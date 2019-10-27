@@ -1,14 +1,14 @@
 # Style Guide
 
-Use this file for language-specific style rules to follow for translation.
+Ten dokument zawiera zasady specyfyczne dla języka, których należy przestrzegać podczas tłumaczenia.
 
-## Rules
+## Zasady
 
-### Text in Code Blocks
+### Tekst w Blokach Kodu
 
-Leave text in code blocks untranslated except for comments. You may optionally translate text in strings, but be careful not to translate strings that refer to code!
+Tekst w blokach kodu, z wyjątkiem komentarzy, nie powinien być tłumaczony. Opcjonalnie możesz przetłumaczyć łańcuchy znaków, ale uważaj, aby nie odnosiły się one do kodu!
 
-Example:
+Przykład:
 
 ```js
 // Example
@@ -18,73 +18,74 @@ export default () => (
 )
 ```
 
-✅ DO:
+✅ DOBRZE:
 
 ```js
-// Ejemplo
+// Przykład
 import React from "react"
 export default () => (
   <div style={{ color: `purple`, fontSize: `72px` }}>Hello Gatsby!</div>
 )
 ```
 
-✅ ALSO OKAY:
+✅ RÓWNIEŻ DOBRZE:
 
 ```js
-// Ejemplo
+// Przykład
 import React from "react"
 export default () => (
-  <div style={{ color: `purple`, fontSize: `72px` }}>¡Hola Gatsby!</div>
+  <div style={{ color: `purple`, fontSize: `72px` }}>Witaj, Gatsby!</div>
 )
 ```
 
-❌ DON'T:
+❌ ŹLE:
 
 ```js
-// Ejemplo
+// Przykład
 import React from "react"
 export default () => (
-  // 'purple' is a CSS keyword
-  <div style={{ color: `morado`, fontSize: `72px` }}>¡Hola Gatsby!</div>
+  // 'purple' jest słowem kluczowym CSS
+  <div style={{ color: `fioletowy`, fontSize: `72px` }}>Witaj, Gatsby!</div>
 )
 ```
 
-❌ DEFINITELY DON'T:
+❌ ZDECYDOWANIE ŹLE:
 
 ```js
-importar Reaccionar desde "reaccionar"
-exportar defecto () => (
-   <div estilo = {{color: `morado`, fontSize:` 72px`}}> ¡Hola Gatsby! </div>
+importuj React z "react"
+eksportuj domyślnie () => (
+   <div styl={{ kolor: `fioletowy`, fontSize:` 72px` }}>Witaj, Gatsby!</div>
 )
 ```
 
-### External Links
+### Zewnętrzne Linki
 
-If an external link is to an article in a reference like [MDN] or [Wikipedia], and a version of that article exists in your language that is of decent quality, consider linking to that version instead.
+Jeśli zewnętrzny link prowadzi do artykułu w np. [MDN] lub [Wikipedia], a istnieje jego dobrze przetłumaczona wersja, weź pod uwagę, czy nie lepiej byłoby użyć jej.
 
 [mdn]: https://developer.mozilla.org/en-US/
 [wikipedia]: https://en.wikipedia.org/wiki/Main_Page
 
-Example:
+Przykład:
 
 ```md
-React elements are [immutable](https://en.wikipedia.org/wiki/Immutable_object).
+React is a JavaScript [library](https://en.wikipedia.org/wiki/Library_(computing)).
 ```
 
-✅ OK:
+✅ DOBRZE:
 
 ```md
-Los elementos de React son [inmutables](https://es.wikipedia.org/wiki/Objeto_inmutable).
+React jest javascriptową [biblioteką](https://pl.wikipedia.org/wiki/Biblioteka_programistyczna).
 ```
 
-For links that have no equivalent (Stack Overflow, YouTube videos, etc.), just use the English link.
+Dla linków, które nie mają polskiego odpowiednika (Stack Overflow, filmy na YouTube , itd.), po prostu użyj wersji angielskiej.
 
-## Glossary
+## Słowniczek
 
-Use this section to list how common technical terminology should be translated.
+Użyj tej sekcji, jako spisu tłumaczeń dla często używanych, technicznych pojęć.
 
 | Term   | Translation |
 | ------ | ----------- |
-| Plugin | ??          |
-| Theme  | ??          |
-| Query  | ??          |
+| Plugin | Wtyczka     |
+| Theme  | Motyw       |
+| Query  | Zapytanie   |
+| String | Łańcuch znaków   |
