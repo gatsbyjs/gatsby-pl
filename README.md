@@ -1,15 +1,12 @@
 
-# Gatsby Polish Translation
+# Polskie tłumaczenie dokumentacji Gatsby
 
-This repo contains the Polish translation for Gatsby.
+To repozytorium zawiera polskie tłumaczenie dokumentacji Gatsby.
 
-Please refer to the [Translation Progress Issue](https://github.com/gatsbyjs/gatsby-pl/issues/1) to start translating!
+Sprawdź [Postęp Tłumaczenia](https://github.com/gatsbyjs/gatsby-pl/issues/1) aby zacząć tłumaczyć!
 
-Useful Links:
+Przydatne linki:
 
 * [Style Guide](/style-guide.md)
-* [Gatsby Translation Guide](https://www.gatsbyjs.org/contributing/gatsby-docs-translation-guide/)
+* [Gatsby Poradnik Tłumacza](https://www.gatsbyjs.org/contributing/gatsby-docs-translation-guide/)
 * [Gatsby Discord](https://gatsby.dev/discord)
-
-(Feel free to translate this document and add any content you feel would be useful to contributors).
-  
