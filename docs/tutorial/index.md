@@ -1,39 +1,39 @@
 ---
-title: Gatsby.js Tutorials
+title: Samouczki Gatsby.js
 disableTableOfContents: true
 ---
 
-Welcome to Gatsby! We’re glad you’re here. The goal of this tutorial is to guide you through setting up and deploying your first Gatsby site using a starter template. As we walk through that process, we’ll introduce some more general web development topics, and go over the underlying structure of a Gatsby site.
+Witamy w Gatsby! Cieszymy się że tu jesteś. Celem tego samouczka jest przeprowadzenie Cie przez proces konfigurowania i wdrożenia pierwszej strony w Gatsby przy użyciu szablonu startowego. W trakcie tego procesu przedstawimy kilka bardziej ogólnych tematów związanych z tworzeniem stron internetowych i omówimy podstawową strukturę witryny Gatsby.
 
-> The full tutorial is intended to be as accessible as possible to people without much web development experience (yet!) — no need to be an expert. If you prefer to jump straight to code, feel free to skip the step-by-step tutorial and see the [quick start](/docs/quick-start/) page.
+> Pełny samouczek ma być jak najbardziej dostępny dla osób bez dużego doświadczenia (jeszcze!) w tworzeniu stron internetowych - nie musisz być ekspertem. Jeśli wolisz od razu przejść do kodu, możesz pominąć podstawowy samouczek (krok po kroku) i wyświetlić stronę [szybkiego startu](/docs/quick-start/).
 
-## Gatsby fundamentals
+## Podstawy Gatsby
 
-0.  [Set up your development environment](/tutorial/part-zero/): We'll introduce you to core technologies that power Gatsby, and guide you through setting up your development environment.
-1.  [Get to know Gatsby building blocks](/tutorial/part-one/): Starting new projects, developing, and deploying sites.
-1.  [Introduction to using CSS in Gatsby](/tutorial/part-two/): Explore libraries like Typography.js and CSS Modules.
-1.  [Building nested layouts in Gatsby](/tutorial/part-three/): Layouts are sections of your site that are reused across multiple pages like headers and footers.
+0.  [Skonfiguruj środowisko programistyczne](/tutorial/part-zero/): Zapoznamy Cię z podstawowymi technologiami zasilającymi Gatsby i przeprowadzimy Cię przez proces konfigurowania środowiska programistycznego.
+1.  [Zapoznaj się z blokami konstrukcyjnymi Gatsby](/tutorial/part-one/): Rozpoczynanie nowych projektów, budowanie i wdrażanie stron.
+1.  [Wprowadzenie do korzystania z CSS w Gatsby](/tutorial/part-two/): Odkryj biblioteki takie jak Typography.js i moduły CSS.
+1.  [Budowanie układów zagnieżdżonych w Gatsby](/tutorial/part-three/): Układy to sekcje witryny, które są wielokrotnie wykorzystywane na wielu stronach, takie jak nagłówki i stopki.
 
-## Intermediate tutorials
+## Samouczki pośrednie
 
-In these intermediate tutorials, you'll learn how to pull data from almost anywhere into your Gatsby site with GraphQL.
+W tych samouczkach dowiesz się, jak pobierać dane z niemal dowolnego miejsca oraz jak wdrożyc je do strony Gatsby przy pomocy GraphQL.
 
-4.  [Querying for data in a blog](/tutorial/part-four/): Create a blog and use a GraphQL query to pull your site title into the blog header.
-5.  [Source plugins and rendering queried data](/tutorial/part-five/): Use a source plugin to pull Markdown blog posts into your site and create an index page with a list of blog posts.
-6.  [Transformer plugins](/tutorial/part-six/): Use a transformer plugin to transform your Markdown blog posts into a form the blog can render.
-7.  [Programmatically create pages from data](/tutorial/part-seven/): Learn how to programmatically create a set of pages for your blog posts.
-8.  [Preparing a site to go live](/tutorial/part-eight/): Learn how to audit your site for performance and best practices for accessibility, SEO, and more.
+4.  [Pobieranie danych na blogu](/tutorial/part-four/): Utwórz bloga i użyj zapytania GraphQL, aby pobrać tytuł strony do umieszczenia w nagłówku.
+5.  [Wtyczki źródłowe i wyświetlanie pobranych danych](/tutorial/part-five/): Użyj wtyczki źródłowej, aby pobrać posty zapisane w pliku Markdown i utworzyć stronę z listą wszystkich postów na blogu.
+6.  [Wtyczki transformujące](/tutorial/part-six/): Użyj wtyczki transformującej, aby przekształcić swoje posty z plików Markdown do postaci, którą możesz wyświetlić na swoim blogu.
+7.  [Programatyczne tworzenie stron z pobranych danych](/tutorial/part-seven/):  Naucz się jak programatycznie stworzyć strony na Twojego bloga.
+8.  [Przygotowanie strony do wdrożenia](/tutorial/part-eight/): Dowiedz się, jak przeprowadzić audyt witryny pod kątem wydajności i najlepszych praktyk w zakresie dostępności, SEO i innych.
 
-## Theme tutorials
+## Samouczki o motywach
 
-Gatsby themes abstract all of your default configuration (shared functionality, data sourcing, design) out of your site and into an installable package.
+Motywy Gatsby wyodrębniają całą twoją domyślną konfigurację (wspólna funkcjonalność, pozyskiwanie danych, projektowanie) z Twojej strony do paczki, którą można instalować w innych projektach.
 
-This means that the configuration and functionality isn’t directly written into your project, but rather versioned, centrally managed, and installed as a dependency. You can seamlessly update a theme, compose themes together, and even swap out one compatible theme for another.
+Oznacza to, że konfiguracja i funkcjonalność nie są zapisywane bezpośrednio w projekcie, ale są wersjonowane, centralnie zarządzane i instalowane jako zależność/moduł. Możesz bezproblemowo aktualizować motyw, komponować go z innymi motywami, a nawet wymieniać jeden kompatybilny motyw na inny.
 
-Learn more about using and building themes with the [Gatsby theme tutorials](/tutorial/theme-tutorials/).
+Dowiedz się więcej o używaniu i budowaniu motywów na [Samouczki o motywach Gatsby](/tutorial/theme-tutorials/).
 
-## Additional tutorials
+## Dodatkowe samouczki
 
-There are many use cases for Gatsby, some of which aren't covered in the first set of tutorials to keep you focused while learning. Gatsby's Additional Tutorials section is a collection of resources showing how to complete even more Gatsby tasks step-by-step, such as using source plugins for images and CMS content.
+Istnieje wiele przypadków użycia Gatsby, z których niektóre nie zostały omówione w pierwszym zestawie samouczków, aby pozwolić ci na skupieniu się podczas nauki. Sekcja dodatkowych samouczków to zbiór zasobów pokazujących krok po kroku jeszcze więcej moźliwości Gatsby, takich jak używanie wtyczek źródłowych do zdjęć i treści CMS.
 
-Go deeper with [additional Gatsby tutorials](/tutorial/additional-tutorials/).
+Zobacz jeszcze więcej na [dodatkowe samouczki Gatsby](/tutorial/additional-tutorials/).
