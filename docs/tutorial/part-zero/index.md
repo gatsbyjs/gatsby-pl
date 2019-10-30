@@ -52,75 +52,83 @@ Po wykonaniu wszystkich kroków upewnij się, że wszystko zostało poprawnie za
 
 The output of each of those commands should be a version number. Your versions may not be the same as those shown below! If entering those commands doesn’t show you a version number, go back and make sure you have installed Node.js.
 
-![Check node and npm versions in terminal](01-node-npm-versions.png)
+Po uruchomieniu kaźdego z tych poleceń powinienes zobaczyć numer wersji. Twoje wersje mogą się różnić od pokazanych poniżej! Jeśli w terminalu nie widzisz numeru wersji, wróć i upewnij się, że poprawnie zainstalowałeś Node.js.
 
-## Install Git
+![Sprawdź wersje node i npm w terminalu](01-node-npm-versions.png)
+
+## Zainstaluj Git
 
 Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency. When you install a Gatsby "starter" site, Gatsby uses Git behind the scenes to download and install the required files for your starter. You will need to have Git installed to set up your first Gatsby site.
 
+Git to darmowy i open-sourcowy system kontroli wersji. Przeznaczony jest on do szybkiej i wydajnej obsługi wszelkiego rodzaju projektów - od małych po bardzo duże. Podczas instalowania startera Gatsby, Gatsby wykorzystuje Git, aby pobrać i zainstalować wymagane pliki projektu startowego. Aby skonfigurować pierwszą stronę Gatsby, musisz zainstalować Git.
+
 The steps to download and install Git depend on your operating system. Follow the guide for your system:
+Procesy pobierania i instalacji Git zależą od Twojego systemu operacyjnego. Postępuj zgodnie z instrukcjami dla swojego systemu:
 
-- [Install Git on macOS](https://www.atlassian.com/git/tutorials/install-git#mac-os-x)
-- [Install Git on Windows](https://www.atlassian.com/git/tutorials/install-git#windows)
-- [Install Git on Linux](https://www.atlassian.com/git/tutorials/install-git#linux)
+- [Zainstalul Git na macOS](https://www.atlassian.com/git/tutorials/install-git#mac-os-x)
+- [Zainstalul Git na Windows](https://www.atlassian.com/git/tutorials/install-git#windows)
+- [Zainstalul Git na Linux](https://www.atlassian.com/git/tutorials/install-git#linux)
 
-## Using the Gatsby CLI
+## Interfejs Gatsby CLI
 
-The Gatsby CLI tool lets you quickly create new Gatsby-powered sites and run commands for developing Gatsby sites. It is a published npm package.
+Interfejs Gatsby CLI pozwala szybko tworzyć nowe strony oparte na Gatsby i uruchamiać komendy potrzebne do tworzenia stron w Gatsby. Gatsby CLI jest paczką npm.
 
-The Gatsby CLI is available via npm and should be installed globally by running `npm install -g gatsby-cli`.
+Interfejs Gatsby CLI jest dostępny za pośrednictwem npm i powinien zostać zainstalowany globalnie, uruchamiając komendę `npm install -g gatsby-cli`.
 
-_**Note**: when you install Gatsby and run it for the first time, you'll see a short message notifying you about anonymous usage data that is being collected for Gatsby commands, you can read more about how that data is pulled out and used in the [telemetry doc](/docs/telemetry)._
+_**Uwaga**: po zainstalowaniu Gatsby i uruchomieniu go po raz pierwszy zobaczysz krótki komunikat informujący o gromadzeniu anonimowych danych dotyaczących użytkowania komend Gatsby CLI, możesz przeczytać więcej o tym, jak te dane są pobierane i wykorzystywane w [dokumencie o telemetrii](/docs/telemetry)._
 
-To see the commands available, run `gatsby --help`.
+Aby zobaczyć dostępne komnendy, uruchoem w terminalu `gatsby --help`.
 
-![Check gatsby commands in terminal](05-gatsby-help.png)
+![Sprawdź dostępne komendy w terminalu](05-gatsby-help.png)
 
-> 💡 If you are unable to successfully run the Gatsby CLI due to a permissions issue, you may want to check out the [npm docs on fixing permissions](https://docs.npmjs.com/getting-started/fixing-npm-permissions), or [this guide](https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md).
+> 💡 Jeśli nie możesz pomyślnie uruchomić interfejsu Gatsby CLI przez problemy z uprawnieniami, możesz sprawdzić [dokoumentację npm na temat rozwiązywania problemów z uprawnieniami](https://docs.npmjs.com/getting-started/fixing-npm-permissions), lub [ten poradnik](https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md).
 
-## Create a Gatsby site
+## Utwórz witrynę Gatsby
 
 Now you are ready to use the Gatsby CLI tool to create your first Gatsby site. Using the tool, you can download “starters” (partially built sites with some default configuration) to help you get moving faster on creating a certain type of site. The “Hello World” starter you’ll be using here is a starter with the bare essentials needed for a Gatsby site.
 
-1.  Open up your terminal.
-2.  Run `gatsby new hello-world https://github.com/gatsbyjs/gatsby-starter-hello-world`. (_Note: Depending on your download speed, the amount of time this takes will vary. For brevity's sake, the gif below was paused during part of the install_).
-3.  Run `cd hello-world`.
-4.  Run `gatsby develop`.
+Teraz możesz zacząć korzystać z Gatsby CLI, aby utworzyć swoją pierwszą stroen Gatsby. Przy pomocy narzędzia możesz pobrać „startery” (częściowo zbudowane strony z domyślną konfiguracją), aby szybciej zacząć tworzyć określony typ strony. Starter „Hello World”, którego będziesz tutaj używać, to starter z elementami niezbędnymi do stworzenia witryny Gatsby.
+
+1.  Otwórz terminal.
+2.  Uruchom komendę `gatsby new hello-world https://github.com/gatsbyjs/gatsby-starter-hello-world`. (_Note: Uwaga: w zależności od prędkości pobierania, ilość czasu może się różnić. Dla zwięzłości, poniższy gif został wstrzymany podczas części instalacyjnej_).
+3.  Uruchom komendę `cd hello-world`.
+4.  Uruchom komendę `gatsby develop`.
 
 <video controls="controls" autoplay="true" loop="true">
   <source type="video/mp4" src="./03-create-site.mp4" />
   <p>Sorry! You browser doesn't support this video.</p>
 </video>
 
-What just happened?
+Co się właściwie wydarzyło?
 
 ```shell
 gatsby new hello-world https://github.com/gatsbyjs/gatsby-starter-hello-world
 ```
 
-- `new` is a gatsby command to create a new Gatsby project.
-- Here, `hello-world` is an arbitrary title — you could pick anything. The CLI tool will place the code for your new site in a new folder called “hello-world”.
-- Lastly, the GitHub URL specified points to a code repository that holds the starter code you want to use.
+- `new` to komenda, która tworzy nowy projekt Gatsby.
+- W tym wypadku, `hello-world` to dowolny tytuł - możesz wybrać dowolną nazwę. Narzędzie CLI umieści kod strony w nowym folderze o nazwie „hello-world”.
+- Wreszcie, podany adres URL wskazuje repozytorium kodu na GitHubie, w którym znajduje się kod startowy, którego chcesz użyć.
 
 ```shell
 cd hello-world
 ```
 
-- This says 'I want to change directories (`cd`) to the “hello-world” subfolder'. Whenever you want to run any commands for your site, you need to be in the context for that site (aka, your terminal needs to be pointed at the directory where your site code lives).
+- Oznacza to 'Chcę zmienić folder (`cd`) na subfolder “hello-world” subfolder'. Ilekroć chcesz uruchomić jakiąś komendę dla swojej witryny, musisz znajdować się w jej kontekście (innymi słowy, terminal musi być skierowany na folder, w którym znajduje się kod strony).
 
 ```shell
 gatsby develop
 ```
 
 - This command starts a development server. You will be able to see and interact with your new site in a development environment — local (on your computer, not published to the internet).
+To polecenie uruchamia serwer developerski. Dzięki temu będziesz mógł zobaczyć i przetestować nową witryną w lokalnym środowisku programistycznym - (na twoim komputerze, niepublikowanym w Internecie).
 
-### View your site locally
+### Wyświetl swoją witrynę lokalniey
 
-Open up a new tab in your browser and navigate to [**http://localhost:8000**](http://localhost:8000/).
+Otwórz nową kartę w przeglądarce i przejdź do [**http://localhost:8000**](http://localhost:8000/).
 
-![Check homepage](04-home-page.png)
+![Sprawdź stronę główną](04-home-page.png)
 
-Congrats! This is the beginning of your very first Gatsby site! 🎉
+Gratulacje! To początek Twojej pierwszej strony zbudowanej z Gatsby! 🎉
 
 You’ll be able to visit the site locally at [**_http://localhost:8000_**](http://localhost:8000/) for as long as your development server is running. That’s the process you started by running the `gatsby develop` command. To stop running that process (or to “stop running the development server”), go back to your terminal window, hold down the “control” key, and then hit “c” (ctrl-c). To start it again, run `gatsby develop` again!
 
