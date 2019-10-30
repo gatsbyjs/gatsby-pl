@@ -5,18 +5,18 @@ disableTableOfContents: true
 
 Witamy w Gatsby! Cieszymy się że tu jesteś. Celem tego samouczka jest przeprowadzenie Cie przez proces konfigurowania i wdrożenia pierwszej strony w Gatsby przy użyciu szablonu startowego. W trakcie tego procesu przedstawimy kilka bardziej ogólnych tematów związanych z tworzeniem stron internetowych i omówimy podstawową strukturę witryny Gatsby.
 
-> Pełny samouczek ma być jak najbardziej dostępny dla osób bez dużego doświadczenia (jeszcze!) w tworzeniu stron internetowych - nie musisz być ekspertem. Jeśli wolisz od razu przejść do kodu, możesz pominąć podstawowy samouczek (krok po kroku) i wyświetlić stronę [szybkiego startu](/docs/quick-start/).
+> Pełny samouczek ma być jak najbardziej przystępny dla osób bez dużego doświadczenia (jeszcze!) w tworzeniu stron internetowych - nie musisz być ekspertem. Jeśli wolisz od razu przejść do kodu, możesz pominąć podstawowy samouczek (krok po kroku) i wyświetlić stronę [szybkiego startu](/docs/quick-start/).
 
 ## Podstawy Gatsby
 
 0.  [Skonfiguruj środowisko programistyczne](/tutorial/part-zero/): Zapoznamy Cię z podstawowymi technologiami zasilającymi Gatsby i przeprowadzimy Cię przez proces konfigurowania środowiska programistycznego.
 1.  [Zapoznaj się z blokami konstrukcyjnymi Gatsby](/tutorial/part-one/): Rozpoczynanie nowych projektów, budowanie i wdrażanie stron.
 1.  [Wprowadzenie do korzystania z CSS w Gatsby](/tutorial/part-two/): Odkryj biblioteki takie jak Typography.js i moduły CSS.
-1.  [Budowanie układów zagnieżdżonych w Gatsby](/tutorial/part-three/): Układy to sekcje witryny, które są wielokrotnie wykorzystywane na wielu stronach, takie jak nagłówki i stopki.
+1.  [Budowanie układów zagnieżdżonych w Gatsby](/tutorial/part-three/): Układy to sekcje witryny, które są wykorzystywane wielokrotnie na kilku różnych stronach, takie jak nagłówki i stopki.
 
 ## Samouczki pośrednie
 
-W tych samouczkach dowiesz się, jak pobierać dane z niemal dowolnego miejsca oraz jak wdrożyc je do strony Gatsby przy pomocy GraphQL.
+W tych samouczkach dowiesz się, jak przy pomocy GraphQL pobierać dane z niemal dowolnego miejsca dla swojej strony Gatsby.
 
 4.  [Pobieranie danych na blogu](/tutorial/part-four/): Utwórz bloga i użyj zapytania GraphQL, aby pobrać tytuł strony do umieszczenia w nagłówku.
 5.  [Wtyczki źródłowe i wyświetlanie pobranych danych](/tutorial/part-five/): Użyj wtyczki źródłowej, aby pobrać posty zapisane w pliku Markdown i utworzyć stronę z listą wszystkich postów na blogu.
@@ -34,6 +34,6 @@ Dowiedz się więcej o używaniu i budowaniu motywów na [Samouczki o motywach G
 
 ## Dodatkowe samouczki
 
-Istnieje wiele przypadków użycia Gatsby, z których niektóre nie zostały omówione w pierwszym zestawie samouczków, aby pozwolić ci na skupieniu się podczas nauki. Sekcja dodatkowych samouczków to zbiór zasobów pokazujących krok po kroku jeszcze więcej moźliwości Gatsby, takich jak używanie wtyczek źródłowych do zdjęć i treści CMS.
+Istnieje wiele przypadków użycia Gatsby, z których niektóre nie zostały omówione w pierwszym zestawie samouczków, aby pozwolić Ci na skupienie się podczas nauki. Sekcja dodatkowych samouczków to zbiór zasobów pokazujących krok po kroku jeszcze więcej moźliwości Gatsby, takich jak używanie wtyczek źródłowych do zdjęć i treści CMS.
 
 Zobacz jeszcze więcej na [dodatkowe samouczki Gatsby](/tutorial/additional-tutorials/).
