@@ -1,52 +1,54 @@
 ---
-title: Set Up Your Development Environment
+title: Skonfiguruj środowisko programistyczne
 typora-copy-images-to: ./
 disableTableOfContents: true
 ---
 
 Before you start building your first Gatsby site, you’ll need to familiarize yourself with some core web technologies and make sure that you have installed all required software tools.
 
-## Familiarize yourself with the command line
+Zanim zaczniesz budować swoją pierwszą strone Gatsby, musisz zapoznać się z niektórymi podstawowymi internetowymi technologiami i upewnić się, że zainstalowałeś wszystkie wymagane narzędzia oraz programy.
 
-The command line is a text-based interface used to run commands on your computer. You’ll also often see it referred to as the terminal. In this tutorial, we’ll use both interchangeably. It’s a lot like using the Finder on a Mac or Explorer on Windows. Finder and Explorer are examples of graphical user interfaces (GUI). The command line is a powerful, text-based way to interact with your computer.
+## Zapoznaj się z wierzem poleceń
 
-Take a moment to locate and open up the command line interface (CLI) for your computer. Depending on which operating system you are using, see [**instructions for Mac**](http://www.macworld.co.uk/feature/mac-software/how-use-terminal-on-mac-3608274/), [**instructions for Windows**](https://www.quora.com/How-do-I-open-terminal-in-windows) or [**instructions for Linux**](https://www.howtogeek.com/140679/beginner-geek-how-to-start-using-the-linux-terminal/).
+Wiersz poleceń to interfejs tekstowy służący do uruchamiania poleceń na komputerze. Często występuje pod nazwą terminal. W tym samouczku będziemy używać obu określeń zamiennie. Uźywanie terminala przypomina używanie Findera na komputerach Mac lub Eksploratora w systemie Windows. Finder i Explorer to przykłady graficznych interfejsów użytkownika (GUI). Wiersz poleceń to potężny, tekstowy sposób interakcji z komputerem.
 
-## Install Homebrew for Node.js
+Poświęć chwilę, aby zlokalizować i otworzyć interfejs wiersza poleceń (CLI) dla swojego komputera. W zależności od używanego systemu operacyjnego zobacz [**instrukcje dla komputerów Mac**](https://www.imymac.com/pl/mac-cleaner/how-to-open-terminal-on-mac.html), [**instrukcje dla systemu Windows**](https://www.download.net.pl/10-sposobow-na-uruchomienie-wiersza-polecenia-w-windows-10/n/7949/) or [**instrukcje dla systemu Linux**](https://pl.wikibooks.org/wiki/Ubuntu/Podstawowe_polecenia).
 
-To install Gatsby and Node.js, it is recommended to use [Homebrew](https://brew.sh/). A little set-up in the beginning can save you from some headaches later on!
+## Zainstaluj Homebrew dla Node.js
 
-How to install or verify Homebrew on your computer:
+To install Gatsby and Node.js, it is recommended to use [Homebrew](https://brew.sh/). Trochę konfiguracji na początku może uchronić Cię przed niektórymi bolączkami w późniejszych krokach!
 
-1. Open your Terminal.
-1. See if Homebrew is installed by running `brew -v`. You should see "Homebrew" and a version number.
-1. If not, download and install [Homebrew with the instructions](https://docs.brew.sh/Installation) for your operating system (Mac, Linux or Windows).
-1. Once you've installed Homebrew, repeat step 2 to verify.
+Jak zainstalować lub zweryfikować Homebrew na komputerze:
 
-### Mac Users: install Xcode Command Line Tools
+1.  Otwórz Terminal.
+2.  Sprawdź czy Homebrew jest zainstalowane uruchamiając komendę `brew -v`. Powinieneś zobaczyć "Homebrew" oraz numer wersji.
+3.  Jeśli nie, pobierz i zainstaluj [Homebrew wraz z instrukcją](https://docs.brew.sh/Installation) dla swojego systemu operacyjnego (Mac, Linux lub Windows).
+4.  Po zainstalowaniu Homebrew powtórz krok 2, aby zweryfikować.
 
-1. Open your Terminal.
-1. On a Mac, install Xcode Command line tools by running `xcode-select --install`.
-   1. If that fails, download it [directly from the Apple site](https://developer.apple.com/download/more/), after signing-in with Apple developer account
-1. After being prompted to start the installation, you'll be prompted again to accept a software license for the tools to download.
+### Użytkownicy komputerów Mac: zainstaluj Xcode Command Line Tools
 
-## ⌚ Install Node.js and npm
+1.  Otwórz Terminal.
+2.  Na Macu, zainstaluj Xcode Command Line Tools uruchamiając komendę `xcode-select --install`.
+3.  Jeśli ten sposób zawiedzie, pobierz [bezpośrednio ze strony Apple](https://developer.apple.com/download/more/), po zalogowaniu się za pomocą konta programisty Apple.
+4.  Po wyświetleniu monitu o rozpoczęcie instalacji ponownie pojawi się monit o zaakceptowanie licencji na oprogramowanie do pobrania narzędzi.
 
-Node.js is an environment that can run JavaScript code outside of a web browser. Gatsby is built with Node.js. To get up and running with Gatsby, you’ll need to have a recent version installed on your computer.
+## ⌚ Zainstaluj Node.js oraz npm
 
-_Note: Gatsby's minimum supported Node.js version is Node 8, but feel free to use a more recent version._
+Node.js to środowisko, które może uruchamiać kod JavaScript poza przeglądarką internetową. Gatsby jest napisane w Node.js. Aby rozpocząć pracę z Gatsby, musisz mieć najnowszą wersję zainstalowaną na komputerze.
 
-1. Open your Terminal.
-1. Run `brew update` to make sure you have the latest version of Homebrew.
-1. Run this command to install Node and npm in one go: `brew install node`
+_Note: Minimalna wersja Node wspierana przez Gatsby to wersja 8, ale możesz teź użyć nowszej wersji._
 
-Once you have followed the installation steps, make sure everything was installed properly:
+1.  Otwórz Terminal.
+2.  Uruchom komendę `brew update` aby upewnić się, że masz najnowszą wersję Homebrew.
+3.  Uruchom tę komendę, aby zainstalować Node i npm naraz: `brew install node`
 
-### Check your Node.js installation
+Po wykonaniu wszystkich kroków upewnij się, że wszystko zostało poprawnie zainstalowane:
 
-1.  Open up your terminal.
-2.  Run `node --version`. (If you’re new to the command line, “run `command`” means “type `node --version` in the command prompt, and hit the Enter key”. From here on, this is what we mean by “run `command`”).
-3.  Run `npm --version`.
+### Sprawdź czy Node.js jest zainstalowane poprawnie
+
+1.  Otwórz Terminal.
+2.  Uruchom komendę `node --version`. (Jeśli dopiero zaczynasz korzystać z terminala, “uruchom `komendę`” oznacza “wpisz `node -version` w wierszu polecenia i naciśnij klawisz Enter”. Od tego momentu właśnie to rozumiemy jako "Uruchom `komendę`”)
+3.  Uruchom komendę `npm --version`.
 
 The output of each of those commands should be a version number. Your versions may not be the same as those shown below! If entering those commands doesn’t show you a version number, go back and make sure you have installed Node.js.
 
