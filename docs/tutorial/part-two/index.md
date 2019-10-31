@@ -1,5 +1,5 @@
 ---
-title: Introduction to Styling in Gatsby
+title: Wprowadzenie do Stylowania w Gatsby
 typora-copy-images-to: ./
 disableTableOfContents: true
 ---
@@ -14,32 +14,33 @@ disableTableOfContents: true
 
 -->
 
-Welcome to part two of the Gatsby tutorial!
+Witaj w drugiej części tutorialu Gatsby
 
-## What's in this tutorial?
+## Czego naucysz się w tym tutorialu?
 
-In this part, you're going to explore options for styling Gatsby websites and dive deeper into using React components for building sites.
+W tej części zapoznasz się z mozliwościami stylizacji stron internetowych Gatsby i przyjrzysz się blizej zastosowaniu komponentów React'a w celu tworzenia witryn.
 
-## Using global styles
+## Zastosowanie stylów globalnych
 
-Every site has some sort of global style. This includes things like the site's typography and background colors. These styles set the overall feel of the site — much like the color and texture of a wall sets the overall feel of a room.
+Kazda strona posiada jakiś rodzaj globalnego stylu. Zaliczają się do tego rzeczy takie jak typografia i kolory tła. Styly te odpowiadają za ogólny odbiór i odczucie strony internetowej - zupełnie jak kolor i faktura ścian w pokoju definiuje panującą w nim atmosferę.
 
-### Creating global styles with standard CSS files
+### Tworzenie stylów globalnych przy urzyciu standarwodych plików CSS
 
-One of the most straightforward ways to add global styles to a site is using a global `.css` stylesheet.
+Jednym z najbardziej podstawowych sposobów aby dodać style do strony jest uzycie globalnego stylesheet'u `.css`.
 
-#### ✋ Create a new Gatsby site
+#### ✋ Utwórz nową stronę Gatsby
 
-Start by creating a new Gatsby site. It may be best (especially if you're new to the command line) to close the terminal windows you used for [part one](/tutorial/part-one/) and start a new terminal session for part two.
+Rozpocznij poprzez utworzenie nowej strony Gatsby. Najlepiej (szczególnie gdy uzywasz linii komend od niedawna) zamknąć wszystkie okna terminala, których uzywałeś w [części pierwszej](/tutorial/part-one/) i otwórz nowe okno dla drugiej części tutorialu.
 
-Open a new terminal window, create a new "hello world" gatsby site, and start the development server:
+
+Otwórz nowe okno terminala, stwórz nową stronę Gatsby "hello world" oraz uruchom serwer developerski (development server):
 
 ```shell
 gatsby new tutorial-part-two https://github.com/gatsbyjs/gatsby-starter-hello-world
 cd tutorial-part-two
 ```
 
-You now have a new Gatsby site (based on the Gatsby "hello world" starter) with the following structure:
+Utworzyłeś teraz nową stonę Gatsby (na podstawie gotowego projektu startowego "hello world") o następującej strukturze:
 
 ```text
 ├── package.json
@@ -48,9 +49,9 @@ You now have a new Gatsby site (based on the Gatsby "hello world" starter) with 
 │       └── index.js
 ```
 
-#### ✋ Add styles to a css file
+#### ✋ Dodaj style do pliku css
 
-1. Create a `.css` file in your new project:
+1. Stwórz plik `.css` w swoim nowym projekcie:
 
 ```shell
 cd src
@@ -59,9 +60,9 @@ cd styles
 touch global.css
 ```
 
-> Note: Feel free to create these directories and files using your code editor, if you'd prefer.
+> Uwaga: Mozesz uzyc dowolnego edytora kodu aby utworzyc ponizsza strukturę plików i folderów, wedle własnych preferencji.
 
-You should now have a structure like this:
+Powinieneś mieć teraz tak wyglądającą strukturę:
 
 ```text
 ├── package.json
@@ -72,7 +73,7 @@ You should now have a structure like this:
 │       └── global.css
 ```
 
-2. Define some styles in the `global.css` file:
+2. Zdefiniuj jakiś styl w pliku `global.css`:
 
 ```css:title=src/styles/global.css
 html {
@@ -80,18 +81,18 @@ html {
 }
 ```
 
-> Note: The placement of the example css file in a `/src/styles/` folder is arbitrary.
+> Uwaga: Umiejscowienie przykładowego pliku css w folderze `/src/styles/` jest dowolne.
 
-#### ✋ Include the stylesheet in `gatsby-browser.js`
+#### ✋ Dodaj stylesheet do pliku `gatsby-browser.js`
 
-1. Create the `gatsby-browser.js`
+1. Utwórz plik `gatsby-browser.js`
 
 ```shell
 cd ../..
 touch gatsby-browser.js
 ```
 
-Your project's file structure should now look like this:
+Twoja struktura plików powinna w tym momencie wyglądać tak:
 
 ```text
 ├── package.json
@@ -103,9 +104,9 @@ Your project's file structure should now look like this:
 ├── gatsby-browser.js
 ```
 
-> 💡 What is `gatsby-browser.js`? Don't worry about this too much and for now, just know that `gatsby-browser.js` is one of a handful of special files that Gatsby looks for and uses (if they exist). Here, the naming of the file **is** important. If you do want to explore more now, check out [the docs](/docs/browser-apis/).
+> 💡 Za co odpowiada `gatsby-browser.js`? Nie przejmuj się zbytnio tym na tym etapie, wiedz tylko, ze `gatsby-browser.js` jest jednym z wielu specjalnych plików które Gatsby automatycznie wyszukuje i uzywa (o ile istnieją). W tym wypadku nazwa pliku **ma znaczenie**. Jeśli chcesz dowiedzieć się więcej na ten temat juz teraz, sprawdz [dokumentację](/docs/browser-apis/).
 
-2. Import your recently-created stylesheet in the `gatsby-browser.js` file:
+2. Zaimportuj swoje właśnie utworzone stylesheet'y do pliku `gatsby-browser.js`:
 
 ```javascript:title=gatsby-browser.js
 import "./src/styles/global.css"
@@ -114,25 +115,25 @@ import "./src/styles/global.css"
 // require('./src/styles/global.css')
 ```
 
-> Note: Both CommonJS (`require`) and ES Module (`import`) syntax work here. If you’re not sure which to choose, we use `import` most of the time.
+> Uwaga: Zarówno syntax CommonJS (`require`) jak Moduł ES (`import`), zadziałają w tym wypadku. Jeśli nie jesteś pewien który z nich wybrać, my w większości wypadków uzywamy 'import'.
 
-3. Start the development server:
+3. Uruchom serwer deweloperski (development server):
 
 ```shell
 gatsby develop
 ```
 
-If you take a look at your project in the browser, you should see a lavender background applied to the "hello world" starter:
+Jeli spojrzysz teraz na swój projekt w przeglądarce, powinieneś zobaczyć w starterze "hello world" zastosowane lawendowe tło:
 
 ![Lavender Hello World!](global-css.png)
 
-> Tip: This part of the tutorial has focused on the quickest and most straightforward way to get started styling a Gatsby site — importing standard CSS files directly, using `gatsby-browser.js`. In most cases, the best way to add global styles is with a shared layout component. [Check out the docs](/docs/global-css/) for more on that approach.
+> Porada: Ta część tutorialu skupia się na najszybszym i prostoliniowym sposobie na rozpoczęcie stylowania strony Gatsby - bezpośrednim zaimportowaniu standardowych plików CSS uzywając `gatsby-browser.js`. Jednakl w większości wypadków, najelpszą metodą na zastosowanie stylów globalnych jest uzycie współdzielonego komponentu odpowiadającego za układ strony. [Sprawdź dokumentację](/docs/global-css/) aby dowiedzieć się więcej na ten temat.
 
-## Using component-scoped CSS
+## Uzycie CSS o zasęgu kompnentu.
 
-So far, we've talked about the more traditional approach of using standard css stylesheets. Now, we'll talk about various methods of modularizing CSS to tackle styling in a component-oriented way.
+Do tej pory rozmawialiśmy o bardziej tradycyjnym podejściu do używania standardowych arkuszy stylów css. Teraz porozmawiamy o różnych metodach rozbicia CSS na niezalezne moduły w celu zastosowania stylowania w sposób zorientowany na pracę z komponentami.
 
-### CSS Modules
+### Moduły CSS
 
 Let's explore **CSS Modules**. Quoting from
 [the CSS Module homepage](https://github.com/css-modules/css-modules):
