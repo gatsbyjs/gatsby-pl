@@ -18,20 +18,19 @@ Witaj w drugiej części tutorialu Gatsby
 
 ## Czego naucysz się w tym tutorialu?
 
-W tej części zapoznasz się z mozliwościami stylizacji stron internetowych Gatsby i przyjrzysz się blizej zastosowaniu komponentów React'a w celu tworzenia witryn.
+W tej części zapoznasz się z możliwościami stylizacji stron internetowych Gatsby i przyjrzysz się bliżej zastosowaniu komponentów React'a w celu tworzenia witryn.
 
 ## Zastosowanie stylów globalnych
 
-Kazda strona posiada jakiś rodzaj globalnego stylu. Zaliczają się do tego rzeczy takie jak typografia i kolory tła. Styly te odpowiadają za ogólny odbiór i odczucie strony internetowej - zupełnie jak kolor i faktura ścian w pokoju definiuje panującą w nim atmosferę.
+Każda strona posiada jakiś rodzaj globalnego stylu. Zaliczają się do tego rzeczy takie jak typografia i kolory tła. Style te odpowiadają za ogólny odbiór i odczucie strony internetowej - zupełnie jak kolor i faktura ścian w pokoju definiuje panującą w nim atmosferę.
 
-### Tworzenie stylów globalnych przy urzyciu standarwodych plików CSS
+### Tworzenie stylów globalnych przy użyciu standarwodych plików CSS
 
-Jednym z najbardziej podstawowych sposobów aby dodać style do strony jest uzycie globalnego stylesheet'u `.css`.
+Jednym z najbardziej podstawowych sposobów aby dodać style do strony jest użycie globalnego stylesheet'u `.css`.
 
 #### ✋ Utwórz nową stronę Gatsby
 
-Rozpocznij poprzez utworzenie nowej strony Gatsby. Najlepiej (szczególnie gdy uzywasz linii komend od niedawna) zamknąć wszystkie okna terminala, których uzywałeś w [części pierwszej](/tutorial/part-one/) i otwórz nowe okno dla drugiej części tutorialu.
-
+Rozpocznij poprzez utworzenie nowej strony Gatsby. Najlepiej (szczególnie gdy używasz linii komend od niedawna) zamknąć wszystkie okna terminala, których używałeś w [części pierwszej](/tutorial/part-one/) i otwórz nowe okno dla drugiej części tutorialu.
 
 Otwórz nowe okno terminala, stwórz nową stronę Gatsby "hello world" oraz uruchom serwer developerski (development server):
 
@@ -60,7 +59,7 @@ cd styles
 touch global.css
 ```
 
-> Uwaga: Mozesz uzyc dowolnego edytora kodu aby utworzyc ponizsza strukturę plików i folderów, wedle własnych preferencji.
+> Uwaga: Możesz użyc dowolnego edytora kodu, aby utworzyc poniższą strukturę plików i folderów, wedle własnych preferencji.
 
 Powinieneś mieć teraz tak wyglądającą strukturę:
 
@@ -104,7 +103,7 @@ Twoja struktura plików powinna w tym momencie wyglądać tak:
 ├── gatsby-browser.js
 ```
 
-> 💡 Za co odpowiada `gatsby-browser.js`? Nie przejmuj się zbytnio tym na tym etapie, wiedz tylko, ze `gatsby-browser.js` jest jednym z wielu specjalnych plików które Gatsby automatycznie wyszukuje i uzywa (o ile istnieją). W tym wypadku nazwa pliku **ma znaczenie**. Jeśli chcesz dowiedzieć się więcej na ten temat juz teraz, sprawdz [dokumentację](/docs/browser-apis/).
+> 💡 Za co odpowiada `gatsby-browser.js`? Nie przejmuj się zbytnio tym na tym etapie, wiedz tylko, ze `gatsby-browser.js` jest jednym z wielu specjalnych plików które Gatsby automatycznie wyszukuje i uzywa (o ile istnieją). W tym wypadku nazwa pliku **ma znaczenie**. Jeśli chcesz dowiedzieć się więcej na ten temat już teraz, sprawdź [dokumentację](/docs/browser-apis/).
 
 2. Zaimportuj swoje właśnie utworzone stylesheet'y do pliku `gatsby-browser.js`:
 
@@ -115,7 +114,7 @@ import "./src/styles/global.css"
 // require('./src/styles/global.css')
 ```
 
-> Uwaga: Zarówno syntax CommonJS (`require`) jak Moduł ES (`import`), zadziałają w tym wypadku. Jeśli nie jesteś pewien który z nich wybrać, my w większości wypadków uzywamy 'import'.
+> Uwaga: Zarówno syntax CommonJS (`require`) jak Moduł ES (`import`), zadziałają w tym wypadku. Jeśli nie jesteś pewien który z nich wybrać, my w większości wypadków używamy 'import'.
 
 3. Uruchom serwer deweloperski (development server):
 
@@ -129,9 +128,9 @@ Jeli spojrzysz teraz na swój projekt w przeglądarce, powinieneś zobaczyć w s
 
 > Porada: Ta część tutorialu skupia się na najszybszym i prostoliniowym sposobie na rozpoczęcie stylowania strony Gatsby - bezpośrednim zaimportowaniu standardowych plików CSS uzywając `gatsby-browser.js`. Jednakl w większości wypadków, najelpszą metodą na zastosowanie stylów globalnych jest uzycie współdzielonego komponentu odpowiadającego za układ strony. [Sprawdź dokumentację](/docs/global-css/) aby dowiedzieć się więcej na ten temat.
 
-## Uzycie CSS o zasęgu kompnentu.
+## Użycie CSS o zasęgu kompnentu.
 
-Do tej pory rozmawialiśmy o bardziej tradycyjnym podejściu do używania standardowych arkuszy stylów css. Teraz porozmawiamy o różnych metodach rozbicia CSS na niezalezne moduły w celu zastosowania stylowania w sposób zorientowany na pracę z komponentami.
+Do tej pory rozmawialiśmy o bardziej tradycyjnym podejściu do używania standardowych arkuszy stylów css. Teraz porozmawiamy o różnych metodach rozbicia CSS na niezależne moduły w celu zastosowania stylowania w sposób zorientowany na pracę z komponentami.
 
 ### Moduły CSS
 
@@ -143,9 +142,9 @@ Zajmijmy się **Modułami CSS**. Cytując
 
 Moduły CSS są bardzo popularne, ponieważ pozwalają normalnie pisać CSS, ale z większym bezpieczeństwem. Narzędzie automatycznie generuje unikalne nazwy klas i animacji, więc nie musisz się martwić o kolizje nazw selektorów.
 
-Gatsby działa od razu z modułami CSS. Ten sposób jest wysoce zalecany dla osób, które dopiero zaczynają budować z Gatsby (i ogólnie z React).
+Gatsby działa od razu z modułami CSS. Ten sposób jest wysoce zalecany dla osób, które dopiero zaczynają budować strony z Gatsby (i ogólnie z React'em).
 
-#### ✋ Zbuduj nową stronę uzywając Modółów CSS
+#### ✋ Zbuduj nową stronę używając Modułów CSS
 
 W tej sekcji będziesz tworzyć komponent nowej strony oraz style , you'll create a new page component and style that page component using a CSS Module.
 
