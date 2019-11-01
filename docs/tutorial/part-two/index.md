@@ -146,7 +146,7 @@ Gatsby działa od razu z modułami CSS. Ten sposób jest wysoce zalecany dla os�
 
 #### ✋ Zbuduj nową stronę używając Modułów CSS
 
-W tej sekcji będziesz tworzyć komponent nowej strony oraz style , you'll create a new page component and style that page component using a CSS Module.
+W tej sekcji będziesz tworzyć komponent nowej strony oraz ostylujesz ten komponent używając Modułu CSS.
 
 Po pierwsze, utwórz nowy komponent 'Container'.
 
@@ -172,7 +172,7 @@ Zobaczysz, że zaimportowałeś plik modułu css o nazwie `container.module.css`
 }
 ```
 
-Zauważ, że nazwa pliku kończy się na `.module.css` zamiast zwykłego `.css`. W ten sposób informujesz Gatsby, że ten plik CSS powinien być przetwarzany jako moduł CSS, zamiast zwykłego CSS.
+Zauważ, że nazwa pliku kończy się na `.module.css` zamiast zwykłego `.css`. W ten sposób informujesz Gatsby, że ten plik CSS powinien być przetwarzany jako Moduł CSS, zamiast zwykłego CSS.
 
 3. Stwórz komponent nowej strony poprzez utworzenie pliku w:
    `src/pages/about-css-modules.js`:
@@ -192,7 +192,7 @@ export default () => (
 
 Teraz, gdy odwiedzisz `http://localhost:8000/about-css-modules/`, Twoja strona powinna wyglądać mniej więcej tak:
 
-![Strona ze stylami modułów CSS](css-modules-basic.png)
+![Strona ze stylami Modułów CSS](css-modules-basic.png)
 
 #### ✋ Ostyluj komponent używając Modułów CSS
 
