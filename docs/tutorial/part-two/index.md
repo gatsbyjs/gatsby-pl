@@ -135,19 +135,19 @@ Do tej pory rozmawialiśmy o bardziej tradycyjnym podejściu do używania standa
 
 ### Moduły CSS
 
-Let's explore **CSS Modules**. Quoting from
-[the CSS Module homepage](https://github.com/css-modules/css-modules):
+Zajmijmy się **Modułami CSS**. Cytując
+[stronę główną modółów CSS](https://github.com/css-modules/css-modules):
 
-> A **CSS Module** is a CSS file in which all class names and animation names
-> are scoped locally by default.
+> **Moduł CSS** jest plikiem CSS, w którym wszystkie nazwy klas i nazwy animacji 
+>  posiadają domyślny zasięg lokalny.
 
-CSS Modules are very popular because they let you write CSS normally but with a lot more safety. The tool automatically generates unique class and animation names, so you don't have to worry about selector name collisions.
+Moduły CSS są bardzo popularne, ponieważ pozwalają normalnie pisać CSS, ale z większym bezpieczeństwem. Narzędzie automatycznie generuje unikalne nazwy klas i animacji, więc nie musisz się martwić o kolizje nazw selektorów.
 
-Gatsby works out of the box with CSS Modules. This approach is highly recommended for those new to building with Gatsby (and React in general).
+Gatsby działa od razu z modułami CSS. Ten sposób jest wysoce zalecany dla osób, które dopiero zaczynają budować z Gatsby (i ogólnie z React).
 
-#### ✋ Build a new page using CSS Modules
+#### ✋ Zbuduj nową stronę uzywając Modółów CSS
 
-In this section, you'll create a new page component and style that page component using a CSS Module.
+W tej sekcji będziesz tworzyć komponent nowej strony oraz style , you'll create a new page component and style that page component using a CSS Module.
 
 First, create a new `Container` component.
 
