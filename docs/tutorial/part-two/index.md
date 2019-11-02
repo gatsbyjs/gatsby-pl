@@ -16,7 +16,7 @@ disableTableOfContents: true
 
 Witaj w drugiej części tutorialu Gatsby
 
-## Czego naucysz się w tym tutorialu?
+## Czego nauczysz się w tym poradniku?
 
 W tej części zapoznasz się z możliwościami stylizacji stron internetowych Gatsby i przyjrzysz się bliżej zastosowaniu komponentów React'a w celu tworzenia witryn.
 
