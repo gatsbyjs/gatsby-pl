@@ -314,7 +314,7 @@ Jest wiele różnych bibliotek CSS-in-JS i wiele z nich posiada już wtyczki do 
 
 #### Zalecane lektury na temat CSS-in-JS
 
-Jeśli jesteś zainteresowany dalszą lekturą, sprawdź [Christopher "vjeux" Chedeau's 2014 presentation that sparked this movement](https://speakerdeck.com/vjeux/react-css-in-js), a także [jeden z nowszych wpisów Mark'a Dalgleish'a "A Unified Styling Language"](https://medium.com/seek-blog/a-unified-styling-language-d0c208de2660).
+Jeśli jesteś zainteresowany dalszą lekturą, sprawdź [prezentację Christophera "vjeux" Chedeau'sa z roku 2014, która zapoczątkowała ten ruch](https://speakerdeck.com/vjeux/react-css-in-js), a także [jeden z nowszych wpisów Marka Dalgleish'a - "A Unified Styling Language"](https://medium.com/seek-blog/a-unified-styling-language-d0c208de2660).
 
 ### Inne opcje CSS
 
