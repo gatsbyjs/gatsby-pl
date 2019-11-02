@@ -38,7 +38,7 @@ _Note: Minimalna wersja Node wspierana przez Gatsby to wersja 8, ale możesz te�
 
 1.  Otwórz Terminal.
 2.  Uruchom komendę `brew update` aby upewnić się, że masz najnowszą wersję Homebrew.
-3.  Uruchom komendę `rew install node`, aby zainstalować jednocześnie Node i npm.
+3.  Uruchom komendę `brew install node`, aby zainstalować jednocześnie Node i npm.
 
 Po wykonaniu wszystkich kroków upewnij się, że wszystko zostało poprawnie zainstalowane:
 
