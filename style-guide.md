@@ -85,13 +85,17 @@ Użyj tej sekcji, jako spisu tłumaczeń dla często używanych, technicznych po
 
 | Słowo / pojęcie  | Tłumaczenie |
 | ------ | ----------- |
-| Plugin | Wtyczka     |
-| Theme  | Motyw       |
-| Query  | Zapytanie   |
-| String | Łańcuch znaków   |
-| Tutorial | Samouczek lub Poradnik   |
-| Gatsby Docs | Dokumentacja Gatsby (pisane z wielkiej litery)   |
-| Run command | Uruchom komendę   |
-| Development server | Serwer deweloperski   |
 | Development environment | Środowisko programistyczne   |
+| Development server | Serwer deweloperski   |
+| Gatsby Docs | Dokumentacja Gatsby (pisane z wielkiej litery)   |
+| Plugin | Wtyczka     |
+| Query  | Zapytanie   |
+| Run command | Uruchom komendę   |
+| String | Łańcuch znaków   |
 | Stylesheet | Arkusz styli   |
+| Theme  | Motyw       |
+| Tutorial | Samouczek lub Poradnik   |
+
+
+
+
