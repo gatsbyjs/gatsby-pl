@@ -92,3 +92,5 @@ Użyj tej sekcji, jako spisu tłumaczeń dla często używanych, technicznych po
 | Tutorial | Samouczek lub Poradnik   |
 | Gatsby Docs | Dokumentacja Gatsby (pisane z wielkiej litery)   |
 | Run command | Uruchom komendę   |
+| Development server | Serwer deweloperski   |
+| Development environment | Środowisko programistyczne   |
