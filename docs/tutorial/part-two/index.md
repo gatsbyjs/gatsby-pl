@@ -128,7 +128,7 @@ Jeśli spojrzysz teraz na swój projekt w przeglądarce, powinieneś zobaczyć w
 
 > Porada: Ta część poradnika skupia się na najszybszym i najprostszym sposobie na rozpoczęcie stylowania strony Gatsby - bezpośrednim zaimportowaniu standardowych plików CSS przy użyciu `gatsby-browser.js`. Jednak w większości przypadków, najlepszą metodą na zastosowanie Stylów Globalnych jest użycie współdzielonego komponentu odpowiadającego za układ strony. [Sprawdź Dokumentację](/docs/global-css/) aby dowiedzieć się więcej na ten temat.
 
-## Użycie CSS o zasęgu kompnentu.
+## Użycie CSS o zasięgu komponentu
 
 Do tej pory rozmawialiśmy o bardziej tradycyjnym podejściu do używania standardowych arkuszy stylów css. Teraz porozmawiamy o różnych metodach rozbicia CSS na niezależne moduły w celu zastosowania stylowania w sposób zorientowany na pracę z komponentami.
 
