@@ -24,7 +24,7 @@ W tej części zapoznasz się z możliwościami stylowania stron internetowych G
 
 Każda strona posiada jakieś style globalne. Zaliczają się do tego rzeczy takie jak typografia i kolory tła. Style te odpowiadają za ogólny odbiór i odczucie strony internetowej - zupełnie jak kolor i faktura ścian w pokoju definiuje panującą w nim atmosferę.
 
-### Tworzenie stylów globalnych przy użyciu standarwodych plików CSS
+### Tworzenie Stylów Globalnych przy użyciu standardowych plików CSS
 
 Jednym z najbardziej podstawowych sposobów aby dodać style do strony jest użycie globalnego arkusza styli `.css`.
 
