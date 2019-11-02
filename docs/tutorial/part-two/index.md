@@ -14,7 +14,7 @@ disableTableOfContents: true
 
 -->
 
-Witaj w drugiej części tutorialu Gatsby
+Witaj w drugiej części poradnika Gatsby
 
 ## Czego nauczysz się w tym poradniku?
 
