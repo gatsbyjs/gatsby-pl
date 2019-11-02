@@ -174,7 +174,7 @@ Zauważ, że zaimportowałeś plik Modułu CSS o nazwie `container.module.css`. 
 
 Zauważ, że nazwa pliku kończy się na `.module.css` zamiast zwykłego `.css`. W ten sposób informujesz Gatsby, że ten plik CSS powinien być przetwarzany jako Moduł CSS, zamiast zwykłego CSS.
 
-3. Stwórz komponent nowej strony poprzez utworzenie pliku w:
+3. Stwórz Komponent nowej strony poprzez utworzenie pliku w:
    `src/pages/about-css-modules.js`:
 
 ```javascript:title=src/pages/about-css-modules.js
