@@ -86,7 +86,9 @@ Użyj tej sekcji, jako spisu tłumaczeń dla często używanych, technicznych po
 | Term   | Translation |
 | ------ | ----------- |
 | Plugin | Wtyczka     |
-| Theme  | Motyw       |
-| Query  | Zapytanie   |
 | String | Łańcuch znaków   |
+| Theme  | Motyw       |
 | Tutorial | Poradnik   |
+| Query  | Zapytanie   |
+
+
