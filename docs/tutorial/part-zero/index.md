@@ -34,7 +34,7 @@ Jak zainstalować lub zweryfikować Homebrew na Twoim komputerze:
 
 Node.js to środowisko, które może uruchamiać kod JavaScript poza przeglądarką internetową. Gatsby jest napisane w Node.js. Aby rozpocząć pracę z Gatsby, musisz mieć najnowszą wersję zainstalowaną na komputerze.
 
-_Note: Minimalna wersja Node wspierana przez Gatsby to wersja 8, ale możesz teź użyć nowszej wersji._
+_Uwaga: Minimalna wersja Node wspierana przez Gatsby to wersja 8, ale możesz teź użyć nowszej wersji._
 
 1.  Otwórz Terminal.
 2.  Uruchom komendę `brew update` aby upewnić się, że masz najnowszą wersję Homebrew.
