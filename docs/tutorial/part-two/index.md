@@ -140,7 +140,7 @@ Zajmijmy się **Modułami CSS**. Cytując
 > **Moduł CSS** jest plikiem CSS, w którym wszystkie nazwy klas i nazwy animacji 
 >  posiadają domyślny zasięg lokalny.
 
-Moduły CSS są bardzo popularne, ponieważ pozwalają normalnie pisać CSS, ale z większym bezpieczeństwem. Narzędzie automatycznie generuje unikalne nazwy klas i animacji, więc nie musisz się martwić o kolizje nazw selektorów.
+Moduły CSS są bardzo popularne, ponieważ pozwalają pisać zwykły, lecz bardziej bezpieczny kod  CSS. Narzędzie automatycznie generuje unikalne nazwy klas i animacji, więc nie musisz się martwić o kolizje nazw Selektorów.
 
 Gatsby działa od razu z modułami CSS. Ten sposób jest wysoce zalecany dla osób, które dopiero zaczynają budować strony z Gatsby (i ogólnie z React'em).
 
