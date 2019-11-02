@@ -150,7 +150,7 @@ W tej sekcji będziesz tworzyć komponent nowej strony oraz ostylujesz ten kompo
 
 Po pierwsze, utwórz nowy komponent 'Container'.
 
-1. Utwórz nowy katalog w `src/components`, a następnie w tym nowym katalogu utwórz plik o nazwie `container.js` i wklej następujące elementy:
+1. Utwórz nowy katalog w `src/components`, a następnie w tym nowym katalogu utwórz plik o nazwie `container.js` i wklej następujący kod:
 
 ```javascript:title=src/components/container.js
 import React from "react"
