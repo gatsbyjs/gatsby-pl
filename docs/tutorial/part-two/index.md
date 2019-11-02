@@ -248,7 +248,7 @@ import Container from "../components/container"
 console.log(styles)
 ```
 
-Kod `console.log(styles)` wyświetli wykonany import, a więc zobaczysz wynik pochodzący z twojego przetworzonego pliku `./about-css-modules.module.css`. Jeśli otworzysz konsolę deweloperską (np. nażędzi deweloperskich Firefox'a lub Chrome) w swojej przeglącarce, oto co zobaczysz:
+Kod `console.log(styles)` wyświetli wykonany import, a więc zobaczysz wynik pochodzący z twojego przetworzonego pliku `./about-css-modules.module.css`. Jeśli otworzysz Konsolę Deweloperską (korzystając np. z narzędzi deweloperskich Firefox'a lub Chrome) w swojej przeglądarce, oto co zobaczysz:
 
 ![Rezultat zaimportowania Modułu CSS w konsoli](css-modules-console.png)
 
