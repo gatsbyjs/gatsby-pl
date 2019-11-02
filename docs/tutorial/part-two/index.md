@@ -72,7 +72,7 @@ Powinieneś mieć teraz tak wyglądającą strukturę:
 │       └── global.css
 ```
 
-2. Zdefiniuj jakiś styl w pliku `global.css`:
+2. Zdefiniuj dowolny styl w pliku `global.css`:
 
 ```css:title=src/styles/global.css
 html {
