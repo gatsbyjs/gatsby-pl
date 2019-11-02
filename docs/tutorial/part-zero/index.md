@@ -58,9 +58,9 @@ Git to darmowy i open-source'owy system kontroli wersji. Przeznaczony jest on do
 
 Procesy pobierania i instalacji Git zależą od Twojego systemu operacyjnego. Postępuj zgodnie z instrukcjami dla swojego systemu:
 
-- [Zainstalul Git na macOS](https://www.atlassian.com/git/tutorials/install-git#mac-os-x)
-- [Zainstalul Git na Windows](https://www.atlassian.com/git/tutorials/install-git#windows)
-- [Zainstalul Git na Linux](https://www.atlassian.com/git/tutorials/install-git#linux)
+- [Zainstaluj Git na macOS](https://www.atlassian.com/git/tutorials/install-git#mac-os-x)
+- [Zainstaluj Git na Windows](https://www.atlassian.com/git/tutorials/install-git#windows)
+- [Zainstaluj Git na Linux](https://www.atlassian.com/git/tutorials/install-git#linux)
 
 ## Interfejs Gatsby CLI
 
@@ -140,7 +140,7 @@ Możesz użyć Prettier bezpośrednio w edytorze, używając [wtyczki Prettier V
 
 1.  Otwórz zakładkę rozszerzeń w VS Code (View => Extensions).
 2.  Wyszukaj "Prettier - Code formatter".
-3.  Kliknij "Install". (Po instalacji pojawi się monit o ponowne uruchomienie VS Code, aby włączyć rozszerzenie. Nowsze wersje VS Code automatycznie włączą rozszerzenie po pobraniu.)
+3.  Kliknij "Install". (Po instalacji pojawi się komunikat z prośbą o ponowne uruchomienie VS Code, aby włączyć rozszerzenie. Nowsze wersje VS Code automatycznie włączą rozszerzenie po pobraniu.)
 
 > 💡 Jeśli nie używasz VS Code, sprawdź dokumentacje Prettier opisującą [proces instalacji](https://prettier.io/docs/en/install.html) lub [integrację z innymi edytorami](https://prettier.io/docs/en/editors.html).
 
