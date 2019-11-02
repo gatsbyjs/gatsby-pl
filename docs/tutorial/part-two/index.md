@@ -105,7 +105,7 @@ Twoja struktura plików powinna w tym momencie wyglądać tak:
 
 > 💡 Za co odpowiada `gatsby-browser.js`? Nie przejmuj się tym teraz, wiedz tylko, że `gatsby-browser.js` jest jednym z wielu specjalnych plików które Gatsby automatycznie wyszukuje i używa (o ile istnieją). W tym wypadku nazwa pliku **ma znaczenie**. Jeśli chcesz dowiedzieć się więcej na ten temat już teraz, sprawdź [Dokumentację](/docs/browser-apis/).
 
-2. Zaimportuj swoje właśnie utworzone stylesheet'y do pliku `gatsby-browser.js`:
+2. Zaimportuj swoje właśnie utworzone arkusze styli do pliku `gatsby-browser.js`:
 
 ```javascript:title=gatsby-browser.js
 import "./src/styles/global.css"
