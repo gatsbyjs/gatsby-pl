@@ -39,7 +39,7 @@ gatsby new tutorial-part-two https://github.com/gatsbyjs/gatsby-starter-hello-wo
 cd tutorial-part-two
 ```
 
-Utworzyłeś teraz nową stonę Gatsby (na podstawie gotowego projektu startowego "hello world") o następującej strukturze:
+Utworzyłeś teraz nową stronę Gatsby (na podstawie gotowego Projektu Startowego "hello world") o następującej strukturze:
 
 ```text
 ├── package.json
