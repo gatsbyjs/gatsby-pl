@@ -330,4 +330,4 @@ i więcej!
 
 ## Czego nauczysz się następnie?
 
-Przejdź teraz do [części trzeciej samouczka](/tutorial/part-three/), gdzie dowiesz się więcej na temat wtyczek Gatsby i komponentów Układu Stron.
+Przejdź teraz do [części trzeciej poradnika](/tutorial/part-three/), gdzie dowiesz się więcej na temat wtyczek Gatsby i komponentów Układu Stron.
