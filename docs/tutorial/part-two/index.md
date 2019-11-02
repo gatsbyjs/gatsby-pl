@@ -26,7 +26,7 @@ Każda strona posiada jakieś style globalne. Zaliczają się do tego rzeczy tak
 
 ### Tworzenie Stylów Globalnych przy użyciu standardowych plików CSS
 
-Jednym z najbardziej podstawowych sposobów aby dodać style do strony jest użycie globalnego arkusza styli `.css`.
+Jednym z najbardziej podstawowych sposobów aby dodać style do strony jest użycie globalnego arkusza stylów `.css`.
 
 #### ✋ Utwórz nową stronę Gatsby
 
