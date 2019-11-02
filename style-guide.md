@@ -89,3 +89,6 @@ Użyj tej sekcji, jako spisu tłumaczeń dla często używanych, technicznych po
 | Theme  | Motyw       |
 | Query  | Zapytanie   |
 | String | Łańcuch znaków   |
+| Tutorial | Samouczek lub Poradnik   |
+| Gatsby Docs | Dokumentacja Gatsby (pisane z wielkiej litery)   |
+| Run command | Uruchom komendę   |
