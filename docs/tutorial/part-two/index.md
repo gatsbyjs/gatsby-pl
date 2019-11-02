@@ -82,7 +82,7 @@ html {
 
 > Uwaga: Umiejscowienie przykładowego pliku css w folderze `/src/styles/` jest opcjonalne.
 
-#### ✋ Dodaj arkusz styli do pliku `gatsby-browser.js`
+#### ✋ Dodaj arkusz stylów do pliku `gatsby-browser.js`
 
 1. Utwórz plik `gatsby-browser.js`
 
