@@ -135,7 +135,7 @@ Do tej pory rozmawialiśmy o bardziej tradycyjnym podejściu do używania standa
 ### Moduły CSS
 
 Zajmijmy się **Modułami CSS**. Cytując
-[stronę główną modółów CSS](https://github.com/css-modules/css-modules):
+[stronę główną Modułów CSS](https://github.com/css-modules/css-modules):
 
 > **Moduł CSS** jest plikiem CSS, w którym wszystkie nazwy klas i nazwy animacji 
 >  posiadają domyślny zasięg lokalny.
