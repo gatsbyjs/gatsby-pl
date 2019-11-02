@@ -28,7 +28,7 @@ Jak zainstalować lub zweryfikować Homebrew na Twoim komputerze:
 1.  Otwórz Terminal.
 2.  Na Macu, zainstaluj Xcode Command Line Tools uruchamiając komendę `xcode-select --install`.
 3.  Jeśli ten sposób zawiedzie, zaloguj się za pomocą konta programisty Apple a następnie pobierz narzędzie [bezpośrednio ze strony Apple](https://developer.apple.com/download/more/).
-4.  Po wyświetleniu monitu o rozpoczęcie instalacji, ponownie pojawi się monit o zaakceptowanie licencji na oprogramowanie do pobrania narzędzi.
+4.  Po wyświetleniu okna zezwolenia na rozpoczęcie instalacji, pojawi się ponownie okno z prośbą o zaakceptowanie licencji pobieranych narzędzi.
 
 ## ⌚ Zainstaluj Node.js oraz npm
 
