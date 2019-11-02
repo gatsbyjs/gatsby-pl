@@ -142,7 +142,7 @@ Zajmijmy się **Modułami CSS**. Cytując
 
 Moduły CSS są bardzo popularne, ponieważ pozwalają pisać zwykły, lecz bardziej bezpieczny kod  CSS. Narzędzie automatycznie generuje unikalne nazwy klas i animacji, więc nie musisz się martwić o kolizje nazw Selektorów.
 
-Gatsby działa od razu z modułami CSS. Ten sposób jest wysoce zalecany dla osób, które dopiero zaczynają budować strony z Gatsby (i ogólnie z React'em).
+Gatsby ma wbudowane wsparcie dla Modułów CSS. Ten sposób jest wysoce zalecany dla osób, które dopiero zaczynają budować strony z Gatsby (i ogólnie z React'em).
 
 #### ✋ Zbuduj nową stronę używając Modułów CSS
 
