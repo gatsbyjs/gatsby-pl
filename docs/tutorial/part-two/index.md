@@ -148,7 +148,7 @@ Gatsby ma wbudowane wsparcie dla Modułów CSS. Ten sposób jest wysoce zalecany
 
 W tej sekcji będziesz tworzyć komponent nowej strony oraz ostylujesz ten komponent używając Modułu CSS.
 
-Po pierwsze, utwórz nowy komponent 'Container'.
+Po pierwsze, utwórz nowy Komponent `Container`.
 
 1. Utwórz nowy katalog w `src/components`, a następnie w tym nowym katalogu utwórz plik o nazwie `container.js` i wklej następujący kod:
 
