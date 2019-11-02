@@ -59,7 +59,7 @@ cd styles
 touch global.css
 ```
 
-> Uwaga: Możesz użyc dowolnego edytora kodu, aby utworzyc poniższą strukturę plików i folderów, wedle własnych preferencji.
+> Uwaga: Możesz użyć dowolnego edytora kodu, aby utworzyć poniższą strukturę plików i folderów, wedle własnych preferencji.
 
 Powinieneś mieć teraz tak wyglądającą strukturę:
 
