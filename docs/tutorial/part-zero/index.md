@@ -179,7 +179,7 @@ Dla świetnego wprowadzenia do korzystania z terminala, sprawdź  [**samouczek C
 
 ### Naucz się więcej na temat npm
 
-npm to manager paczek dla Javascript. Paczka to kod w formie modułu, którego możesz użyć w swoim projekcie. Jeśli pobrałeś i zainstalowałeś Node.js, npm zostało również zainstalowane na Twoim komputerze!
+npm to manager paczek dla Javascript. Paczka to kod w formie modułu, którego możesz użyć w swoim projekcie. Jeśli pobrałeś i zainstalowałeś Node.js, npm również został zainstalowany na Twoim komputerze!
 
 npm składa się z trzech odrębnych części: strona npm, rejestr npm, oraz interfejs wiersza polceń npm.
 
