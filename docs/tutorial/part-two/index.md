@@ -306,7 +306,7 @@ Skończona strona powinna wyglądać w taki sposób:
 
 ### CSS-in-JS
 
-CSS-in-JS jest metodą stylowania zorientowaną na komponenty. Najogólniej mówiąc, jest to schemat w którym [CSS jest wkomponowany w linii używając JavaScript](https://reactjs.org/docs/faq-styling.html#what-is-css-in-js).
+CSS-in-JS jest metodą stylowania zorientowaną na komponenty. Najogólniej mówiąc, jest to schemat w którym [CSS jest napisany bezpośrednio w pliku JavaScript](https://reactjs.org/docs/faq-styling.html#what-is-css-in-js).
 
 #### Używanie CSS-in-JS z Gatsby
 
