@@ -89,3 +89,4 @@ Użyj tej sekcji, jako spisu tłumaczeń dla często używanych, technicznych po
 | Theme  | Motyw       |
 | Query  | Zapytanie   |
 | String | Łańcuch znaków   |
+| Tutorial | Poradnik   |
