@@ -14,7 +14,7 @@ Poświęć chwilę, aby zlokalizować i otworzyć interfejs wiersza poleceń (CL
 
 ## Zainstaluj Homebrew dla Node.js
 
-Do instalacji Gatsby oraz Node.js poleca się użycie [Homebrew](https://brew.sh/). Trochę konfiguracji na początku może uchronić Cię przed niektórymi bolączkami w późniejszych krokach!
+Do instalacji Gatsby oraz Node.js zaleca się użycie [Homebrew](https://brew.sh/). Trochę konfiguracji na początku może uchronić Cię przed niektórymi bolączkami w późniejszych krokach!
 
 Jak zainstalować lub zweryfikować Homebrew na Twoim komputerze:
 
