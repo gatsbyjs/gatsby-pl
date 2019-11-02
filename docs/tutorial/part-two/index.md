@@ -122,7 +122,7 @@ import "./src/styles/global.css"
 gatsby develop
 ```
 
-Jeli spojrzysz teraz na swój projekt w przeglądarce, powinieneś zobaczyć w starterze "hello world" zastosowane lawendowe tło:
+Jeśli spojrzysz teraz na swój projekt w przeglądarce, powinieneś zobaczyć w Starterze "hello world" zastosowane lawendowe tło:
 
 ![Lavender Hello World!](global-css.png)
 
