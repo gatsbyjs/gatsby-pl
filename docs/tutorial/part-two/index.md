@@ -196,7 +196,7 @@ Teraz, gdy odwiedzisz `http://localhost:8000/about-css-modules/`, Twoja strona p
 
 #### ✋ Ostyluj komponent używając Modułów CSS
 
-W tej sekcji utworzysz listę osób o imionach, awatarach i krótkich biografiach łacińskich. Utworzysz także komponent `<User />', i nadasz mu styl za pomocą Modułu CSS.
+W tej sekcji utworzysz listę osób o imionach, awatarach i krótkich biografiach łacińskich. Utworzysz także Komponent `<User />' i nadasz mu Styl za pomocą Modułu CSS.
 
 1. Utwórz plik dla CSS w `src/pages/about-css-modules.module.css`.
 
