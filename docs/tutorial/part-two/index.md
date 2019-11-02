@@ -298,7 +298,7 @@ export default () => (
 )
 ```
 
-> Wskazówka: Generalnie, jeśli użyjesz komponentu w kilku różnych miejscach na stronie, powinien on znajdować się we własnym pliku-module w folderze 'components'. Ale gdy jest użyty tylko w jednym pliku, napisz go bezpośrednio w kodzie.
+> Wskazówka: Wskazówka: Generalnie, jeśli zamierzasz używać komponentu w kilku różnych miejscach na stronie, powinien znajdować się on we własnym Module CSS w folderze `components`. Ale jeśli jest użyty tylko w jednym pliku, umieść go bezpośrednio w kodzie.
 
 Skończona strona powinna wyglądać w taki sposób:
 
