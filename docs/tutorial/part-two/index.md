@@ -114,7 +114,7 @@ import "./src/styles/global.css"
 // require('./src/styles/global.css')
 ```
 
-> Uwaga: Zarówno syntax CommonJS (`require`) jak Moduł ES (`import`), zadziałają w tym wypadku. Jeśli nie jesteś pewien który z nich wybrać, my w większości wypadków używamy 'import'.
+> Uwaga: Zarówno składnia CommonJS (`require`), jak i ES Module (`import`), zadziała w tym wypadku. Jeśli nie jesteś pewien którą z nich wybrać, my w większości wypadków używamy 'import'.
 
 3. Uruchom Serwer Deweloperski (development server):
 
