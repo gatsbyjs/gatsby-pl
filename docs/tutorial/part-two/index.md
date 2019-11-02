@@ -200,7 +200,7 @@ W tej sekcji utworzysz listę osób o imionach, awatarach i krótkich biografiac
 
 1. Utwórz plik dla CSS w `src/pages/about-css-modules.module.css`.
 
-2. Wklej poniższy kod do nowo utworzonego pliku pliku:
+2. Wklej poniższy kod do nowo utworzonego pliku:
 
 ```css:title=src/pages/about-css-modules.module.css
 .user {
