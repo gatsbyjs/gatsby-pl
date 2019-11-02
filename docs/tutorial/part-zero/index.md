@@ -45,7 +45,7 @@ Po wykonaniu wszystkich kroków upewnij się, że wszystko zostało poprawnie za
 ### Sprawdź czy Node.js jest zainstalowane poprawnie
 
 1.  Otwórz Terminal.
-2.  Uruchom komendę `node --version`. (Jeśli dopiero zaczynasz korzystać z terminala, “uruchom `komendę`” oznacza “wpisz `node -version` w wierszu polecenia i naciśnij klawisz Enter”. Od tego momentu właśnie to rozumiemy jako "Uruchom `komendę`”)
+2.  Uruchom komendę `node --version`. (Jeśli dopiero zaczynasz korzystać z terminala, “uruchom `komendę`” oznacza “wpisz `node --version` w wierszu polecenia i naciśnij klawisz Enter”. Od tego momentu właśnie to rozumiemy jako "Uruchom `komendę`”)
 3.  Uruchom komendę `npm --version`.
 
 Po uruchomieniu kaźdego z tych poleceń powinieneś zobaczyć numer wersji. Twoje wersje mogą się różnić od pokazanych poniżej! Jeśli w terminalu nie widzisz numeru wersji, wróć i upewnij się, że poprawnie zainstalowałeś Node.js.
