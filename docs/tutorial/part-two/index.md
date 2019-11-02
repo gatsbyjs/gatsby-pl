@@ -163,7 +163,7 @@ export default ({ children }) => (
 
 Zobaczysz, że zaimportowałeś plik modułu css o nazwie `container.module.css`. Utwórzmy teraz ten plik.
 
-2. W tym samym katalogu (`src/components`), utórz plik `container.module.css` i kopiuj/wklej następujący kod:
+2. W tym samym katalogu (`src/components`), utwórz plik `container.module.css` i kopiuj/wklej następujący kod:
 
 ```css:title=src/components/container.module.css
 .container {
