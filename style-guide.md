@@ -90,5 +90,3 @@ Użyj tej sekcji, jako spisu tłumaczeń dla często używanych, technicznych po
 | Theme  | Motyw       |
 | Tutorial | Poradnik   |
 | Query  | Zapytanie   |
-
-
