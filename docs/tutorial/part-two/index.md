@@ -256,7 +256,7 @@ Jeśli porównasz to ze swoim plikiem CSS, zauważysz, że każda z klas jest te
 
 4. Stwórz komponent `User`.
 
-Stwórz nowy komponent `<User />` w lini w komponencie strony `about-css-modules.js`. 
+Stwórz nowy komponent `<User />` bezpośrednio w kodzie komponentu strony `about-css-modules.js`. 
 Zmodyfikuj `about-css-modules.js` tak, by wyglądał w poniższy sposób:
 
 ```jsx:title=src/pages/about-css-modules.js
