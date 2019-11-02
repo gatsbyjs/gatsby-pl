@@ -22,7 +22,7 @@ W tej części zapoznasz się z możliwościami stylizacji stron internetowych G
 
 ## Zastosowanie stylów globalnych
 
-Każda strona posiada jakiś rodzaj globalnego stylu. Zaliczają się do tego rzeczy takie jak typografia i kolory tła. Style te odpowiadają za ogólny odbiór i odczucie strony internetowej - zupełnie jak kolor i faktura ścian w pokoju definiuje panującą w nim atmosferę.
+Każda strona posiada jakieś style globalne. Zaliczają się do tego rzeczy takie jak typografia i kolory tła. Style te odpowiadają za ogólny odbiór i odczucie strony internetowej - zupełnie jak kolor i faktura ścian w pokoju definiuje panującą w nim atmosferę.
 
 ### Tworzenie stylów globalnych przy użyciu standarwodych plików CSS
 
