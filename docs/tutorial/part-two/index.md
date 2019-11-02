@@ -116,7 +116,7 @@ import "./src/styles/global.css"
 
 > Uwaga: Zarówno syntax CommonJS (`require`) jak Moduł ES (`import`), zadziałają w tym wypadku. Jeśli nie jesteś pewien który z nich wybrać, my w większości wypadków używamy 'import'.
 
-3. Uruchom serwer deweloperski (development server):
+3. Uruchom Serwer Deweloperski (development server):
 
 ```shell
 gatsby develop
