@@ -18,7 +18,7 @@ Witaj w drugiej części poradnika Gatsby
 
 ## Czego nauczysz się w tym poradniku?
 
-W tej części zapoznasz się z możliwościami stylizacji stron internetowych Gatsby i przyjrzysz się bliżej zastosowaniu komponentów React'a w celu tworzenia witryn.
+W tej części zapoznasz się z możliwościami stylowania stron internetowych Gatsby i przyjrzysz się bliżej zastosowaniu komponentów React'a w celu tworzenia witryn.
 
 ## Zastosowanie stylów globalnych
 
