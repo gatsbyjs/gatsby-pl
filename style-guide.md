@@ -83,7 +83,7 @@ Dla linków, które nie mają polskiego odpowiednika (Stack Overflow, filmy na Y
 
 Użyj tej sekcji, jako spisu tłumaczeń dla często używanych, technicznych pojęć.
 
-| Term   | Translation |
+| Słowo / pojęcie  | Tłumaczenie |
 | ------ | ----------- |
 | Plugin | Wtyczka     |
 | Theme  | Motyw       |
@@ -94,3 +94,4 @@ Użyj tej sekcji, jako spisu tłumaczeń dla często używanych, technicznych po
 | Run command | Uruchom komendę   |
 | Development server | Serwer deweloperski   |
 | Development environment | Środowisko programistyczne   |
+| Stylesheet | Arkusz styli   |
