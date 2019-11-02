@@ -126,7 +126,7 @@ Jeśli spojrzysz teraz na swój projekt w przeglądarce, powinieneś zobaczyć w
 
 ![Lavender Hello World!](global-css.png)
 
-> Porada: Ta część tutorialu skupia się na najszybszym i prostoliniowym sposobie na rozpoczęcie stylowania strony Gatsby - bezpośrednim zaimportowaniu standardowych plików CSS uzywając `gatsby-browser.js`. Jednakl w większości wypadków, najelpszą metodą na zastosowanie stylów globalnych jest uzycie współdzielonego komponentu odpowiadającego za układ strony. [Sprawdź dokumentację](/docs/global-css/) aby dowiedzieć się więcej na ten temat.
+> Porada: Ta część poradnika skupia się na najszybszym i najprostszym sposobie na rozpoczęcie stylowania strony Gatsby - bezpośrednim zaimportowaniu standardowych plików CSS przy użyciu `gatsby-browser.js`. Jednak w większości przypadków, najlepszą metodą na zastosowanie Stylów Globalnych jest użycie współdzielonego komponentu odpowiadającego za układ strony. [Sprawdź Dokumentację](/docs/global-css/) aby dowiedzieć się więcej na ten temat.
 
 ## Użycie CSS o zasęgu kompnentu.
 
