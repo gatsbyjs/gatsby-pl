@@ -81,7 +81,7 @@ Aby zobaczyć dostępne komendy, uruchom w terminalu `gatsby --help`.
 Teraz możesz zacząć korzystać z Gatsby CLI i utworzyć swoją pierwszą stronę Gatsby. Przy pomocy interfejsu możesz pobrać „startery” (częściowo zbudowane strony z domyślną konfiguracją), aby szybciej zacząć tworzyć określony typ strony. Starter „Hello World”, którego będziesz tutaj używać, to starter z elementami niezbędnymi do stworzenia witryny Gatsby.
 
 1.  Otwórz terminal.
-2.  Uruchom komendę `gatsby new hello-world https://github.com/gatsbyjs/gatsby-starter-hello-world`. (_Note: Uwaga: w zależności od prędkości pobierania, czas trwania może się różnić. Dla zwięzłości, poniższy gif został wstrzymany podczas części instalacyjnej_).
+2.  Uruchom komendę `gatsby new hello-world https://github.com/gatsbyjs/gatsby-starter-hello-world`. (_Uwaga: w zależności od prędkości pobierania, czas trwania może się różnić. Dla zwięzłości, poniższy gif został wstrzymany podczas części instalacyjnej_).
 3.  Uruchom komendę `cd hello-world`.
 4.  Uruchom komendę `gatsby develop`.
 
