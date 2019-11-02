@@ -252,7 +252,7 @@ Kod `console.log(styles)` wyświetli wykonany import, a więc zobaczysz wynik po
 
 ![Rezultat zaimportowania Modułu CSS w konsoli](css-modules-console.png)
 
-Jeśli porównasz to ze swoim plikiem CSS, zauważysz, że każda z klas jest teraz kluczem w zaimportowanym obiekcie wskazującym do długiego string'a - np. 'avatar' wkazuje do `src-pages----about-css-modules-module---avatar---2lRF7`. Tak wyglądają nazwy klas wygenerowane przez Moduł CSS. Jest zagwarantowane, że nazwy te będą unikatowe na całej Twojej stronie. I ponieważ dlatego, że muszisz zaimportować je by użyć klas, nie ma nigdy wątpliwości, gdzie jaki CSS został użyty.
+Jeśli porównasz to ze swoim plikiem CSS, zauważysz, że każda z klas jest teraz kluczem w zaimportowanym obiekcie wskazującym na długi String - np. 'avatar' wskazuje na `src-pages----about-css-modules-module---avatar---2lRF7`. Tak wyglądają nazwy klas wygenerowane przez Moduł CSS. Jest zagwarantowane, że nazwy te będą unikatowe na całej Twojej stronie. I ponieważ musisz zaimportować je, by użyć klas, nie ma nigdy wątpliwości, gdzie jaki CSS został użyty.
 
 4. Stwórz komponent `User`.
 
