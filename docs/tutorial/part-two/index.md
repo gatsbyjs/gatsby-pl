@@ -236,7 +236,7 @@ W tej sekcji utworzysz listę osób o imionach, awatarach i krótkich biografiac
 }
 ```
 
-3. Zaimportuj nowy plik `src/pages/about-css-modules.module.css` do strony `about-css-modules.js`, którą wcześniej utworzyłeś, poprzez edytowanie pierwszych kilku linijek kodu w pliku, w ten sposób:
+3. Zaimportuj nowy plik `src/pages/about-css-modules.module.css` do strony `about-css-modules.js`, którą wcześniej utworzyłeś, poprzez edytowanie pierwszych kilku linijek kodu, w ten sposób:
 
 ```javascript:title=src/pages/about-css-modules.js
 import React from "react"
