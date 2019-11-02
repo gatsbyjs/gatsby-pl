@@ -310,7 +310,7 @@ CSS-in-JS jest metodą stylowania zorientowaną na komponenty. Najogólniej mów
 
 #### Używanie CSS-in-JS z Gatsby
 
-Jest wiele różnych bibliotek CSS-in-JS i wiele z nich posiada już wtyczki do Gatsby. Nie będziemy omawiać przykładu CSS-in-JS w tym początkowym samouczku, ale zachęcamy Cię do [zbadania](/docs/styling/) co ten ekosystem ma do zaoferowania. Mamy mini-samouczki dla dwóch bibliotek, a konkretnie, [Emotion](/docs/emotion/) oraz [Styled Components](/docs/styled-components/).
+Jest wiele różnych bibliotek CSS-in-JS i wiele z nich posiada już wtyczki do Gatsby. Nie będziemy omawiać przykładu CSS-in-JS w tym początkowym samouczku, ale zachęcamy Cię do [zbadania](/docs/styling/) co ten ekosystem ma do zaoferowania. Mamy mini-poradniki dla dwóch bibliotek, a konkretnie, [Emotion](/docs/emotion/) oraz [Styled Components](/docs/styled-components/).
 
 #### Zalecane lektury na temat CSS-in-JS
 
