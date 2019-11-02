@@ -80,7 +80,7 @@ html {
 }
 ```
 
-> Uwaga: Umiejscowienie przykładowego pliku css w folderze `/src/styles/` jest dowolne.
+> Uwaga: Umiejscowienie przykładowego pliku css w folderze `/src/styles/` jest opcjonalne.
 
 #### ✋ Dodaj stylesheet do pliku `gatsby-browser.js`
 
