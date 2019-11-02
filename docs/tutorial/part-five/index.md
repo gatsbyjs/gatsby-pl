@@ -6,15 +6,15 @@ disableTableOfContents: true
 
 > This tutorial is part of a series about Gatsby’s data layer. Make sure you’ve gone through [part 4](/tutorial/part-four/) before continuing here.
 
-## What's in this tutorial?
+## Czego nauczysz się w tym poradniku?
 
-In this tutorial, you'll be learning about how to pull data into your Gatsby site using GraphQL and source plugins. Before you learn about these plugins, however, you'll want to know how to use something called GraphiQL, a tool that helps you structure your queries correctly.
+W tym poradniku dowiesz się, jak pobierać dane do strony Gatsby przy użyciu GraphQL i wtyczek źródłowych. Zanim jednak dowiesz się o tych wtyczkach, najpierw musisz wiedzieć, jak korzystać z czegoś co nazywa się GraphiQL - narzędzia, które pomaga ułorzyć strukturę Twoich zapytań.
 
-## Introducing GraphiQL
+## Przedstawiamy GraphiQL
 
-GraphiQL is the GraphQL integrated development environment (IDE). It's a powerful (and all-around awesome) tool you'll use often while building Gatsby websites.
+GraphiQL jest zintegrowanym środowiskiem deweloperskim (IDE) w GraphQL. Jest to potężne (i pod wieloma względami niesamowite) narzędzie, którego będziesz często używać podczas tworzenia stron internetowych w Gatsby.
 
-You can access it when your site's development server is running—normally at
+Masz do niego dostęp, gdy Serwer Deweloperski Twojej strony działa zwyczajnie pod adresem
 <http://localhost:8000/___graphql>.
 
 <video controls="controls" autoplay="true" loop="true">
