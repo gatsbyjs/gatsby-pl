@@ -89,7 +89,7 @@ W panelu Explore, pole `id` zostało automatycznie zaznaczone. Wybierz więcej k
 
 ![filesystem-explorer-options](filesystem-explorer-options.png)
 
-Alternatywnie, możesz dodawać pola używając skrótu autouzupełnienia (<kbd>Ctrl + Space</kbd>). To pokaże wszystkie dostępne pola dla zapytań na Węzłach (nodes) `File`.
+Alternatywnie, możesz dodawać pola używając skrótu autouzupełnienia (<kbd>Ctrl + Space</kbd>). To pokaże wszystkie dostępne pola dla zapytań do `File` Node.
 
 ![filesystem-autocomplete](filesystem-autocomplete.png)
 
