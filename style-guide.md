@@ -92,7 +92,7 @@ Użyj tej sekcji, jako spisu tłumaczeń dla często używanych, technicznych po
 | Query  | Zapytanie   |
 | Run command | Uruchom komendę   |
 | String | Łańcuch znaków   |
-| Stylesheet | Arkusz styli   |
+| Stylesheet | Arkusz stylów   |
 | Theme  | Motyw       |
 | Tutorial | Samouczek lub Poradnik   |
 
