@@ -47,7 +47,7 @@ Po pierwsze, zainstaluj wtyczkę do katalogu głównego projektu:
 npm install --save gatsby-source-filesystem
 ```
 
-Then add it to your `gatsby-config.js`:
+Następnie dodaj wtyczkę do pliku `gatsby-config.js`:
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -75,42 +75,42 @@ module.exports = {
 }
 ```
 
-Save that and restart the gatsby development server. Then open up GraphiQL again.
+Zapisz plik i uruchom serwer deweloperski Gatsby. Następnie otwórz ponownie GraphiQL.
 
-In the explorer pane, you'll see `allFile` and `file` available as selections:
+W panelu Explorer, zobaczysz `allFile` oraz `file` jako dostępny wybór:
 
 ![graphiql-filesystem](graphiql-filesystem.png)
 
-Click the `allFile` dropdown. Position your cursor after `allFile` in the query area, and then type <kbd>Ctrl + Enter</kbd>. This will pre-fill a query for the `id` of each file. Press "Play" to run the query:
+Kliknij w menu `allFile`. Ustaw kursor zaraz za `allFile` w obszarze zapytania, a następnie wciśnij <kbd>Ctrl + Enter</kbd>. To sprawi autouzupełnienie zapytania o `id` każdego z plików. Wciśnij "Play" aby wykonać zapytanie:
 
 ![filesystem-query](filesystem-query.png)
 
-In the Explorer pane, the `id` field has automatically been selected. Make selections for more fields by checking the field's corresponding checkbox. Press "Play" to run the query again, with the new fields:
+W panelu Explore, pole `id` zostało automatycznie zaznaczone. Wybierz więcej kategorii pól klikając w odpowiadające im pola wyboru. Wciśnij "Play" aby wykonać zapytanie, ponownie, tym razem z nowymi polami:
 
 ![filesystem-explorer-options](filesystem-explorer-options.png)
 
-Alternatively, you can add fields by using the autocomplete shortcut (<kbd>Ctrl + Space</kbd>). This will show queryable fields on the `File` nodes.
+Alternatywnie, możesz dodawać pola używając skrótu autouzupełnienia (<kbd>Ctrl + Space</kbd>). To pokaże wszystkie dostępne pola dla zapytań na Węzłach (nodes) `File`.
 
 ![filesystem-autocomplete](filesystem-autocomplete.png)
 
-Try adding a number of fields to your query, pressing <kbd>Ctrl + Enter</kbd>
-each time to re-run the query. You'll see the updated query results:
+Spróbuj teraz dodać większą liczbę pól do twojego zapytania, wciskając po każdym razie <kbd>Ctrl + Enter</kbd>
+by wykonywać kolejne zapytania. Zobaczysz akutalizujące się wyniki zapytań:
 
 ![allfile-query](allfile-query.png)
 
-The result is an array of `File` "nodes" (node is a fancy name for an object in a
-"graph"). Each `File` node object has the fields you queried for.
+Wynikiem jest tablica "węzłów" `File` (węzeł to takie ekstrawaganckie słówko na obiekt w "graph").
+Każdy obiekt-węzeł `File` zawiera pola dla których wykonałeś zapytanie.
 
-## Build a page with a GraphQL query
+## Zbuduj stronę za pomocą zapytania GraphQL
 
-Building new pages with Gatsby often starts in GraphiQL. You first sketch out
-the data query by playing in GraphiQL then copy this to a React page component
-to start building the UI.
+Budowanie nowych stron z Gatsby często rozpoczyna się w GraphiQL. Zaczynasz najpierw
+tworzyć szkic zapytań o dane metodą prób i błędów w GraphiQL,
+a potem kopiujesz działające już zapytania do komponentu strony React by rozpocząć budowę UI.
 
-Let's try this.
+Spróbujmy tego.
 
-Create a new file at `src/pages/my-files.js` with the `allFile` GraphQL query you just
-created:
+Stwórz nowy plik w `src/pages/my-files.js` wraz z zapytaniem GraphQL `allFile`, 
+które przed chwilą tworzyłeś:
 
 ```jsx:title=src/pages/my-files.js
 import React from "react"
@@ -142,18 +142,18 @@ export const query = graphql`
 `
 ```
 
-The `console.log(data)` line is highlighted above. It's often helpful when
-creating a new component to console out the data you're getting from the GraphQL query
-so you can explore the data in your browser console while building the UI.
+Wyróżniliśmy powyżej linię `console.log(data)`. Gdy tworzymy nowy komponent,
+często pomocnym okazuje się, by wyświetlić w konsoli dane które otrzymujemy z zapytań do GraphQL,
+aby można było sprawdzać sobie te dane w konsoli przeglądarki, podczas budowania UI.
 
-If you visit the new page at `/my-files/` and open up your browser console
-you will see something like:
+Jeśli odwiedzisz nową stronę pod adresem `/my-files/` i otworzysz konsolę przeglądarki której używasz,
+zobaczysz coś co wygląda mniej więcej tak tak:
 
 ![data-in-console](data-in-console.png)
 
-The shape of the data matches the shape of the GraphQL query.
+Forma otrzymanych danych odpowiada formie zapytania GraphQL.
 
-Add some code to your component to print out the File data.
+Dodaj teraz kod do twojego komponentu by wyświetlić dane Pliku.
 
 ```jsx:title=src/pages/my-files.js
 import React from "react"
@@ -209,10 +209,10 @@ export const query = graphql`
 `
 ```
 
-And now visit [http://localhost:8000/my-files](http://localhost:8000/my-files)… 😲
+A teraz wejdź pod adres [http://localhost:8000/my-files](http://localhost:8000/my-files)… 😲
 
 ![my-files-page](my-files-page.png)
 
-## What's coming next?
+## Czego nauczysz się w nastęnej części?
 
-Now you've learned how source plugins bring data _into_ Gatsby’s data system. In the next tutorial, you'll learn how transformer plugins _transform_ the raw content brought by source plugins. The combination of source plugins and transformer plugins can handle all data sourcing and data transformation you might need when building a Gatsby site. Learn about transformer plugins in [part six of the tutorial](/tutorial/part-six/).
+Teraz wiesz już jak wtyczki Source wprowadzają dane _do wnętrza_ sytemu danych Gatsby. W kolejnym poradniku nauczymy cię jak wtyczki Transformer _transformują_ surowe dane wprowadzone przez wtyczki Source. Kombinacja wtyczek Source i Transformer potrafi kontrolować wszystkie źródła oraz transformacje danych, których możesz potrzebować budując strony Gatsby. Naucz się wtyczek Transformer w [części szóstej poradnika](/tutorial/part-six/).
