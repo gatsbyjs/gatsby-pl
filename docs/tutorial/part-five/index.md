@@ -33,7 +33,7 @@ Eksplorator GraphiQL pozwoli Ci interaktywnie budować kompletne zapytania poprz
   lessonTitle="Build a GraphQL Query using Gatsby’s GraphiQL Explorer"
 />
 
-## Wtyczki Sources
+## Wtyczki Źródeł
 
 Dane w stronach Gatsby mogą pochodzić z różnych źródeł: API, bazy danych, CMS, pliki lokalne, itp.
 
