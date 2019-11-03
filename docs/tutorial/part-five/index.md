@@ -1,10 +1,10 @@
 ---
-title: Source Plugins
+title: Wtyczki Źródeł
 typora-copy-images-to: ./
 disableTableOfContents: true
 ---
 
-> Ten poradnik jest częścią serii na temat warstwy danych w Gatsby. Upewnij się, że zapoznałeś się z [częścią czwartą](/tutorial/part-four/) znaim będziesz kontynuował.
+> Ten poradnik jest częścią serii na temat warstwy danych w Gatsby. Upewnij się, że zapoznałeś się z [częścią czwartą](/tutorial/part-four/) zanim będziesz kontynuował.
 
 ## Czego nauczysz się w tym poradniku?
 
@@ -81,7 +81,7 @@ W panelu Explorer, zobaczysz `allFile` oraz `file` jako dostępny wybór:
 
 ![graphiql-filesystem](graphiql-filesystem.png)
 
-Kliknij w menu `allFile`. Ustaw kursor zaraz za `allFile` w obszarze zapytania, a następnie wciśnij <kbd>Ctrl + Enter</kbd>. Uruchomi to autouzupełnienie zapytania o `id` każdego z plików. Wciśnij "Play" aby wykonać zapytanie:
+Kliknij w menu `allFile`. Ustaw kursor zaraz za `allFile` w obszarze zapytania, a następnie wciśnij <kbd>Ctrl + Enter</kbd>. Uruchomi to autouzupełnienie zapytania o `id` każdego z plików. Naciśnij "Play" aby wykonać zapytanie:
 
 ![filesystem-query](filesystem-query.png)
 
@@ -217,4 +217,4 @@ A teraz wejdź pod adres [http://localhost:8000/my-files](http://localhost:8000/
 
 ## Czego nauczysz się w następnej części?
 
-Teraz wiesz już jak wtyczki Źródeł wprowadzają dane _do wnętrza_ sytemu danych Gatsby. W kolejnym poradniku nauczymy cię jak wtyczki Transformacji _transformują_ surowe dane wprowadzone przez wtyczki Źródeł. Kombinacja wtyczek Źródeł i Transformacji potrafi kontrolować wszystkie źródła oraz transformacje danych, których możesz potrzebować budując strony Gatsby. Naucz się wtyczek Transformacji w [części szóstej poradnika](/tutorial/part-six/).
+Teraz wiesz już jak wtyczki Źródeł wprowadzają dane _do wnętrza_ systemu danych Gatsby. W kolejnym poradniku nauczymy cię jak wtyczki Transformacji _transformują_ surowe dane wprowadzone przez wtyczki Źródeł. Kombinacja wtyczek Źródeł i Transformacji potrafi kontrolować wszystkie źródła oraz transformacje danych, których możesz potrzebować budując strony Gatsby. Naucz się wtyczek Transformacji w [części szóstej poradnika](/tutorial/part-six/).
