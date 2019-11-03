@@ -12,15 +12,15 @@ Do tej pory, uczyłeś/aś się jak korzystać z React.js - jak potężne potraf
 
 Odkryłeś/aś również, jak działa stylowanie komponentów przy użyciu Modułów CSS.
 
-## Co Ciebie czeka w tym poradniku?
+## Co Cię czeka w tym poradniku?
 
-W ciągu kolejnych czterech części tych samouczków (włączając ten), dowiesz się, jak działa Warstwa Danych Gatsby, która jest niezwykłą właściwością jego ekosystemu. Pozwoli Ci ona z łatwością budować strony, gdzie źródłem Twoich danych może być Markdown, WordPress, „headless CMS” lub inne.
+W ciągu kolejnych czterech części tych samouczków (włączając ten), dowiesz się, jak działa Warstwa Danych Gatsby, która jest potężną właściwością jego ekosystemu. Pozwoli Ci ona z łatwością budować strony, gdzie źródłem Twoich danych może być Markdown, WordPress, „headless CMS” lub inne.
 
 **UWAGA:** Warstwa Danych Gatsby jest napędzana przez GraphQL. Dla bardziej dogłębnego poradnika odnośnie GraphQL polecamy [How to GraphQL](https://www.howtographql.com/).
 
 ## Dane w Gatsby
 
-Strona internetowa składa się z czterech części: HTML, CSS, JS oraz dane. Pierwsza połowa naszych poradników skupiona jest na pierwszych trzech z nich. Teraz nauczmy się, jak wykorzystuje się dane w Gatsby.
+Strona internetowa składa się z czterech części: HTML, CSS, JS oraz danych. Pierwsza połowa naszych poradników skupiona jest na pierwszych trzech z nich. Teraz nauczmy się, jak wykorzystuje się dane w Gatsby.
 
 **Czym są dane?**
 
@@ -43,11 +43,11 @@ Dane mogą także występować w plikach typu Markdown, CSV itp. a także w baza
 
 Absolutnie nie! Możesz skorzystać z node `createPages` API aby pobierać nieustrukturyzowane dane bezpośrednio do stron Gatsby, zamiast poprzez Warstwę Danych Gatsby. Jest to świetnym wyborem dla mniejszych stron, ponieważ GraphQL i wtyczki źródłowe zaoszczędzą Ci trochę więcej czasu, gdy potrzebujesz stworzyć bardziej zaawansowane strony.
 
-Zobacz poradnik [Using Gatsby without GraphQL](/docs/using-gatsby-without-graphql/) aby nauczyć się jak pobierać dane do Twoich stron Gatsby, używając node `createPages` API i przejrzeć przykładową stronę!
+Zobacz poradnik [Używanie Gatsby bez GraphQL](/docs/using-gatsby-without-graphql/) aby nauczyć się jak pobierać dane do Twoich stron Gatsby, używając node `createPages` API i zobaczyć przykładową stronę!
 
-### Kiedy mam używać nieustrukturyzowane danych, a kiedy GraphQL?
+### Kiedy mam używać nieustrukturyzowanych danych, a kiedy GraphQL?
 
-Jeśli tworzysz mniejszą stronę, jedną z najskuteczniejszych opcji jest pobranie nieustrukturyzowanych danych, tak jak to jest pokazane w poradniku, przy użyciu `createPages` API. Natomiast kiedy Twoja strona stanie się bardziej zaawansowana, zaczniesz budować skomplikowane strony lub gdybyś miał/miała potrzebę przekształcenia Twoich danych, podążaj tymi krokami:
+Jeśli tworzysz mniejszą stronę, jedną z najskuteczniejszych opcji jest pobranie nieustrukturyzowanych danych, tak jak jest to pokazane w poradniku, przy użyciu `createPages` API. Natomiast kiedy Twoja strona stanie się bardziej zaawansowana, zaczniesz budować skomplikowane strony lub gdybyś miał/miała potrzebę przekształcenia Twoich danych, podążaj tymi krokami:
 
 1.  Skorzystaj z [Biblioteki Wtyczek](/plugins/) i sprawdź, czy istnieją już wtyczki źródłowe/przekształcające dane, których potrzebujesz.
 2.  Jeśli nie istnieją, przeczytaj samouczek [Tworzenie Wtyczek](/docs/creating-plugins/) i zastanów się nad stworzeniem własnej!
@@ -73,13 +73,13 @@ gatsby new tutorial-part-four https://github.com/gatsbyjs/gatsby-starter-hello-w
 cd tutorial-part-four
 ```
 
-Zainstaluj kilka innych potrzebnych zależności w źródle projektu. Będziesz potrzebować motywu Typography "Kirkham" oraz wypróbujesz biblioteki CSS-in-JS, ["Emotion"](https://emotion.sh/):
+Zainstaluj kilka innych potrzebnych paczek w głównym folderze projektu. Będziesz potrzebować motywu Typography "Kirkham" oraz wypróbujesz biblioteki CSS-in-JS, ["Emotion"](https://emotion.sh/):
 
 ```shell
 npm install --save gatsby-plugin-typography typography react-typography typography-theme-kirkham gatsby-plugin-emotion @emotion/core
 ```
 
-Ustaw stronę podobnie, do tej, z którą skonczyłeś/aś w [Części Trzeciej](/tutorial/part-three). Będzie ona miała komponent layout (układ) oraz dwa inne komponenty stron:
+Zbuduj stronę podobnie, do tej, z którą skonczyłeś/aś w [Części Trzeciej](/tutorial/part-three). Będzie ona miała komponent layout (układ) oraz dwa inne komponenty stron:
 
 ```jsx:title=src/components/layout.js
 import React from "react"
@@ -163,7 +163,7 @@ export default typography
 export const rhythm = typography.rhythm
 ```
 
-`gatsby-config.js` (musi znajdować się w ścieżce źródłowej Twojego projektu, nie w katalogu src)
+`gatsby-config.js` (musi znajdować się w głównym katalogu Twojego projektu, nie w katalogu src)
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -187,9 +187,9 @@ Udało Ci się stworzyć kolejną witrynę z layoutem i dwoma stronami.
 
 Teraz możesz zacząc tworzyć zapytania o dane 😋
 
-## Twoje pierwsze query (zapytanie) GraphQL
+## Twoje pierwsze zapytanie GraphQL
 
-Kiedy tworzysz strony internetowe, prawdopodobnie zaczniesz chcieć ponownie wykorzystywać wspólne części danych — na przykład _tytuł strony_. Spójrz na stronę `/about/`. Zauważysz, że Twój tytuł (`Pandas Eating Lots`) występuję naraz w komponencie layout (nagłówek witryny), a także w `<h1 />` strony `about.js` (nagłówek strony).
+Podczas tworzenia stron internetowych, prawdopodobnie będziesz chciał/ła ponownie wykorzystywać wspólne części danych — na przykład _tytuł strony_. Spójrz na stronę `/about/`. Zauważysz, że Twój tytuł (`Pandas Eating Lots`) występuję naraz w komponencie layout (nagłówek witryny), a także w `<h1 />` strony `about.js` (nagłówek strony).
 
 Ale co jeśli chcesz zmienić tytuł witryny w przyszłości? Musiałbyś/Musiałabyś przeszukać wszystkie komponenty i edytować każdy z nich. Staje się to niewygodne i podatne na błędy, w szczególności dla większych, bardziej zaawansowanych stron. Zamiast tego, możesz przechowywać tytuł w jednym miejscu i odnosić się do niego z innych plików; zmień tytuł w jednym miejscu, a Gatsby _ściągnie_ Twój nowy tytuł do plików, które się do niego odnoszą.
 
@@ -272,7 +272,7 @@ Zapytania stron (page queries) znajdują się poza definicją komponentu — wed
 ### Użyj StaticQuery
 
 [StaticQuery (zapytanie statyczne)](/docs/static-query/) to nowe API wprowadzone w Gatsby v2 które pozwala komponentom innym niż strony (takim jak Twój komponent `layout.js`), na otrzymywanie danych poprzez zapytania GraphQL.
-Użyjmy nowo prowadzonej wersji hookowej — [`useStaticQuery`](/docs/use-static-query/).
+Użyjmy nowo wprowadzonej wersji korzystającej z hooków — [`useStaticQuery`](/docs/use-static-query/).
 
 Śmiało, dokonaj kilku zmian w swoim pliku `src/components/layout.js` aby użyć hooka `useStaticQuery` i odnieś się do `{data.site.siteMetadata.title}`, który wskazuje na Twój tytuł strony. Kiedy skończysz, Twój komponent będzie wyglądał tak:
 
@@ -335,17 +335,17 @@ export default ({ children }) => {
 
 Kolejny Sukces! 🎉
 
-![Tytuł strony i tytuł layout razem pobierają dane z siteMetadata](site-metadata-two-titles.png)
+![Tytuł strony i tytuł układu razem pobierają dane z siteMetadata](site-metadata-two-titles.png)
 
 Dlaczego użyliśmy dwóch różnych zapytań? Te przykłady były szybkim wprowadzeniem do różnych rodzajów zapytań, jak są formatowane i gdzie można z nich skorzystać. Zapamiętaj, że tylko strony mogą tworzyć zapytania stronowe (page queries).
 Komponenty, które nie są stronami (non-page components), takie jak Layout, powinny korzystać z zapytania statycznego (StaticQuery).
-[Część siódma](/tutorial/part-seven) poradnika wytłumaczy Ci te rodzaje zapytań bardziej dogłębnie.
+[Część siódma](/tutorial/part-seven) poradnika wytłumaczy Ci dokładniej, te rodzaje zapytań.
 
 Przywróćmy teraz oryginalny tytuł.
 
-Jedną z głównych zasad Gatsby jest to, że _twórcy potrzebują błyskawicznej więzi z tym, co tworzą_ ([ukłon dla Breta Victora](http://blog.ezyang.com/2012/02/transcript-of-inventing-on-principle/)). W innych słowach, kiedy zrobisz jakąkolwiek zmianę w kodzie, powinieneś/powinnaś natychmiastowo widzieć efekt tej zmiany. To Ty zmieniasz dane wejściowe, a Gatsby zajmie się ich wyświetleniem.
+Jedną z głównych zasad Gatsby jest to, że _twórcy potrzebują błyskawicznej więzi z tym, co tworzą_ ([ukłon dla Breta Victora](http://blog.ezyang.com/2012/02/transcript-of-inventing-on-principle/)). Innymi słowy, kiedy robisz jakąkolwiek zmianę w kodzie, powinieneś/powinnaś natychmiastowo widzieć efekt tej zmiany. To Ty zmieniasz dane wejściowe, a Gatsby zajmie się ich wyświetleniem.
 
-Więc praktycznie wszędzie, Twoje zmiany będą miały natychmiastowy efekt. Zedytuj plik `gatsby-config.js` ponownie, tym razem zmieniając `title` (tytuł) z powrotem na "Pandas Eating Lots". Zmiana powinna pojawić się błyskawicznie na twoich stronach.
+Praktycznie wszędzie, Twoje zmiany będą miały natychmiastowy efekt. Zedytuj plik `gatsby-config.js` ponownie, tym razem zmieniając `title` (tytuł) z powrotem na "Pandas Eating Lots". Zmiana powinna pojawić się błyskawicznie na twoich stronach.
 
 ![Oba tytuły zawierające Pandas Eating Lots](pandas-eating-lots-titles.png)
 
