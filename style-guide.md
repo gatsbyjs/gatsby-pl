@@ -87,6 +87,7 @@ Użyj tej sekcji, jako spisu tłumaczeń dla często używanych, technicznych po
 | ------ | ----------- |
 | Development environment | Środowisko programistyczne   |
 | Development server | Serwer deweloperski   |
+| Explorer | Eksplorator   |
 | Gatsby Docs | Dokumentacja Gatsby (pisane z wielkiej litery)   |
 | Plugin | Wtyczka     |
 | Query  | Zapytanie   |
