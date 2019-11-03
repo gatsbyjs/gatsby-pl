@@ -85,7 +85,7 @@ Kliknij w menu `allFile`. Ustaw kursor zaraz za `allFile` w obszarze zapytania, 
 
 ![filesystem-query](filesystem-query.png)
 
-W panelu Explore, pole `id` zostało automatycznie zaznaczone. Wybierz więcej kategorii pól klikając w odpowiadające im pola wyboru. Wciśnij "Play" aby wykonać zapytanie, ponownie, tym razem z nowymi polami:
+W panelu Explore, pole `id` zostało automatycznie zaznaczone. Wybierz więcej kategorii pól klikając w odpowiadające im pola wyboru. Naciśnij "Play" aby wykonać zapytanie, ponownie, tym razem z nowymi polami:
 
 ![filesystem-explorer-options](filesystem-explorer-options.png)
 
@@ -155,7 +155,7 @@ zobaczysz coś co wygląda mniej więcej tak:
 
 Format otrzymanych danych odpowiada formatowi zapytania GraphQL.
 
-Dodaj teraz kod do twojego komponentu by wyświetlić dane Pliku.
+Dodaj teraz kod do twojego komponentu aby wyświetlić dane Pliku.
 
 ```jsx:title=src/pages/my-files.js
 import React from "react"
@@ -215,6 +215,6 @@ A teraz wejdź pod adres [http://localhost:8000/my-files](http://localhost:8000/
 
 ![my-files-page](my-files-page.png)
 
-## Czego nauczysz się w nastęnej części?
+## Czego nauczysz się w następnej części?
 
 Teraz wiesz już jak wtyczki Źródeł wprowadzają dane _do wnętrza_ sytemu danych Gatsby. W kolejnym poradniku nauczymy cię jak wtyczki Transformacji _transformują_ surowe dane wprowadzone przez wtyczki Źródeł. Kombinacja wtyczek Źródeł i Transformacji potrafi kontrolować wszystkie źródła oraz transformacje danych, których możesz potrzebować budując strony Gatsby. Naucz się wtyczek Transformacji w [części szóstej poradnika](/tutorial/part-six/).
