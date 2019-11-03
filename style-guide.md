@@ -88,6 +88,7 @@ Użyj tej sekcji, jako spisu tłumaczeń dla często używanych, technicznych po
 | Development environment | Środowisko programistyczne   |
 | Development server | Serwer deweloperski   |
 | Gatsby Docs | Dokumentacja Gatsby (pisane z wielkiej litery)   |
+| Layout component | Komponent układu   |
 | Plugin | Wtyczka     |
 | Query  | Zapytanie   |
 | Run command | Uruchom komendę   |
