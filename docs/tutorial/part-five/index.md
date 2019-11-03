@@ -4,7 +4,7 @@ typora-copy-images-to: ./
 disableTableOfContents: true
 ---
 
-> This tutorial is part of a series about Gatsby’s data layer. Make sure you’ve gone through [part 4](/tutorial/part-four/) before continuing here.
+> Ten poradnik jest częścią serii na temat warstw danych Gatsby. Upewnij się, że zapoznałeś się z [częścią czwartą](/tutorial/part-four/) znaim będziesz kontynuował tutaj.
 
 ## Czego nauczysz się w tym poradniku?
 
