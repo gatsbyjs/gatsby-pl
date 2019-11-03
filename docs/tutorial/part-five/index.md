@@ -19,29 +19,29 @@ Masz do niego dostęp, gdy Serwer Deweloperski Twojej strony działa zwyczajnie 
 
 <video controls="controls" autoplay="true" loop="true">
   <source type="video/mp4" src="/graphiql-explore.mp4"></source>
-  <p>Your browser does not support the video element.</p>
+  <p>Twoja przeglądarka nie obsługuje tego elementu wideo.</p>
 </video>
 
 Rozejrzyj się po "typie" `Site` i sprawdź jakie pola są dostępne -- sprawdź też obiekt `siteMetadata` który którkego zapytanie wykonałeś wcześniej. Spróbuj otworzyć GraphiQL i pobawić się trochę ze swoimi danymi! Wciślnij <kbd>Ctrl + Spacja</kbd> (lub <kbd>Shift + Spacja</kbd> jako alternatywny skrót), żeby wyświetlić okno autouzupełniania i <kbd>Ctrl + Enter</kbd>, aby wykonać zapytanie GraphQL. Będziesz używał GraphQL znacznie więcej w dalszej części poradnika.
 
 ## Używanie Eksploratora GraphiQL
 
-The GraphiQL Explorer enables you to interactively construct full queries by clicking through available fields and inputs without the repetitive process of typing these queries out by hand.
+Eksplorator GraphiQL pozwoli Tobie interaktywnie budować kompletne zapytania poprzez kliknięcia w dostępne pola oraz wejścia/inputy, oszczędzając Ci żmudnego procesu wpisywania tych zapytań ręcznie na klawiaturze.
 
 <EggheadEmbed
   lessonLink="https://egghead.io/lessons/gatsby-build-a-graphql-query-using-gatsby-s-graphiql-explorer"
   lessonTitle="Build a GraphQL Query using Gatsby’s GraphiQL Explorer"
 />
 
-## Source plugins
+## Wtyczki Sources
 
-Data in Gatsby sites can come from anywhere: APIs, databases, CMSs, local files, etc.
+Dane w stronach Gatsby mogą pochodzić zewsząd: API, baz danych, CMS, plików lokalnych, itp.
 
-Source plugins fetch data from their source. E.g. the filesystem source plugin knows how to fetch data from the file system. The WordPress plugin knows how to fetch data from the WordPress API.
+Wtyczki Sources pobierają dane ze swoejgo źródła. Np. wtyczka `filesystem source` wie jak pobierać dane z systemu plików. Wtyczka WordPress wie jak pobierać dane z WordPress API.
 
-Add [`gatsby-source-filesystem`](/packages/gatsby-source-filesystem/) and explore how it works.
+Dodaj wtyczkę [`gatsby-source-filesystem`](/packages/gatsby-source-filesystem/) i sprawdź jak ona działa.
 
-First, install the plugin at the root of the project:
+Po pierwsze, zainstaluj wtyczkę do katalogu głównego projektu:
 
 ```shell
 npm install --save gatsby-source-filesystem
