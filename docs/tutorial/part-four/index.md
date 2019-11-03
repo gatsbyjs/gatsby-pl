@@ -14,7 +14,7 @@ Odkryłeś/aś również, jak działa stylowanie komponentów przy użyciu Modu�
 
 ## Co Ciebie czeka w tym poradniku?
 
-W ciągu kolejnych czterech części tych samouczków (włączając ten), dowiesz się, jak działa Warstwa Danych Gatsby, która jest niezwykłą właściwością ekosystemu Gatsby'ego. Pozwoli Ci ona z łatwością budować strony, gdzie źródłem Twoich danych może być Markdown, WordPress, „headless CMS” lub inne.
+W ciągu kolejnych czterech części tych samouczków (włączając ten), dowiesz się, jak działa Warstwa Danych Gatsby, która jest niezwykłą właściwością jego ekosystemu. Pozwoli Ci ona z łatwością budować strony, gdzie źródłem Twoich danych może być Markdown, WordPress, „headless CMS” lub inne.
 
 **UWAGA:** Warstwa Danych Gatsby jest napędzana przez GraphQL. Dla bardziej dogłębnego poradnika odnośnie GraphQL polecamy [How to GraphQL](https://www.howtographql.com/).
 
@@ -26,12 +26,12 @@ Strona internetowa składa się z czterech części: HTML, CSS, JS oraz dane. Pi
 
 Najbardziej "uczelnianą" odpowiedzią byłoby: dane, to rzeczy takie jak: `"łańcuchy znaków"`, liczby całkowite (`42`), obiekty (`{ pizza: true }`) itp.
 
-Natomiast, podczas pracowania w Gatsbym, bardziej celnym wyjaśnieniem byłoby "wszystko, co istnieje poza komponentem Reacta".
+Podczas pracy w Gatsby, trafniejszym określeniem jest "wszystko, co istnieje poza komponentem Reacta".
 
 Dotychczas, pisałeś/aś tekst i dodawałeś/aś obrazki _bezpośrednio_ w komponentach.
 Jest to _świetnym_ rozwiązaniem na zbudowanie wielu stron internetowych. Ale, często chciałbyś/chciałabyś przechowywać dane _na zewnątrz_ komponentów i dodawać je _do_ do komponentu, kiedy to potrzebne.
 
-Jeśli tworzysz stronę w WordPressie (tak, aby inni kontrybutorzy mieli przyjemny w użyciu interfejs do dodawania i utrzymywania kontentu) i Gatsby, _dane_ potrzebne Twojej witrynie (strony i posty) znajdują się w WordPressie, skąd Ty możesz _ściągnąć_ te dane, kiedy tylko będziesz je potrzebował/potrzebowała, wprost do Twoich komponentów.
+Jeśli tworzysz stronę w WordPressie (tak, aby inni kontrybutorzy mieli przyjemny w użyciu interfejs do dodawania i zarządzania zawartością) i Gatsby, _dane_ potrzebne Twojej witrynie (strony i posty) znajdują się w WordPressie, skąd Ty możesz, w razie potrzeby, _pobrać_ te dane, wprost do Twoich komponentów.
 
 Dane mogą także występować w plikach typu Markdown, CSV itp. a także w bazach danych oraz wszelakich API.
 
@@ -43,20 +43,20 @@ Dane mogą także występować w plikach typu Markdown, CSV itp. a także w baza
 
 Absolutnie nie! Możesz skorzystać z node `createPages` API aby pobierać nieustrukturyzowane dane bezpośrednio do stron Gatsby, zamiast poprzez Warstwę Danych Gatsby. Jest to świetnym wyborem dla mniejszych stron, ponieważ GraphQL i wtyczki źródłowe zaoszczędzą Ci trochę więcej czasu, gdy potrzebujesz stworzyć bardziej zaawansowane strony.
 
-Zobacz poradnik [Using Gatsby without GraphQL](/docs/using-gatsby-without-graphql/) aby nauczyć się jak ściągać dane do Twoich stron Gatsby, używając node `createPages` API i przejrzeć przykładową stronę!
+Zobacz poradnik [Using Gatsby without GraphQL](/docs/using-gatsby-without-graphql/) aby nauczyć się jak pobierać dane do Twoich stron Gatsby, używając node `createPages` API i przejrzeć przykładową stronę!
 
 ### Kiedy mam używać nieustrukturyzowane danych, a kiedy GraphQL?
 
-Jeśli tworzysz mniejszą stronę, jedną z najskuteczniejszych opcji jest ściągnięcie nieustrukturyzowanych danych, tak jak to jest pokazane w poradniku, przy użyciu `createPages` API. Natomiast kiedy Twoja strona stanie się bardziej zaawansowana, zaczniesz budować skomplikowane strony lub gdybyś miał/miała potrzebę przekształcenia Twoich danych, podążaj tymi krokami:
+Jeśli tworzysz mniejszą stronę, jedną z najskuteczniejszych opcji jest pobranie nieustrukturyzowanych danych, tak jak to jest pokazane w poradniku, przy użyciu `createPages` API. Natomiast kiedy Twoja strona stanie się bardziej zaawansowana, zaczniesz budować skomplikowane strony lub gdybyś miał/miała potrzebę przekształcenia Twoich danych, podążaj tymi krokami:
 
 1.  Skorzystaj z [Biblioteki Wtyczek](/plugins/) i sprawdź, czy istnieją już wtyczki źródłowe/przekształcające dane, których potrzebujesz.
 2.  Jeśli nie istnieją, przeczytaj samouczek [Tworzenie Wtyczek](/docs/creating-plugins/) i zastanów się nad stworzeniem własnej!
 
-### Jak Warstwa Danych Gatsby korzysta z GraphQL, aby ściągać dane do komponentów
+### Jak Warstwa Danych Gatsby korzysta z GraphQL, aby pobierać dane do komponentów
 
 Istnieje wiele opcji na ładowanie danych do komponentów React. Jedną z najbardziej popularnych i potężnych technologii jest [GraphQL](http://graphql.org/).
 
-GraphQL został wynaleziony przez Facebook, aby pomóc inżynierom produktów _pobierać_ tylko te dane, o które zapytają, wprost do komponentów.
+GraphQL został wynaleziony przez Facebook, aby pomóc inżynierom produktów _pobierać_ tylko te dane, których potrzebują, wprost do komponentów.
 
 GraphQL to język zapytań (część _QL_ od angielskiego **q**uery **l**anguage). Jeśli masz doświadczenie z SQL, to GraphQL działa na bardzo podobnej zasadzie. Używasz specjalnej składni, aby opisać dane, które potrzebujesz w swoim komponencie, a one zostają dostarczane do Ciebie.
 
@@ -179,7 +179,7 @@ module.exports = {
 }
 ```
 
-Dodaj powyższe pliki i uruchom komendę `gatsby develop` tak jak zawsze. Następnie, powinieneś/powinnaś ujrzeć:
+Dodaj powyższe pliki i uruchom komendę `gatsby develop`, tak jak wcześniej. Następnie, powinieneś/powinnaś ujrzeć:
 
 ![start](start.png)
 
@@ -191,7 +191,7 @@ Teraz możesz zacząc tworzyć zapytania o dane 😋
 
 Kiedy tworzysz strony internetowe, prawdopodobnie zaczniesz chcieć ponownie wykorzystywać wspólne części danych — na przykład _tytuł strony_. Spójrz na stronę `/about/`. Zauważysz, że Twój tytuł (`Pandas Eating Lots`) występuję naraz w komponencie layout (nagłówek witryny), a także w `<h1 />` strony `about.js` (nagłówek strony).
 
-Ale co jeśli chcesz zmienić tytuł witryny w przyszłości? Musiałbyś/Musiałabyś przeszukać wszystkie komponenty i zedytować każdy z nich. Staje się to niewygodne i podatne na błędy, w szczególności dla większych, bardziej zaawansowanych stron. Zamiast tego, możesz przechowywać tytuł w jednym miejscu i odnosić się do niego z innych plików; zmień tytuł w jednym miejscu, a Gatsby _ściągnie_ Twój nowy tytuł do plików, które się do niego odnoszą.
+Ale co jeśli chcesz zmienić tytuł witryny w przyszłości? Musiałbyś/Musiałabyś przeszukać wszystkie komponenty i edytować każdy z nich. Staje się to niewygodne i podatne na błędy, w szczególności dla większych, bardziej zaawansowanych stron. Zamiast tego, możesz przechowywać tytuł w jednym miejscu i odnosić się do niego z innych plików; zmień tytuł w jednym miejscu, a Gatsby _ściągnie_ Twój nowy tytuł do plików, które się do niego odnoszą.
 
 Miejsce na tego typu wspólne dane to obiekt `siteMetadata` w pliku `gatsby-config.js`. Dodaj swój nowy tytuł do pliku `gatsby-config.js`:
 
@@ -218,7 +218,7 @@ Uruchom ponownie serwer deweloperski.
 
 ### Zapytaj o nowy tytuł
 
-Od teraz, Twój nowy tytuł strony jest możliwy do ściągnięcia; Dodaj zapytanie do pliku `about.js` korzystając z [page query](/docs/page-query):
+Od teraz, Twój tytuł strony jest możliwy do ściągnięcia; Dodaj zapytanie do pliku `about.js` korzystając z [page query](/docs/page-query):
 
 ```jsx:title=src/pages/about.js
 import React from "react"
@@ -265,9 +265,9 @@ Podstawowe zapytanie GraphQL, które otrzymuje `title` (tytuł) w Twoim pliku `a
 }
 ```
 
-> 💡 W [części piątej](/tutorial/part-five/#introducing-graphiql), Napotkasz się na narzędzie, które pozwoli Ci interaktywnie przeszukiwać dane dostępne poprzez GraphQL i pomoże Ci formułować zapytania, takie jak te wyżej.
+> 💡 W [części piątej](/tutorial/part-five/#introducing-graphiql), poznasz narzędzie, które pozwoli Ci interaktywnie przeszukiwać dane dostępne poprzez GraphQL i pomoże Ci formułować zapytania, takie jak te wyżej.
 
-Zapytania stron (page queries) znajdują się poza definicją komponentu — przyjęliśmy konwencję, aby umieszczać je na końcu pliku danego komponentu — możliwe do użycia, są tylko dla komponentów stron.
+Zapytania stron (page queries) znajdują się poza definicją komponentu — według konwencji umieszczane na końcu pliku komponentu — i możliwe są do użycia tylko dla komponentów stron.
 
 ### Użyj StaticQuery
 
@@ -351,4 +351,4 @@ Więc praktycznie wszędzie, Twoje zmiany będą miały natychmiastowy efekt. Ze
 
 ## Co czeka Cię w kolejnym poradniku?
 
-Następnie, w [części piątej](/tutorial/part-five/) samouczka, dowiesz się jak ściągać dane do Twoich stron Gatsby używając GraphQL ze wtyczkami źródłowymi.
+Następnie, w [części piątej](/tutorial/part-five/) samouczka, dowiesz się jak pobierać dane do Twoich stron Gatsby używając GraphQL z wtyczkami źródłowymi.
