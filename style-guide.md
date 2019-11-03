@@ -83,9 +83,19 @@ Dla linków, które nie mają polskiego odpowiednika (Stack Overflow, filmy na Y
 
 Użyj tej sekcji, jako spisu tłumaczeń dla często używanych, technicznych pojęć.
 
-| Term   | Translation |
+| Słowo / pojęcie  | Tłumaczenie |
 | ------ | ----------- |
+| Development environment | Środowisko programistyczne   |
+| Development server | Serwer deweloperski   |
+| Gatsby Docs | Dokumentacja Gatsby (pisane z wielkiej litery)   |
 | Plugin | Wtyczka     |
-| Theme  | Motyw       |
 | Query  | Zapytanie   |
+| Run command | Uruchom komendę   |
 | String | Łańcuch znaków   |
+| Stylesheet | Arkusz styli   |
+| Theme  | Motyw       |
+| Tutorial | Samouczek lub Poradnik   |
+
+
+
+
