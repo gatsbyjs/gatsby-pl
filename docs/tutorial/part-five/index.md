@@ -22,9 +22,9 @@ Masz do niego dostęp, gdy Serwer Deweloperski Twojej strony działa zwyczajnie 
   <p>Your browser does not support the video element.</p>
 </video>
 
-Poke around the built-in `Site` "type" and see what fields are available on it -- including the `siteMetadata` object you queried earlier. Try opening GraphiQL and play with your data! Press <kbd>Ctrl + Space</kbd> (or use <kbd>Shift + Space</kbd> as an alternate keyboard shortcut) to bring up the autocomplete window and <kbd>Ctrl + Enter</kbd> to run the GraphQL query. You'll be using GraphiQL a lot more through the remainder of the tutorial.
+Rozejrzyj się po "typie" `Site` i sprawdź jakie pola są dostępne -- sprawdź też obiekt `siteMetadata` który którkego zapytanie wykonałeś wcześniej. Spróbuj otworzyć GraphiQL i pobawić się trochę ze swoimi danymi! Wciślnij <kbd>Ctrl + Spacja</kbd> (lub <kbd>Shift + Spacja</kbd> jako alternatywny skrót), żeby wyświetlić okno autouzupełniania i <kbd>Ctrl + Enter</kbd>, aby wykonać zapytanie GraphQL. Będziesz używał GraphQL znacznie więcej w dalszej części poradnika.
 
-## Using the GraphiQL Explorer
+## Używanie Eksploratora GraphiQL
 
 The GraphiQL Explorer enables you to interactively construct full queries by clicking through available fields and inputs without the repetitive process of typing these queries out by hand.
 
