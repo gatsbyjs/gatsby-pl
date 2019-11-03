@@ -91,6 +91,7 @@ Użyj tej sekcji, jako spisu tłumaczeń dla często używanych, technicznych po
 | Gatsby Docs | Dokumentacja Gatsby (pisane z wielkiej litery)   |
 | Plugin | Wtyczka     |
 | Query  | Zapytanie   |
+| Root | Katalog główny   |
 | Run command | Uruchom komendę   |
 | String | Łańcuch znaków   |
 | Stylesheet | Arkusz stylów   |
