@@ -37,7 +37,7 @@ Eksplorator GraphiQL pozwoli Ci interaktywnie budować kompletne zapytania poprz
 
 Dane w stronach Gatsby mogą pochodzić z różnych źródeł: API, bazy danych, CMS, pliki lokalne, itp.
 
-Wtyczki Sources pobierają dane ze swoejgo źródła. Np. wtyczka `filesystem source` wie jak pobierać dane z systemu plików. Wtyczka WordPress wie jak pobierać dane z WordPress API.
+Wtyczki Źródeł pobierają dane ze swojego źródła. Np. wtyczka `filesystem source` wie jak pobierać dane z systemu plików. Wtyczka WordPress wie jak pobierać dane z WordPress API.
 
 Dodaj wtyczkę [`gatsby-source-filesystem`](/packages/gatsby-source-filesystem/) i sprawdź jak działa.
 
@@ -103,11 +103,13 @@ Każdy obiekt-węzeł `File` zawiera pola dla których wykonałeś zapytanie.
 
 ## Zbuduj stronę używając zapytań GraphQL
 
-Budowanie nowych stron z Gatsby często rozpoczyna się w GraphiQL. Zaczynasz najpierw
+Budowanie nowych stron z Gatsby często rozpoczyna się w GraphiQL. Zaczynasz od utworzenia
+szkicu zapytań w GraphiQL (metodą prób i błędów),
+a potem kopiujesz działające już zapytania do komponentu strony React by rozpocząć budowę UI.
 tworzyć szkic zapytań o dane metodą prób i błędów w GraphiQL,
 a potem kopiujesz działające już zapytania do komponentu strony React by rozpocząć budowę UI.
 
-Spróbujmy tego.
+Spróbujmy tak zrobić.
 
 Stwórz nowy plik w `src/pages/my-files.js` wraz z zapytaniem GraphQL `allFile`, 
 które przed chwilą tworzyłeś:
@@ -215,4 +217,4 @@ A teraz wejdź pod adres [http://localhost:8000/my-files](http://localhost:8000/
 
 ## Czego nauczysz się w nastęnej części?
 
-Teraz wiesz już jak wtyczki Source wprowadzają dane _do wnętrza_ sytemu danych Gatsby. W kolejnym poradniku nauczymy cię jak wtyczki Transformer _transformują_ surowe dane wprowadzone przez wtyczki Source. Kombinacja wtyczek Source i Transformer potrafi kontrolować wszystkie źródła oraz transformacje danych, których możesz potrzebować budując strony Gatsby. Naucz się wtyczek Transformer w [części szóstej poradnika](/tutorial/part-six/).
+Teraz wiesz już jak wtyczki Źródeł wprowadzają dane _do wnętrza_ sytemu danych Gatsby. W kolejnym poradniku nauczymy cię jak wtyczki Transformacji _transformują_ surowe dane wprowadzone przez wtyczki Źródeł. Kombinacja wtyczek Źródeł i Transformacji potrafi kontrolować wszystkie źródła oraz transformacje danych, których możesz potrzebować budując strony Gatsby. Naucz się wtyczek Transformacji w [części szóstej poradnika](/tutorial/part-six/).
