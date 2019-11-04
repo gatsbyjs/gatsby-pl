@@ -14,7 +14,7 @@ Wtyczki Gatsby to paczki JavaScript, które pomagają dodać różne funkcjonaln
 
 Komponenty układu budują sekcje witryny, które chcesz udostępnić na wielu stronach. Na przykład, witryny zwykle zawierają komponent układu z takim samym nagłówkiem i stopką. Inne typowe elementy układów to pasek boczny i / lub nawigacja. Na przykład na tej stronie nagłówek u góry jest częścią komponentu układu gatsbyjs.org.
 
-Sprawdźmy teraz część trzecią poradnika.
+Zacznijmy teraz część trzecią poradnika.
 
 ## Używanie wtyczek
 
