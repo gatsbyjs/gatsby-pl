@@ -135,7 +135,7 @@ export default () => (
 
 ![z-układem](with-layout2.png)
 
-Nieźle. Właśnie zainstalowałeś i skonfigurowałeś swoją pierwszą wtyczkę Gatsby!
+Nieźle. Właśnie zainstalowałeś/aś i skonfigurowałeś/aś swoją pierwszą wtyczkę Gatsby!
 
 ## Tworzenie komponetów układu
 
