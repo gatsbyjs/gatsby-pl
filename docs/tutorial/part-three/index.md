@@ -70,7 +70,7 @@ Plik `gatsby-config.js` to kolejny specjalny plik, który Gatsby automatycznie r
 
 > Jeśli chcesz dowiedzieć się więcej, sprawdź [Dokumentację Gatsby na temat gatsby-config.js](/docs/gatsby-config/).
 
-3. Typography.js potrzebuje pliku konfiguracyjnego. Utwórz nowy katalog o nazwie `utils` w katalogu` src`. Następnie dodaj nowy plik o nazwie `typography.js` do` utils` i skopiuj do niego poniższy kod:
+3. Typography.js potrzebuje pliku konfiguracyjnego. Utwórz nowy katalog o nazwie `utils` w katalogu` src`. Następnie dodaj nowy plik o nazwie `typography.js` do `utils` i skopiuj do niego poniższy kod:
 
 ```javascript:title=src/utils/typography.js
 import Typography from "typography"
