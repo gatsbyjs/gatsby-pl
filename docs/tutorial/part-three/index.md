@@ -274,7 +274,7 @@ export default ({ children }) => (
 
 Mamy to! Trzystronicowa witryna z podstawową globalną nawigacją.
 
-_Wyzwania:_ Dzięki nowym możliwościom „komponentu układu” spróbuj dodać nagłówki, stopki, globalną nawigację, paski boczne itp. na swoich stronach Gatsby!
+_Wyzwanie:_ Dzięki nowym możliwościom „komponentu układu” spróbuj dodać nagłówki, stopki, globalną nawigację, paski boczne itp. na swoich stronach Gatsby!
 
 ## Co dalej?
 
