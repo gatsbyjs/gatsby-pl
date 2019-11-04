@@ -22,7 +22,7 @@ Prawdopodobnie znasz już idee wtyczek. Wiele systemów obsługuje dodawanie nie
 
 Członkowie społeczności (tacy jak Ty!) Mogą dodawać wtyczki (niewielkie ilości kodu JavaScript), z których inni mogą korzystać podczas tworzenia witryn Gatsby.
 
-> Istnieją już setki wtyczek! Poznaj [Bibliotekę wtyczek](/plugins/) Gatsby.
+> Istnieją już setki wtyczek! Poznaj [Bibliotekę Wtyczek](/plugins/) Gatsby.
 
 Naszym celem przy tworzeniu wtyczek jest, aby były łatwe do zainstalowania i używania. Prawdopodobnie będziesz używać wtyczek w prawie każdej budowanej witrynie Gatsby. Podczas dalszej części samouczka będziesz mieć wiele okazji do przećwiczenia instalacji i używania wtyczek.
 
