@@ -137,7 +137,7 @@ export default () => (
 
 Nieźle. Właśnie zainstalowałeś/aś i skonfigurowałeś/aś swoją pierwszą wtyczkę Gatsby!
 
-## Tworzenie komponetów układu
+## Tworzenie komponentów układu
 
 Teraz przejdźmy do nauki o komponentach układu. Aby przygotować się do tej części, dodaj do projektu kilka nowych stron: stronę o mnie i stronę kontaktową.
 
