@@ -157,7 +157,7 @@ import React from "react"
 
 export default () => (
   <div>
-    <h1>Chętnie porozmawiam! Napisz me emaila na poniższy adres</h1>
+    <h1>Chętnie porozmawiam! Napisz do mnie emaila na poniższy adres</h1>
     <p>
       <a href="mailto:me@example.com">me@example.com</a>
     </p>
