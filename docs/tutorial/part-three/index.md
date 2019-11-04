@@ -32,7 +32,7 @@ Jako wstęp do korzystania z wtyczek zainstalujemy i wdrożymy wtyczkę Gatsby d
 
 ### ✋ Utwórz nową stronę Gatsby
 
-Jak już wspomnieliśmy w [części drugiej](/tutorial/part-two/), w tym momencie prawdopodobnie dobrym pomysłem będzie zamknięcie okien terminali i plików z poprzednich części samouczka, aby utrzymać porządek na pulpicie. Następnie otwórz nowe okno terminala i uruchom następujące polecenia, aby utworzyć nową witrynę Gatsby w katalogu o nazwie „tutorial-part-three”, a następnie przejdź do nowego katalogu:
+Jak już wspomnieliśmy w [części drugiej](/tutorial/part-two/), w tym momencie prawdopodobnie dobrym pomysłem będzie zamknięcie okien terminali i plików z poprzednich części samouczka, aby utrzymać porządek na pulpicie. Następnie otwórz nowe okno terminala i uruchom następujące polecenia, aby utworzyć nową witrynę Gatsby w katalogu o nazwie `tutorial-part-three`, a następnie przejdź do nowego katalogu:
 
 ```shell
 gatsby new tutorial-part-three https://github.com/gatsbyjs/gatsby-starter-hello-world
