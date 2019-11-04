@@ -94,7 +94,7 @@ Po załadowaniu witryny, jeśli sprawdzisz wygenerowany kod HTML za pomocą Chro
 
 ### ✋ Wprowadź zmiany treści i stylu
 
-Skopiuj poniższy kod do pliku `src/pages/index.js`, abyś lepiej zobaczyć
+Skopiuj poniższy kod do pliku `src/pages/index.js`, aby lepiej zobaczyć
 efekt wygenerowanego przez Typography.js kodu CSS.
 
 ```jsx:title=src/pages/index.js
