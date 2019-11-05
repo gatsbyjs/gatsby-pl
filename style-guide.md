@@ -85,15 +85,25 @@ Użyj tej sekcji, jako spisu tłumaczeń dla często używanych, technicznych po
 
 | Słowo / pojęcie  | Tłumaczenie |
 | ------ | ----------- |
+| Array | Array (odmieniany po polsku) |
 | Development environment | Środowisko programistyczne   |
 | Development server | Serwer deweloperski   |
+| Explorer | Eksplorator   |
 | Gatsby Docs | Dokumentacja Gatsby (pisane z wielkiej litery)   |
+| Global styles | Style globalne |
+| Layout components | Komponenty Układu |
+| Node | Node (odmieniane po polsku)  |
 | Plugin | Wtyczka     |
 | Query  | Zapytanie   |
+| Root | Katalog główny   |
 | Run command | Uruchom komendę   |
-| String | Łańcuch znaków   |
-| Stylesheet | Arkusz styli   |
+| Scope | Zasięg |
+| Selectors | Selektory |
+| Source plugins | Wtyczki Źródeł   |
+| String | String (odmieniany po polsku)   |
+| Stylesheet | Arkusz stylów   |
 | Theme  | Motyw       |
+| Transformer plugins | Wtyczki Transformacji   |
 | Tutorial | Samouczek lub Poradnik   |
 
 
