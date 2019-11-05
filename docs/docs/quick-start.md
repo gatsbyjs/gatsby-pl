@@ -11,7 +11,7 @@ Ten szybki start jest przeznaczony dla średnio-zaawansowanych i zaawansowanych 
   lessonTitle="Quick Start with Gatsby: Create, Develop, and Build Gatsby Sites From the Command Line"
 />
 
-**Uwaga**: Ten filmik korzysta z `npx`, które jest narzędziem uruchamiającym paczki npm bez potrzeby ich instalacji. Uruchomienie komendy `npx gatsby new` jest tym samym co `gatsby new`, jeśli zainstalujesz gatsby-cli na swoim komputerze.
+**Uwaga**: Ten filmik korzysta z `npx`, które jest narzędziem uruchamiającym paczki npm bez potrzeby ich instalacji. Uruchomienie komendy `npx gatsby new` jest tym samym co `gatsby new`, jeśli masz zainstalowane gatsby-cli na swoim komputerze.
 
 ### Zainstaluj Gatsby CLI.
 
@@ -37,9 +37,9 @@ cd gatsby-site
 gatsby develop
 ```
 
-Gatsby zacznie środowisko deweloperskie z odświeżaniem na żywo, dostępne domyślnie na `localhost:8000`.
+Gatsby uruchomi środowisko deweloperskie z natychmiastowym odświeżaniem, dostępne domyślnie na `localhost:8000`.
 
-Spróbuj dokonać edycji strony JavaScript w `src/pages`. Zapisane zmiany odświeżą się na żywo w przeglądarce.
+Spróbuj dokonać edycji stron JavaScript w `src/pages`. Zapisane zmiany odświeżą się natychmiastowo w przeglądarce.
 
 ### Zbuduj wersję produkcyjną.
 
@@ -61,6 +61,6 @@ Gatsby rozpocznie lokalny serwer HTML aby przetestować Twoją zbudowaną stron�
 
 Aby zobaczyć szczegółową dokumentację dla komend CLI, uruchom `gatsby --help` w terminalu.
 
-Dla specyficznych komend, uruchom `gatsby NAZWA_KOMENDY --help` np. `gatsby new --help`.
+Dla konkretnych komend, uruchom `gatsby NAZWA_KOMENDY --help` np. `gatsby new --help`.
 
 Po więcej informacji o Gatsby CLI, odwiedź [sekcję o CLI](/docs/gatsby-cli/) w dokumentacji.
