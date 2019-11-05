@@ -1,57 +1,57 @@
 ---
-title: Creating Nested Layout Components
+title: Tworzenie komponentów zagnieżdżonych układów
 typora-copy-images-to: ./
 disableTableOfContents: true
 ---
 
-Welcome to part three!
+Witaj w części trzeciej!
 
-## What's in this tutorial?
+## Czego nauczysz się w tym poradniku?
 
-In this part, you'll learn about Gatsby plugins and creating "layout" components.
+W tej części dowiesz się o wtyczkach Gatsby i tworzeniu komponentów „układu”.
 
-Gatsby plugins are JavaScript packages that help add functionality to a Gatsby site. Gatsby is designed to be extensible, which means plugins are able to extend and modify just about everything Gatsby does.
+Wtyczki Gatsby to paczki JavaScript, które pomagają dodać różne funkcjonalności do strony. Gatsby zaprojektowano tak aby był jak najbardziej elastyczny, co oznacza, że wtyczki mogą rozszerzać i modyfikować niemal wszystko, co robi.
 
-Layout components are for sections of your site that you want to share across multiple pages. For example, sites will commonly have a layout component with a shared header and footer. Other common things to add to layouts are a sidebar and/or navigation menu. On this page for example, the header at the top is part of gatsbyjs.org's layout component.
+Komponenty układu budują sekcje witryny, które chcesz udostępnić na wielu stronach. Na przykład, witryny zwykle zawierają komponent układu z takim samym nagłówkiem i stopką. Inne typowe elementy układów to pasek boczny i / lub nawigacja. Na przykład na tej stronie nagłówek u góry jest częścią komponentu układu gatsbyjs.org.
 
-Let's dive into part three.
+Zacznijmy teraz część trzecią poradnika.
 
-## Using plugins
+## Używanie wtyczek
 
-You’re probably familiar with the idea of plugins. Many software systems support adding custom plugins to add new functionality or even modify the core workings of the software. Gatsby plugins work the same way.
+Prawdopodobnie znasz już idee wtyczek. Wiele systemów obsługuje dodawanie niestandardowych wtyczek w celu dodania nowej funkcjonalności, a nawet zmodyfikowania podstawowych funkcji oprogramowania. Wtyczki Gatsby działają w ten sam sposób.
 
-Community members (like you!) can contribute plugins (small amounts of JavaScript code) that others can then use when building Gatsby sites.
+Członkowie społeczności (tacy jak Ty!) Mogą dodawać wtyczki (niewielkie ilości kodu JavaScript), z których inni mogą korzystać podczas tworzenia witryn Gatsby.
 
-> There are already hundreds of plugins! Explore the Gatsby [Plugin Library](/plugins/).
+> Istnieją już setki wtyczek! Poznaj [Bibliotekę Wtyczek](/plugins/) Gatsby.
 
-Our goal with plugins is to make them straightforward to install and use. You will likely be using plugins in almost every Gatsby site you build. While working through the rest of the tutorial you’ll have many opportunities to practice installing and using plugins.
+Naszym celem przy tworzeniu wtyczek jest, aby były łatwe do zainstalowania i używania. Prawdopodobnie będziesz używać wtyczek w prawie każdej budowanej witrynie Gatsby. Podczas dalszej części samouczka będziesz mieć wiele okazji do przećwiczenia instalacji i używania wtyczek.
 
-For an initial introduction to using plugins, we'll install and implement the Gatsby plugin for Typography.js.
+Jako wstęp do korzystania z wtyczek zainstalujemy i wdrożymy wtyczkę Gatsby dla Typography.js.
 
-[Typography.js](https://kyleamathews.github.io/typography.js/) is a JavaScript library which generates global base styles for your site's typography. The library has a [corresponding Gatsby plugin](/packages/gatsby-plugin-typography/) to streamline using it in a Gatsby site.
+[Typography.js](https://kyleamathews.github.io/typography.js/) to biblioteka JavaScript, która generuje globalne, bazowe style dla typografii na Twojej stronie. Posiada ona [odpowiednią wtyczkę Gatsby](/packages/gatsby-plugin-typography/), która usprawnia korzystanie z biblioteki wraz z Gatsby.
 
-### ✋ Create a new Gatsby site
+### ✋ Utwórz nową stronę Gatsby
 
-As we mentioned in [part two](/tutorial/part-two/), at this point it's probably a good idea to close the terminal window(s) and project files from previous parts of the tutorial, to keep things clean on your desktop. Then open a new terminal window and run the following commands to create a new Gatsby site in a directory called `tutorial-part-three` and then move to this new directory:
+Jak już wspomnieliśmy w [części drugiej](/tutorial/part-two/), w tym momencie prawdopodobnie dobrym pomysłem będzie zamknięcie okien terminali i plików z poprzednich części samouczka, aby utrzymać porządek na pulpicie. Następnie otwórz nowe okno terminala i uruchom następujące polecenia, aby utworzyć nową witrynę Gatsby w katalogu o nazwie `tutorial-part-three`, a następnie przejdź do nowego katalogu:
 
 ```shell
 gatsby new tutorial-part-three https://github.com/gatsbyjs/gatsby-starter-hello-world
 cd tutorial-part-three
 ```
 
-### ✋ Install and configure `gatsby-plugin-typography`
+### ✋ Zainstaluj i skonfiguruj `gatsby-plugin-typography`
 
-There are two main steps to using a plugin: Installing and configuring.
+Korzystanie z wtyczek składa się z dwóch głównych kroków: instalacji i konfiguracji.
 
-1. Install the `gatsby-plugin-typography` NPM package.
+1. Zainstaluj paczkę NPM `gatsby-plugin-typography`.
 
 ```shell
 npm install --save gatsby-plugin-typography react-typography typography typography-theme-fairy-gates
 ```
 
-> Note: Typography.js requires a few additional packages, so those are included in the instructions. Additional requirements like this will be listed in the "install" instructions of each plugin.
+> Uwaga: Typography.js wymaga kilku dodatkowych paczek, dlatego są one zawarte w instrukcji. Dodatkowe wymagania, są zwykle wymienione w instrukcjach „instalowania” danej wtyczki.
 
-2. Edit the file `gatsby-config.js` at the root of your project to the following:
+2. W głównym folderze, zmien plik `gatsby-config.js`, aby wyglądał następująco:
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -66,11 +66,11 @@ module.exports = {
 }
 ```
 
-The `gatsby-config.js` is another special file that Gatsby will automatically recognize. This is where you add plugins and other site configuration.
+Plik `gatsby-config.js` to kolejny specjalny plik, który Gatsby automatycznie rozpozna. Możesz tutaj dodać wtyczki i inne elementy konfiguracji witryny.
 
-> Check out the [doc on gatsby-config.js](/docs/gatsby-config/) to read more, if you wish.
+> Jeśli chcesz dowiedzieć się więcej, sprawdź [Dokumentację Gatsby na temat gatsby-config.js](/docs/gatsby-config/).
 
-3. Typography.js needs a configuration file. Create a new directory called `utils` in the `src` directory. Then add a new file called `typography.js` to `utils` and copy the following into the file:
+3. Typography.js potrzebuje pliku konfiguracyjnego. Utwórz nowy katalog o nazwie `utils` w katalogu` src`. Następnie dodaj nowy plik o nazwie `typography.js` do `utils` i skopiuj do niego poniższy kod:
 
 ```javascript:title=src/utils/typography.js
 import Typography from "typography"
@@ -82,41 +82,41 @@ export const { scale, rhythm, options } = typography
 export default typography
 ```
 
-4. Start the development server.
+4. Uruchom serwer deweloperski.
 
 ```shell
 gatsby develop
 ```
 
-Once you load the site, if you inspect the generated HTML using the Chrome developer tools, you’ll see that the typography plugin added a `<style>` element to the `<head>` element with its generated CSS:
+Po załadowaniu witryny, jeśli sprawdzisz wygenerowany kod HTML za pomocą Chrome dev tools, zobaczysz, że wtyczka Typography.js dodała element `<style>` do elementu `<head>` z wygenerowanym kodem CSS:
 
-![typography-styles](typography-styles.png)
+![style-typograficzne](typography-styles.png)
 
-### ✋ Make some content and style changes
+### ✋ Wprowadź zmiany treści i stylu
 
-Copy the following into your `src/pages/index.js` so you can see the
-effect of the CSS generated by Typography.js better.
+Skopiuj poniższy kod do pliku `src/pages/index.js`, aby lepiej zobaczyć
+efekt wygenerowanego przez Typography.js kodu CSS.
 
 ```jsx:title=src/pages/index.js
 import React from "react"
 
 export default () => (
   <div>
-    <h1>Hi! I'm building a fake Gatsby site as part of a tutorial!</h1>
+    <h1>Cześć! Tworzę przykładową witrynę Gatsby w ramach poradnika!</h1>
     <p>
-      What do I like to do? Lots of course but definitely enjoy building
-      websites.
+      Co lubię robić? Oczywiście wiele, ale zdecydowanie lubię budować
+       strony internetowe.
     </p>
   </div>
 )
 ```
 
-Your site should now look like this:
+Twoja witryna powinna teraz wyglądać następująco:
 
-![no-layout](no-layout.png)
+![bez-układu](no-layout.png)
 
-Let's make a quick improvement. Many sites have a single column of text centered in the middle of the page. To create this, add the following styles to the
-`<div>` in `src/pages/index.js`.
+Zróbmy szybką poprawkę. Wiele witryn ma jedną kolumnę tekstu wyśrodkowaną na środku strony. Aby utworzyć taki układ, dodaj następujące style do
+`<div>` w pliku `src/pages/index.js`.
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -124,30 +124,30 @@ import React from "react"
 export default () => (
   // highlight-next-line
   <div style={{ margin: `3rem auto`, maxWidth: 600 }}>
-    <h1>Hi! I'm building a fake Gatsby site as part of a tutorial!</h1>
+    <h1>Cześć! Tworzę przykładową witrynę Gatsby w ramach poradnika!</h1>
     <p>
-      What do I like to do? Lots of course but definitely enjoy building
-      websites.
+      Co lubię robić? Oczywiście wiele, ale zdecydowanie lubię budować
+       strony internetowe.
     </p>
   </div>
 )
 ```
 
-![with-layout2](with-layout2.png)
+![z-układem](with-layout2.png)
 
-Sweet. You've installed and configured your very first Gatsby plugin!
+Nieźle. Właśnie zainstalowałeś/aś i skonfigurowałeś/aś swoją pierwszą wtyczkę Gatsby!
 
-## Creating layout components
+## Tworzenie komponentów układu
 
-Now let's move on to learning about layout components. To get ready for this part, add a couple new pages to your project: an about page and a contact page.
+Teraz przejdźmy do nauki o komponentach układu. Aby przygotować się do tej części, dodaj do projektu kilka nowych stron: stronę o mnie i stronę kontaktową.
 
 ```jsx:title=src/pages/about.js
 import React from "react"
 
 export default () => (
   <div>
-    <h1>About me</h1>
-    <p>I’m good enough, I’m smart enough, and gosh darn it, people like me!</p>
+    <h1>O mnie</h1>
+    <p>Jestem wystarczająco dobry, jestem wystarczająco inteligentny i do cholery, ludzie mnie lubią!</p>
   </div>
 )
 ```
@@ -157,7 +157,7 @@ import React from "react"
 
 export default () => (
   <div>
-    <h1>I'd love to talk! Email me at the address below</h1>
+    <h1>Chętnie porozmawiam! Napisz do mnie emaila na poniższy adres</h1>
     <p>
       <a href="mailto:me@example.com">me@example.com</a>
     </p>
@@ -165,19 +165,19 @@ export default () => (
 )
 ```
 
-Let's see what the new about page looks like:
+Zobaczmy, jak wygląda nowa strona:
 
-![about-uncentered](about-uncentered.png)
+![o-mnie-nie-wycentrowane](about-uncentered.png)
 
-Hmm. It would be nice if the content of the two new pages were centered like the index page. And it would be nice to have some sort of global navigation so it's easy for visitors to find and visit each of the sub-pages.
+Hmm. Byłoby lepiej, gdyby treść dwóch nowych stron była wyśrodkowana tak jak strona główna. Poza tym, byłoby super mieć globalną nawigację, aby odwiedzający mogli łatwo znaleźć i odwiedzić każdą z podstron.
 
-You'll tackle these changes by creating your first layout component.
+Poradzisz sobie z tymi zmianami, tworząc pierwszy komponent układu.
 
-### ✋ Create your first layout component
+### ✋ Utwórz swój pierwszy komponent układu
 
-1. Create a new directory at `src/components`.
+1. Utwórz nowy folder `src/components`.
 
-2. Create a very basic layout component at `src/components/layout.js`:
+2. Utwórz bardzo podstawowy komponent układu `src/components/layout.js`:
 
 ```jsx:title=src/components/layout.js
 import React from "react"
@@ -189,7 +189,7 @@ export default ({ children }) => (
 )
 ```
 
-3. Import this new layout component into your `src/pages/index.js` page component:
+3. Zaimportuj nowy komponent w komponencie strony `src/pages/index.js`:
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -197,47 +197,47 @@ import Layout from "../components/layout" // highlight-line
 
 export default () => (
   <Layout> {/* highlight-line */}
-    <h1>Hi! I'm building a fake Gatsby site as part of a tutorial!</h1>
+    <h1>Cześć! Tworzę przykładową witrynę Gatsby w ramach poradnika!</h1>
     <p>
-      What do I like to do? Lots of course but definitely enjoy building
-      websites.
+      Co lubię robić? Oczywiście wiele, ale zdecydowanie lubię budować
+       strony internetowe.
     </p>
   </Layout> {/* highlight-line */}
 )
 ```
 
-![with-layout2](with-layout2.png)
+![z-układem](with-layout2.png)
 
-Sweet, the layout is working! The content of your index page is still centered.
+Nieźle, układ działa prawidłowo! Treść strony głównej jest nadal wyśrodkowana.
 
-But try navigating to `/about/`, or `/contact/`. The content on those pages still won't be centered.
+Spróbuj jednak przejśc do stron `/about/`, albo `/contact/`. Treść na tych stronach nadal nie będzie wyśrodkowana..
 
-4. Import the layout component in `about.js` and `contact.js` (as you did for `index.js` in the previous step).
+4. Zaimportuj komponent układu do `about.js` oraz `contact.js` (tak jak zrobiłeś dla `index.js` w poprzednim kroku).
 
-The content of all three of your pages is centered thanks to this single shared layout component!
+Zawartość wszystkich trzech stron jest wyśrodkowana dzięki jednemu wspólnemu komponentowi układu!
 
-### ✋ Add a site title
+### ✋ Dodaj tytuł strony
 
-1. Add the following line to your new layout component:
+1. Dodaj następujący wiersz do nowego komponentu układu:
 
 ```jsx:title=src/components/layout.js
 import React from "react"
 
 export default ({ children }) => (
   <div style={{ margin: `3rem auto`, maxWidth: 650, padding: `0 1rem` }}>
-    <h3>MySweetSite</h3> {/* highlight-line */}
+    <h3>MojaŚwietnaStrona</h3> {/* highlight-line */}
     {children}
   </div>
 )
 ```
 
-If you go to any of your three pages, you'll see the same title added, e.g. the `/about/` page:
+Jeśli przejdziesz na którąkolwiek ze swoich trzech stron, zobaczysz dodany ten sam tytuł, np. strona `/about/`:
 
-![with-title](with-title.png)
+![z-tytułem](with-title.png)
 
-### ✋ Add navigation links between pages
+### ✋ Dodaj linki nawigacyjne pomiędzy stronami
 
-1. Copy the following into your layout component file:
+1. Skopiuj następujące elementy do pliku komponentu układu:
 
 ```jsx:title=src/components/layout.js
 import React from "react"
@@ -256,12 +256,12 @@ export default ({ children }) => (
     {/* highlight-start */}
     <header style={{ marginBottom: `1.5rem` }}>
       <Link to="/" style={{ textShadow: `none`, backgroundImage: `none` }}>
-        <h3 style={{ display: `inline` }}>MySweetSite</h3>
+        <h3 style={{ display: `inline` }}>MojaŚwietnaStrona</h3>
       </Link>
       <ul style={{ listStyle: `none`, float: `right` }}>
-        <ListLink to="/">Home</ListLink>
-        <ListLink to="/about/">About</ListLink>
-        <ListLink to="/contact/">Contact</ListLink>
+        <ListLink to="/">Strona główna</ListLink>
+        <ListLink to="/about/">O mnie</ListLink>
+        <ListLink to="/contact/">Kontakt</ListLink>
       </ul>
     </header>
     {/* highlight-end */}
@@ -270,12 +270,12 @@ export default ({ children }) => (
 )
 ```
 
-![with-navigation2](with-navigation2.png)
+![z-nawigacja2](with-navigation2.png)
 
-And there you have it! A three page site with basic global navigation.
+Mamy to! Trzystronicowa witryna z podstawową globalną nawigacją.
 
-_Challenge:_ With your new "layout component" powers, trying adding headers, footers, global navigation, sidebars, etc. to your Gatsby sites!
+_Wyzwanie:_ Dzięki nowym możliwościom „komponentu układu” spróbuj dodać nagłówki, stopki, globalną nawigację, paski boczne itp. na swoich stronach Gatsby!
 
-## What's coming next?
+## Co dalej?
 
-Continue on to [part four of the tutorial](/tutorial/part-four/) where you'll start learning about Gatsby's data layer and programmatically creating pages!
+Kontynuuj do [części czwartej poradnika](/tutorial/part-four/) gdzie zaczniesz poznawać warstwę danych Gatsby i programatycznie tworzyć strony!
