@@ -8,7 +8,7 @@ disableTableOfContents: true
 
 ## Czego nauczysz się w tym poradniku?
 
-W tym poradniku dowiesz się, jak pobierać dane do strony Gatsby przy użyciu GraphQL i wtyczek źródłowych. Zanim jednak dowiesz się o tych wtyczkach, najpierw musisz wiedzieć, jak korzystać z czegoś co nazywa się GraphiQL - narzędzia, które pomaga ułożyć strukturę Twoich zapytań.
+W tym poradniku dowiesz się, jak pobierać dane do strony Gatsby przy użyciu GraphQL i Wtyczek Źródeł. Zanim jednak dowiesz się o tych wtyczkach, najpierw musisz wiedzieć, jak korzystać z czegoś co nazywa się GraphiQL - narzędzia, które pomaga ułożyć strukturę Twoich Zapytań.
 
 ## Przedstawiamy GraphiQL
 
@@ -98,14 +98,12 @@ by wykonywać kolejne zapytania. Zobaczysz aktualizujące się wyniki zapytań:
 
 ![allfile-query](allfile-query.png)
 
-Wynikiem jest tablica "węzłów" `File` (węzeł to takie ekstrawaganckie słówko na obiekt w "graph").
-Każdy obiekt-węzeł `File` zawiera pola dla których wykonałeś zapytanie.
+Wynikiem jest Array node'ów odpowiadający `Plikom` (node to takie ekstrawaganckie słówko na obiekt w "graph").
+Każdy obiekt/node `Pliku` zawiera pola dla których wykonałeś zapytanie.
 
 ## Zbuduj stronę używając zapytań GraphQL
 
-Budowanie nowych stron z Gatsby często rozpoczyna się w GraphiQL. Zaczynasz od utworzenia
-szkicu zapytań w GraphiQL (metodą prób i błędów),
-a potem kopiujesz działające już zapytania do komponentu strony React by rozpocząć budowę UI.
+Budowanie nowych stron z Gatsby często rozpoczyna się w GraphiQL. Zaczynasz
 tworzyć szkic zapytań o dane metodą prób i błędów w GraphiQL,
 a potem kopiujesz działające już zapytania do komponentu strony React by rozpocząć budowę UI.
 
