@@ -1,12 +1,12 @@
 ---
-title: Programmatically create pages from data
+title: Programatyczne tworzenie stron z danych
 typora-copy-images-to: ./
 disableTableOfContents: true
 ---
 
-> This tutorial is part of a series about Gatsby’s data layer. Make sure you’ve gone through [part 4](/tutorial/part-four/), [part 5](/tutorial/part-five/), and [part 6](/tutorial/part-six/) before continuing here.
+> Ten poradnik jest częścią serii na temat Warstwy Danych Gatsby. Upewnij się, że zapoznałeś się wcześniej z [częścią 4](/tutorial/part-four/), [częścią 5](/tutorial/part-five/), oraz [częścią 6](/tutorial/part-six/) zanim będziesz kontynuował.
 
-## What's in this tutorial?
+## Czego dowiesz się w tym poradniku?
 
 In the previous tutorial, you created a nice index page that queries markdown
 files and produces a list of blog post titles and excerpts. But you don't want to just see excerpts, you want actual pages for your
