@@ -8,38 +8,36 @@ disableTableOfContents: true
 
 ## Czego dowiesz się w tym poradniku?
 
-In the previous tutorial, you created a nice index page that queries markdown
-files and produces a list of blog post titles and excerpts. But you don't want to just see excerpts, you want actual pages for your
-markdown files.
+W poprzednim poradniku, tworzyłeś niezłą stronę index ktora wykonywała zapytania do plików 
+Markdown i wyświetalała listę tytułów i fragmentów blog postów. Jednak nie chcemy widzieć samych fragmentów, chcielibyśmy właściwych stron dla naszych plików Markdown.
 
-You could continue to create pages by placing React components in `src/pages`. However, you'll
-now learn how to _programmatically_ create pages from _data_. Gatsby is _not_
-limited to making pages from files like many static site generators. Gatsby lets
-you use GraphQL to query your _data_ and _map_ the query results to _pages_—all at build
-time. This is a really powerful idea. You'll be exploring its implications and
-ways to use it for the remainder of this part of the tutorial.
+Moglibyśmy kontynuować tworzyć strony poprzez umieszczanie kolejnych komponentów React'a w 
+folderze `src/pages`. Jednak teraz nauczymy się jak _programatycznie_ tworzyć strony z 
+_danych_. Gatsby _nie_ jest ograniczony do tworzenia stron z plików, jak wiele innych 
+generatorów stron statycznych. Gatsby pozwala Toboie używać GraphQL, by pytać o twoje _dane_ i _map'ować_ wyniki zpaytań na _strony_-wszystko podczas procesu budowania strony. Taka 
+koncepcja daje potężne możliwości. Nauczysz się zastosowań i sposobów na użycie tych możliwości w dalszej części poradnika.
 
-Let's get started.
+Zaczynajmy.
 
-## Creating slugs for pages
+## Tworzenie slug'ów dla stron
 
-Creating new pages has two steps:
+Tworzenie nowych stron ma dwa kroki:
 
-1.  Generate the "path" or "slug" for the page.
-2.  Create the page.
+1.  Generowanie "ścieżki" lub "slug'a" dla strony.
+2.  Tworzenie strony.
 
-_**Note**: Often data sources will directly provide a slug or pathname for content — when working with one of those systems (e.g. a CMS), you don't need to create the slugs yourself as you do with markdown files._
+_**Nota**: Często źródła danych dostarczą bezpośrednio slug lub nazwę ścieżki dla zawartości - kiedy pracuejsz z jednym z takich systemów (np. z CMS), nie będziesz musiał tworzyć slug'ów własnoręcznie, tak jak jest to robione z plikami markdown._
 
-To create your markdown pages, you'll learn to use two Gatsby APIs:
-[`onCreateNode`](/docs/node-apis/#onCreateNode) and
-[`createPages`](/docs/node-apis/#createPages). These are two workhorse APIs
-you'll see used in many sites and plugins.
+By tworzyć własne strony Markdown, nauczymy Cię używać dwóch API Gatsby'ego:
+[`onCreateNode`](/docs/node-apis/#onCreateNode) oraz
+[`createPages`](/docs/node-apis/#createPages). Są to dwa główne API
+które zauważysz że są używane na wielu stronach i w pluginach.
 
-We do our best to make Gatsby APIs simple to implement. To implement an API, you export a function
-with the name of the API from `gatsby-node.js`.
+Dokładamy wszelkich starań by sprawić Gatsby API łatwym do zastosowania. W celu wykorzystania
+API, eksportujesz funkcję z nazwą API z pliku `gatsby-node.js`.
 
-So, here's where you'll do that. In the root of your site, create a file named
-`gatsby-node.js`. Then add the following.
+A więc zrobimy to tutaj. W katalogu głównym Twojej strony, stwórz plik o nazwie
+`gatsby-node.js`. A potem dopisz do niego poniższy kod.
 
 ```javascript:title=gatsby-node.js
 exports.onCreateNode = ({ node }) => {
@@ -47,15 +45,15 @@ exports.onCreateNode = ({ node }) => {
 }
 ```
 
-This `onCreateNode` function will be called by Gatsby whenever a new node is created (or updated).
+Funkcja `onCreateNode` będzie wywoływana przez Gatsby za każdym razem gdy tworzony jest nowy Node (lub aktualizowany).
 
-Stop and restart the development server. As you do, you'll see quite a few newly
-created nodes get logged to the terminal console.
+Zatrzymaj i uruchom ponownie serwer deweloperski. Gdy będziesz to robił, zauważysz w konsoli 
+terminala kilka wpisów o utworzonych node'ach.
 
-Use this API to add the slugs for your markdown pages to `MarkdownRemark`
-nodes.
+Użyj tego API by dodać slug'i do swoich stron Markdown, do node'ów
+`MarkdownRemark`.
 
-Change your function so it now only logs `MarkdownRemark` nodes.
+Zmień swoją funkcję tak by teraz wyświetlała tylko wpisy node'ów `MarkdownRemark`.
 
 ```javascript:title=gatsby-node.js
 exports.onCreateNode = ({ node }) => {
