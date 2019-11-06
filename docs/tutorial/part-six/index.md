@@ -12,11 +12,11 @@ Poprzednia część pokazała Ci, jak Wtyczki Źródeł pobierają dane _do_ sys
 
 ## Wtyczki Transformacji
 
-Często, format danych którzy otrzymujesz z Wtyczek Źródeł nie jest taki, jaki potrzebujesz do stworzenia witryny. Wtyczka Źródła systemu plików pozwoli Ci na pobranie danych _o_ plikach, ale co jeśli potrzebujesz tych, znajdujących się _w środku_ plików?
+Często, format danych którzy otrzymujesz z Wtyczek Źródeł nie jest taki, jaki potrzebujesz do stworzenia witryny. Wtyczka Źródła systemu plików pozwoli Ci na pobranie danych _na temat_ plików, co jednak jeśli potrzebujesz danych, znajdujących się _w środku_ plików?
 
-Aby to było możliwe, Gatsby wspiera Wtyczki Transformacji, które odbierają surową zawartość z Wtyczek Źródeł i _transformują_ je w coś bardziej użytecznego.
+Aby to umożliwić, Gatsby wspiera Wtyczki Transformacji, które pobierają surową zawartość z Wtyczek Źródeł i _transformują_ je w coś bardziej użytecznego.
 
-Na przykład, pliki markdown. W Markdownie świetnie się pisze, ale co kiedy chcesz stworzyć stronę z jego zawartością? Potrzebujesz wtedy przekształcić markdown do HTML.
+Na przykład, pliki markdown. W markdownie pisze się świetnie, ale co jeśli chcesz stworzyć stronę przy jego pomocy? Potrzebujesz wtedy przekształcić markdown do HTML.
 
 Dodaj plik markdown to swojej strony:
 `src/pages/sweet-pandas-eating-sweets.md` (To będzie Twój pierwszy post na blogu w formacie markdown) i naucz się jak _przetransformować_ go do HTML używając Wtyczek Transformacji oraz GraphQL.
@@ -77,7 +77,7 @@ Wybierz `allMarkdownRemark` ponownie i uruchom je tak, jak zrobiłeś/aś to wcz
 
 ![markdown-query](markdown-query.png)
 
-Ok! Mamy nadzieję, że zaczyna Ci się już wszystko powoli układać. Wtyczki Źródła pobierają dane _do_ systemu danych Gatsby, a wtyczki _transformujące_ przekształcają surową zawartość pobraną poprzednio przez Wtyczki Źródła. Ten schemat obsłuży całe pobieranie i transformowanie danych, których mógłbyś/mogłabyś potrzebować do tworzenia strony przy użyciu Gatsby.
+Ok! Mamy nadzieję, że zaczyna Ci się już wszystko powoli układać w sensowną całość. Wtyczki Źródła pobierają dane _do_ systemu danych Gatsby, a wtyczki _transformujące_ przekształcają surową zawartość pobraną poprzednio przez Wtyczki Źródła. Ten schemat obsłuży całe pobieranie i transformowanie danych, których mógłbyś/mogłabyś potrzebować do tworzenia strony przy użyciu Gatsby.
 
 ## Stwórz listę plików markdown twojej witryny w `src/pages/index.js`
 
@@ -153,7 +153,7 @@ Twoja strona tytułowa powinna teraz wyglądać tak:
 
 ![strona tytułowa](frontpage.png)
 
-Ale Twój jeden post wygląda trochę samotnie. Dodajmy jescze jeden:
+Ale jeden post wygląda trochę samotnie. Dodajmy jescze jeden:
 `src/pages/pandas-and-bananas.md`
 
 ```markdown:title=src/pages/pandas-and-bananas.md
