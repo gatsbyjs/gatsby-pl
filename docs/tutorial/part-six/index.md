@@ -4,7 +4,7 @@ typora-copy-images-to: ./
 disableTableOfContents: true
 ---
 
-> Ten samouczek jest częscią serii o Warstwie Danych Gatsby. Upewnij się, że masz już za sobą [część czwartą](/tutorial/part-four/) i [część piątą](/tutorial/part-five) zanim kontynuujesz.
+> Ten samouczek jest częścią serii o Warstwie Danych Gatsby. Upewnij się, że masz już za sobą [część czwartą](/tutorial/part-four/) i [część piątą](/tutorial/part-five) zanim będziesz kontynuować.
 
 ## Co czeka Cię w tym poradniku?
 
