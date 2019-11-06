@@ -1,94 +1,96 @@
 ---
-title: Preparing a Site to Go Live
+title: Przygotowanie strony do wdrożenia
 typora-copy-images-to: ./
 disableTableOfContents: true
 ---
 
-Wow! You've come a long way! You've learned how to:
+Wow! Przebyłeś długą drogę! Dotychczas nauczyłeś się jak:
 
-- create new Gatsby sites
-- create pages and components
-- style components
-- add plugins to a site
-- source & transform data
-- use GraphQL to query data for pages
-- programmatically create pages from your data
+- tworzyć nowe strony Gatsby
+- tworzyć nowe strony i komponenty
+- stylować komponenty
+- dodawać wtyczki do strony
+- pobierać i transformować dane
+- używać GraphQL do pobierania danych na stronę
+- programatycznie tworzyć nowe strony z pobranych danych
 
-In this final section, you're going to walk through some common steps for preparing a site to go live by introducing a powerful site diagnostic tool called [Lighthouse](https://developers.google.com/web/tools/lighthouse/). Along the way, we'll introduce a few more plugins you'll often want to use in your Gatsby sites.
+W tej ostatniej sekcji przeprowadzisz kilka typowych kroków przygotowujących witrynę do uruchomienia i wdrożenia, wprowadzając potężne narzędzie diagnostyczne o nazwie [Lighthouse](https://developers.google.com/web/tools/lighthouse/). Po drodze wprowadzimy jeszcze kilka wtyczek, których często będziesz chciał użyć w swoich witrynach Gatsby.
 
-## Audit with Lighthouse
+## Audyt Lighthouse
 
-Quoting from the [Lighthouse website](https://developers.google.com/web/tools/lighthouse/):
+Cytując [stronę Lighthouse](https://developers.google.com/web/tools/lighthouse/):
 
-> Lighthouse is an open-source, automated tool for improving the quality of web pages. You can run it against any web page, public or requiring authentication. It has audits for performance, accessibility, progressive web apps (PWAs), and more.
+> Lighthouse to open-source'owe, zautomatyzowane narzędzie do poprawy jakości stron internetowych. Możesz je uruchomić na dowolnej stronie internetowej, publicznej lub wymagającej uwierzytelnienia.Posiada audyty wydajności, dostępności, progresywnych aplikacji internetowych (PWA) i nie tylko.
 
-Lighthouse is included in Chrome DevTools. Running its audit -- and then addressing the errors it finds and implementing the improvements it suggests -- is a great way to prepare your site to go live. It helps give you confidence that your site is as fast and accessible as possible.
+Lighthouse jest częścią Chrome DevTools. Przeprowadzenie audytu - a następnie usunięcie napotkanych błędów i wdrożenie sugerowanych ulepszeń - to świetny sposób na przygotowanie witryny do uruchomienia. Pomaga ci upewnić się, że Twoja strona jest tak szybka i dostępna, jak to tylko możliwe.
 
-Try it out!
+Wypróbuj Lighthouse!
 
-First, you need to create a production build of your Gatsby site. The Gatsby development server is optimized for making development fast; But the site that it generates, while closely resembling a production version of the site, isn't as optimized.
+Najpierw musisz utworzyć wersję produkcyjną swojej witryny Gatsby. Serwer programistyczny Gatsby jest zoptymalizowany pod kątem szybkiego programowania; Jednak witryna, którą generuje, choć przypomina wersję produkcyjną witryny, nie jest tak zoptymalizowana.
 
-### ✋ Create a production build
+### ✋ Zbuduj wersję produkcyjną
 
-1.  Stop the development server (if it's still running) and run the following command:
+1.  Zatrzymaj serwer programistyczny (jeśli nadal działa) i uruchom następującą komendę:
 
 ```shell
 gatsby build
 ```
 
-> 💡 As you learned in [part 1](/tutorial/part-one/), this does a production build of your site and outputs the built static files into the `public` directory.
+> 💡 Jak już się nauczyłeś w [części pierwszej](/tutorial/part-one/), ta komenda buduje wersję produkcyjną Twojej strony i tworzy statyczne pliki w folderze `public`.
 
-2.  View the production site locally. Run:
+2. Aby zobaczyć lokalnie wersję produkcyjną swojej strony, uruchom:
 
 ```shell
 gatsby serve
 ```
 
-Once this starts, you can view your site at [`localhost:9000`](http://localhost:9000).
+Po uruchomieniu, możesz wyświetlić swoją witrynę pod adresem [`localhost:9000`](http://localhost:9000).
 
-### Run a Lighthouse audit
+### Przperowadź audyt Lighthouse
 
-Now you're going to run your first Lighthouse test.
+Teraz uruchomisz swój pierwszy test Lighthouse.
 
-1.  If you haven't already done so, open the site in Chrome Incognito Mode so no extensions interfere with the test. Then, open up the Chrome DevTools.
+1.  Jeśli jeszcze tego nie zrobiłeś, otwórz stronę w trybie incognito w Chrome, aby żadne rozszerzenia nie zakłócały testu. Następnie otwórz Chrome DevTools.
 
-2.  Click on the "Audits" tab where you'll see a screen that looks like:
+2.  Kliknij zakładkę „Audits”, gdzie zobaczysz ekran wyglądający jak:
 
-![Lighthouse audit start](./lighthouse-audit.png)
+![Lighthouse audyt](./lighthouse-audit.png)
 
-3.  Click "Perform an audit..." (All available audit types should be selected by default). Then click "Run audit". (It'll then take a minute or so to run the audit). Once the audit is complete, you should see results that look like this:
+3.  Kliknij "Perform an audit..."(Wszystkie dostępne typy kontroli powinny być domyślnie wybrane). Następnie kliknij "Run audit”. (Uruchomienie audytu zajmie około minuty). Po zakończeniu audytu powinieneś zobaczyć wyniki, które wyglądają tak:
 
-![Lighthouse audit results](./lighthouse-audit-results.png)
+![Wyniki audytu Lighthouse](./lighthouse-audit-results.png)
 
 As you can see, Gatsby's performance is excellent out of the box but you're missing some things for PWA, Accessibility, Best Practices, and SEO that will improve your scores (and in the process make your site much more friendly to visitors and search engines).
 
-## Add a manifest file
+Jak widać, wydajność Gatsby jest znakomita "z automatu", ale brakuje Ci kilku rzeczy związanych z PWA, dostępnością, najlepszymi praktykami i SEO, które poprawią twoje wyniki (a przez to uczynią twoją stronę bardziej przyjazną dla odwiedzających i silinków wyszukiwania).
 
-Looks like you have a pretty lackluster score in the "Progressive Web App" category. Let's address that.
+## Dodaj plik manifestu
 
-But first, what exactly _are_ PWAs?
+Wygląda na to, że masz dość marny wynik w kategorii „Progresywna aplikacja internetowa”(PWA). Zajmijmy się tym.
 
-They are regular websites that take advantage of modern browser functionality to augment the web experience with app-like features and benefits. Check out [Google's overview](https://developers.google.com/web/progressive-web-apps/) of what defines a PWA experience.
+Ale najpierw, czym właściwie _są_ PWA?
 
-Inclusion of a web app manifest is one of the three generally accepted [baseline requirements for a PWA](https://alistapart.com/article/yes-that-web-project-should-be-a-pwa#section1).
+Są to zwykłe strony internetowe, wykorzystujące nowoczesną funkcjonalność przeglądarki, która ma zwiększyć komfort korzystania z Internetu dzięki funkcjom i zaletom podobnym do działania natywnych aplikacji. Sprawdź [dokument Google](https://developers.google.com/web/progressive-web-apps/) na temat tego, co definiuje PWA.
 
-Quoting [Google](https://developers.google.com/web/fundamentals/web-app-manifest/):
+Dołączenie manifestu aplikacji internetowej jest jednym z trzech ogólnie akceptowanych [podstawowych wymagań dla PWA](https://alistapart.com/article/yes-that-web-project-should-be-a-pwa#section1).
 
-> The web app manifest is a simple JSON file that tells the browser about your web application and how it should behave when 'installed' on the user's mobile device or desktop.
+Cytująć [Google](https://developers.google.com/web/fundamentals/web-app-manifest/):
 
-[Gatsby's manifest plugin](/packages/gatsby-plugin-manifest/) configures Gatsby to create a `manifest.webmanifest` file on every site build.
+> Manifest aplikacji internetowej to prosty plik JSON, który informuje przeglądarkę o Twojej aplikacji internetowej i tym, jak powinna się zachowywać po „zainstalowaniu” na urządzeniu mobilnym lub komputerze użytkownika.
 
-### ✋ Using `gatsby-plugin-manifest`
+[Wtyczka manifestu Gatsby](/packages/gatsby-plugin-manifest/) konfiguruje Gatsby tak aby tworzył plik `manifest.webmanifest` przy każdej budowie strony.
 
-1.  Install the plugin:
+### ✋ Używanie `gatsby-plugin-manifest`
+
+1.  Zainstaluj wtyczkę:
 
 ```shell
 npm install --save gatsby-plugin-manifest
 ```
 
-2. Add a favicon for your app under `src/images/icon.png`. For the purposes of this tutorial you can use [this example icon](https://raw.githubusercontent.com/gatsbyjs/gatsby/master/docs/tutorial/part-eight/icon.png), should you not have one available. The icon is necessary to build all images for the manifest. For more information, look at the docs for [`gatsby-plugin-manifest`](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-plugin-manifest/README.md).
+2. Dodaj favicon swojej aplikacji w `src/images/icon.png`. Jeśli nie posiadasz faviconu, na potrzeby tego poradnika, użyj [tej przykładowej ikony](https://raw.githubusercontent.com/gatsbyjs/gatsby/master/docs/tutorial/part-eight/icon.png). Ikona jest niezbędna do zbudowania wszystkich obrazów manifestu. Aby uzyskać więcej informacji, zapoznaj się z dokumentacją dotyczącą [`gatsby-plugin-manifest`](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-plugin-manifest/README.md).
 
-3. Add the plugin to the `plugins` array in your `gatsby-config.js` file.
+3. Dodaj wtyczkę do Array `plugins` w pliku `gatsby-config.js`.
 
 ```javascript:title=gatsby-config.js
 {
