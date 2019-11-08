@@ -367,7 +367,7 @@ Cóż, niezupełnie; tylko dla tego poradnika. Sprawdż [Dodatkowe Poradniki](/t
 
 To dopiero początek. Tak trzymaj!
 
-- Zbudowałeś coś fajnego? Udostępnij to nw Twiterze z hashtagiem [#buildwithgatsby](https://twitter.com/search?q=%23buildwithgatsby), i [@oznacz nas](https://twitter.com/gatsbyjs)!
+- Zbudowałeś coś fajnego? Udostępnij to na Twiterze z hashtagiem [#buildwithgatsby](https://twitter.com/search?q=%23buildwithgatsby), i [@oznacz nas](https://twitter.com/gatsbyjs)!
 - Czy napisałeś fajny artykuł na blogu o tym, czego się nauczyłeś? To też udostępnij!
 - Współtwórz Gatsby! Przejrzyj [otwarte zagadnienia](https://github.com/gatsbyjs/gatsby/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22) w repozytorium Gatsby i [zostań współtwórcą](/contributing/how-to-contribute/).
 
