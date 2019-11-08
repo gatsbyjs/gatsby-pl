@@ -49,7 +49,7 @@ Otwórz plik `src/pages/index.js`. Kod z tego pliku tworzy komponent, który zaw
   <p>Przepraszamy! Twoja przeglądarka nie może wyświetlić tego filmu.</p>
 </video>
 
-> 💡 Gatsby korzysta z **hot reloading** aby przyspieszyć twój proces dewelopmentu. Zasadniczo, kiedy masz uruchomiony serwer deweloperski Gatsby, pliki twojej strony są cały czas "obserwowane" w tle — za każdym razem kiedy zapiszesz plik, Twoje zmiany zostaną wyświetlone w przeglądarce. Nie potrzebujesz odświeżać całej strony ani restartować serwra — Twoje zmiany po prostu się pojawią.
+> 💡 Gatsby korzysta z **hot reloading** aby przyspieszyć twój proces dewelopmentu. Zasadniczo, kiedy masz uruchomiony serwer deweloperski Gatsby, pliki twojej strony są cały czas "obserwowane" w tle — za każdym razem kiedy zapiszesz plik, Twoje zmiany zostaną wyświetlone w przeglądarce. Nie potrzebujesz odświeżać całej strony ani restartować serwera — Twoje zmiany po prostu się pojawią.
 
 2.  Teraz możesz sprawić, aby Twoje zmiany były bardziej widoczne. Spróbuj zastąpić kod, który obecnie znajduje się w `src/pages/index.js` kodem, który jest poniżej i zapisz plik. Zauważysz zmiany w tekście — kolor zmieni się na fioletowy, a czcionka będzie większa.
 
@@ -127,9 +127,9 @@ Generalnie, komponent jest elementem składowym Twojej strony; Jest to samodziel
 
 Gatsby jest oparty na React. Kiedy mówimy o używaniu i tworzeniu **komponentów**, tak na prawdę chodzi nam o **komponenty Reactowe** — samodzielne fragmenty kodu (napisane zazwyczaj przy użyciu JSX), które potrafią przyjmować dane wejściowe i zwracać Reactowe elementy opisujące część interfejsu użytkownika.
 
-Jedna ważna zmiana, którą zauważysz, gdy zaczniesz budować przy użyciu komponentów (jeśli jesteś już deweloperem) to to, że Twój CSS, HTML i JavaScript są ściśle powiązane i często mieszczą się nawet w tym samym pliku.
+Jedna ważna zmiana, którą zauważysz, gdy zaczniesz budować przy użyciu komponentów (jeśli jesteś już deweloperem) to ta, że Twój CSS, HTML i JavaScript są ściśle powiązane i często mieszczą się nawet w tym samym pliku.
 
-Choć może się wydawać, że nie jest to nic takiego, ma to głęboki wpływ na to, jak myślisz o tworzeniu stron internetowych.
+Choć może się wydawać, że nie jest to nic takiego, ma to spory wpływ na to, w jaki sposób myślisz o tworzeniu stron internetowych.
 
 Weźmy za przykład tworzenie niestandardowego przycisku. W przeszłości stworzyłbyś klasę CSS (powiedzmy `.primary-button`) z Twoimi niestandardowymi stylami, a następnie używał jej, kiedy chciałbyś z tych styli skorzystać. Na przykład:
 
@@ -244,9 +244,9 @@ W pliku `header.js`, komponent nagłówka oczekuje przekazania prop `headerText`
 <h1>{props.headerText}</h1>
 ```
 
-> 💡 W JSX możesz osadzić dowolne wyrażenie JavaScript, zawierając je w `{}`. W ten właśnie sposóbkorzystasz z właściwości `headerText` (lub “prop!”) z obiektu “props”.
+> 💡 W JSX możesz osadzić dowolne javascriptowe wyrażenie, zawierając je w `{}`. W ten właśnie sposób korzystasz z właściwości `headerText` (lub “prop!”) z obiektu “props”.
 
-Jeśli przekazałbyś jakiś inny prop komponentowi `<Header />`, w taki sposób...
+Jeśli przekazałbyś kolejny prop komponentowi `<Header />`, w taki sposób...
 
 ```jsx:title=src/pages/about.js
 <Header headerText="About Gatsby" arbitraryPhrase="is arbitrary" />
@@ -303,7 +303,6 @@ export default () => (
 ```
 
 Po kliknięciu nowego linku "Contact", na stronie głównej, powinieneś zobaczyć...
-When you click the new "Contact" link on the homepage, you should see...
 
 ![Deweloperska strona 404 Gatsby](09-dev-404.png)
 
@@ -339,7 +338,6 @@ Komponent `<Link />` Gatsby służy do łączenia pomiędzy stronami na Twojej w
 Gatsby.js jest _nowoczesnym generatorem stron_, co oznacza tyle, że nie potrzebujesz konfigurować żadnych serwerów ani skomplikowanych baz danych, aby go wdrożyć. Zamiast tego, komenda Gatsby `build` tworzy folder ze statycznymi plikami HTML i JavaScript, które możesz umieścić na hostingu statycznych stron.
 
 Wypróbuj [Surge](http://surge.sh/) aby wdrożyć Twoją pierwszą stronę Gatsby. Surge jest jednym z wielu "hostingów stron statycznych", które umożliwiają wdrażanie stron Gatsby.
-Try using [Surge](http://surge.sh/) for deploying your first Gatsby website. Surge is one of many "static site hosts" which make it possible to deploy Gatsby sites.
 
 Jeśli jeszcze nie zainstalowałeś i nie skonfigutowałeś Surge, otwórz nowe okno terminala i zainstaluj jego narzędzie wiersza poleceń:
 
