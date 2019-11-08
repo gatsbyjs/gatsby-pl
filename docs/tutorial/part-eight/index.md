@@ -20,7 +20,7 @@ W tej ostatniej sekcji przeprowadzisz kilka typowych kroków przygotowujących w
 
 Cytując [stronę Lighthouse](https://developers.google.com/web/tools/lighthouse/):
 
-> Lighthouse to open-source'owe, zautomatyzowane narzędzie do poprawy jakości stron internetowych. Możesz je uruchomić na dowolnej stronie internetowej, publicznej lub wymagającej uwierzytelnienia.Posiada audyty wydajności, dostępności, progresywnych aplikacji internetowych (PWA) i nie tylko.
+> Lighthouse to open-source'owe, zautomatyzowane narzędzie do poprawy jakości stron internetowych. Możesz je uruchomić na dowolnej stronie internetowej, publicznej lub wymagającej uwierzytelnienia. Posiada audyty wydajności, dostępności, progresywnych aplikacji internetowych (PWA) i nie tylko.
 
 Lighthouse jest częścią Chrome DevTools. Przeprowadzenie audytu - a następnie usunięcie napotkanych błędów i wdrożenie sugerowanych ulepszeń - to świetny sposób na przygotowanie witryny do uruchomienia. Pomaga ci upewnić się, że Twoja strona jest tak szybka i dostępna, jak to tylko możliwe.
 
