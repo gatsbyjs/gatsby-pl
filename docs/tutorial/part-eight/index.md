@@ -349,7 +349,7 @@ Lighthouse to świetne narzędzie do ulepszania strony oraz do nauki -- Kontynuu
 
 ### Oficjalna dokumentacja
 
-- [Oficjalna dokumentacja](https://www.gatsbyjs.org/docs/): Zobcz naszą oficjalnę dokumentację dla _[Szybkiego startu](https://www.gatsbyjs.org/docs/quick-start/)_, _[Szczegółowych poradników](https://www.gatsbyjs.org/docs/preparing-your-environment/)_, _[Referencji do API](https://www.gatsbyjs.org/docs/gatsby-link/)_, i wielu innych.
+- [Oficjalna dokumentacja](https://www.gatsbyjs.org/docs/): Zobcz naszą oficjalną dokumentację dla _[Szybkiego startu](https://www.gatsbyjs.org/docs/quick-start/)_, _[Szczegółowych poradników](https://www.gatsbyjs.org/docs/preparing-your-environment/)_, _[Referencji do API](https://www.gatsbyjs.org/docs/gatsby-link/)_, i wielu innych.
 
 ### Oficjalne wtyczki
 
