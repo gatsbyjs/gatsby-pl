@@ -1,94 +1,94 @@
 ---
-title: Preparing a Site to Go Live
+title: Przygotowanie strony do wdrożenia
 typora-copy-images-to: ./
 disableTableOfContents: true
 ---
 
-Wow! You've come a long way! You've learned how to:
+Wow! Przebyłeś długą drogę! Dotychczas nauczyłeś się jak:
 
-- create new Gatsby sites
-- create pages and components
-- style components
-- add plugins to a site
-- source & transform data
-- use GraphQL to query data for pages
-- programmatically create pages from your data
+- tworzyć nowe strony Gatsby
+- tworzyć nowe strony i komponenty
+- stylować komponenty
+- dodawać wtyczki do strony
+- pobierać i transformować dane
+- używać GraphQL do pobierania danych na stronę
+- programatycznie tworzyć nowe strony z pobranych danych
 
-In this final section, you're going to walk through some common steps for preparing a site to go live by introducing a powerful site diagnostic tool called [Lighthouse](https://developers.google.com/web/tools/lighthouse/). Along the way, we'll introduce a few more plugins you'll often want to use in your Gatsby sites.
+W tej ostatniej sekcji przeprowadzisz kilka typowych kroków przygotowujących witrynę do uruchomienia i wdrożenia, wprowadzając potężne narzędzie diagnostyczne o nazwie [Lighthouse](https://developers.google.com/web/tools/lighthouse/). Po drodze poznamy jeszcze kilka wtyczek, których często będziesz chciał użyć w swoich witrynach Gatsby.
 
-## Audit with Lighthouse
+## Audyt Lighthouse
 
-Quoting from the [Lighthouse website](https://developers.google.com/web/tools/lighthouse/):
+Cytując [stronę Lighthouse](https://developers.google.com/web/tools/lighthouse/):
 
-> Lighthouse is an open-source, automated tool for improving the quality of web pages. You can run it against any web page, public or requiring authentication. It has audits for performance, accessibility, progressive web apps (PWAs), and more.
+> Lighthouse to open-source'owe, zautomatyzowane narzędzie do poprawy jakości stron internetowych. Możesz je uruchomić na dowolnej stronie internetowej, publicznej lub wymagającej uwierzytelnienia. Posiada audyty wydajności, dostępności, progresywnych aplikacji internetowych (PWA) i nie tylko.
 
-Lighthouse is included in Chrome DevTools. Running its audit -- and then addressing the errors it finds and implementing the improvements it suggests -- is a great way to prepare your site to go live. It helps give you confidence that your site is as fast and accessible as possible.
+Lighthouse jest częścią Chrome DevTools. Przeprowadzenie audytu - a następnie usunięcie napotkanych błędów i wdrożenie sugerowanych ulepszeń - to świetny sposób na przygotowanie witryny do uruchomienia. Pomaga ci upewnić się, że Twoja strona jest tak szybka i dostępna, jak to tylko możliwe.
 
-Try it out!
+Wypróbuj Lighthouse!
 
-First, you need to create a production build of your Gatsby site. The Gatsby development server is optimized for making development fast; But the site that it generates, while closely resembling a production version of the site, isn't as optimized.
+Najpierw musisz utworzyć wersję produkcyjną swojej witryny Gatsby. Serwer programistyczny Gatsby jest zoptymalizowany pod kątem szybkiego programowania; Jednak witryna, którą generuje, choć przypomina wersję produkcyjną witryny, nie jest tak zoptymalizowana.
 
-### ✋ Create a production build
+### ✋ Zbuduj wersję produkcyjną
 
-1.  Stop the development server (if it's still running) and run the following command:
+1.  Zatrzymaj serwer programistyczny (jeśli nadal działa) i uruchom następującą komendę:
 
 ```shell
 gatsby build
 ```
 
-> 💡 As you learned in [part 1](/tutorial/part-one/), this does a production build of your site and outputs the built static files into the `public` directory.
+> 💡 Jak już się nauczyłeś w [części pierwszej](/tutorial/part-one/), ta komenda buduje wersję produkcyjną Twojej strony i tworzy statyczne pliki w folderze `public`.
 
-2.  View the production site locally. Run:
+2. Aby zobaczyć lokalnie wersję produkcyjną swojej strony, uruchom:
 
 ```shell
 gatsby serve
 ```
 
-Once this starts, you can view your site at [`localhost:9000`](http://localhost:9000).
+Po uruchomieniu, możesz wyświetlić swoją witrynę pod adresem [`localhost:9000`](http://localhost:9000).
 
-### Run a Lighthouse audit
+### Przperowadź audyt Lighthouse
 
-Now you're going to run your first Lighthouse test.
+Teraz uruchomisz swój pierwszy test Lighthouse.
 
-1.  If you haven't already done so, open the site in Chrome Incognito Mode so no extensions interfere with the test. Then, open up the Chrome DevTools.
+1.  Jeśli jeszcze tego nie zrobiłeś, otwórz stronę w trybie incognito w Chrome, aby żadne rozszerzenia nie zakłócały testu. Następnie otwórz Chrome DevTools.
 
-2.  Click on the "Audits" tab where you'll see a screen that looks like:
+2.  Kliknij zakładkę „Audits”, gdzie zobaczysz ekran wyglądający jak:
 
-![Lighthouse audit start](./lighthouse-audit.png)
+![Lighthouse audyt](./lighthouse-audit.png)
 
-3.  Click "Perform an audit..." (All available audit types should be selected by default). Then click "Run audit". (It'll then take a minute or so to run the audit). Once the audit is complete, you should see results that look like this:
+3.  Kliknij "Perform an audit..."(Wszystkie dostępne typy kontroli powinny być domyślnie wybrane). Następnie kliknij "Run audit”. (Uruchomienie audytu zajmie około minuty). Po zakończeniu audytu powinieneś zobaczyć wyniki, które wyglądają tak:
 
-![Lighthouse audit results](./lighthouse-audit-results.png)
+![Wyniki audytu Lighthouse](./lighthouse-audit-results.png)
 
-As you can see, Gatsby's performance is excellent out of the box but you're missing some things for PWA, Accessibility, Best Practices, and SEO that will improve your scores (and in the process make your site much more friendly to visitors and search engines).
+Jak widać, wydajność Gatsby jest znakomita "z automatu", ale brakuje Ci kilku rzeczy związanych z PWA, dostępnością, najlepszymi praktykami i SEO, które poprawią twoje wyniki (a przez to uczynią twoją stronę bardziej przyjazną dla odwiedzających i silinków wyszukiwania).
 
-## Add a manifest file
+## Dodaj plik manifestu
 
-Looks like you have a pretty lackluster score in the "Progressive Web App" category. Let's address that.
+Wygląda na to, że masz dość marny wynik w kategorii „Progresywna aplikacja internetowa”(PWA). Zajmijmy się tym.
 
-But first, what exactly _are_ PWAs?
+Ale najpierw, czym właściwie _są_ PWA?
 
-They are regular websites that take advantage of modern browser functionality to augment the web experience with app-like features and benefits. Check out [Google's overview](https://developers.google.com/web/progressive-web-apps/) of what defines a PWA experience.
+Są to zwykłe strony internetowe, wykorzystujące nowoczesną funkcjonalność przeglądarki, która ma zwiększyć komfort korzystania z Internetu dzięki funkcjom i zaletom podobnym do działania natywnych aplikacji. Sprawdź [dokument Google](https://developers.google.com/web/progressive-web-apps/) na temat tego, co definiuje PWA.
 
-Inclusion of a web app manifest is one of the three generally accepted [baseline requirements for a PWA](https://alistapart.com/article/yes-that-web-project-should-be-a-pwa#section1).
+Dołączenie manifestu aplikacji internetowej jest jednym z trzech ogólnie akceptowanych [podstawowych wymagań dla PWA](https://alistapart.com/article/yes-that-web-project-should-be-a-pwa#section1).
 
-Quoting [Google](https://developers.google.com/web/fundamentals/web-app-manifest/):
+Cytująć [Google](https://developers.google.com/web/fundamentals/web-app-manifest/):
 
-> The web app manifest is a simple JSON file that tells the browser about your web application and how it should behave when 'installed' on the user's mobile device or desktop.
+> Manifest aplikacji internetowej to prosty plik JSON, który informuje przeglądarkę o Twojej aplikacji internetowej i tym, jak powinna się zachowywać po „zainstalowaniu” na urządzeniu mobilnym lub komputerze użytkownika.
 
-[Gatsby's manifest plugin](/packages/gatsby-plugin-manifest/) configures Gatsby to create a `manifest.webmanifest` file on every site build.
+[Wtyczka manifestu Gatsby](/packages/gatsby-plugin-manifest/) konfiguruje Gatsby tak aby tworzył plik `manifest.webmanifest` przy każdej budowie strony.
 
-### ✋ Using `gatsby-plugin-manifest`
+### ✋ Używanie `gatsby-plugin-manifest`
 
-1.  Install the plugin:
+1.  Zainstaluj wtyczkę:
 
 ```shell
 npm install --save gatsby-plugin-manifest
 ```
 
-2. Add a favicon for your app under `src/images/icon.png`. For the purposes of this tutorial you can use [this example icon](https://raw.githubusercontent.com/gatsbyjs/gatsby/master/docs/tutorial/part-eight/icon.png), should you not have one available. The icon is necessary to build all images for the manifest. For more information, look at the docs for [`gatsby-plugin-manifest`](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-plugin-manifest/README.md).
+2. Dodaj favicon swojej aplikacji w `src/images/icon.png`. Jeśli nie posiadasz faviconu, na potrzeby tego poradnika, użyj [tej przykładowej ikony](https://raw.githubusercontent.com/gatsbyjs/gatsby/master/docs/tutorial/part-eight/icon.png). Ikona jest niezbędna do zbudowania wszystkich obrazów manifestu. Aby uzyskać więcej informacji, zapoznaj się z dokumentacją dotyczącą [`gatsby-plugin-manifest`](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-plugin-manifest/README.md).
 
-3. Add the plugin to the `plugins` array in your `gatsby-config.js` file.
+3. Dodaj wtyczkę do Array `plugins` w pliku `gatsby-config.js`.
 
 ```javascript:title=gatsby-config.js
 {
@@ -111,23 +111,23 @@ npm install --save gatsby-plugin-manifest
 }
 ```
 
-That's all you need to get started with adding a web manifest to a Gatsby site. The example given reflects a base configuration -- Check out the [plugin reference](/packages/gatsby-plugin-manifest/?=gatsby-plugin-manifest#automatic-mode) for more options.
+To wszystko czego potrzebujesz aby dodać manifest do swojej strony Gatsby. Podany przykład ilustruje bazową konfigurację -- Sprawdź [dokumentację wtyczki](/packages/gatsby-plugin-manifest/?=gatsby-plugin-manifest#automatic-mode) aby zobaczyć więcej opcji.
 
-## Add offline support
+## Dodaj obsługę offline
 
-Another requirement for a website to qualify as a PWA is the use of a [service worker](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API). A service worker runs in the background, deciding to serve network or cached content based on connectivity, allowing for a seamless, managed offline experience.
+Kolejnym wymogiem, aby strona internetowa mogła zostać zakwalifikowana jako PWA, jest użycie [service worker](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API). Service worker działa w tle, decydując się na udostępnianie treści sieciowych lub buforowanych w zależności od dostępności połączenia internetowego, umożliwiając bezproblemowe zarządzanie offline.
 
-[Gatsby's offline plugin](/packages/gatsby-plugin-offline/) makes a Gatsby site work offline and more resistant to bad network conditions by creating a service worker for your site.
+[Wtyczka Gatsby offline](/packages/gatsby-plugin-offline/) sprawia, że witryna Gatsby działa offline i jest bardziej odporna na słabe połączenie internetowe, tworząc service worker'a dla Twojej witryny.
 
-### ✋ Using `gatsby-plugin-offline`
+### ✋ Używanie `gatsby-plugin-offline`
 
-1.  Install the plugin:
+1.  Zainstaluj wtyczkę
 
 ```shell
 npm install --save gatsby-plugin-offline
 ```
 
-2.  Add the plugin to the `plugins` array in your `gatsby-config.js` file.
+2.  Dodaj wtyczkę do Array `plugins` w pliku `gatsby-config.js`.
 
 ```javascript:title=gatsby-config.js
 {
@@ -152,27 +152,27 @@ npm install --save gatsby-plugin-offline
 }
 ```
 
-That's all you need to get started with service workers with Gatsby.
+To wszystko, czego potrzebujesz, aby rozpocząć pracę z service worker'ami w Gatsby.
 
-> 💡 The offline plugin should be listed _after_ the manifest plugin so that the offline plugin can cache the created `manifest.webmanifest`.
+> 💡 Wtyczka offline powinna być umieszczona _po_ bo wtyczce manifestu aby wtyczka offline mogła zapisać utworzony plik `manifest.webmanifest` w cache.
 
-## Add page metadata
+## Dodaj metadane strony
 
-Adding metadata to pages (such as a title or description) is key in helping search engines like Google understand your content and decide when to surface it in search results.
+Dodanie metadanych do stron (jak np. tytuł lub opis) ma kluczowe znaczenie dla wyszukiwarek, takich jak Google, w zrozumieniu treści i podjęciu decyzji, kiedy pokazać ją w wynikach wyszukiwania.
 
-[React Helmet](https://github.com/nfl/react-helmet) is a package that provides a React component interface for you to manage your [document head](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head).
+[React Helmet](https://github.com/nfl/react-helmet) to paczka która daje Ci do dyspozycji komponent React do zarządzania [head'em dokumentu/strony](https://developer.mozilla.org/pl/docs/Web/HTML/Element/head).
 
-Gatsby's [react helmet plugin](/packages/gatsby-plugin-react-helmet/) provides drop-in support for server rendering data added with React Helmet. Using the plugin, attributes you add to React Helmet will be added to the static HTML pages that Gatsby builds.
+[Wtyczka react helmet](/packages/gatsby-plugin-react-helmet/) zapewnia wsparcie dla renderowania danych dodanych za pomocą React Helmet. Za pomocą wtyczki atrybuty dodane do React Helmet zostaną dodane do statycznych stron HTML tworzonych przez Gatsby.
 
-### ✋ Using `React Helmet` and `gatsby-plugin-react-helmet`
+### ✋ Używanie `React Helmet` oraz `gatsby-plugin-react-helmet`
 
-1.  Install both packages:
+1.  Zainstaluj obie paczki:
 
 ```shell
 npm install --save gatsby-plugin-react-helmet react-helmet
 ```
 
-2.  Make sure you have a `description` and an `author` configured inside your `siteMetadata` object. Also, add the `gatsby-plugin-react-helmet` plugin to the `plugins` array in your `gatsby-config.js` file.
+2. Upewnij się, że w obiekcie `siteMetadata` masz ustawione pola `description` i `author`. Ponadto, dodaj wtyczkę `gatsby-plugin-react-helmet` do Array `plugins` w pliku `gatsby-config.js`.
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -205,7 +205,7 @@ module.exports = {
 }
 ```
 
-3. In the `src/components` directory, create a file called `seo.js` and add the following:
+3. W folderze `src/components`, utwórz plik `seo.js` i dodaj:
 
 ```jsx:title=src/components/seo.js
 import React from "react"
@@ -291,9 +291,9 @@ SEO.propTypes = {
 export default SEO
 ```
 
-The above code sets up defaults for your most common metadata tags and provides you an `<SEO>` component to work with in the rest of your project. Pretty cool, right?
+Powyższy kod ustawia wartości domyślne dla najpopularniejszych tagów metadanych i daje Ci do dyspozycji komponent `<SEO>` do pracy w pozostałej części projektu. Całkiem fajnie, prawda?
 
-4.  Now, you can use the `<SEO>` component in your templates and pages and pass props to it. For example, add it to your `blog-post.js` template like so:
+4.  Teraz możesz używać komponentu `<SEO>` w swoich szablonach i stronach i przekazywać do niego props'y. Na przykład dodaj go do szablonu `blog-post.js` w następujący sposób:
 
 ```jsx:title=src/templates/blog-post.js
 import React from "react"
@@ -331,44 +331,44 @@ export const query = graphql`
 `
 ```
 
-The above example is based off the [Gatsby Starter Blog](/starters/gatsbyjs/gatsby-starter-blog/). By passing props to the `<SEO>` component, you can dynamically change the metadata for a post. In this case, the blog post `title` and `excerpt` (if it exists in the blog post markdown file) will be used instead of the default `siteMetadata` properties in your `gatsby-config.js` file.
+Powyższy przykład oparty jest na [Gatsby Starter Blog](/starters/gatsbyjs/gatsby-starter-blog/). Przesyłając props'y do komponentu `<SEO>`, możesz dynamicznie zmieniać metadane dla postu. W tym wypadku zamiast domyślnych właściwości `siteMetadata` z pliku `gatsby-config.js`, zostaną użyte `title` i `excerpt` bloga (jeśli istnieje w pliku markdown).
 
-Now, if you run the Lighthouse audit again as laid out above, you should get close to--if not a perfect-- 100 score!
+Teraz, jeśli ponownie uruchomisz audyt Lighthouse, zgodnie z powyższym opisem, powinieneś zbliżyć się do - jeśli nie osiągnąć - 100 punktów!
 
-> 💡 For further reading and examples, check out [Adding an SEO Component](/docs/add-seo-component/) and the [React Helmet docs](https://github.com/nfl/react-helmet#example)!
+> 💡 Po więcej informacji i przykładów zobacz [Dodawania komponentu SEO](/docs/add-seo-component/) oraz [dokumentację React Helmet](https://github.com/nfl/react-helmet#example)!
 
-## Keep making it better
+## Cały czas polepszaj wynik
 
-In this section, we've shown you a few Gatsby-specific tools to improve your site's performance and prepare to go live.
+W tej sekcji pokazaliśmy kilka narzędzi specyficznych dla Gatsby, które mają poprawić wydajność witryny i przygotować ją do uruchomienia/wdrożenia.
 
-Lighthouse is a great tool for site improvements and learning -- Continue looking through the detailed feedback it provides and keep making your site better!
+Lighthouse to świetne narzędzie do ulepszania strony oraz do nauki -- Kontynuuj przeglądanie szczegółowych raportów i ulepszaj swoją witrynę!
 
-## Next Steps
+## Następne kroki
 
-### Official Documentation
+### Oficjalna dokumentacja
 
-- [Official Documentation](https://www.gatsbyjs.org/docs/): View our Official Documentation for _[Quick Start](https://www.gatsbyjs.org/docs/quick-start/)_, _[Detailed Guides](https://www.gatsbyjs.org/docs/preparing-your-environment/)_, _[API References](https://www.gatsbyjs.org/docs/gatsby-link/)_, and much more.
+- [Oficjalna dokumentacja](https://www.gatsbyjs.org/docs/): Zobcz naszą oficjalną dokumentację dla _[Szybkiego startu](https://www.gatsbyjs.org/docs/quick-start/)_, _[Szczegółowych poradników](https://www.gatsbyjs.org/docs/preparing-your-environment/)_, _[Referencji do API](https://www.gatsbyjs.org/docs/gatsby-link/)_, i wielu innych.
 
-### Official Plugins
+### Oficjalne wtyczki
 
-- [Official Plugins](https://github.com/gatsbyjs/gatsby/tree/master/packages): The complete list of all the Official Plugins maintained by Gatsby.
+- [Oficjalne wtyczki](https://github.com/gatsbyjs/gatsby/tree/master/packages): Kompletna lista Oficjalnych wtyczek utrzymywanych przez zespół Gatsby.
 
-### Official Starters
+### Oficjalne startery
 
-1.  [Gatsby's Default Starter](https://github.com/gatsbyjs/gatsby-starter-default): Kick off your project with this default boilerplate. This barebones starter ships with the main Gatsby configuration files you might need. _[working example](http://gatsbyjs.github.io/gatsby-starter-default/)_
-2.  [Gatsby's Blog Starter](https://github.com/gatsbyjs/gatsby-starter-blog): Gatsby starter for creating an awesome and blazing-fast blog. _[working example](http://gatsbyjs.github.io/gatsby-starter-blog/)_
-3.  [Gatsby's Hello-World Starter](https://github.com/gatsbyjs/gatsby-starter-hello-world): Gatsby Starter with the bare essentials needed for a Gatsby site. _[working example](https://gatsby-starter-hello-world-demo.netlify.com/)_
+1.  [Gatsby's Domyślny Starter](https://github.com/gatsbyjs/gatsby-starter-default): Rozpocznij projekt z tym domyślnym szablonem. Ten prosty starter jest dostarczany z głównymi plikami konfiguracyjnymi Gatsby, których możesz potrzebować. _[działający przykład](http://gatsbyjs.github.io/gatsby-starter-default/)_
+2.  [Gatsby's Blog Starter](https://github.com/gatsbyjs/gatsby-starter-blog): Starter Gatsby do stworzenia wspaniałego i niesamowicie szybkiego bloga. _[działający przykład](http://gatsbyjs.github.io/gatsby-starter-blog/)_
+3.  [Gatsby's Hello-World Starter](https://github.com/gatsbyjs/gatsby-starter-hello-world): Starter Gatsby Starter z niezbędnym minimum potrzebnym do rozpoczęcia strony Gatsby. _[działający przykład](https://gatsby-starter-hello-world-demo.netlify.com/)_
 
-## That's all, folks
+## To by było na tyle
 
-Well, not quite; just for this tutorial. There are [Additional Tutorials](/tutorial/additional-tutorials/) to check out for more guided use cases.
+Cóż, niezupełnie; tylko dla tego poradnika. Sprawdż [Dodatkowe Poradniki](/tutorial/additional-tutorials/) aby zobaczyć więcej przykładów użycia Gatsby.
 
-This is just the beginning. Keep going!
+To dopiero początek. Tak trzymaj!
 
-- Did you build something cool? Share it on Twitter, tag [#buildwithgatsby](https://twitter.com/search?q=%23buildwithgatsby), and [@mention us](https://twitter.com/gatsbyjs)!
-- Did you write a cool blog post about what you learned? Share that, too!
-- Contribute! Take a stroll through [open issues](https://github.com/gatsbyjs/gatsby/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22) on the gatsby repo and [become a contributor](/contributing/how-to-contribute/).
+- Zbudowałeś coś fajnego? Udostępnij to na Twiterze z hashtagiem [#buildwithgatsby](https://twitter.com/search?q=%23buildwithgatsby), i [@oznacz nas](https://twitter.com/gatsbyjs)!
+- Czy napisałeś fajny artykuł na blogu o tym, czego się nauczyłeś? To też udostępnij!
+- Współtwórz Gatsby! Przejrzyj [otwarte zagadnienia](https://github.com/gatsbyjs/gatsby/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22) w repozytorium Gatsby i [zostań współtwórcą](/contributing/how-to-contribute/).
 
-Check out the ["how to contribute"](/contributing/how-to-contribute/) docs for even more ideas.
+Sprawdź dokumentację na temat tego ["jak współtworzyć"](/contributing/how-to-contribute/) po więcej pomysłów.
 
-We can't wait to see what you do 😄.
+Nie możemy się doczekać, aby zobaczyć, co zrobisz 😄.
