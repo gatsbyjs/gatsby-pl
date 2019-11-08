@@ -160,7 +160,7 @@ To wszystko, czego potrzebujesz, aby rozpocząć pracę z service worker'ami w G
 
 ## Dodaj metadane strony
 
-Dodanie metadanych do stron (takich jak tytuł lub opis) ma kluczowe znaczenie dla wyszukiwarek, takich jak Google, w zrozumieniu treści i podjęciu decyzji, kiedy pokazać ją w wynikach wyszukiwania.
+Dodanie metadanych do stron (jak np. tytuł lub opis) ma kluczowe znaczenie dla wyszukiwarek, takich jak Google, w zrozumieniu treści i podjęciu decyzji, kiedy pokazać ją w wynikach wyszukiwania.
 
 [React Helmet](https://github.com/nfl/react-helmet) to paczka która daje Ci do dyspozycji komponent React do zarządzania [head'em dokumentu/strony](https://developer.mozilla.org/pl/docs/Web/HTML/Element/head).
 
