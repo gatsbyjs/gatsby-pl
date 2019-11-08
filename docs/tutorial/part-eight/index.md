@@ -113,7 +113,7 @@ npm install --save gatsby-plugin-manifest
 }
 ```
 
-To wszystko czego potrzebujesz aby dodać manifest do swojej strony Gatsby. Podany przykład ilustruję bazową, podstawową konfigurację -- Sprawdź [dokumentację wtyczki](/packages/gatsby-plugin-manifest/?=gatsby-plugin-manifest#automatic-mode) aby zobaczyć więcej opcji.
+To wszystko czego potrzebujesz aby dodać manifest do swojej strony Gatsby. Podany przykład ilustruje bazową konfigurację -- Sprawdź [dokumentację wtyczki](/packages/gatsby-plugin-manifest/?=gatsby-plugin-manifest#automatic-mode) aby zobaczyć więcej opcji.
 
 ## Dodaj obsługę offline
 
