@@ -119,7 +119,7 @@ To wszystko czego potrzebujesz aby dodać manifest do swojej strony Gatsby. Poda
 
 Kolejnym wymogiem, aby strona internetowa mogła zostać zakwalifikowana jako PWA, jest użycie [service worker](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API). Service worker działa w tle, decydując się na udostępnianie treści sieciowych lub buforowanych w zależności od dostępności połączenia internetowego, umożliwiając bezproblemowe zarządzanie offline.
 
-[Wtyczka Gatsby offline](/packages/gatsby-plugin-offline/) sprawia, że witryna Gatsby działa offline i jest bardziej odporna na słabe połączenie internetowe, tworząc service worker dla Twojej witryny.
+[Wtyczka Gatsby offline](/packages/gatsby-plugin-offline/) sprawia, że witryna Gatsby działa offline i jest bardziej odporna na słabe połączenie internetowe, tworząc service worker'a dla Twojej witryny.
 
 ### ✋ Używanie `gatsby-plugin-offline`
 
