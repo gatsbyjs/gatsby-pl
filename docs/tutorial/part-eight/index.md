@@ -335,7 +335,7 @@ export const query = graphql`
 
 Powyższy przykład oparty jest na [Gatsby Starter Blog](/starters/gatsbyjs/gatsby-starter-blog/). Przesyłając props'y do komponentu `<SEO>`, możesz dynamicznie zmieniać metadane dla postu. W tym wypadku zamiast domyślnych właściwości `siteMetadata` z pliku `gatsby-config.js`, zostaną użyte `title` i `excerpt` bloga (jeśli istnieje w pliku markdown).
 
-Teraz, jeśli ponownie uruchomisz audyt Lighthouse, zgodnie z powyższym opisem, powinieneś zbliżyć się do - jeśli nie idealnego - 100 punktów!
+Teraz, jeśli ponownie uruchomisz audyt Lighthouse, zgodnie z powyższym opisem, powinieneś zbliżyć się do - jeśli nie osiągnąć - 100 punktów!
 
 > 💡 Po więcej informacji i przykładów zobacz [Dodawania komponentu SEO](/docs/add-seo-component/) oraz [dokumentację React Helmet](https://github.com/nfl/react-helmet#example)!
 
