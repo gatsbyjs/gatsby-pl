@@ -26,7 +26,7 @@ Jeśli pominiesz ostatni URL, Gatsby automatycznie wygeneruje stronę bazując n
 
 W edytorze kodu, otwórz kod wygenerowany dla twojej strony “Hello World” i przyjrzyj się folderom i plikom znajdującym się w folderze ‘hello-world’. Powinno to wyglądać mniej więcej tak:
 
-![Hello World projekt w VS Code](01-hello-world-vscode.png)
+![Projekt Hello World w VS Code](01-hello-world-vscode.png)
 
 _Note: Edytor pokazany tutaj to Visual Studio Code. Jeśli korzystasz z innego edytora, może to wyglądać nieco inaczej._
 
@@ -171,9 +171,9 @@ export default () => (
 
 Samo umieszczenie Reactowego komponentu w pliku `src/pages/about.js` wystarczyło, aby strona była dostępna na `/about`.
 
-### ✋ Korzystanie z pod-komponentów
+### ✋ Korzystanie z sub-komponentów
 
-Powiedzmy, że strona główna i o mnie stały się już całkiem spore i musiałeś przepisywać wiele rzeczy. Możesz użyć pod-komponentów aby rozbić interfejs na kawałki, których użyjesz wielokrotnie. Obie Twoje strony mają nagłówki `<h1>` — stwórz komponent, który będzie opisywał `Header`.
+Powiedzmy, że strona główna i o mnie stały się już całkiem spore i musiałeś przepisywać wiele rzeczy. Możesz użyć sub-komponentów aby rozbić interfejs na kawałki, których użyjesz wielokrotnie. Obie Twoje strony mają nagłówki `<h1>` — stwórz komponent, który będzie opisywał `Header`.
 
 1.  Stwórz nowy folder `src/components` a w nim plik `header.js`.
 2.  Dodaj poniższy kod do nowo stworzonego pliku `src/components/header.js`.
@@ -232,7 +232,7 @@ Powinieneś teraz znowu widzieć tekst “About Gatsby” w nagłówku!
 
 Wcześniej określiliśmy komponenty Reactowe jako elementy wielokrotnego użytku, służące do opisywania interfejsu. Aby sprawić, by były one dynamiczne, musisz być w stanie przekazywać im różne dane. Można to zrobić przy pomocy danych wejściowych zwanych “props". Props są (jak wskazuje nazwa) właściwościami dostarczanymi do komponentów Reactowych.
 
-W `about.js` przekazałeś prop o nazwie `headerText` i wartości `"About Gatsby"` do zaimportowanego pod-komponentu `Header`:
+W `about.js` przekazałeś prop o nazwie `headerText` i wartości `"About Gatsby"` do zaimportowanego sub-komponentu `Header`:
 
 ```jsx:title=src/pages/about.js
 <Header headerText="About Gatsby" />
@@ -308,7 +308,7 @@ Po kliknięciu nowego linku "Contact", na stronie głównej, powinieneś zobaczy
 
 ...deweloperską stronę 404 Gatsby. Dlaczego? Ponieważ próbujesz łączyć do strony, która jeszcze nie istnieje.
 
-2.  Musisz teraz stworzyć komponent strony dla strony "Kontakt" w `src/pages/contact.js` i sprawić, aby łączył on spowrotem do strony głównej:
+2.  Musisz teraz stworzyć komponent strony dla strony "Kontakt" w `src/pages/contact.js` i sprawić, aby łączył on z powrotem do strony głównej:
 
 ```jsx:title=src/pages/contact.js
 import React from "react"
@@ -381,7 +381,7 @@ W tej części:
 - Poznałeś startery Gatsby, oraz to jak z nich korzystać podczas tworzenia nowych projektów
 - Poznałeś składnię JSX
 - Poznałeś komponenty
-- Poznałeś komponenty strony oraz pod-komponenty Gatsby
+- Poznałeś komponenty strony oraz sub-komponenty Gatsby
 - Poznałeś Reactowe “props” oraz jak używać wielokrotnie komponentów Reactowych
 
 Przejdź teraz do [**stylowania swojej strony**](/tutorial/part-two/)!
