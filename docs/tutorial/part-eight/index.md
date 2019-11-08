@@ -14,7 +14,7 @@ Wow! Przebyłeś długą drogę! Dotychczas nauczyłeś się jak:
 - używać GraphQL do pobierania danych na stronę
 - programatycznie tworzyć nowe strony z pobranych danych
 
-W tej ostatniej sekcji przeprowadzisz kilka typowych kroków przygotowujących witrynę do uruchomienia i wdrożenia, wprowadzając potężne narzędzie diagnostyczne o nazwie [Lighthouse](https://developers.google.com/web/tools/lighthouse/). Po drodze wprowadzimy jeszcze kilka wtyczek, których często będziesz chciał użyć w swoich witrynach Gatsby.
+W tej ostatniej sekcji przeprowadzisz kilka typowych kroków przygotowujących witrynę do uruchomienia i wdrożenia, wprowadzając potężne narzędzie diagnostyczne o nazwie [Lighthouse](https://developers.google.com/web/tools/lighthouse/). Po drodze poznamy jeszcze kilka wtyczek, których często będziesz chciał użyć w swoich witrynach Gatsby.
 
 ## Audyt Lighthouse
 
