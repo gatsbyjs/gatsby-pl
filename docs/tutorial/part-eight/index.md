@@ -60,8 +60,6 @@ Teraz uruchomisz swój pierwszy test Lighthouse.
 
 ![Wyniki audytu Lighthouse](./lighthouse-audit-results.png)
 
-As you can see, Gatsby's performance is excellent out of the box but you're missing some things for PWA, Accessibility, Best Practices, and SEO that will improve your scores (and in the process make your site much more friendly to visitors and search engines).
-
 Jak widać, wydajność Gatsby jest znakomita "z automatu", ale brakuje Ci kilku rzeczy związanych z PWA, dostępnością, najlepszymi praktykami i SEO, które poprawią twoje wyniki (a przez to uczynią twoją stronę bardziej przyjazną dla odwiedzających i silinków wyszukiwania).
 
 ## Dodaj plik manifestu
