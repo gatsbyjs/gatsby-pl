@@ -292,8 +292,8 @@ Odwiedź jedną z nich, a zobaczysz:
 
 ![hello-world-blog-post](hello-world-blog-post.png)
 
-Which is a bit boring and not what you want. Now you can pull in data from your markdown post. Change
-`src/templates/blog-post.js` to:
+Wygląda to wciąż nudno, a pewnie chcesz czegoś lepszego. Teraz możesz już pobrać dane ze swojego postu markdown. Zmień
+`src/templates/blog-post.js` w taki sposób:
 
 ```jsx:title=src/templates/blog-post.js
 import React from "react"
@@ -330,16 +330,16 @@ export const query = graphql`
 // highlight-end
 ```
 
-And…
+I...
 
 ![blog-post](blog-post.png)
 
-Sweet!
+Ekstra!
 
-The last step is to link to your new pages from the index page.
+Ostatni krok to podlinkowanie twoich nowych stron do strony index.
 
-Return to `src/pages/index.js`, query for your markdown slugs, and create
-links.
+Wróć do `src/pages/index.js`, wykonaj zapytanie o slug'i markdown i stwórz
+linki.
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -419,25 +419,25 @@ export const query = graphql`
 `
 ```
 
-And there you go! A working, albeit small, blog!
+I proszę bardzo! Działający, choć niewielki, blog!
 
-## Challenge
+## Zadanie
 
-Try playing more with the site. Try adding some more markdown files. Explore
-querying other data from the `MarkdownRemark` nodes and adding them to the
-frontpage or blog posts pages.
+Spróbuj pobawić się trochę więcej ze stroną. Spróbuj dodać więcej plików markdown. Zbadaj działanie
+wykonywania zapytań o inne dane z node'ów `MarkdownRemark` i dodaj je do strony
+frontowej lub stron blog postów.
 
-In this part of the tutorial, you've learned the foundations of building with
-Gatsby's data layer. You've learned how to _source_ and _transform_ data using
-plugins, how to use GraphQL to _map_ data to pages, and then how to build _page
-template components_ where you query for data for each page.
+W tej części poradnika, nauczyłeś się podstaw budowania stron
+z użyciem warstwy danych Gatsby. Nauczyłeś wię jak _pobierać_ i _przekształcać_ dane używając
+wtyczek, jak używać GraphQL do _mapowania_ danych na strony, a potem jak budować _komponenty szablonów stron_
+gdzie wykonujesz zapytania o dane dla każdej ze stron.
 
-## What's coming next?
+## Czego nauczysz się w daleszej części?
 
-Now that you've built a Gatsby site, where do you go next?
+Teraz gdy już wiesz jak zbudować stronę w Gatsby, gdzie udać się następnie?
 
-- Share your Gatsby site on Twitter and see what other people have created by searching for #gatsbytutorial! Make sure to mention @gatsbyjs in your Tweet and include the hashtag #gatsbytutorial :)
-- You could take a look at some [example sites](https://github.com/gatsbyjs/gatsby/tree/master/examples#gatsby-example-websites)
-- Explore more [plugins](/docs/plugins/)
-- See what [other people are building with Gatsby](/showcase/)
-- Check out the documentation on [Gatsby's APIs](/docs/api-specification/), [nodes](/docs/node-interface/), or [GraphQL](/docs/graphql-reference/)
+- Podziel się swoją stroną Gatsby na twitterze i sam zobacz co inni ludzie stworzyli wyszukując #gatsbytutorial! Upewnij się, że wspomnisz @gatsbyjs w swoim Tweet'cie i dodasz hasztag #gatsbytutorial :)
+- Możesz obejrzeć różne [przykładowe strony](https://github.com/gatsbyjs/gatsby/tree/master/examples#gatsby-example-websites)
+- Sprawdź więcej [wtyczek](/docs/plugins/)
+- Zobacz co [inni ludzie budują z Gatsby](/showcase/)
+- Sprawdź dokumentację [API Gatsby](/docs/api-specification/), [node](/docs/node-interface/), lub [GraphQL](/docs/graphql-reference/)
