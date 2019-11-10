@@ -8,35 +8,34 @@ disableTableOfContents: true
 
 ## Czego dowiesz się w tym poradniku?
 
-W poprzednim poradniku, tworzyłeś niezłą stronę index ktora wykonywała zapytania do plików 
-Markdown i wyświetalała listę tytułów i fragmentów blog postów. Jednak nie chcemy widzieć samych fragmentów, chcielibyśmy właściwych stron dla naszych plików Markdown.
+W poprzednim poradniku, stworzyłeś niezłą stronę index, która wykonywała zapytania do plików 
+Markdown i wyświetla listę tytułów oraz fragmenty blog postów. Jednak nie chcemy widzieć tylko fragmentów, chcielibyśmy właściwych, pełnych stron dla naszych plików Markdown.
 
 Moglibyśmy kontynuować tworzyć strony poprzez umieszczanie kolejnych komponentów React'a w 
 folderze `src/pages`. Jednak teraz nauczymy się jak _programatycznie_ tworzyć strony z 
-_danych_. Gatsby _nie_ jest ograniczony do tworzenia stron z plików, jak wiele innych 
-generatorów stron statycznych. Gatsby pozwala Toboie używać GraphQL, by pytać o twoje _dane_ i _map'ować_ wyniki zpaytań na _strony_-wszystko podczas procesu budowania strony. Taka 
-koncepcja daje potężne możliwości. Nauczysz się zastosowań i sposobów na użycie tych możliwości w dalszej części poradnika.
+_danych_. Gatsby, w przeciwieństwie do wielu innych generatorów stron statycznych, _nie_ jest ograniczony do tworzenia stron z plików. Gatsby pozwala Tobie używać GraphQL, po to, aby pytać o Twoje _dane_, oraz _map'ować_ wyniki zapytań na _strony_ - wszystko podczas procesu budowania (build). Ta 
+koncepcja daje ogromną moc w twoje ręce. Nauczysz się zastosowań i sposobów użycia tej możliwości w dalszej części poradnika.
 
 Zaczynajmy.
 
-## Tworzenie slug'ów dla stron
+## Tworzenie slug'ów stron
 
-Tworzenie nowych stron ma dwa kroki:
+Tworzenie nowych stron dzielimy na dwa kroki:
 
-1.  Generowanie "ścieżki" lub "slug'a" dla strony.
+1.  Wygenerowanie "ścieżki" (lub "slug'a") strony.
 2.  Tworzenie strony.
 
-_**Nota**: Często źródła danych dostarczą bezpośrednio slug lub nazwę ścieżki dla zawartości - kiedy pracuejsz z jednym z takich systemów (np. z CMS), nie będziesz musiał tworzyć slug'ów własnoręcznie, tak jak jest to robione z plikami markdown._
+_**Notatka**: Często źródła danych dostarczają bezpośrednio slug lub nazwę ścieżki dla treści - kiedy pracujesz z jednym z takich systemów (np. z CMS), nie będziesz musiał tworzyć slug'ów własnoręcznie, w przeciwieństwie do tego jak jest to robione z plikami Markdown._
 
-By tworzyć własne strony Markdown, nauczymy Cię używać dwóch API Gatsby'ego:
-[`onCreateNode`](/docs/node-apis/#onCreateNode) oraz
-[`createPages`](/docs/node-apis/#createPages). Są to dwa główne API
-które zauważysz że są używane na wielu stronach i w pluginach.
+By tworzyć własne strony z Markdown, nauczymy Cię używać dwóch API Gatsby'ego:
+[`onCreateNode`](/docs/node-apis/#onCreateNode),  oraz
+[`createPages`](/docs/node-apis/#createPages). Są to dwa główne API,
+które zauważysz, że są używane na wielu stronach i w pluginach.
 
-Dokładamy wszelkich starań by sprawić Gatsby API łatwym do zastosowania. W celu wykorzystania
-API, eksportujesz funkcję z nazwą API z pliku `gatsby-node.js`.
+Dokładamy wszelkich starań by zrobić API Gatsby jak najprostszym w użyciu. W celu wykorzystania
+API, eksportuj funkcję z nazwą API z pliku `gatsby-node.js`.
 
-A więc zrobimy to tutaj. W katalogu głównym Twojej strony, stwórz plik o nazwie
+A zatem zróbmy to tutaj. W katalogu głównym Twojej strony, stwórz plik o nazwie
 `gatsby-node.js`. A potem dopisz do niego poniższy kod.
 
 ```javascript:title=gatsby-node.js
@@ -45,15 +44,15 @@ exports.onCreateNode = ({ node }) => {
 }
 ```
 
-Funkcja `onCreateNode` będzie wywoływana przez Gatsby za każdym razem gdy tworzony jest nowy Node (lub aktualizowany).
+Funkcja `onCreateNode` będzie wywoływana przez Gatsby za każdym razem, gdy będzie tworzony (lub aktualizowany) nowy Node.
 
-Zatrzymaj i uruchom ponownie serwer deweloperski. Gdy będziesz to robił, zauważysz w konsoli 
+Zatrzymaj i uruchom ponownie serwer deweloperski. Gdy to zrobisz, zauważysz w konsoli 
 terminala kilka wpisów o utworzonych node'ach.
 
-Użyj tego API by dodać slug'i do swoich stron Markdown, do node'ów
+Użyj tego API by dodawać slug'i do swoich stron Markdown, do node'ów
 `MarkdownRemark`.
 
-Zmień swoją funkcję tak by teraz wyświetlała tylko wpisy node'ów `MarkdownRemark`.
+Zmień teraz swoją funkcję tak, aby wyświetlała tylko wpisy pochodzące z node'ów `MarkdownRemark`.
 
 ```javascript:title=gatsby-node.js
 exports.onCreateNode = ({ node }) => {
@@ -65,11 +64,11 @@ exports.onCreateNode = ({ node }) => {
 }
 ```
 
-Chcemy użyć wszystkich plików Markdown by stworzyć Slug'i dla stron. Tak więc 
-`pandas-and-bananas.md` utworzy `/pandas-and-bananas/`. Ale skąd brać nazwy plików
-z Node'a `MarkdownRemark`? Abyt to zrobić, musisz _przenieść_ "node graph" na jego
-node'a `File` _rodzica_, jako, że node `File`zawiera dane na temat plików na dysku,
-których potrzebujesz. Aby to zrobić, zmodywikuj swoją funkcję ponownie:
+Chcemy użyć wszystkich plików Markdown, aby tworzyć slug'i dla stron. Tak więc 
+`pandas-and-bananas.md` utworzy `/pandas-and-bananas/`. Ale jak uzyskać nazwę pliku
+z node'a `MarkdownRemark`? Aby to zrobić, musisz _przenieść_ "node graph" do jego
+_nadrzędnego_ node'a `File`, ponieważ node'y `File` zawierą potrzebne informacje o plikach na dysku.
+Aby to zrobić, zmodyfikuj ponownie swoją funkcję:
 
 ```javascript:title=gatsby-node.js
 // highlight-next-line
@@ -83,14 +82,14 @@ exports.onCreateNode = ({ node, getNode }) => {
 }
 ```
 
-Po ponownym uruchomieniu serwera deweloperskiego, powinienieś ujrzeć 
-wyświetlone w terminalu relatywne ścieżki dla Twoich dwóch plików Markdown.
+Po zrestartowaniu serwera deweloperskiego, powinieneś ujrzeć, 
+wyświetlone w oknie terminala, dwie ścieżki względne Twoich plików Markdown.
 
 ![markdown-relative-path](markdown-relative-path.png)
 
-Teraz musisz utworzyć slug'i. Jako że logika tworzenia slugów z nazw plików może być 
-trudna, `gatsby-source-filesystem` przychodzi wraz z wbudowaną funkcją tworzenia
-Slug'ów. Użyjmy tego teraz.
+Teraz musisz stworzyć slug'i. Ponieważ logika tworzenia slug'ów z nazw plików może być 
+trudna, wtyczka `gatsby-source-filesystem` dostarcza nam wbudowaną funkcję tworzenia
+Slug'ów. Użyjmy tego.
 
 ```javascript:title=gatsby-node.js
 const { createFilePath } = require(`gatsby-source-filesystem`) // highlight-line
@@ -102,20 +101,20 @@ exports.onCreateNode = ({ node, getNode }) => {
 }
 ```
 
-Funkcja przejmuje znajdowanie node'a `Pliku` rodzica razem ze stworzeniem
-slug'a. Uruchom serwer deweloperski ponownie i powinieneś zobaczyć wyświetlone w terminalu
+Funkcja ta obsługuje znajdowanie node'a nadrzędnego `Pliku`, wraz z utworzeniem jego
+slug'a. Uruchom ponownie serwer deweloperski, powinieneś zobaczyć wyświetlone w oknie terminala
 dwa slug'i, po jednym dla każdego pliku Markdown.
 
-Teraz możesz dodać nowe slugi bezpośrednio do node'ów `MarkdownRemark`. Daje Ci to
-ogromne możliwości, ponieważ dane, które dodajesz do node'ów są dostępne dla wszystkich 
-późniejszych zapytań w GraphQL. Zatem, będzie bardzo łatwo pobrać slug'i gdy przyjdzie czas na tworzenie stron.
+Teraz możesz dodać nowe slug'i bezpośrednio do node'ów `MarkdownRemark`. Daje Ci to
+ogromne możliwości, ponieważ dane, które dodajesz do node'ów, będą dostępne we wszystkich 
+późniejszych zapytaniach w GraphQL. Dlatego będzie bardzo łatwo pobierać slug'i gdy przyjdzie czas na tworzenie stron.
 
-Aby to zrobić, użyjesz funkcji przekazanej do implementacji API, która nazywa się
-[`createNodeField`](/docs/actions/#createNodeField). Ta funkcja pozwoli Tobie
-tworzyć dodatkowe pola na node'ach stowrzonych przez inne wtyczki. Tylko 
+Aby to zrobić, musisz użyć funkcji przekazanej do implementacji API, która nazywa się
+[`createNodeField`](/docs/actions/#createNodeField). Funkcja ta pozwoli Tobie
+tworzyć dodatkowe pola danych na node'ach stworzonych przez inne wtyczki. Tylko 
 oryginalny twórca node'a może bezpośrednio modyfikować node - wszystkie inne wtyczki
-(włączając twoje `gatsby-node.js`) muszą używać tej funkcji by tworzyć 
-nowe pola.
+(w tym `gatsby-node.js`) muszą używać tej funkcji do tworzenia 
+dodatkowych pól.
 
 ```javascript:title=gatsby-node.js
 const { createFilePath } = require(`gatsby-source-filesystem`)
@@ -135,8 +134,8 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 }
 ```
 
-Zrestartuj serwer deweloperski i odśwież GraphiQL. Potem uruchom to
-zapytanie GraphQL by ujrzeć swoje nowe slugi.
+Uruchom ponownie serwer deweloperski i otwórz lub odśwież GraphiQL. Potem uruchom to
+zapytanie GraphQL, aby zobaczyć nowe slugi.
 
 ```graphql
 {
@@ -152,11 +151,11 @@ zapytanie GraphQL by ujrzeć swoje nowe slugi.
 }
 ```
 
-Teraz gdy slug'i są gotowe, możesz zacząć tworzyć strony.
+Po utworzeniu slug'ów możesz zacząć tworzyć strony.
 
 ## Tworzenie stron
 
-W tym samym pliku `gatsby-node.js`, dodaj poniższy kod.
+W tym samym pliku `gatsby-node.js`, dodaj następujące elementy.
 
 ```javascript:title=gatsby-node.js
 const { createFilePath } = require(`gatsby-source-filesystem`)
@@ -197,23 +196,23 @@ exports.createPages = async ({ graphql, actions }) => {
 ```
 
 Dodałeś implementację API
-[`createPages`](/docs/node-apis/#createPages), które Gatsby wywołuje po to, by wtyczki mogły dodawać
+[`createPages`](/docs/node-apis/#createPages), który Gatsby wywołuje po to, aby wtyczki mogły dodawać
 strony.
 
-Jak wspomniano we wstępie do tego poradnika, wymagane kroki by tworzyć strony programatycznie są następujące:
+Jak wspomniano we wstępie do tej części poradnika, wymagane kroki do programatycznego tworzenia stron to:
 
-1.  Zapytanie o dane przy użyciu GraphQL
-2.  Zmapowanie wyników zapytań na strony
+1.  Zapytanie o dane za pomocą GraphQL
+2.  Zmapowanie wyników zapytania na strony
 
-Powyższy kod jest pierwszym krokiem do tworzenia stron z Twoich plików markdown, ponieważ używasz
-dostarczonej przez `graphql` funkcji by wykonywać zapytania o slug'i z markdown, które utworzyłeś.
-Na końcu wyświetlasz w konsoli wynik zapytania, który powinien wyglądać w ten sposób:
+Powyższy kod jest pierwszym krokiem do tworzenia stron z plików markdown, ponieważ używasz
+dostarczonej przez `graphql` funkcji, aby wykonywać zapytania o utworzone przez siebie slug'i markdown.
+Na końcu wyświetlasz w konsoli wynik zapytania, który powinien wyglądać następująco:
 
 ![query-markdown-slugs](query-markdown-slugs.png)
 
-Potrzebujesz jescze jednej rzeczy poza slugiem by tworzyć strony: komponent szablonu
-strony. Jak wszystko w Gatsby, programatyczne strony są zasilane komponentami React.
-Kiedy tworzysz stronę, musisz wskazać którego komponentu użyć.
+Aby tworzyć strony, potrzebujesz jeszcze jednej rzeczy poza slugiem: komponentu szablonu
+strony. Jak wszystko w Gatsby, programatyczne strony są obsługiwane przez komponenty React.
+Podczas tworzenia strony musisz określić, którego komponentu użyć.
 
 Stwórz folder `src/templates`, a potem dodaj następujący kod w
 pliku o nazwie `src/templates/blog-post.js`.
@@ -281,10 +280,10 @@ exports.createPages = async ({ graphql, actions }) => {
 }
 ```
 
-Uruchonm ponownie serwer deweloperski, twoje strony zostaną teraz utworzone! Łatwym sposobem
-by znaleźć nowe strony które utworzyłeś podczas kodowania, jest odwiedzenie domyślnego adresu pod którym 
+Uruchom ponownie serwer deweloperski, Twoje strony zostaną teraz utworzone! Łatwym sposobem
+by znaleźć nowe strony, które utworzyłeś podczas pisania kodu, jest odwiedzenie domyślnego adresu, pod którym 
 Gatsby w pomocny sposób wyświetli Tobie pełną listę dostępnych stron. Jeśli odwiedzisz adres
-<http://localhost:8000/sdf>, zobaczysz nowe strony które utworzyłeś.
+<http://localhost:8000/sdf>, zobaczysz nowe strony które stworzyłeś.
 
 ![new-pages](new-pages.png)
 
@@ -292,7 +291,7 @@ Odwiedź jedną z nich, a zobaczysz:
 
 ![hello-world-blog-post](hello-world-blog-post.png)
 
-Wygląda to wciąż nudno, a pewnie chcesz czegoś lepszego. Teraz możesz już pobrać dane ze swojego postu markdown. Zmień
+Wygląda to wciąż nudno, i pewnie chcesz zobaczyć coś bardziej rozbudowanego. Teraz możesz już pobierać dane ze swojego postu napisanego w markdown. A więc zmień
 `src/templates/blog-post.js` w taki sposób:
 
 ```jsx:title=src/templates/blog-post.js
@@ -419,9 +418,9 @@ export const query = graphql`
 `
 ```
 
-I proszę bardzo! Działający, choć niewielki, blog!
+I mamy to! Działający, choć niewielki, blog!
 
-## Zadanie
+## Wyzwanie
 
 Spróbuj pobawić się trochę więcej ze stroną. Spróbuj dodać więcej plików markdown. Zbadaj działanie
 wykonywania zapytań o inne dane z node'ów `MarkdownRemark` i dodaj je do strony
@@ -432,7 +431,7 @@ z użyciem warstwy danych Gatsby. Nauczyłeś wię jak _pobierać_ i _przekszta�
 wtyczek, jak używać GraphQL do _mapowania_ danych na strony, a potem jak budować _komponenty szablonów stron_
 gdzie wykonujesz zapytania o dane dla każdej ze stron.
 
-## Czego nauczysz się w daleszej części?
+## Czego nauczysz się w dalszej części?
 
 Teraz gdy już wiesz jak zbudować stronę w Gatsby, gdzie udać się następnie?
 
