@@ -137,8 +137,8 @@ Do tej pory rozmawialiśmy o bardziej tradycyjnym podejściu do używania standa
 Zajmijmy się **Modułami CSS**. Cytując
 [stronę główną Modułów CSS](https://github.com/css-modules/css-modules):
 
-> **Moduł CSS** jest plikiem CSS, w którym wszystkie nazwy klas i nazwy animacji 
->  posiadają domyślny zasięg lokalny.
+> **Moduł CSS** jest plikiem CSS, w którym wszystkie nazwy klas i nazwy animacji
+> posiadają domyślny zasięg lokalny.
 
 Moduły CSS są bardzo popularne, ponieważ pozwalają pisać zwykły, lecz bardziej bezpieczny kod CSS. Narzędzie automatycznie generuje unikatowe nazwy klas i animacji, więc nie musisz się martwić o kolizje nazw Selektorów.
 
@@ -256,7 +256,7 @@ Jeśli porównasz to ze swoim plikiem CSS, zauważysz, że każda z klas jest te
 
 4. Stwórz komponent `User`.
 
-Stwórz nowy komponent `<User />` bezpośrednio w kodzie komponentu strony `about-css-modules.js`. 
+Stwórz nowy komponent `<User />` bezpośrednio w kodzie komponentu strony `about-css-modules.js`.
 Zmodyfikuj `about-css-modules.js` tak, by wyglądał w poniższy sposób:
 
 ```jsx:title=src/pages/about-css-modules.js
