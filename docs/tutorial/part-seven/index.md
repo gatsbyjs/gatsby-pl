@@ -8,12 +8,12 @@ disableTableOfContents: true
 
 ## Czego dowiesz się w tym poradniku?
 
-W poprzednim poradniku, stworzyłeś niezłą stronę index, która wykonywała zapytania do plików 
-Markdown i wyświetla listę tytułów oraz fragmenty blog postów. Jednak nie chcemy widzieć tylko fragmentów, chcielibyśmy właściwych, pełnych stron dla naszych plików Markdown.
+W poprzednim poradniku, stworzyłeś niezłą stronę główną, która wykonywała zapytania do plików 
+Markdown i wyświetlała listę tytułów oraz fragmenty blog postów. Jednak nie chcemy widzieć tylko fragmentów, chcielibyśmy właściwych, pełnych stron dla naszych plików Markdown.
 
-Moglibyśmy kontynuować tworzyć strony poprzez umieszczanie kolejnych komponentów React'a w 
+Moglibyśmy kontynuować tworzenie stron poprzez umieszczanie kolejnych komponentów React'a w 
 folderze `src/pages`. Jednak teraz nauczymy się jak _programatycznie_ tworzyć strony z 
-_danych_. Gatsby, w przeciwieństwie do wielu innych generatorów stron statycznych, _nie_ jest ograniczony do tworzenia stron z plików. Gatsby pozwala Tobie używać GraphQL, po to, aby pytać o Twoje _dane_, oraz _map'ować_ wyniki zapytań na _strony_ - wszystko podczas procesu budowania (build). Ta 
+_danych_. Gatsby, w przeciwieństwie do wielu innych generatorów stron statycznych, _nie_ jest ograniczony do tworzenia stron z plików. Gatsby pozwala Ci używać GraphQL, po to, aby wysyłać zapytania o Twoje _dane_, oraz _map'ować_ wyniki zapytań na _strony_ - wszystko podczas procesu budowania (build). Ta 
 koncepcja daje ogromną moc w twoje ręce. Nauczysz się zastosowań i sposobów użycia tej możliwości w dalszej części poradnika.
 
 Zaczynajmy.
@@ -30,7 +30,7 @@ _**Notatka**: Często źródła danych dostarczają bezpośrednio slug lub nazw�
 By tworzyć własne strony z Markdown, nauczymy Cię używać dwóch API Gatsby'ego:
 [`onCreateNode`](/docs/node-apis/#onCreateNode),  oraz
 [`createPages`](/docs/node-apis/#createPages). Są to dwa główne API,
-które zauważysz, że są używane na wielu stronach i w pluginach.
+które zauważysz, że są używane na wielu stronach i we wtyczkach.
 
 Dokładamy wszelkich starań by zrobić API Gatsby jak najprostszym w użyciu. W celu wykorzystania
 API, eksportuj funkcję z nazwą API z pliku `gatsby-node.js`.
@@ -110,7 +110,7 @@ ogromne możliwości, ponieważ dane, które dodajesz do node'ów, będą dostę
 późniejszych zapytaniach w GraphQL. Dlatego będzie bardzo łatwo pobierać slug'i gdy przyjdzie czas na tworzenie stron.
 
 Aby to zrobić, musisz użyć funkcji przekazanej do implementacji API, która nazywa się
-[`createNodeField`](/docs/actions/#createNodeField). Funkcja ta pozwoli Tobie
+[`createNodeField`](/docs/actions/#createNodeField). Funkcja ta pozwoli Ci
 tworzyć dodatkowe pola danych na node'ach stworzonych przez inne wtyczki. Tylko 
 oryginalny twórca node'a może bezpośrednio modyfikować node - wszystkie inne wtyczki
 (w tym `gatsby-node.js`) muszą używać tej funkcji do tworzenia 
@@ -196,7 +196,7 @@ exports.createPages = async ({ graphql, actions }) => {
 ```
 
 Dodałeś implementację API
-[`createPages`](/docs/node-apis/#createPages), który Gatsby wywołuje po to, aby wtyczki mogły dodawać
+[`createPages`](/docs/node-apis/#createPages), które Gatsby wywołuje po to, aby wtyczki mogły dodawać
 strony.
 
 Jak wspomniano we wstępie do tej części poradnika, wymagane kroki do programatycznego tworzenia stron to:
