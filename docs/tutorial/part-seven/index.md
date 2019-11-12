@@ -14,7 +14,7 @@ Markdown i wyświetlała listę tytułów oraz fragmenty blog postów. Jednak ni
 Moglibyśmy kontynuować tworzenie stron poprzez umieszczanie kolejnych komponentów React'a w 
 folderze `src/pages`. Jednak teraz nauczymy się jak _programatycznie_ tworzyć strony z 
 _danych_. Gatsby, w przeciwieństwie do wielu innych generatorów stron statycznych, _nie_ jest ograniczony do tworzenia stron z plików. Gatsby pozwala Ci używać GraphQL, po to, aby wysyłać zapytania o Twoje _dane_, oraz _map'ować_ wyniki zapytań na _strony_ - wszystko podczas procesu budowania (build). Ta 
-koncepcja daje ogromną moc w twoje ręce. Nauczysz się zastosowań i sposobów użycia tej możliwości w dalszej części poradnika.
+koncepcja daje Ci ogromne możliwości. Nauczysz się zastosowań i sposobów użycia tych możliwości w dalszej części poradnika.
 
 Zaczynajmy.
 
@@ -32,7 +32,7 @@ By tworzyć własne strony z Markdown, nauczymy Cię używać dwóch API Gatsby'
 [`createPages`](/docs/node-apis/#createPages). Są to dwa główne API,
 które zauważysz, że są używane na wielu stronach i we wtyczkach.
 
-Dokładamy wszelkich starań by zrobić API Gatsby jak najprostszym w użyciu. W celu wykorzystania
+Dokładamy wszelkich starań aby API Gatsby'ego były jak najprostsze w użyciu. W celu wykorzystania
 API, eksportuj funkcję z nazwą API z pliku `gatsby-node.js`.
 
 A zatem zróbmy to tutaj. W katalogu głównym Twojej strony, stwórz plik o nazwie
