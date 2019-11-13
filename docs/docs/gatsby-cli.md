@@ -1,17 +1,17 @@
 ---
-title: Commands (Gatsby CLI)
+title: Komendy (Gatsby CLI)
 tableOfContentsDepth: 2
 ---
 
-The Gatsby command line tool (CLI) is the main entry point for getting up and running with a Gatsby application and for using functionality including like running a development server and building out your Gatsby application for deployment.
+Interfejs wiersza poleceń Gatsby (CLI) to główny punkt wejściowy do rozpoczęcia pracy nad aplikacją Gatsby oraz do używania funkcjonalności, takich jak uruchamianie serwera deweloperskiego czy budowanie wersji produkcyjnej twojej aplikacji Gatsby.
 
 _We provide similar documentation available with the gatsby-cli [README](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-cli/README.md), and our [cheat sheet](/docs/cheat-sheet/) has all the top CLI commands ready to print out._
 
-## How to use gatsby-cli
+## Jak używać gatsby-cli
 
-The Gatsby CLI (`gatsby-cli`) is packaged as an executable that can be used globally. The Gatsby CLI is available via [npm](https://www.npmjs.com/) and should be installed globally by running `npm install -g gatsby-cli` to use it locally.
+Gatsby CLI (`gatsby-cli`) is packaged as an executable that can be used globally. Gatsby CLI jest dostępne poprzez [npm](https://www.npmjs.com/) i powinno być zainstalowane globalnie poprzez uruchomienie komendy `npm install -g gatsby-cli` żeby móc używać go lokalnie.
 
-Run `gatsby --help` for full help.
+Uruchom komendę `gatsby --help` w celu uzyskania pełnej pomocy.
 
 You can also use the `package.json` script variant of these commands, typically exposed _for you_ with most [starters](/docs/starters/). For example, if you want to make the [`gatsby develop`](#develop) command available in your application, open up `package.json` and add a script like so:
 
@@ -31,30 +31,31 @@ You can also use the `package.json` script variant of these commands, typically 
 gatsby new [<site-name> [<starter-url>]]
 ```
 
-#### Arguments
+#### Argumenty
 
-| Argument    | Description                                                                                                                                                                                                     |
-| ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| site-name   | Your Gatsby site name, which is also used to create a project directory.                                                                                                                                        |
-| starter-url | A Gatsby starter URL or local file path. Defaults to [gatsby-starter-default](https://github.com/gatsbyjs/gatsby-starter-default); see the [Gatsby starters](/docs/gatsby-starters/) docs for more information. |
+| Argument    | Opis                                                                                                                                                                                                                                  |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| site-name   | Nazwa twojej strony Gatsby, która zostanie również użyta, żeby stworzyć katalog projektu.                                                                                                                                             |
+| starter-url | URL startera Gatsby lub ścieżka lokalnego pliku. Domyślnie [gatsby-starter-default](https://github.com/gatsbyjs/gatsby-starter-default); zobacz dokumentację [Gatsby starters](/docs/gatsby-starters/) aby uzyskać więcej informacji. |
 
-> Note: The `site-name` should only consist of letters and numbers. If you specify a `.`, `./` or a `<space>` in the name, `gatsby new` will throw an error.
+> Uwaga: `site-name` powinna zawierać tylko litery i cyfry. Jeśli w nazwie zawrzesz `.`, `./` lub `<spację>`, `gatsby new` wyrzuci błąd.
 
-#### Examples
+#### Przykłady
 
-- Create a Gatsby site named `my-awesome-site` using the default starter:
+- Stwórz stronę Gatsby o nazwie `my-awesome-site` używając domyślnego startera:
 
 ```shell
 gatsby new my-awesome-site
 ```
 
-- Create a Gatsby site named `my-awesome-blog-site`, using [gatsby-starter-blog](https://www.gatsbyjs.org/starters/gatsbyjs/gatsby-starter-blog/):
+- Stwórz stronę Gatsby o nazwie `my-awesome-blog-site` używając [gatsby-starter-blog](https://www.gatsbyjs.org/starters/gatsbyjs/gatsby-starter-blog/):
 
 ```shell
 gatsby new my-awesome-blog-site https://github.com/gatsbyjs/gatsby-starter-blog
 ```
 
 - If you leave out both of the arguments, the CLI will run an interactive shell asking for these inputs:
+- Jeśli pozostawisz oba argumenty puste, CLI uruchomi ??? prosząc o wprowadzenie tych danych:
 
 ```shell
 gatsby new
@@ -70,13 +71,13 @@ See the [Gatsby starters docs](https://www.gatsbyjs.org/docs/gatsby-starters/) f
 
 ### `develop`
 
-Once you've installed a Gatsby site, go to the root directory of your project and start the development server:
+Po zainstalowaniu strony Gatsby, przejdź do katalogu głównego twojego projektu i uruchom serwer deweloperski:
 
 `gatsby develop`
 
-#### Options
+#### Opcje
 
-|     Option      | Description                                     |
+|      Opcja      | Opis                                            |
 | :-------------: | ----------------------------------------------- |
 | `-H`, `--host`  | Set host. Defaults to localhost                 |
 | `-p`, `--port`  | Set port. Defaults to 8000                      |
