@@ -55,7 +55,7 @@ gatsby new my-awesome-blog-site https://github.com/gatsbyjs/gatsby-starter-blog
 ```
 
 - If you leave out both of the arguments, the CLI will run an interactive shell asking for these inputs:
-- Jeśli pozostawisz oba argumenty puste, CLI uruchomi ??? prosząc o wprowadzenie tych danych:
+- Jeśli pozostawisz oba argumenty puste, CLI uruchomi interaktywną powłokę prosząc o wprowadzenie tych danych:
 
 ```shell
 gatsby new
@@ -67,7 +67,7 @@ gatsby new
    (Use a different starter)
 ```
 
-See the [Gatsby starters docs](https://www.gatsbyjs.org/docs/gatsby-starters/) for more details.
+Zobacz dokumentację [Gatsby starters](/docs/gatsby-starters/) aby uzyskać więcej informacji.
 
 ### `develop`
 
@@ -79,17 +79,17 @@ Po zainstalowaniu strony Gatsby, przejdź do katalogu głównego twojego projekt
 
 |      Opcja      | Opis                                            |
 | :-------------: | ----------------------------------------------- |
-| `-H`, `--host`  | Set host. Defaults to localhost                 |
-| `-p`, `--port`  | Set port. Defaults to 8000                      |
-| `-o`, `--open`  | Open the site in your (default) browser for you |
-| `-S`, `--https` | Use HTTPS                                       |
+| `-H`, `--host`  | Ustawienie hosta. Domyślnie localhost                 |
+| `-p`, `--port`  | Ustawienie portu. Domyślnie 8000                      |
+| `-o`, `--open`  | Otwarcie strony w twojej (domyślnej) przeglądarce |
+| `-S`, `--https` | Użycie HTTPS                                       |
 
 Follow the [Local HTTPS guide](/docs/local-https/)
 to find out how you can set up an HTTPS development server using Gatsby.
 
-#### Preview changes on other devices
+#### Podgląd zmian na innych urządzeniach
 
-You can use the Gatsby develop command with the host option to access your dev environment on other devices on the same network, run:
+Możesz użyć komendy `gatsby develop` z opcją hosta, żeby uzyskać dostęp do środowiska programistycznego na innych urządzeniach. Uruchom:
 
 ```shell
 gatsby develop -H 0.0.0.0
