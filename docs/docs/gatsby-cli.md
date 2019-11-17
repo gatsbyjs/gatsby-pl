@@ -8,8 +8,8 @@ Interfejs wiersza poleceń Gatsby (CLI) to główny punkt wejściowy do rozpocz�
 _Zapewniamy podobną dokumentację dostępną razem z [README](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-cli/README.md) gatsby-cli, a nasz [cheat sheet](/docs/cheat-sheet/) zawiera wszystkie najważniejsze komendy CLI gotowe do wydrukowania_
 
 ## Jak używać gatsby-cli
-
-Gatsby CLI (`gatsby-cli`) is packaged as an executable that can be used globally. Gatsby CLI jest dostępne poprzez [npm](https://www.npmjs.com/) i powinno być zainstalowane globalnie poprzez uruchomienie komendy `npm install -g gatsby-cli` żeby móc używać go lokalnie.
+Gatsby CLI `gatsby-cli` jest spakowane jako plik wynonywalny, który może być używany globalnie.
+Gatsby CLI jest dostępne poprzez [npm](https://www.npmjs.com/) i powinno być zainstalowane globalnie poprzez uruchomienie komendy `npm install -g gatsby-cli` żeby móc używać go lokalnie.
 
 Uruchom komendę `gatsby --help` w celu uzyskania pełnej pomocy.
 
@@ -23,7 +23,7 @@ Możesz także użyć opisanych tu komend jako skryptów w `package.json`, któr
 }
 ```
 
-## API komend
+## Komendy API
 
 ### `new`
 
@@ -83,18 +83,17 @@ Po zainstalowaniu strony Gatsby, przejdź do katalogu głównego twojego projekt
 | `-o`, `--open`  | Otwarcie strony w twojej (domyślnej) przeglądarce |
 | `-S`, `--https` | Użycie HTTPS                                      |
 
-Follow the [Local HTTPS guide](/docs/local-https/)
-to find out how you can set up an HTTPS development server using Gatsby.
+Przeczytaj [przewodnik po lokalnym HTTPS](/docs/local-https/), aby dowiedzieć się jak ustawić serwer deweloperski HTTPS przy użyciu Gatsby.
 
 #### Podgląd zmian na innych urządzeniach
 
-Możesz użyć komendy `gatsby develop` z opcją hosta, żeby uzyskać dostęp do środowiska programistycznego na innych urządzeniach. Uruchom:
+Możesz użyć komendy `gatsby develop` z opcją hosta, aby uzyskać dostęp do środowiska programistycznego na innych urządzeniach. Uruchom:
 
 ```shell
 gatsby develop -H 0.0.0.0
 ```
 
-Następnie terminal wyświetli standardowe informacje, ale dodatkowo dołączy URL, na który możesz przejść z innego urządzenia będącego w tej samej sieci aby zobaczyć jak strona jest wyświetlana.
+Następnie terminal wyświetli standardowe informacje, ale dodatkowo dołączy URL, na który możesz przejść z innego urządzenia będącego w tej samej sieci, aby zobaczyć jak strona jest wyświetlana.
 
 ```
 You can now view gatsbyjs.org in the browser.
@@ -120,7 +119,7 @@ Uruchom komendę w katalogu głównym strony Gatsby, aby zbudować wersję produ
 | `--open-tracing-config-file` | Plik konfiguracyjny śledzenia (zgodny z OpenTracing). Zobacz dokumentację [Performance Tracing](/docs/performance-tracing/) |
 | `--no-color`, `--no-colors`  | Wyłącza wyświetlanie kolorów w terminalu                                                                                    |
 
-In addition to these build options, there are some optional [build environment variables](/docs/environment-variables/#build-variables) for more advanced configurations that can adjust how a build runs. For example, setting `CI=true` as an environment variable will tailor output for [dumb terminals](https://en.wikipedia.org/wiki/Computer_terminal#Dumb_terminals).
+Oprócz wymienionych opcji budowania, istnieją także opcjonalne [zmienne środowiskowe](/docs/environment-variables/#build-variables) do bardziej zaawansowanych konfiguracji, które pozwalają dostosować jak przebiega proces budowania aplikacji. Na przykład ustawienie `CI=true` jako zmiennej środowiskowej dostosuje dane wyjściowe do [terminali nieinteligentnych](https://en.wikipedia.org/wiki/Computer_terminal#Dumb_terminals).
 
 ### `serve`
 
@@ -175,13 +174,12 @@ Kieruje cię do dokumentacji dotyczącej użycia i tworzenia wtyczek.
 
 ### Repl
 
-Get a Node.js REPL (interactive shell) with context of your Gatsby environment:
+Uruchom Node.js REPL (interaktywną powłokę) z kontekstem twojego środowiska Gatsby:
 
 `gatsby repl`
 
-Gatsby will prompt you to type in commands and explore. When it shows this: `gatsby >`
-
-You can type in a command, such as one of these:
+Gatsby poprosi cię o wpisanie komend. Gdy pokaże to: `gatsby >`
+możesz wpisać komendę, np. jedną z poniższych
 
 `babelrc`
 
@@ -201,10 +199,10 @@ You can type in a command, such as one of these:
 
 `staticQueries`
 
-When combined with the [GraphQL explorer](/docs/introducing-graphiql/), these REPL commands could be very helpful for understanding your Gatsby site's data.
+Gdy połączysz to z [eksploratorem GraphQL](/docs/introducing-graphiql/), te komendy REPL mogą być bardzo przydatne do zrozumienia danych twojej strony Gatsby.
 
-For more information, check out the [Gatsby REPL documentation](/docs/gatsby-repl/).
+Sprawdź [dokumentację Gatsby REPL](/docs/gatsby-repl/), aby uzyskać więcej informacji.
 
-### Disabling colored output
+### Wyłączenie kolorowego wyniku w terminalu
 
-In addition to the explicit `--no-color` option, the CLI respects the presence of the `NO_COLOR` environment variable (see [no-color.org](https://no-color.org/)).
+Oprócz sprecyzowanej opcji `--no-c(olor`, CLI respektuje obecność zmiennej środowiskowej `NO_COLOR` (zobacz [no-color.org](https://no-color.org/)).
