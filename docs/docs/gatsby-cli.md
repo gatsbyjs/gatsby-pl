@@ -83,7 +83,7 @@ Po zainstalowaniu strony Gatsby, przejdź do katalogu głównego twojego projekt
 | `-o`, `--open`  | Otwarcie strony w twojej (domyślnej) przeglądarce |
 | `-S`, `--https` | Użycie HTTPS                                      |
 
-Przeczytaj [przewodnik po lokalnym HTTPS](/docs/local-https/), aby dowiedzieć się jak ustawić serwer deweloperski HTTPS przy użyciu Gatsby.
+Przeczytaj [przewodnik o lokalnym HTTPS](/docs/local-https/), aby dowiedzieć się jak ustawić serwer deweloperski HTTPS przy użyciu Gatsby.
 
 #### Podgląd zmian na innych urządzeniach
 
