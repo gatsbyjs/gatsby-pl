@@ -5,11 +5,11 @@ tableOfContentsDepth: 2
 
 Interfejs wiersza poleceń Gatsby (CLI) to główny punkt wejściowy do rozpoczęcia pracy nad aplikacją Gatsby oraz do używania funkcjonalności, takich jak uruchamianie serwera deweloperskiego czy budowanie wersji produkcyjnej twojej aplikacji Gatsby.
 
-_Zapewniamy podobną dokumentację dostępną razem z [README](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-cli/README.md) gatsby-cli, a nasz [cheat sheet](/docs/cheat-sheet/) zawiera wszystkie najważniejsze komendy CLI gotowe do wydrukowania_
+_Zapewniamy podobną dokumentację dostępną razem z [README](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-cli/README.md) gatsby-cli, a nasza [ściąga](/docs/cheat-sheet/) zawiera wszystkie najważniejsze komendy CLI gotowe do wydrukowania_
 
 ## Jak używać gatsby-cli
-Gatsby CLI `gatsby-cli` jest spakowane jako plik wynonywalny, który może być używany globalnie.
-Gatsby CLI jest dostępne poprzez [npm](https://www.npmjs.com/) i powinno być zainstalowane globalnie poprzez uruchomienie komendy `npm install -g gatsby-cli` żeby móc używać go lokalnie.
+Interfejs wiersza poleceń Gatsby (`gatsby-cli`) jest spakowany jako plik wynonywalny, który może być używany globalnie.
+Gatsby CLI jest dostępne poprzez [npm](https://www.npmjs.com/) i powinno być zainstalowane globalnie poprzez uruchomienie komendy `npm install -g gatsby-cli`, żeby móc używać go lokalnie.
 
 Uruchom komendę `gatsby --help` w celu uzyskania pełnej pomocy.
 
@@ -164,7 +164,7 @@ Jest to przydatne jako ostatnia deska ratunku, gdy twój lokalny projekt wydaje 
 
 ### `plugin`
 
-Uruchamia komendy typowe dla wtyczek Gatsby.
+Uruchamia komendy dotyczące wtyczek Gatsby.
 
 #### `docs`
 
@@ -178,7 +178,7 @@ Uruchom Node.js REPL (interaktywną powłokę) z kontekstem twojego środowiska 
 
 `gatsby repl`
 
-Gatsby poprosi cię o wpisanie komend. Gdy pokaże to: `gatsby >`
+Gatsby poprosi cię o wpisanie komend. Gdy pokaże to: `gatsby >`,
 możesz wpisać komendę, np. jedną z poniższych
 
 `babelrc`
@@ -199,10 +199,10 @@ możesz wpisać komendę, np. jedną z poniższych
 
 `staticQueries`
 
-Gdy połączysz to z [eksploratorem GraphQL](/docs/introducing-graphiql/), te komendy REPL mogą być bardzo przydatne do zrozumienia danych twojej strony Gatsby.
+W połączeniu z [eksploratorem GraphQL](/docs/introducing-graphiql/), te komendy REPL mogą być bardzo przydatne do zrozumienia danych twojej strony Gatsby.
 
 Sprawdź [dokumentację Gatsby REPL](/docs/gatsby-repl/), aby uzyskać więcej informacji.
 
 ### Wyłączenie kolorowego wyniku w terminalu
 
-Oprócz sprecyzowanej opcji `--no-c(olor`, CLI respektuje obecność zmiennej środowiskowej `NO_COLOR` (zobacz [no-color.org](https://no-color.org/)).
+Oprócz sprecyzowanej opcji `--no-color`, CLI respektuje obecność zmiennej środowiskowej `NO_COLOR` (zobacz [no-color.org](https://no-color.org/)).
