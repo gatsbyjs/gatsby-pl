@@ -8,7 +8,7 @@ Interfejs wiersza poleceń Gatsby (CLI) to główny punkt wejściowy do rozpocz�
 _Zapewniamy podobną dokumentację dostępną razem z [README](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-cli/README.md) gatsby-cli, a nasza [ściąga](/docs/cheat-sheet/) zawiera wszystkie najważniejsze komendy CLI gotowe do wydrukowania_
 
 ## Jak używać gatsby-cli
-Interfejs wiersza poleceń Gatsby (`gatsby-cli`) jest spakowany jako plik wynonywalny, który może być używany globalnie.
+Interfejs wiersza poleceń Gatsby (`gatsby-cli`) jest spakowany jako plik wykonywalny, który może być używany globalnie.
 Gatsby CLI jest dostępne poprzez [npm](https://www.npmjs.com/) i powinno być zainstalowane globalnie poprzez uruchomienie komendy `npm install -g gatsby-cli`, żeby móc używać go lokalnie.
 
 Uruchom komendę `gatsby --help` w celu uzyskania pełnej pomocy.
@@ -54,7 +54,7 @@ gatsby new my-awesome-site
 gatsby new my-awesome-blog-site https://github.com/gatsbyjs/gatsby-starter-blog
 ```
 
-- Jeśli pozostawisz oba argumenty puste, CLI uruchomi interaktywną powłokę prosząc o wprowadzenie tych danych:
+- Jeśli pozostawisz oba argumenty puste, CLI poprosi Cię o wprowadzenie tych danych:
 
 ```shell
 gatsby new
