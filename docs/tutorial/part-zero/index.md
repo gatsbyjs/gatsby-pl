@@ -87,7 +87,7 @@ Teraz możesz zacząć korzystać z Gatsby CLI i utworzyć swoją pierwszą stro
 
 <video controls="controls" autoplay="true" loop="true">
   <source type="video/mp4" src="./03-create-site.mp4" />
-  <p>Sorry! You browser doesn't support this video.</p>
+  <p>Sorry! Your browser doesn't support this video.</p>
 </video>
 
 Co się właściwie wydarzyło?

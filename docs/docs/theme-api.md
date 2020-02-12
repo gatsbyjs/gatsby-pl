@@ -97,7 +97,7 @@ Until Gatsby has tooling to automatically handle shadowing, you will have to man
 
 Luckily, the way to do that is only a few steps. Take the `src` directory from the theme, and move it to the front of the path, then write a file at that location in your site. Looking back on the `Header` example, this is the path to the component in your theme:
 
-```
+```text
 gatsby-theme-amazing/src/components/header.js
 ```
 

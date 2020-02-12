@@ -27,7 +27,7 @@ Możesz także użyć opisanych tu komend jako skryptów w `package.json`, któr
 
 ### `new`
 
-```
+```shell
 gatsby new [<site-name> [<starter-url>]]
 ```
 
@@ -95,7 +95,7 @@ gatsby develop -H 0.0.0.0
 
 Następnie terminal wyświetli standardowe informacje, ale dodatkowo dołączy URL, na który możesz przejść z innego urządzenia będącego w tej samej sieci, aby zobaczyć jak strona jest wyświetlana.
 
-```
+```shell
 You can now view gatsbyjs.org in the browser.
 ⠀
   Local:            http://0.0.0.0:8000/

@@ -1,5 +1,5 @@
 ---
-title: Building an E-commerce Site
+title: Building an e-commerce Site
 ---
 
 The speed and performance of sites built with Gatsby make it a great tool for building E-commerce sites. There are existing plugins for connecting services like [Shopify](/packages/gatsby-source-shopify/) and [Snipcart](/packages/gatsby-plugin-snipcart/) to Gatsby, and this section contains reference guides to help get things setup.
