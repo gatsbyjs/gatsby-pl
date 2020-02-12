@@ -49,8 +49,13 @@ Funkcja `onCreateNode` będzie wywoływana przez Gatsby za każdym razem, gdy b�
 Zatrzymaj i uruchom ponownie serwer deweloperski. Gdy to zrobisz, zauważysz w konsoli 
 terminala kilka wpisów o utworzonych node'ach.
 
+<<<<<<< HEAD
 Użyj tego API by dodawać slug'i do swoich stron Markdown, do node'ów
 `MarkdownRemark`.
+=======
+In the next section, you will use this API to add slugs for your Markdown pages to `MarkdownRemark`
+nodes.
+>>>>>>> 79b09bc29f133961f3d7de0f36a25ff727e6c22a
 
 Zmień teraz swoją funkcję tak, aby wyświetlała tylko wpisy pochodzące z node'ów `MarkdownRemark`.
 
@@ -280,10 +285,17 @@ exports.createPages = async ({ graphql, actions }) => {
 }
 ```
 
+<<<<<<< HEAD
 Uruchom ponownie serwer deweloperski, Twoje strony zostaną teraz utworzone! Łatwym sposobem
 by znaleźć nowe strony, które utworzyłeś podczas pisania kodu, jest odwiedzenie domyślnego adresu, pod którym 
 Gatsby w pomocny sposób wyświetli Tobie pełną listę dostępnych stron. Jeśli odwiedzisz adres
 <http://localhost:8000/sdf>, zobaczysz nowe strony które stworzyłeś.
+=======
+Restart the development server and your pages will be created! An easy way to
+find new pages you create while developing is to go to a random path where
+Gatsby will helpfully show you a list of pages on the site. If you go to
+`http://localhost:8000/sdf`, you'll see the new pages you created.
+>>>>>>> 79b09bc29f133961f3d7de0f36a25ff727e6c22a
 
 ![new-pages](new-pages.png)
 
@@ -379,7 +391,7 @@ export default ({ data }) => {
                 {node.frontmatter.title}{" "}
                 <span
                   css={css`
-                    color: #bbb;
+                    color: #555;
                   `}
                 >
                   — {node.frontmatter.date}
@@ -422,9 +434,15 @@ I mamy to! Działający, choć niewielki, blog!
 
 ## Wyzwanie
 
+<<<<<<< HEAD
 Spróbuj pobawić się trochę więcej ze stroną. Spróbuj dodać więcej plików markdown. Zbadaj działanie
 wykonywania zapytań o inne dane z node'ów `MarkdownRemark` i dodaj je do strony
 frontowej lub stron blog postów.
+=======
+Try playing more with the site. Try adding some more markdown files. Explore
+querying other data from the `MarkdownRemark` nodes and adding them to the
+front page or blog posts pages.
+>>>>>>> 79b09bc29f133961f3d7de0f36a25ff727e6c22a
 
 W tej części poradnika, nauczyłeś się podstaw budowania stron
 z użyciem warstwy danych Gatsby. Nauczyłeś wię jak _pobierać_ i _przekształcać_ dane używając
