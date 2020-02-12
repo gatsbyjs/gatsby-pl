@@ -13,59 +13,35 @@ Ten szybki start jest przeznaczony dla średnio-zaawansowanych i zaawansowanych 
 
 **Uwaga**: Ten filmik korzysta z `npx`, które jest narzędziem uruchamiającym paczki npm bez potrzeby ich instalacji. Uruchomienie komendy `npx gatsby new` jest tym samym co `gatsby new`, jeśli masz zainstalowane gatsby-cli na swoim komputerze.
 
-<<<<<<< HEAD
-### Zainstaluj Gatsby CLI.
-=======
-### Install the Gatsby CLI
->>>>>>> 79b09bc29f133961f3d7de0f36a25ff727e6c22a
+### Zainstaluj Gatsby CLI
 
 ```shell
 npm install -g gatsby-cli
 ```
 
-<<<<<<< HEAD
-### Stwórz nową stronę.
-=======
-### Create a new site
->>>>>>> 79b09bc29f133961f3d7de0f36a25ff727e6c22a
+### Stwórz nową stronę
 
 ```shell
 gatsby new gatsby-site
 ```
 
-<<<<<<< HEAD
-### Zmień katalog na ten z Twoją stroną.
-=======
-### Change directories into site folder
->>>>>>> 79b09bc29f133961f3d7de0f36a25ff727e6c22a
+### Zmień katalog na ten z Twoją stroną
 
 ```shell
 cd gatsby-site
 ```
 
-<<<<<<< HEAD
-### Włącz serwer deweloperski.
-=======
-### Start development server
->>>>>>> 79b09bc29f133961f3d7de0f36a25ff727e6c22a
+### Włącz serwer deweloperski
 
 ```shell
 gatsby develop
 ```
 
-<<<<<<< HEAD
-Gatsby uruchomi środowisko deweloperskie z natychmiastowym odświeżaniem, dostępne domyślnie na `localhost:8000`.
-=======
-Gatsby will start a hot-reloading development environment accessible by default at `http://localhost:8000`.
->>>>>>> 79b09bc29f133961f3d7de0f36a25ff727e6c22a
+Gatsby uruchomi środowisko deweloperskie z natychmiastowym odświeżaniem, dostępne domyślnie na `http://localhost:8000`.
 
 Spróbuj dokonać edycji stron JavaScript w `src/pages`. Zapisane zmiany odświeżą się natychmiastowo w przeglądarce.
 
-<<<<<<< HEAD
-### Zbuduj wersję produkcyjną.
-=======
-### Create a production build
->>>>>>> 79b09bc29f133961f3d7de0f36a25ff727e6c22a
+### Zbuduj wersję produkcyjną
 
 ```shell
 gatsby build
@@ -73,11 +49,7 @@ gatsby build
 
 Gatsby przeprowadzi zoptymalizowaną kompilację produkcyjną dla Twojej strony, generując przy tym statyczne pliki HTML i pakiety JavaScript dla każdej ściezki.
 
-<<<<<<< HEAD
-### Zaserwuj wersję produkcyjną lokalnie.
-=======
-### Serve the production build locally
->>>>>>> 79b09bc29f133961f3d7de0f36a25ff727e6c22a
+### Zaserwuj wersję produkcyjną lokalnie
 
 ```shell
 gatsby serve

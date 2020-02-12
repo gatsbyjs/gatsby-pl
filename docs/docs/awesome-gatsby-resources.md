@@ -90,10 +90,7 @@ See the [unofficial list of themes](https://gatsbytemplates.io/)
 - [Building a Video Blog with Gatsby and Markdown (MDX)](https://scotch.io/tutorials/building-a-video-blog-with-gatsby-and-markdown-mdx)
 - [Deploying Your First Gatsby Site to Netlify](https://scotch.io/tutorials/deploying-your-first-gatsby-site-to-netlify)
 - [Add a chat widget to your Gatsby blog](https://pusher.com/tutorials/chat-gatsby/)
-<<<<<<< HEAD
-=======
 - [Headless WordPress: Why Gatsby Should Be Next on Your List of Things to Learn](https://deliciousbrains.com/gatsby-headless-wordpress/)
->>>>>>> 79b09bc29f133961f3d7de0f36a25ff727e6c22a
 
 ### German
 

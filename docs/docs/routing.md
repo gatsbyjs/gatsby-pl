@@ -61,14 +61,10 @@ Alternatively, you can navigate between pages using standard `<a>` tags, but you
 
 ## Creating authentication-gated links
 
-<<<<<<< HEAD
-If you don't want all of your content available on the public web, Gatsby lets you create [client-only routes](/docs/client-only-routes-and-user-authentication) that live behind an authentication gate.
-=======
 For pages dealing with sensitive information, or other dynamic behavior, you may want to handle that information server-side. Gatsby lets you create [client-only routes](/docs/client-only-routes-and-user-authentication) that live behind an authentication gate, ensuring that the information is only available to authorized users.
 
 ## Performance and Prefetching
 
 In order to improve performance, Gatsby looks for links that appear on the current page to perform prefetching. Before a user has even clicked on a link, Gatsby has started to fetch the page it points to. [Learn more about prefetching](/docs/how-code-splitting-works/#prefetching-chunks).
->>>>>>> 79b09bc29f133961f3d7de0f36a25ff727e6c22a
 
 <GuideList slug={props.slug} />

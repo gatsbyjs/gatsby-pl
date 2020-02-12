@@ -32,12 +32,9 @@ Yarn is a package manager for your code, similar to [NPM](https://www.npmjs.com/
 - Set up repo and install dependencies: `yarn run bootstrap`
 - Make sure tests are passing for you: `yarn test`
 - Create a topic branch: `git checkout -b topics/new-feature-name`
-<<<<<<< HEAD
-=======
 
 ### Docs only changes
 
->>>>>>> 79b09bc29f133961f3d7de0f36a25ff727e6c22a
 - See [docs setup instructions](/contributing/docs-contributions#docs-site-setup-instructions) for docs-only changes.
 - Run `yarn run watch` from the root of the repo to watch for changes to packages' source code and compile these changes on-the-fly as you work.
 

@@ -295,11 +295,7 @@ gatsby develop
 
 ### Testing with GraphiQL
 
-<<<<<<< HEAD
-You can test out your GraphQL queries with GraphiQL (a GraphQL debugger) fire up GraphiQL on [http://localhost:8000/\_\_\_graphql](http://localhost:8000/___graphql)
-=======
 You can test out your GraphQL queries with GraphiQL (a GraphQL debugger) fire up GraphiQL on `http://localhost:8000/___graphql`
->>>>>>> 79b09bc29f133961f3d7de0f36a25ff727e6c22a
 
 Once GraphiQL is open, paste the query below :
 

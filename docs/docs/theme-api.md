@@ -103,11 +103,7 @@ gatsby-theme-amazing/src/components/header.js
 
 and here is the path where you would shadow it in your site:
 
-<<<<<<< HEAD
-```
-=======
 ```text
->>>>>>> 79b09bc29f133961f3d7de0f36a25ff727e6c22a
 <your-site>/src/gatsby-theme-amazing/components/header.js
 ```
 

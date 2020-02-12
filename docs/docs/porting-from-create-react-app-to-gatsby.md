@@ -135,7 +135,6 @@ These are only a few examples, though all can be fixed in one of two ways:
 if (typeof window !== `undefined`) {
   // code that references a browser global
   window.alert("Woohoo!")
-<<<<<<< HEAD
 }
 ```
 
@@ -180,52 +179,6 @@ class MyComponment() extends Component {
 }
 ```
 
-=======
-}
-```
-
-2. For class components: moving references to browser globals into a `componentDidMount`
-
-```jsx
-
-import React, { Component } from "react"
-
-class MyComponment() extends Component {
-  render() {
-    window.alert("This will break the build")
-
-    return (
-      <div>
-        <p>Component</p>
-      </div>
-    )
-  }
-}
-```
-
-Would be changed into:
-
-```jsx
-
-import React, { Component } from "react"
-
-class MyComponment() extends Component {
-  componentDidMount() {
-    // code that references the browser global
-    window.alert("This won't break the build")
-  }
-
-  render() {
-    return (
-      <div>
-        <p>Component</p>
-      </div>
-    )
-  }
-}
-```
-
->>>>>>> 79b09bc29f133961f3d7de0f36a25ff727e6c22a
 3. For function components: moving references to browser globals into a `useEffect` hook
 
 ```jsx
@@ -256,11 +209,7 @@ export default Foo
 
 If these browser globals aren't protected correctly, you'll see a webpack error like the one below when building your site:
 
-<<<<<<< HEAD
-```
-=======
 ```text
->>>>>>> 79b09bc29f133961f3d7de0f36a25ff727e6c22a
 WebpackError: ReferenceError: window is not defined
 ```
 

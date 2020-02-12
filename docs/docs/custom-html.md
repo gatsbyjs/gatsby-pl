@@ -17,12 +17,9 @@ And then make modifications as needed.
 
 If you need to insert custom html into the `<head>` or `<footer>` of each page on your site, you can use `html.js`.
 
-<<<<<<< HEAD
-=======
 > Customizing `html.js` is a workaround solution for when the use of the appropriate APIs is not available in `gatsby-ssr.js`. Consider using [`onRenderBody`](/docs/ssr-apis/#onRenderBody) or [`onPreRenderHTML`](/docs/ssr-apis/#onPreRenderHTML) instead of the method above.
 > As a further consideration, customizing `html.js` is not supported within a Gatsby Theme. Use the API methods mentioned instead.
 
->>>>>>> 79b09bc29f133961f3d7de0f36a25ff727e6c22a
 ## Required props
 
 Note: the various props that are rendered into pages _are_ required e.g.
