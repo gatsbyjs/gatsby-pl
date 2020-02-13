@@ -114,11 +114,7 @@ import "./src/styles/global.css"
 // require('./src/styles/global.css')
 ```
 
-<<<<<<< HEAD
 > Uwaga: Zarówno składnia CommonJS (`require`), jak i ES Module (`import`), zadziała w tym wypadku. Jeśli nie jesteś pewien którą z nich wybrać, my w większości wypadków używamy 'import'.
-=======
-> Note: Both CommonJS (`require`) and ES Module (`import`) syntax work here. If you’re not sure which to choose, `import` is usually a good default. When working with files that are only run in a Node.js environment however (like `gatsby-node.js`), `require` will need to be used.
->>>>>>> 79b09bc29f133961f3d7de0f36a25ff727e6c22a
 
 3. Uruchom Serwer Deweloperski (development server):
 
@@ -252,25 +248,14 @@ import Container from "../components/container"
 console.log(styles)
 ```
 
-<<<<<<< HEAD
 Kod `console.log(styles)` wyświetli wykonany import, a więc zobaczysz wynik pochodzący z twojego przetworzonego pliku `./about-css-modules.module.css`. Jeśli otworzysz Konsolę Deweloperską (korzystając np. z narzędzi deweloperskich Firefox'a lub Chrome) w swojej przeglądarce, oto co zobaczysz:
-=======
-The `console.log(styles)` code will log the resulting import so you can see the result of your processed `./about-css-modules.module.css` file. If you open the developer console (using e.g. Firefox or Chrome's developer tools, often by the F12 key) in your browser, you'll see:
->>>>>>> 79b09bc29f133961f3d7de0f36a25ff727e6c22a
 
 ![Rezultat zaimportowania Modułu CSS w konsoli](css-modules-console.png)
 
 Jeśli porównasz to ze swoim plikiem CSS, zauważysz, że każda z klas jest teraz kluczem w zaimportowanym obiekcie wskazującym na długi String - np. 'avatar' wskazuje na `src-pages----about-css-modules-module---avatar---2lRF7`. Tak wyglądają nazwy klas wygenerowane przez Moduł CSS. Jest zagwarantowane, że nazwy te będą unikatowe na całej Twojej stronie. I ponieważ musisz zaimportować je, by użyć klas, nie ma nigdy wątpliwości, gdzie jaki CSS został użyty.
 
-<<<<<<< HEAD
-4. Stwórz komponent `User`.
-
-Stwórz nowy komponent `<User />` bezpośrednio w kodzie komponentu strony `about-css-modules.js`.
-Zmodyfikuj `about-css-modules.js` tak, by wyglądał w poniższy sposób:
-=======
-4. Create a new `<User />` component inline in the `about-css-modules.js` page
-   component. Modify `about-css-modules.js` so it looks like the following:
->>>>>>> 79b09bc29f133961f3d7de0f36a25ff727e6c22a
+4. Stwórz nowy komponent `<User />` bezpośrednio w kodzie komponentu strony `about-css-modules.js`.
+   Zmodyfikuj `about-css-modules.js` tak, by wyglądał w poniższy sposób:
 
 ```jsx:title=src/pages/about-css-modules.js
 import React from "react"

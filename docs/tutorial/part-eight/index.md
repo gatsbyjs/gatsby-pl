@@ -44,11 +44,7 @@ gatsby build
 gatsby serve
 ```
 
-<<<<<<< HEAD
-Po uruchomieniu, możesz wyświetlić swoją witrynę pod adresem [`localhost:9000`](http://localhost:9000).
-=======
-Once this starts, you can view your site at `http://localhost:9000`.
->>>>>>> 79b09bc29f133961f3d7de0f36a25ff727e6c22a
+Po uruchomieniu, możesz wyświetlić swoją witrynę pod adresem `http://localhost:9000`.
 
 ### Przperowadź audyt Lighthouse
 
@@ -359,15 +355,9 @@ Lighthouse to świetne narzędzie do ulepszania strony oraz do nauki -- Kontynuu
 
 ### Oficjalne startery
 
-<<<<<<< HEAD
-1.  [Gatsby's Domyślny Starter](https://github.com/gatsbyjs/gatsby-starter-default): Rozpocznij projekt z tym domyślnym szablonem. Ten prosty starter jest dostarczany z głównymi plikami konfiguracyjnymi Gatsby, których możesz potrzebować. _[działający przykład](http://gatsbyjs.github.io/gatsby-starter-default/)_
-2.  [Gatsby's Blog Starter](https://github.com/gatsbyjs/gatsby-starter-blog): Starter Gatsby do stworzenia wspaniałego i niesamowicie szybkiego bloga. _[działający przykład](http://gatsbyjs.github.io/gatsby-starter-blog/)_
-3.  [Gatsby's Hello-World Starter](https://github.com/gatsbyjs/gatsby-starter-hello-world): Starter Gatsby Starter z niezbędnym minimum potrzebnym do rozpoczęcia strony Gatsby. _[działający przykład](https://gatsby-starter-hello-world-demo.netlify.com/)_
-=======
-1.  [Gatsby's Default Starter](https://github.com/gatsbyjs/gatsby-starter-default): Kick off your project with this default boilerplate. This barebones starter ships with the main Gatsby configuration files you might need. _[working example](https://gatsbyjs.github.io/gatsby-starter-default/)_
-2.  [Gatsby's Blog Starter](https://github.com/gatsbyjs/gatsby-starter-blog): Gatsby starter for creating an awesome and blazing-fast blog. _[working example](https://gatsbyjs.github.io/gatsby-starter-blog/)_
-3.  [Gatsby's Hello-World Starter](https://github.com/gatsbyjs/gatsby-starter-hello-world): Gatsby Starter with the bare essentials needed for a Gatsby site. _[working example](https://gatsby-starter-hello-world-demo.netlify.com/)_
->>>>>>> 79b09bc29f133961f3d7de0f36a25ff727e6c22a
+1.  [Gatsby Domyślny Starter](https://github.com/gatsbyjs/gatsby-starter-default): Rozpocznij projekt z tym domyślnym szablonem. Ten prosty starter jest dostarczany z głównymi plikami konfiguracyjnymi Gatsby, których możesz potrzebować. _[działający przykład](http://gatsbyjs.github.io/gatsby-starter-default/)_
+2.  [Gatsby Blog Starter](https://github.com/gatsbyjs/gatsby-starter-blog): Starter Gatsby do stworzenia wspaniałego i niesamowicie szybkiego bloga. _[działający przykład](http://gatsbyjs.github.io/gatsby-starter-blog/)_
+3.  [Gatsby Hello-World Starter](https://github.com/gatsbyjs/gatsby-starter-hello-world): Starter Gatsby z niezbędnym minimum potrzebnym do rozpoczęcia strony Gatsby. _[działający przykład](https://gatsby-starter-hello-world-demo.netlify.com/)_
 
 ## To by było na tyle
 

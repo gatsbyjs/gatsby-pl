@@ -270,19 +270,11 @@ export default ({ children }) => (
 )
 ```
 
-<<<<<<< HEAD
 ![z-nawigacja2](with-navigation2.png)
-=======
-![with-navigation2](with-navigation.png)
->>>>>>> 79b09bc29f133961f3d7de0f36a25ff727e6c22a
 
 Mamy to! Trzystronicowa witryna z podstawową globalną nawigacją.
 
-<<<<<<< HEAD
 _Wyzwanie:_ Dzięki nowym możliwościom „komponentu układu” spróbuj dodać nagłówki, stopki, globalną nawigację, paski boczne itp. na swoich stronach Gatsby!
-=======
-_Challenge:_ With your new "layout component" powers, try adding headers, footers, global navigation, sidebars, etc. to your Gatsby sites!
->>>>>>> 79b09bc29f133961f3d7de0f36a25ff727e6c22a
 
 ## Co dalej?
 

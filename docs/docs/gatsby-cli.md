@@ -76,21 +76,12 @@ Po zainstalowaniu strony Gatsby, przejdź do katalogu głównego twojego projekt
 
 #### Opcje
 
-<<<<<<< HEAD
 |      Opcja      | Opis                                              |
 | :-------------: | ------------------------------------------------- |
 | `-H`, `--host`  | Ustawienie hosta. Domyślnie localhost             |
 | `-p`, `--port`  | Ustawienie portu. Domyślnie 8000                  |
 | `-o`, `--open`  | Otwarcie strony w twojej (domyślnej) przeglądarce |
 | `-S`, `--https` | Użycie HTTPS                                      |
-=======
-|     Option      | Description                                     |
-| :-------------: | ----------------------------------------------- |
-| `-H`, `--host`  | Set host. Defaults to localhost                 |
-| `-p`, `--port`  | Set port. Defaults to env.PORT or 8000          |
-| `-o`, `--open`  | Open the site in your (default) browser for you |
-| `-S`, `--https` | Use HTTPS                                       |
->>>>>>> 79b09bc29f133961f3d7de0f36a25ff727e6c22a
 
 Przeczytaj [przewodnik o lokalnym HTTPS](/docs/local-https/), aby dowiedzieć się jak ustawić serwer deweloperski HTTPS przy użyciu Gatsby.
 
@@ -111,11 +102,7 @@ You can now view gatsbyjs.org in the browser.
   On Your Network:  http://192.168.0.212:8000/ // highlight-line
 ```
 
-<<<<<<< HEAD
 **Uwaga**: Nie możesz odwiedzić adresu 0.0.0.0:8000 w systemie Windows (jednak wszystko zadziała poprawnie przy użyciu localhost:8000 lub pokazanego w terminalu adresu URL "On Your Network" na Windows)
-=======
-**Note**: To access Gatsby on your local machine, use either `http://localhost:8000` or the "On Your Network" URL.
->>>>>>> 79b09bc29f133961f3d7de0f36a25ff727e6c22a
 
 ### `build`
 
@@ -218,14 +205,11 @@ Sprawdź [dokumentację Gatsby REPL](/docs/gatsby-repl/), aby uzyskać więcej i
 
 ### Wyłączenie kolorowego wyniku w terminalu
 
-<<<<<<< HEAD
 Oprócz sprecyzowanej opcji `--no-color`, CLI respektuje obecność zmiennej środowiskowej `NO_COLOR` (zobacz [no-color.org](https://no-color.org/)).
-=======
-In addition to the explicit `--no-color` option, the CLI respects the presence of the `NO_COLOR` environment variable (see [no-color.org](https://no-color.org/)).
 
 ## How to change your default package manager for your next project?
 
-When you use `gatsby new` for the first time to create a new project, you are asked to choose your default package manager between yarn and npm.
+Kiedy używasz `gatsby new` po raz pierwszy do utworzenia nowego projektu, zostaniesz poproszony o wybranie domyślnego menedżera pakietów między yarn a npm.
 
 ```shell
 Which package manager would you like to use ? › - Use arrow-keys. Return to submit.
@@ -233,12 +217,12 @@ Which package manager would you like to use ? › - Use arrow-keys. Return to su
    npm
 ```
 
-Once you’ve made your choice, the CLI won’t ask for your preference again for any subsequent project.
+Po dokonaniu wyboru interfejs CLI nie będzie pytać ju o preferencje dla kolejnych projektów.
 
-If you want to change this for your next project you have to edit the config file created automatically by the CLI.
-This file is available on your system at: `~/.config/gatsby/config.json`
+Jeśli chciałbyś zmienić wybór dla swojego następnego projektu, musisz edytować plik konfiguracyjny utworzony automatycznie przez CLI.
+Ten plik jest dostępny w twoim systemie pod adresem: `~ / .config / gatsby / config.json`
 
-In it you’re going to see something like this.
+Zobaczysz w nim coś takiego.
 
 ```json:title=config.json
 {
@@ -248,5 +232,4 @@ In it you’re going to see something like this.
 }
 ```
 
-Edit your `packageManager` value, save and you’re good to go for your next project using `gatsby new`.
->>>>>>> 79b09bc29f133961f3d7de0f36a25ff727e6c22a
+Edytuj w nim wartość `packageManager`, zapisz i możesz rozpocząć kolejny projekt, używając `gatsby new`.

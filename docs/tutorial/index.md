@@ -28,11 +28,7 @@ W tych samouczkach dowiesz się, jak przy pomocy GraphQL pobierać dane z niemal
 
 Motywy Gatsby wyodrębniają całą twoją domyślną konfigurację (wspólna funkcjonalność, pozyskiwanie danych, projektowanie) z Twojej strony do paczki, którą można instalować w innych projektach.
 
-<<<<<<< HEAD
 Oznacza to, że konfiguracja i funkcjonalność nie są zapisywane bezpośrednio w projekcie, ale są wersjonowane, centralnie zarządzane i instalowane jako zależność/moduł. Możesz bezproblemowo aktualizować motyw, komponować go z innymi motywami, a nawet wymieniać jeden kompatybilny motyw na inny.
-=======
-This means that the configuration and functionality aren’t directly written into your project, but rather versioned, centrally managed, and installed as a dependency. You can seamlessly update a theme, compose themes together, and even swap out one compatible theme for another.
->>>>>>> 79b09bc29f133961f3d7de0f36a25ff727e6c22a
 
 Dowiedz się więcej o używaniu i budowaniu motywów na [Samouczki o motywach Gatsby](/tutorial/theme-tutorials/).
 
