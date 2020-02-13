@@ -209,7 +209,7 @@ export const query = graphql`
 `
 ```
 
-A teraz wejdź pod adres [http://localhost:8000/my-files](http://localhost:8000/my-files)… 😲
+A teraz odwiedź adres `http://localhost:8000/my-files`… 😲
 
 ![my-files-page](my-files-page.png)
 

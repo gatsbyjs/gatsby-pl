@@ -25,42 +25,22 @@ A single plugin can use multiple APIs to accomplish its purpose. E.g. the plugin
 
 1.  modifies the webpack config to add its plugin
 2.  adds a Babel plugin to replace React's default createElement
-3.  modifies server rendering to extract out the critical CSS for each rendered
-    page and inline the CSS in the `<head>` of that HTML page.
+3.  modifies server rendering to extract out the critical CSS for each rendered page and inline the CSS in the `<head>` of that HTML page.
 
-Plugins can also depend on other plugins. [The Sharp
-plugin](/packages/gatsby-plugin-sharp/) exposes a number of high-level APIs for
-transforming images that several other Gatsby image plugins depend on.
-[gatsby-transformer-remark](/packages/gatsby-transformer-remark/) does basic
-markdown->html transformation but exposes an API to allow other plugins to
-intervene in the conversion process e.g.
-[gatsby-remark-prismjs](/packages/gatsby-remark-prismjs/) which adds
-highlighting to code blocks.
+Plugins can also depend on other plugins. [The Sharp plugin](/packages/gatsby-plugin-sharp/) exposes a number of high-level APIs for transforming images that several other Gatsby image plugins depend on. [gatsby-transformer-remark](/packages/gatsby-transformer-remark/) does basic markdown->html transformation but exposes an API to allow other plugins to intervene in the conversion process e.g. [gatsby-remark-prismjs](/packages/gatsby-remark-prismjs/) which adds highlighting to code blocks.
 
-Transformer plugins are decoupled from source plugins. Transformer plugins look
-at the media type of new nodes created by source plugins to decide if they can
-transform it or not. Which means that a markdown transformer plugin can
-transform markdown from any source without any other configuration e.g. from a
-file, a code comment, or external service like Trello which supports markdown
-in some of its data fields.
+Transformer plugins are decoupled from source plugins. Transformer plugins look at the media type of new nodes created by source plugins to decide if they can transform it or not. Which means that a markdown transformer plugin can transform markdown from any source without any other configuration e.g. from a file, a code comment, or external service like Trello which supports markdown in some of its data fields.
 
-See
-[the full list of (official only for now — adding support for community plugins later) plugins](/docs/plugins/).
+See [the full list of (official only for now — adding support for community plugins later) plugins](/docs/plugins/).
 
 ## API
 
 ### Concepts
 
-- _Page_ — a site page with a pathname, a template component, and optional
-  GraphQL query.
-- _Page Component_ — React.js component that renders a page and can optionally
-  specify a GraphQL query
-- _Component extensions_ — extensions that are resolvable as components. `.js`
-  and `.jsx` are supported by core. But plugins can add support for other
-  compile-to-js languages.
-- _Dependency_ — Gatsby automatically tracks dependencies between different
-  objects e.g. a page can depend on certain nodes. This allows for hot
-  reloading, caching, incremental rebuilds, etc.
+- _Page_ — a site page with a pathname, a template component, and optional GraphQL query.
+- _Page Component_ — React.js component that renders a page and can optionally specify a GraphQL query
+- _Component extensions_ — extensions that are resolvable as components. `.js` and `.jsx` are supported by core. But plugins can add support for other compile-to-js languages.
+- _Dependency_ — Gatsby automatically tracks dependencies between different objects e.g. a page can depend on certain nodes. This allows for hot reloading, caching, incremental rebuilds, etc.
 - _Node_ — a data object
 - _Node Field_ — a field added by a plugin to a node that it doesn't control
 - _Node Link_ — a connection between nodes that gets converted to GraphQL relationships. Can be created in a variety of ways as well as automatically inferred. Parent/child links from nodes and their transformed derivative nodes are first class links.

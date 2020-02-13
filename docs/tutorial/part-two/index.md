@@ -254,10 +254,8 @@ Kod `console.log(styles)` wyświetli wykonany import, a więc zobaczysz wynik po
 
 Jeśli porównasz to ze swoim plikiem CSS, zauważysz, że każda z klas jest teraz kluczem w zaimportowanym obiekcie wskazującym na długi String - np. 'avatar' wskazuje na `src-pages----about-css-modules-module---avatar---2lRF7`. Tak wyglądają nazwy klas wygenerowane przez Moduł CSS. Jest zagwarantowane, że nazwy te będą unikatowe na całej Twojej stronie. I ponieważ musisz zaimportować je, by użyć klas, nie ma nigdy wątpliwości, gdzie jaki CSS został użyty.
 
-4. Stwórz komponent `User`.
-
-Stwórz nowy komponent `<User />` bezpośrednio w kodzie komponentu strony `about-css-modules.js`.
-Zmodyfikuj `about-css-modules.js` tak, by wyglądał w poniższy sposób:
+4. Stwórz nowy komponent `<User />` bezpośrednio w kodzie komponentu strony `about-css-modules.js`.
+   Zmodyfikuj `about-css-modules.js` tak, by wyglądał w poniższy sposób:
 
 ```jsx:title=src/pages/about-css-modules.js
 import React from "react"

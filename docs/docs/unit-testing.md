@@ -236,18 +236,7 @@ const babelOptions = {
 }
 ```
 
-You may notice that two other options, `testRegex` and `moduleFileExtensions`,
-have been added. Option `testRegex` is the pattern telling Jest which files
-contain tests. The pattern above matches any `.js`, `.jsx`, `.ts` or `.tsx`
-file inside a `__tests__` directory, or any file elsewhere with the extension
-`.test.js`, `.test.jsx`, `.test.ts`, `.test.tsx`, or `.spec.js`, `.spec.jsx`,
-`.spec.ts`, `.spec.tsx`.
-
-Option `moduleFileExtensions` is needed when working with TypeScript.
-The only thing it is doing is telling Jest which file extensions you can
-import in your files without making precise the file extension. By default,
-it works with `js`, `json`, `jsx`, `node` file extensions so you just need
-to add `ts` and `tsx`. You can read more about it in [Jest's documentation](https://jestjs.io/docs/en/configuration.html#modulefileextensions-array-string).
+Once this is changed, you can write your tests in TypeScript using the `.ts` or `.tsx` extensions.
 
 ## Other resources
 

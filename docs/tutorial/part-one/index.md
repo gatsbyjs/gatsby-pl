@@ -20,7 +20,7 @@ Podczas tworzenia nowej strony Gatsby, możesz użyć poniższej komendy, aby st
 gatsby new [NAZWA_FOLDERU_STRONY] [URL_REPO_STARTERA_NA_GITHUB]
 ```
 
-Jeśli pominiesz ostatni URL, Gatsby automatycznie wygeneruje stronę bazując na [**domyślnym starterze**](https://github.com/gatsbyjs/gatsby-starter-default). Dla tej sekcji, zostań przy stronie “Hello World” którą stworzyłeś wcześniej w części zerowej poradnika.
+Jeśli pominiesz ostatni URL, Gatsby automatycznie wygeneruje stronę bazując na [**domyślnym starterze**](https://github.com/gatsbyjs/gatsby-starter-default). Dla tej sekcji, zostań przy stronie “Hello World” którą stworzyłeś wcześniej w części zerowej poradnika. Możesz dowiedzieć się więcej o [modyfikowaniu starterów](/docs/modifying-a-starter) w dokumentacji.
 
 ### ✋ Otwórz kod
 
@@ -165,7 +165,7 @@ export default () => (
 )
 ```
 
-2.  Otwórz http://localhost:8000/about/.
+2.  Otwórz `http://localhost:8000/about/`.
 
 ![Nowa strona O Mnie](05-about-page.png)
 
@@ -367,6 +367,8 @@ Teraz możesz wreszcie wdrożyć swoją stronę poprzez publikację wygenerowany
 ```shell
 surge public/
 ```
+
+> Pamietaj aby nacisnąć przycisk `enter` po zobaczeniu informacji `domain: some-name.surge.sh` w Twoim wierszu wierszu poleceń.
 
 Kiedy to się zakończy, powinieneś w swoim terminalu zobaczyć coś takiego:
 

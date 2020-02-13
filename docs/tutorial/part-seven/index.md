@@ -49,8 +49,7 @@ Funkcja `onCreateNode` będzie wywoływana przez Gatsby za każdym razem, gdy b�
 Zatrzymaj i uruchom ponownie serwer deweloperski. Gdy to zrobisz, zauważysz w konsoli 
 terminala kilka wpisów o utworzonych node'ach.
 
-Użyj tego API by dodawać slug'i do swoich stron Markdown, do node'ów
-`MarkdownRemark`.
+W tej sekcji użyjesz tego API by dodawać slugi do swoich stron Markdown, do node'ów `MarkdownRemark`.
 
 Zmień teraz swoją funkcję tak, aby wyświetlała tylko wpisy pochodzące z node'ów `MarkdownRemark`.
 
@@ -283,7 +282,7 @@ exports.createPages = async ({ graphql, actions }) => {
 Uruchom ponownie serwer deweloperski, Twoje strony zostaną teraz utworzone! Łatwym sposobem
 by znaleźć nowe strony, które utworzyłeś podczas pisania kodu, jest odwiedzenie domyślnego adresu, pod którym 
 Gatsby w pomocny sposób wyświetli Tobie pełną listę dostępnych stron. Jeśli odwiedzisz adres
-<http://localhost:8000/sdf>, zobaczysz nowe strony które stworzyłeś.
+`http://localhost:8000/sdf`, zobaczysz nowe strony które stworzyłeś.
 
 ![new-pages](new-pages.png)
 

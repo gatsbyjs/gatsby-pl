@@ -13,35 +13,35 @@ Ten szybki start jest przeznaczony dla średnio-zaawansowanych i zaawansowanych 
 
 **Uwaga**: Ten filmik korzysta z `npx`, które jest narzędziem uruchamiającym paczki npm bez potrzeby ich instalacji. Uruchomienie komendy `npx gatsby new` jest tym samym co `gatsby new`, jeśli masz zainstalowane gatsby-cli na swoim komputerze.
 
-### Zainstaluj Gatsby CLI.
+### Zainstaluj Gatsby CLI
 
 ```shell
 npm install -g gatsby-cli
 ```
 
-### Stwórz nową stronę.
+### Stwórz nową stronę
 
 ```shell
 gatsby new gatsby-site
 ```
 
-### Zmień katalog na ten z Twoją stroną.
+### Zmień katalog na ten z Twoją stroną
 
 ```shell
 cd gatsby-site
 ```
 
-### Włącz serwer deweloperski.
+### Włącz serwer deweloperski
 
 ```shell
 gatsby develop
 ```
 
-Gatsby uruchomi środowisko deweloperskie z natychmiastowym odświeżaniem, dostępne domyślnie na `localhost:8000`.
+Gatsby uruchomi środowisko deweloperskie z natychmiastowym odświeżaniem, dostępne domyślnie na `http://localhost:8000`.
 
 Spróbuj dokonać edycji stron JavaScript w `src/pages`. Zapisane zmiany odświeżą się natychmiastowo w przeglądarce.
 
-### Zbuduj wersję produkcyjną.
+### Zbuduj wersję produkcyjną
 
 ```shell
 gatsby build
@@ -49,7 +49,7 @@ gatsby build
 
 Gatsby przeprowadzi zoptymalizowaną kompilację produkcyjną dla Twojej strony, generując przy tym statyczne pliki HTML i pakiety JavaScript dla każdej ściezki.
 
-### Zaserwuj wersję produkcyjną lokalnie.
+### Zaserwuj wersję produkcyjną lokalnie
 
 ```shell
 gatsby serve
