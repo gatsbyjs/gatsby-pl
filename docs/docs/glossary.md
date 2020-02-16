@@ -154,7 +154,7 @@ System [CMS](#cms), który obsługuje jedynie [backend](#backend) zarządzania t
 
 ### [Headless WordPress](/docs/glossary/headless-wordpress)
 
-The practice of using JSON returned from the WordPress REST API as a [headless CMS](#headless-cms). It allows you to use WordPress to write and edit content that can be consumed by any client capable of parsing JSON.
+Sposób w którym korzysta się z plików JSON otrzymanych z REST API WordPressa jako [headless CMS](#headless-cms). Pozwala Ci to używać WordPressa do pisania i edytowania zawartości, która następnie może być użyta przez jakiegokolwiek klienta zdolnego do parsowania formatu JSON
 
 ### Hosting
 
