@@ -338,7 +338,7 @@ Skrót UI odnosi się do interfejsu użytkownika. W dziedzinie interakcji człow
 
 ### [webpack](/docs/glossary/webpack)
 
-[javascriptowa](#javascript) aplikacja, z której korzysta Gatsby aby spakować kod Twojej strony. Dzieje się to automatycznie podczas [budowania](#build).
+[Javascriptowa](#javascript) aplikacja, z której korzysta Gatsby aby spakować kod Twojej strony. Dzieje się to automatycznie podczas [budowania](#build).
 
 ## X
 
