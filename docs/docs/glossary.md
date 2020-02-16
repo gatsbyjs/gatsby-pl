@@ -226,7 +226,7 @@ Program, który pozwala uruchamiać [JavaScript](#javascript) na twoim komputerz
 
 ### Package
 
-Paczką zazwyczaj nazywawy [javascriptowy](#javascript) program zawierający dodatkowe informacje odnośnie tego, w jaki sposób powinien być on używany i dystrybuowany, np. numer jego wersji. [NPM](#npm) i [Yarn](#yarn) zarządzają i instalują paczki używane przez twój projekt. [Gatsby](#gatsby) sam w sobie jest paczką.
+Paczką zazwyczaj nazywamy [javascriptowy](#javascript) program zawierający dodatkowe informacje odnośnie tego, w jaki sposób powinien być on używany i dystrybuowany, np. numer jego wersji. [NPM](#npm) i [Yarn](#yarn) zarządzają i instalują paczki używane przez Twój projekt. [Gatsby](#gatsby) sam w sobie jest paczką.
 
 ### Page
 
