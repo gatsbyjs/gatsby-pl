@@ -214,7 +214,7 @@ Manager [Paczek](#package) [Node](#node) (Node Package Manager). Służy do inst
 
 ### Node
 
-Gatsby korzysta z [węzłów danych](/docs/node-interface/) do reprezentowania pojedynczego elementu danych. A [źródło danych](#data-source) tworzy wiele węzłów.
+Gatsby korzysta z [węzłów danych](/docs/node-interface/) do reprezentowania pojedynczego elementu danych. [Źródło danych](#data-source) tworzy wiele węzłów.
 
 ### [Node.js](/docs/glossary/node)
 
