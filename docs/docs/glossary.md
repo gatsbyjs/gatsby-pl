@@ -120,7 +120,7 @@ Gatsby domyślnie wspiera dwa środowiska, [środowisko deweloperskie](#developm
 
 ### Environment Variables
 
-[Zmienne środowiskowe](/docs/environment-variables/) pozwalają na dostosowywanie zachowania Twojej aplikacji w zależności od jej [środowiska](#environment). Przykładowo podczas rozwijania oprogramowania możesz chcieć pobierać swoją zawartość z przejściowego systemu CMS i połączyć się z właściwym CMS, gdy już stronę [zbudujesz](#build). Przy pomocą zmiennych środowiskowych możesz ustawić inny adres URL dla każdego środowiska.
+[Zmienne środowiskowe](/docs/environment-variables/) pozwalają na dostosowywanie zachowania Twojej aplikacji w zależności od jej [środowiska](#environment). Przykładowo podczas rozwijania oprogramowania możesz chcieć pobierać swoją zawartość z przejściowego systemu CMS i połączyć się z właściwym CMS, gdy już [zbudujesz](#build) swoją stronę. Za pomocą zmiennych środowiskowych możesz ustawić inny adres URL dla każdego środowiska.
 
 ## F
 
