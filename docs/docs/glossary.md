@@ -100,7 +100,7 @@ Proces [budowania](#build) Twojej strony lub aplikacji i przesyłania jej na [ho
 
 ### Development Environment
 
-[Środowisko](#environment) podczas pracy nad kodem. Jest ono obsługiwane poprzez [CLI](#cli) za pomocą komendy `gatsby develop` i zapewnia specjalistyczne raportowanie błędów oraz wiele dodatkowych funkcji, które przydadzą się podczas debugowania kodu przez zbudowaniem projektu dla [produkcji](#production-environment).
+[Środowisko](#environment) podczas pracy nad kodem. Jest ono obsługiwane poprzez [CLI](#cli) za pomocą komendy `gatsby develop` i zapewnia specjalistyczne raportowanie błędów oraz wiele dodatkowych funkcji, które przydadzą się podczas debugowania kodu przed zbudowaniem projektu dla [produkcji](#production-environment).
 
 ### DOM
 
