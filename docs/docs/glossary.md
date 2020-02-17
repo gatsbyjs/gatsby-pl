@@ -126,7 +126,7 @@ Gatsby domyślnie wspiera dwa środowiska, [środowisko deweloperskie](#developm
 
 ### Filesystem
 
-Sposób w jakim pliki są zorganizowane. W przypadku Gatsby oznacza to, że pliki znajdują się w tym samym miejscu co kod witryny lub aplikacji, zamiast pobierać dane z zewnętrznego [źródła](#data-source). Najczęstsze użycie systemu plików w Gatsby obejmuje zawartość zapisaną w plikach Markdown, obrazach, plikach danych i innych zasobach.
+Sposób w jaki pliki są zorganizowane. W przypadku Gatsby oznacza to, że pliki znajdują się w tym samym miejscu co kod witryny lub aplikacji, zamiast pobierać dane z zewnętrznego [źródła](#data-source). Najczęstsze użycie systemu plików w Gatsby obejmuje zawartość zapisaną w plikach Markdown, obrazy, pliki danych i inne zasoby.
 
 ### Frontend
 
