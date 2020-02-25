@@ -19,7 +19,13 @@ Ten szybki start jest przeznaczony dla średnio-zaawansowanych i zaawansowanych 
 npm install -g gatsby-cli
 ```
 
+<<<<<<< HEAD
 ### Stwórz nową stronę
+=======
+> The above command installs Gatsby CLI globally on your machine.
+
+### Create a new site
+>>>>>>> 544ea88b26036514a0018d4526ff6b3f388823a7
 
 ```shell
 gatsby new gatsby-site
