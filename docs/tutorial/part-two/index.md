@@ -32,7 +32,7 @@ Jednym z najbardziej podstawowych sposobów aby dodać style do strony jest uży
 
 Rozpocznij poprzez utworzenie nowej strony Gatsby. Najlepiej (szczególnie gdy używasz interfejsu wiersza poleceń od niedawna) zamknij wszystkie okna terminala, których używałeś w [części pierwszej](/tutorial/part-one/) i otwórz nowe okno dla drugiej części poradnika.
 
-Otwórz nowe okno terminala, stwórz nową stronę Gatsby "hello world" oraz uruchom serwer developerski (development server):
+Otwórz nowe okno terminala, stwórz nową stronę Gatsby "hello world" w folderze `tutorial-part-two` a następnie przejdź do tego folderu:
 
 ```shell
 gatsby new tutorial-part-two https://github.com/gatsbyjs/gatsby-starter-hello-world
