@@ -12,11 +12,7 @@ Wiersz poleceń to interfejs tekstowy służący do uruchamiania poleceń na kom
 
 Poświęć chwilę, aby zlokalizować i otworzyć interfejs wiersza poleceń (CLI) dla swojego komputera. W zależności od używanego systemu operacyjnego sprawdź [**instrukcje dla komputerów Mac**](https://www.imymac.com/pl/mac-cleaner/how-to-open-terminal-on-mac.html), [**instrukcje dla systemu Windows**](https://www.download.net.pl/10-sposobow-na-uruchomienie-wiersza-polecenia-w-windows-10/n/7949/) lub [**instrukcje dla systemu Linux**](https://pl.wikibooks.org/wiki/Ubuntu/Podstawowe_polecenia).
 
-<<<<<<< HEAD
 _Uwaga: Jeśli dopiero zaczynasz korzystać z wiersza poleceń, „uruchomienie” polecenia oznacza wprowadzenie określonego zestawu instrukcji w wierszu polecenia i naciśnięcie klawisza Enter. Polecenia będą wyświetlane w podświetlonym polu, coś w rodzaju `node --version`, ale nie każde podświetlone pole jest poleceniem! Jeśli coś jest poleceniem, zostanie wspomniane jako coś, co musisz uruchomić/wykonać._
-=======
-_Note: If you’re new to the command line, "running" a command, means "writing a given set of instructions in your command prompt, and hitting the Enter key". Commands will be shown in a highlighted box, something like `node --version`, but not every highlighted box is a command! If something is a command it will be mentioned as something you have to run/execute._
->>>>>>> 544ea88b26036514a0018d4526ff6b3f388823a7
 
 ## Zainstaluj Node.js dla Twojego systemu operacyjnego
 
@@ -28,31 +24,17 @@ Aby zainstalować Gatsby i Node.js na komputerze Mac, zaleca się użycie [Homeb
 
 #### Jak zainstalować lub zweryfikować Homebrew na swoim komputerze:
 
-<<<<<<< HEAD
 1. Otwórz Terminal.
 2. Sprawdź czy Homebrew jest zainstalowane uruchamiając komendę `brew -v`. Powinieneś zobaczyć "Homebrew" oraz numer wersji.
 3. Jeśli nie, pobierz i zainstaluj [Homebrew wraz z instrukcją](https://docs.brew.sh/Installation) dla swojego systemu operacyjnego (Mac, Linux lub Windows).
 4. Po zainstalowaniu Homebrew powtórz krok 2, aby zweryfikować.
-=======
-1. Open your Terminal.
-2. See if Homebrew is installed by running `brew -v`. You should see "Homebrew" and a version number.
-3. If not, download and install [Homebrew with the instructions](https://docs.brew.sh/Installation).
-4. Once you've installed Homebrew, repeat step 2 to verify.
->>>>>>> 544ea88b26036514a0018d4526ff6b3f388823a7
 
 #### Zainstaluj Xcode Command Line Tools:
 
-<<<<<<< HEAD
 1. Otwórz Terminal.
 2. Na Macu, zainstaluj Xcode Command Line Tools uruchamiając komendę `xcode-select --install`.
-   - Jeśli ten sposób zawiedzie, zaloguj się za pomocą konta programisty Apple a następnie pobierz narzędzie [bezpośrednio ze strony Apple](https://developer.apple.com/download/more/).
+   - Jeśli to zawiedzie, zaloguj się za pomocą konta programisty Apple a następnie pobierz narzędzie [bezpośrednio ze strony Apple](https://developer.apple.com/download/more/).
 3. Po wyświetleniu okna zezwolenia na rozpoczęcie instalacji, pojawi się ponownie okno z prośbą o zaakceptowanie licencji pobieranych narzędzi.
-=======
-1. Open your Terminal.
-2. Install Xcode Command line tools by running `xcode-select --install`.
-   - If that fails, download it [directly from Apple's site](https://developer.apple.com/download/more/), after signing-in with an Apple developer account
-3. After being prompted to start the installation, you'll be prompted again to accept a software license for the tools to download.
->>>>>>> 544ea88b26036514a0018d4526ff6b3f388823a7
 
 #### Zainstaluj Node
 
