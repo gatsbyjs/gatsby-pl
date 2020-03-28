@@ -6,8 +6,8 @@ disableTableOfContents: true
 Kiedy dopiero zaczynasz z Gatsby, odkrywasz jak wiele jest nowych słów do poznania. W tym słowniczku staramy się stworzyć ogólny przegląd najpopularniejszych pojęć i ich znaczenia dla stron Gatsby.
 
 <HorizontalNavList
-items={"ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("")}
-slug={props.slug}
+  items={"ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("")}
+  slug={props.slug}
 />
 
 ## A
@@ -34,7 +34,7 @@ Narzędzie, które umożliwia Ci korzystanie z najnowocześniejszych funkcji [Ja
 
 To co dzieje się za kulisami i nie jest [publiczne](#public). Często odnosi się to do panelu kontrolnego twojego systemu [CMS](#cms). Są one często obsługiwane przez języki programowania po stronie serwera, takie jak Node.js, PHP, Go, ASP.net, Ruby lub Java.
 
-### Build
+### [Build](/docs/glossary/build/)
 
 W Gatsby, jest to proces przemiany kodu i zawartości w stronę internetową, która może być hostowana i dostępna z zewnątrz. Zobacz również: [backend](#backend) i [serwerowy](#server-side).
 
@@ -75,6 +75,10 @@ Komponent może zawierać inne komponenty. W rzeczywistości, [strony](#page) i 
 ### Config
 
 Plik konfiguracyjny, `gatsby-config.js` przekazuje Gatsby informacje o Twojej stronie internetowej. Popularną opcją ustawianą w pliku konfiguracyjnym są metadane Twojej strony, które następnie zasilają meta tagi SEO.
+
+### [Content Delivery Network](/docs/glossary/content-delivery-network)
+
+A content delivery network (CDN) is a highly distributed network of servers that stores copies of your content in locations that are closer to your site's visitors. Content delivery networks improve your site's performance by reducing the time needed to complete a network request.
 
 ### [Continuous Deployment](/docs/glossary/continuous-deployment)
 
@@ -206,11 +210,11 @@ Linting to proces uruchamiania programu, który analizuje kod pod kątem potencj
 
 ## M
 
-### MDX
+### [MDX](/docs/glossary/mdx/)
 
 Rozszerzenie [Markdown](#markdown) dodające wsparcie dla [komponentów](#component) [Reactowych](#react) wewnątrz Twojej zawartości.
 
-### Markdown
+### [Markdown](/docs/glossary/markdown/)
 
 Sposób pisania treści HTML przy użyciu zwykłego tekstu korzystając ze znaków specjalnych w celu oznaczenia typów treści, takich jak symbole [nagłówków](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements) oraz podkreślenia i gwiazdki dla wyróżnienia tekstu.
 
@@ -294,7 +298,15 @@ Dokładna reprezentacja sposobu przechowywania danych w systemie, na przykład t
 
 ### Server-side
 
+<<<<<<< HEAD
 Część serwerowa [relacji klient-serwer](https://en.wikipedia.org/wiki/Client%E2%80%93server_model) odnosi się do operacji wykonywanych przez program komputerowy zarządzający dostępem do scentralizowanego zasobu lub usługi w sieci komputerowej. Gatsby używa serwerowej technologii [Node.js](#nodejs) do kompilowania stron w czasie budowania, w przeciwieństwie do udostępniania ich w [środowisku uruchomieniowym przeglądarki](#runtime) za pomocą JavaScriptu [po stronie klienta](#client-side). Zobacz także: [frontend](#frontend) i [backend](#backend).
+=======
+The server-side part of the [client-server relationship](https://en.wikipedia.org/wiki/Client%E2%80%93server_model) refers to operations performed by a computer program which manages access to a centralized resource or service in a computer network. See also: [frontend](#frontend) and [backend](#backend).
+
+### [Server-side rendering](/docs/glossary/server-side-rendering/)
+
+Using a [Node.js](#nodejs)-based server to generate HTML in response to a request from a user agent such as a browser. Gatsby uses the server-side technology [Node.js](#nodejs) to compile pages at build time, as opposed to serving them at [browser runtime](#runtime) with [client-side](#client-side) JavaScript.
+>>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
 
 ### Source Code
 
@@ -347,6 +359,10 @@ Skrót UI odnosi się do interfejsu użytkownika. W dziedzinie interakcji człow
 ### [webpack](/docs/glossary/webpack)
 
 [Javascriptowa](#javascript) aplikacja, z której korzysta Gatsby aby spakować kod Twojej strony. Dzieje się to automatycznie podczas [budowania](#build).
+
+### [WPGraphQL](/docs/glossary/wpgraphql)
+
+A WordPress plugin that adds [GraphQL](#graphql) capabilities to WordPress. It's another way that you can use WordPress as a content source for Gatsby.
 
 ## X
 

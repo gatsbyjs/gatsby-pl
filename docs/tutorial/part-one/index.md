@@ -45,8 +45,13 @@ Otwórz plik `src/pages/index.js`. Kod z tego pliku tworzy komponent, który zaw
 1.  Zmień tekst “Hello World!” na “Hello Gatsby!” i zapisz plik. Jeśli twoje okna znajdują się obok siebie, powinieneś zauważyć, że zmiany w kodzie i zawartości są widoczne niemal natychmiast w przeglądarce, po zapisaniu pliku.
 
 <video controls="controls" autoplay="true" loop="true">
+<<<<<<< HEAD
   <source type="video/mp4" src="./02-demo-hot-reloading.mp4"></source>
   <p>Przepraszamy! Twoja przeglądarka nie może wyświetlić tego filmu.</p>
+=======
+  <source type="video/mp4" src="./02-demo-hot-reloading.mp4" />
+  <p>Sorry! Your browser doesn't support this video.</p>
+>>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
 </video>
 
 > 💡 Gatsby korzysta z **hot reloading** aby przyspieszyć twój proces dewelopmentu. Zasadniczo, kiedy masz uruchomiony serwer deweloperski Gatsby, pliki twojej strony są cały czas "obserwowane" w tle — za każdym razem kiedy zapiszesz plik, Twoje zmiany zostaną wyświetlone w przeglądarce. Nie potrzebujesz odświeżać całej strony ani restartować serwera — Twoje zmiany po prostu się pojawią.
@@ -327,8 +332,13 @@ export default () => (
 Po zapisaniu pliku, powinieneś zobaczyć stronę kontaktową i być w stanie łączyć się między nią a stroną główną.
 
 <video controls="controls" loop="true">
+<<<<<<< HEAD
   <source type="video/mp4" src="./10-linking-between-pages.mp4"></source>
   <p>Przepraszamy! Twoja przeglądarka nie mogła wyświetlić tego filmu.</p>
+=======
+  <source type="video/mp4" src="./10-linking-between-pages.mp4" />
+  <p>Sorry! Your browser doesn't support this video.</p>
+>>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
 </video>
 
 Komponent `<Link />` Gatsby służy do łączenia pomiędzy stronami na Twojej witrynie. Dla linków zewnętrznych, do stron nie powiązanych z Twoją witryną Gatsby, użyj zwykłego znacznika HTML, `<a>`.

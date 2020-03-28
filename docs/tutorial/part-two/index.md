@@ -48,7 +48,11 @@ Utworzyłeś teraz nową stronę Gatsby (na podstawie gotowego Projektu Startowe
 │       └── index.js
 ```
 
+<<<<<<< HEAD
 #### ✋ Dodaj style do pliku css
+=======
+#### ✋ Add styles to a CSS file
+>>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
 
 1. Stwórz plik `.css` w swoim nowym projekcie:
 
@@ -80,7 +84,11 @@ html {
 }
 ```
 
+<<<<<<< HEAD
 > Uwaga: Umiejscowienie przykładowego pliku css w folderze `/src/styles/` jest opcjonalne.
+=======
+> Note: The placement of the example CSS file in a `/src/styles/` folder is arbitrary.
+>>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
 
 #### ✋ Dodaj arkusz stylów do pliku `gatsby-browser.js`
 
@@ -130,7 +138,11 @@ Jeśli spojrzysz teraz na swój projekt w przeglądarce, powinieneś zobaczyć w
 
 ## Użycie CSS o zasięgu komponentu
 
+<<<<<<< HEAD
 Do tej pory rozmawialiśmy o bardziej tradycyjnym podejściu do używania standardowych arkuszy stylów css. Teraz porozmawiamy o różnych metodach rozbicia CSS na niezależne moduły w celu zastosowania stylowania w sposób zorientowany na pracę z komponentami.
+=======
+So far, we've talked about the more traditional approach of using standard CSS stylesheets. Now, we'll talk about various methods of modularizing CSS to tackle styling in a component-oriented way.
+>>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
 
 ### Moduły CSS
 
@@ -161,7 +173,11 @@ export default ({ children }) => (
 )
 ```
 
+<<<<<<< HEAD
 Zauważ, że zaimportowałeś plik Modułu CSS o nazwie `container.module.css`. Utwórzmy teraz ten plik.
+=======
+You'll notice you imported a CSS module file named `container.module.css`. Let's create that file now.
+>>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
 
 2. W tym samym katalogu (`src/components`), utwórz plik `container.module.css` i kopiuj/wklej następujący kod:
 
