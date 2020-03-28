@@ -300,6 +300,10 @@ Dokładna reprezentacja sposobu przechowywania danych w systemie, na przykład t
 
 Część serwerowa [relacji klient-serwer](https://en.wikipedia.org/wiki/Client%E2%80%93server_model) odnosi się do operacji wykonywanych przez program komputerowy zarządzający dostępem do scentralizowanego zasobu lub usługi w sieci komputerowej. Gatsby używa serwerowej technologii [Node.js](#nodejs) do kompilowania stron w czasie budowania, w przeciwieństwie do udostępniania ich w [środowisku uruchomieniowym przeglądarki](#runtime) za pomocą JavaScriptu [po stronie klienta](#client-side). Zobacz także: [frontend](#frontend) i [backend](#backend).
 
+### [Server-side rendering](/docs/glossary/server-side-rendering/)
+
+Użycie serwera opartego na [Node.js](#nodejs) do wygenerowania HTML w odpowiedzi na żądanie od klienta użytkownika, takiego jak przeglądarka. Gatsby używa technologii po stronie serwera [Node.js](#nodejs) do kompilowania stron w czasie ich budowania, w przeciwieństwie do udostępniania ich w [środowisku uruchomieniowym](#runtime) za pomocą javascriptu [po stronie klienta](#client-side).
+
 ### Source Code
 
 Kod źródłowy to kod, który znajduje się w folderze `/src/` i tworzy unikalne aspekty Twojej witryny lub aplikacji. Składa się z [JavaScript](#javascript), a czasem [CSS](#css) oraz innych plików.
