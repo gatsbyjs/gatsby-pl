@@ -298,15 +298,11 @@ Dokładna reprezentacja sposobu przechowywania danych w systemie, na przykład t
 
 ### Server-side
 
-<<<<<<< HEAD
 Część serwerowa [relacji klient-serwer](https://en.wikipedia.org/wiki/Client%E2%80%93server_model) odnosi się do operacji wykonywanych przez program komputerowy zarządzający dostępem do scentralizowanego zasobu lub usługi w sieci komputerowej. Gatsby używa serwerowej technologii [Node.js](#nodejs) do kompilowania stron w czasie budowania, w przeciwieństwie do udostępniania ich w [środowisku uruchomieniowym przeglądarki](#runtime) za pomocą JavaScriptu [po stronie klienta](#client-side). Zobacz także: [frontend](#frontend) i [backend](#backend).
-=======
-The server-side part of the [client-server relationship](https://en.wikipedia.org/wiki/Client%E2%80%93server_model) refers to operations performed by a computer program which manages access to a centralized resource or service in a computer network. See also: [frontend](#frontend) and [backend](#backend).
 
 ### [Server-side rendering](/docs/glossary/server-side-rendering/)
 
-Using a [Node.js](#nodejs)-based server to generate HTML in response to a request from a user agent such as a browser. Gatsby uses the server-side technology [Node.js](#nodejs) to compile pages at build time, as opposed to serving them at [browser runtime](#runtime) with [client-side](#client-side) JavaScript.
->>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
+Użycie serwera opartego na [Node.js](#nodejs) do wygenerowania HTML w odpowiedzi na żądanie od klienta użytkownika, takiego jak przeglądarka. Gatsby używa technologii po stronie serwera [Node.js](#nodejs) do kompilowania stron w czasie ich budowania, w przeciwieństwie do udostępniania ich w [środowisku uruchomieniowym](#runtime) za pomocą javascriptu [po stronie klienta](#client-side).
 
 ### Source Code
 

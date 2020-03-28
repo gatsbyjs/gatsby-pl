@@ -18,13 +18,8 @@ Masz do niego dostęp, gdy Serwer Deweloperski Twojej strony działa zwyczajnie 
 <http://localhost:8000/___graphql>.
 
 <video controls="controls" autoplay="true" loop="true">
-<<<<<<< HEAD
   <source type="video/mp4" src="/graphiql-explore.mp4"></source>
   <p>Twoja przeglądarka nie obsługuje tego elementu wideo.</p>
-=======
-  <source type="video/mp4" src="/graphiql-explore.mp4" />
-  <p>Your browser does not support the video element.</p>
->>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
 </video>
 
 Zapoznaj się z "typem" `Site` i sprawdź jakie pola są dostępne -- sprawdź też obiekt `siteMetadata` do którego zapytanie wykonałeś wcześniej. Spróbuj otworzyć GraphiQL i pobawić się trochę ze swoimi danymi! Wciśnij <kbd>Ctrl + Spacja</kbd> (lub <kbd>Shift + Spacja</kbd> jako alternatywny skrót), żeby wyświetlić okno autouzupełniania i <kbd>Ctrl + Enter</kbd>, aby wykonać zapytanie GraphQL. Będziesz używał GraphiQL znacznie częściej w dalszej części poradnika.

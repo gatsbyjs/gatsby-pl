@@ -20,16 +20,12 @@ Zaczynajmy.
 
 ## Tworzenie slug'ów stron
 
-<<<<<<< HEAD
+`Slug` to unikalna część identyfikująca adres internetowy,
+podobnie jak część `/tutorial/part-seven` w adresie `https://www.gatsbyjs.org/tutorial/part-seven/`.
+
+Jest również nazywany 'ścieżką', ale w tym samouczku będziemy używać terminu 'slug' dla zachowania spójności.
+
 Tworzenie nowych stron dzielimy na dwa kroki:
-=======
-A ‘slug’ is the unique identifying part of a web address,
-such as the `/tutorial/part-seven` part of the page `https://www.gatsbyjs.org/tutorial/part-seven/`.
-
-It is also referred to as the ‘path’ but this tutorial will use the term ‘slug’ for consistency.
-
-Creating new pages has two steps:
->>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
 
 1.  Wygenerowanie "ścieżki" (lub "slug'a") strony.
 2.  Tworzenie strony.

@@ -33,17 +33,10 @@ gatsby new [<site-name> [<starter-url>]]
 
 #### Argumenty
 
-<<<<<<< HEAD
 | Argument    | Opis                                                                                                                                                                                                                                   |
 | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | site-name   | Nazwa twojej strony Gatsby, która zostanie również użyta, żeby stworzyć katalog projektu.                                                                                                                                              |
 | starter-url | URL startera Gatsby lub ścieżka lokalnego pliku. Domyślnie [gatsby-starter-default](https://github.com/gatsbyjs/gatsby-starter-default); zobacz dokumentację [starterów Gatsby](/docs/gatsby-starters/) aby uzyskać więcej informacji. |
-=======
-| Argument    | Description                                                                                                                                                                                              |
-| ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| site-name   | Your Gatsby site name, which is also used to create a project directory.                                                                                                                                 |
-| starter-url | A Gatsby starter URL or local file path. Defaults to [gatsby-starter-default](https://github.com/gatsbyjs/gatsby-starter-default); see the [Gatsby starters](/docs/starters/) docs for more information. |
->>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
 
 > Uwaga: `site-name` powinna zawierać tylko litery i cyfry. Jeśli w nazwie zawrzesz `.`, `./` lub `<spację>`, `gatsby new` wyrzuci błąd.
 
@@ -119,22 +112,12 @@ Uruchom komendę w katalogu głównym strony Gatsby, aby zbudować wersję produ
 
 #### Opcje
 
-<<<<<<< HEAD
 |            Opcja             | Opis                                                                                                                        |
 | :--------------------------: | --------------------------------------------------------------------------------------------------------------------------- |
 |       `--prefix-paths`       | Buduje stronę dodając prefiks do ścieżek (ustaw pathPrefix w twojej konfiguracji)                                           |
 |        `--no-uglify`         | Buduje stronę bez optymalizacji plików JS (do debuggowania)                                                                 |
 | `--open-tracing-config-file` | Plik konfiguracyjny śledzenia (zgodny z OpenTracing). Zobacz dokumentację [Performance Tracing](/docs/performance-tracing/) |
 | `--no-color`, `--no-colors`  | Wyłącza wyświetlanie kolorów w terminalu                                                                                    |
-=======
-|            Option            | Description                                                                                                                                  |
-| :--------------------------: | -------------------------------------------------------------------------------------------------------------------------------------------- |
-|       `--prefix-paths`       | Build site with link paths prefixed (set pathPrefix in your config)                                                                          |
-|        `--no-uglify`         | Build site without uglifying JS bundles (for debugging)                                                                                      |
-|         `--profile`          | Build site with react profiling. See [Profiling Site Performance with React Profiler](/docs/profiling-site-performance-with-react-profiler/) |
-| `--open-tracing-config-file` | Tracer configuration file (OpenTracing compatible). See [Performance Tracing](/docs/performance-tracing/)                                    |
-| `--no-color`, `--no-colors`  | Disables colored terminal output                                                                                                             |
->>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
 
 Oprócz wymienionych opcji budowania, istnieją także opcjonalne [zmienne środowiskowe](/docs/environment-variables/#build-variables) do bardziej zaawansowanych konfiguracji, które pozwalają dostosować jak przebiega proces budowania aplikacji. Na przykład ustawienie `CI=true` jako zmiennej środowiskowej dostosuje dane wyjściowe do [terminali nieinteligentnych](https://en.wikipedia.org/wiki/Computer_terminal#Dumb_terminals).
 

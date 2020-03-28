@@ -54,13 +54,7 @@ Jeśli tworzysz mniejszą stronę, jedną z najskuteczniejszych opcji jest pobra
 
 ### Jak Warstwa Danych Gatsby korzysta z GraphQL, aby pobierać dane do komponentów
 
-<<<<<<< HEAD
 Istnieje wiele opcji na ładowanie danych do komponentów React. Jedną z najbardziej popularnych i potężnych technologii jest [GraphQL](http://graphql.org/).
-=======
-There are many options for loading data into React components. One of the most
-popular and powerful of these is a technology called
-[GraphQL](https://graphql.org/).
->>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
 
 GraphQL został wynaleziony przez Facebook, aby pomóc inżynierom produktów _pobierać_ tylko te dane, których potrzebują, wprost do komponentów.
 

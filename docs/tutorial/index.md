@@ -24,21 +24,11 @@ W tych samouczkach dowiesz się, jak przy pomocy GraphQL pobierać dane z niemal
 7.  [Programatyczne tworzenie stron z pobranych danych](/tutorial/part-seven/):  Naucz się jak programatycznie stworzyć strony na Twojego bloga.
 8.  [Przygotowanie strony do wdrożenia](/tutorial/part-eight/): Dowiedz się, jak przeprowadzić audyt witryny pod kątem wydajności i najlepszych praktyk w zakresie dostępności, SEO i innych.
 
-<<<<<<< HEAD
-## Samouczki o motywach
+## Samouczki dotyczące wtyczek i motywów
 
-Motywy Gatsby wyodrębniają całą twoją domyślną konfigurację (wspólna funkcjonalność, pozyskiwanie danych, projektowanie) z Twojej strony do paczki, którą można instalować w innych projektach.
+Wtyczki Gatsby to sposób na enkapsulację, ponowne użycie i tworzenie funkcji, takich jak pozyskiwanie danych. Motywy Gatsby to rodzaj wtyczki, która wyodrębnia domyślną konfigurację (wspólna funkcjonalność, pozyskiwanie danych, projektowanie) z Twojej witryny do instalowalnego pakietu.
 
-Oznacza to, że konfiguracja i funkcjonalność nie są zapisywane bezpośrednio w projekcie, ale są wersjonowane, centralnie zarządzane i instalowane jako zależność/moduł. Możesz bezproblemowo aktualizować motyw, komponować go z innymi motywami, a nawet wymieniać jeden kompatybilny motyw na inny.
-
-Dowiedz się więcej o używaniu i budowaniu motywów na [Samouczki o motywach Gatsby](/tutorial/theme-tutorials/).
-=======
-## Plugin & Theme tutorials
-
-Gatsby plugins are a way to encapsulate, re-use, and compose functionality, such as data sourcing. Gatsby themes are a type of plugin which abstracts your default configuration (shared functionality, data sourcing, design) out of your site and into an installable package.
-
-Learn how to build and use plugins and themes step-by-step in the [Plugin and Theme Tutorials](/tutorial/plugin-and-theme-tutorials/).
->>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
+Dowiedz się, jak krok po kroku tworzyć i używać wtyczek i motywów w [Samouczki dotyczące wtyczek i motywów](/tutorial/theme-tutorials/).
 
 ## Dodatkowe samouczki
 
