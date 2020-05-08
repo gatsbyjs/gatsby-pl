@@ -21,7 +21,7 @@ tableOfContentsDepth: 1
 gatsby new {twoja-nazwa-projektu} {link-do-startera}
 ```
 
-> _Nie uruchamiaj powyższego polecenie dokładnie w ten sposób -- pamiętaj aby odpowiednio zastąpić {twoja-nazwa-projektu} oraz {link-do-startera}!_
+> _Nie uruchamiaj powyższego polecenia dokładnie w ten sposób -- pamiętaj aby odpowiednio zastąpić {twoja-nazwa-projektu} oraz {link-do-startera}!_
 
 3. Uruchom twoją nową stronę:
 
