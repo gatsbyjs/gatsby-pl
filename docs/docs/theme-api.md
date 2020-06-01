@@ -1,21 +1,23 @@
 ---
-title: Themes API Reference
+title: API Motywów Gatsby
 ---
 
-## Core Gatsby APIs
+## Gatsby Core API
 
-Themes are packaged Gatsby sites shipped as plugins, so you have access to all of Gatsby's APIs for modifying default configuration settings and functionality.
+Motywy są spakowanymi stronami Gatsby dostarczanymi jako pluginy, dzięki czemu masz dostęp do całego API Gatsby'ego oraz możliwości modyfikowania domyślnej konfiguracji i funkcjonalności.
 
-- [Gatsby Config](https://www.gatsbyjs.org/docs/gatsby-config/)
-- [Actions](https://www.gatsbyjs.org/docs/actions/)
-- [Node Interface](https://www.gatsbyjs.org/docs/node-interface/)
-- ... [and more](https://www.gatsbyjs.org/docs/api-specification/)
+- [Konfiguracja Gatsbyego](https://www.gatsbyjs.org/docs/gatsby-config/)
+- [Akcje](https://www.gatsbyjs.org/docs/actions/)
+- [Interfejs Noda](https://www.gatsbyjs.org/docs/node-interface/)
+- ... [i wiele więcej](https://www.gatsbyjs.org/docs/api-specification/)
 
-If you're new to Gatsby you can get started by following along with the guides for building out a site. Converting it to a theme will be straightforward later on since themes are prepackaged Gatsby sites.
+Jeżeli dopiero zaczynasz swoją przygodę z Gatsbym, możesz zacząć przechodząc przez [przewodniki](https://www.gatsbyjs.org/tutorial/) do budowania strony. Poźniejsze konwertowanie jej do motywu będzie proste i przyjemne, gdyż motywy są wcześniej spakowanymi stronami Gatsby.
 
-## Configuration
+## Konfiguracja
 
-Plugins can now include a `gatsby-config` in addition to the other `gatsby-*` files. We typically refer to plugins that include a `gatsby-config.js` as a theme (more on that in [theme composition](#theme-composition)). A typical `gatsby-config.js` in a user's site that uses your theme could look like this. This example passes in two options to `gatsby-theme-name`: `postsPath` and `colors`.
+Pluginy mogą zawierać `gatsby-config` poza pozostałymi plikami `gatsby-*`. Jeżeli taki plugin będzie zawierał `gatsby-config.js` to zazwyczaj nazwiemy go motywem (więcej na ten temat w [kompozycji motywów](#kompozycja-motywów)). Typowy `gatsby-config.js` strony użytkownika, która używa twojego motywu może wyglądać tak:
+
+Dodatkowo, w tym przykładzie podajemy dwie opcje do `gatsby-theme-name`: `postsPath` oraz `colors`.
 
 ```js:title=gatsby-config.js
 module.exports = {
@@ -33,14 +35,14 @@ module.exports = {
 }
 ```
 
-You can access options that are passed to your theme in your theme's `gatsby-config`. You can use options to make filesystem sourcing configurable, accept different nav menu items, change branding colors from the default, and anything else you want to make configurable.
+Możesz odnosić się do opcji podanych twojemu motywowi, w jego `gatsby-config`. Dzięki tej możliwości, można na przykład używać ich do konfiguracji lokalizacji źródeł w systemie plików, przyjmowania różnych elementów menu nawigacyjnego strony, zmiany domyślnych kolorów na stronie, czy czegokolwiek innego co może być konfigurowalne.
 
-To take advantage of the options that are passed in when configuring your theme in a user's site, return a function in your theme's `gatsby-config.js`. The argument the function receives is the options the user passed in.
+Aby skorzystać z opcji podanych twojemu motywowi przez konfigurację strony użytkownika, który ten motyw wykorzystuje, w pliku `gatsby-config.js` twojego motywu należy zwrócić funkcję. Argument, który zostanie podany tej funkcji, to opcje które użytkownik poda przy konfiguracji motywu.
 
 ```js:title=gatsby-config.js
 module.exports = themeOptions => {
   console.log(themeOptions)
-  // logs `postsPath` and `colors`
+  // wyświetli `postsPath` oraz `colors`
 
   return {
     plugins: [
@@ -50,70 +52,77 @@ module.exports = themeOptions => {
 }
 ```
 
-While using the usual object export (`module.exports = {}`) in your theme means that you can run the theme standalone as its own site, when using a function in your theme to accept options you will need to run the theme as part of an example site. See how the [theme authoring starter](https://github.com/gatsbyjs/gatsby-starter-theme-workspace) handles this using Yarn Workspaces.
+Używanie tradycyjnego eksportu obiektu w `gatsby-config` twojego motywu (`module.exports = {}`), oznacza że może on działać jako samodzielna strona w nim zawarta, natomiast jeżeli korzystamy z eksportu funkcji, motyw musi być używany jako część innej strony. Warto zobaczyć jak [theme authoring starter](https://github.com/gatsbyjs/gatsby-starter-theme-workspace) wykorzystuje Yarn Workspaces we współpracy z motywami Gatsby.
 
-### Accessing options elsewhere
+### Dostęp do opcji konfiguracji w innych miejscach
 
-Note that because themes are plugins you can also access the options in any of the lifecycle methods that you're used to. For example, in your theme's `gatsby-node.js` you can access the options as the second argument to `createPages`:
+Warto zauważyć, że skoro motywy są pluginami, to można uzyskać dostęp do opcji konfiguracji z każdej z funkcji cyklu życia Gatsby. Na przykład, wewnątrz `gatsby-node.js` twojego motywu, opcje zostaną przekazane jako drugi argument do `createPages`:
 
 ```js:title=gatsby-node.js
 exports.createPages = async ({ graphql, actions }, themeOptions) => {
   console.log(themeOptions)
+  // wyświetli przekazane opcje - `postsPath` oraz `colors`
 }
 ```
 
 ## Shadowing
 
-Since themes are usually deployed as npm packages that other people use in their sites, you need a way to modify certain files, such as React components, without making changes to the source code of the theme. This is called _Shadowing_.
+Ze względu na fakt, że motywy są publikowane jako paczki na npm, które inni użytkownicy wykorzystują w swoich projektach, należy zapewnić metodę modyfikowania poszczególnych plików (takich jak komponenty Reacta), bez wprowadzania zmian do kodu źródłowego motywu. Metoda ta, nazywa się _Shadowing_ (nadpisywanie).
 
-Shadowing is a filesystem-based API that allows us to replace one file with another at build time. For example, if you had a theme with a `Header` component you could replace that `Header` with your own by creating a new file and placing it in the correct location for Shadowing to find it.
+_Shadowing_ to oparte na systemie plików API, które pozwala na zamianę jednego pliku innym, w trakie budowania strony. Na przykład, jeżeli motyw ma komponent `Header` to użytkownik, który ten motyw wykorzystuje, może zamienić ten komponent swoim przez umieszczenie jego pliku w odpowiedniej lokalizacji tak, aby _Shadowing_ mógł go odnaleźć.
 
-### Overriding
+### Nadpisywanie
 
-Taking a closer look at the `Header` example, let's say you have a theme called `gatsby-theme-amazing`. That theme uses a `Header` component to render navigation and other miscellaneous items. The path to the component from the root of the npm package is `gatsby-theme-amazing/src/components/header.js`.
+Spójrzmy na przykład `Header` - powiedzmy, że stworzyłeś motyw o nazwie `gatsby-theme-amazing`. Motyw ten używa komponentu `Header`, aby wyrenderować nawigację i inne elementy z nią związane. Ścieżka do komponentu z katalogu głównego paczki na npm to: `gatsby-theme-amazing/src/components/header.js`.
 
-You might want the `Header` component to do something different (maybe change colors, maybe add additional navigation items, really anything you can think of). To do that, you create a file in your site at `src/gatsby-theme-amazing/components/header.js`. You can now export any React component you want from this file and Gatsby will use it instead of the theme's component.
+Jeżeli chciałbyś, aby komponent `Header` robił coś innego (np. chciałbyś zmienić kolory, dodać dodatkową część, czy cokolwiek innego co możnaby zmodyfikować), wystarczy stworzyć plik w projekcie strony, która ten motyw wykorzystuje. Plik ten powinien znaleźć się w lokalizacji `src/gatsby-theme-amazing/components/header.js`. Teraz wystarczy wyeksportować dowolny komponent Reacta, a Gatsby użyje go zamiast odpowiadającego komponentu z motywu.
 
-> 💡 Note: you can shadow components from other themes using the same method. Read more about advanced applications in [latent shadowing](https://johno.com/latent-component-shadowing).
+> 💡 Można również używać w ten sposób komponentów z innych motywów. Dowiedz się więcej na temat zaawansowanych aplikacji w [latent shadowing](https://johno.com/latent-component-shadowing).
 
-### Extending
+### Rozszerzanie
 
-In the last section we talked about completely replacing one component with another. What if you want to make a smaller change that doesn't require copy/pasting the entire theme component into your own? You can take advantage of the ability to extend components.
+W poprzedniej sekcji opisaliśmy sposób nadpisywania komponentów własnymi. Ale co jeżeli chcielibyśmy tylko dodać coś do zapewnionych nam już komponentów, bez potrzeby kopiowania ich kodu do naszych? W tym celu, można skorzystać z możliwości **rozszerzania** komponentów.
 
-Taking the `Header` example from before, when you write your shadowing file at `src/gatsby-theme-amazing/components/header.js`, you can import the original component and re-export it as such, adding your own overridden prop to the component.
+Biorąc przykład `Header` z wcześniejszych sekcji, jeżeli stworzymy plik `src/gatsby-theme-amazing/components/header.js`, można zaimportować oryginalny komponent, a następnie wyeksportować go ponownie, nadpisując jakieś właściwości, czy korzystając z takich technik jak [Komponenty Wyższego Rzędu (HOC)](https://pl.reactjs.org/docs/higher-order-components.html)
 
 ```js
 import Header from "gatsby-theme-amazing/src/components/header"
 
-// these props are the same as the original component would get
+// Tutaj właściwości będą takie same, jakie otrzymałby oryginalny komponent, z tym że jedną z nich nadpisujemy/dodajemy ręcznie
 export default props => <Header {...props} myProp="true" />
 ```
 
-Taking this approach means that when you upgrade your theme later you can also take advantage of all the updates to the `Header` component because you haven't fully replaced it, just modified it.
+Idąc tą drogą, jeżeli później autor motywu go zaaktualizuje, to użytkownik nadal będzie mógł korzystać z wprowadzonych zmian, gdyż istniejący komponent będzie tylko rozszerzony, a nie wymieniony.
 
-### What path should be used to shadow a file?
+### Jaka ścieżka powinna zostać wybrana, aby nadpisać plik?
 
-Until Gatsby has tooling to automatically handle shadowing, you will have to manually locate paths in a theme and create the correct shadowing paths in your site.
+Ze względu na fakt, że Gatsby posiada zestaw narzędzi do automatycznego nadpisywania plików, musimy ręcznie wyszukiwać ścieżki do komponentów w kodzie źródłowym motywu, a następnie tworzyć odpowiadające im pliki w projekcie strony, która ten motyw wykorzystuje.
 
-Luckily, the way to do that is only a few steps. Take the `src` directory from the theme, and move it to the front of the path, then write a file at that location in your site. Looking back on the `Header` example, this is the path to the component in your theme:
+Na szczęście, jest to tylko kilka kroków:
+
+1. Znajdź lokalizację `src` wewnątrz kodu źródłowego danego motywu w `node_modules`
+2. Przesuń ją na początek ścieżki
+3. Znajdź plik, który chcesz nadpisać, i dodaj jego lokalizację względem katalogu src do końca ścieżki
+
+Biorąc pod uwagę przykład komponentu `Header`, to jest jego ścieżka wewnątrz motywu:
 
 ```text
 gatsby-theme-amazing/src/components/header.js
 ```
 
-and here is the path where you would shadow it in your site:
+a to jest ścieżka pliku, wewnątrz którego powinno znaleźć się jego nadpisanie
 
 ```text
-<your-site>/src/gatsby-theme-amazing/components/header.js
+<twoja-strona>/src/gatsby-theme-amazing/components/header.js
 ```
 
-Shadowing only works on imported files in the `src` directory. This is because shadowing is built on top of Webpack, so the module graph needs to include the shadowable file.
+Nadpisywanie działa tylko na plikach zaimportowanych wewnątrz lokalizacji `src` motywu, gdyż zbudowane jest ono na Webpacku - wykres zależności musi zawierać nadpisywalny plik.
 
-Since you can use multiple themes in a given site, there are many potential places to shadow a given file (one for each theme and one for the user's site). In the event that multiple themes are attempting to shadow `gatsby-theme-amazing/src/components/header.js`, the last theme included in the plugins array will win. The site itself takes the highest priority in shadowing.
+Skoro można używać wielu motywów wewnątrz jednej strony, potencjalnie może powstać sytuacja gdy jeden plik będzie nadpisany w wielu miejscach. W sytuacji, gdy wiele motywów będzie chciało nadpisać plik `gatsby-theme-amazing/src/components/header.js` wewnątrz innego motywu, Gatsby wybierze nadpisanie z ostatniego motywu wewnątrz arraya pluginów w projekcie strony, która z nich korzysta. Jeżeli nadpisanie pojawi się również wewnątrz projektu samej strony, to ono będzie miało zawsze największy priorytet.
 
-## Theme composition
+## Kompozycja motywów
 
-Gatsby themes can compose horizontally and vertically. Vertical composition refers to the classic "parent/child" relationship. A child theme declares a parent theme in the child theme's plugins array.
+Motywy Gatsby mogą przyjmować kompozycję wertykalną i horyzontalną. Kompozycja wertykalna odnosi się do klasycznej relacji "rodzic->dziecko". Motyw-dziecko deklaruje motyw-rodzica, wewnątrz swojej array pluginów.
 
 ```js:title=gatsby-theme-child/gatsby-config.js
 module.exports = {
@@ -121,7 +130,7 @@ module.exports = {
 }
 ```
 
-Horizontal composition is when two different themes are used together, such as `gatsby-theme-blog` and `gatsby-theme-notes`.
+Kompozycja horyzontalna jest wtedy, gdy dwa motywy są użyte razem, obok siebie. Na przykład użycie `gatsby-theme-blog` oraz `gatsby-theme-notes` wewnątrz jednej strony.
 
 ```js:title=my-site/gatsby-config.js
 module.exports = {
@@ -129,11 +138,11 @@ module.exports = {
 }
 ```
 
-Themes at their core are an algorithm that merges multiple `gatsby-config.js` files together into a single config your site can use to build with. To do that you need to define how to combine two `gatsby-config.js`s together. Before you can do that, you need to flatten the parent/child relationships into a single array. This results in the final ordering when considering which shadowing file to use if multiple are available.
+Motywy od środka są algorytmem, który scala wiele plików `gatsby-config.js`, do pojedynczej konfiguracji, którą twoja strona może użyć aby się zbudować. Aby mogło się to stać, trzeba zdefiniować sposób w jaki łączone jest wiele plików `gatsby-config.js`. Zanim to się stanie, trzeba wyrównać relacje rodzic->dziecko do pojedynczego arraya. Rezultat tego ma znaczenie, gdy trzeba określić z którego motywu użyć plik do nadpisywania, gdy dostępnych jest wiele.
 
-The first example results in a final ordering of `['gatsby-theme-parent', 'gatsby-theme-child']` (parents always come before their children so that children can override functionality), while the second example results in `['gatsby-theme-blog', 'gatsby-theme-notes']`.
+Rezultat pierwszego przykładu to `['gatsby-theme-parent', 'gatsby-theme-child']` (rodzice zawsze muszą być przed ich dziećmi, tak aby one mogły nadpisać ich funkcjonalność, bo to one deklarują użycie ich rodzica), a rezultatem drugiego przykładu jest `['gatsby-theme-blog', 'gatsby-theme-notes']`.
 
-Once you have the final ordering of themes you merge them together using a reduce function. [This reduce function](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/utils/merge-gatsby-config.js) specifies the way each key in `gatsby-config.js` will merge together. Unless otherwise specified below, the last value wins.
+Gdy wszystkie motywy są ułożone w końcowej kolejności, zostają scalone za pomocą funkcji [reduce](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/utils/merge-gatsby-config.js) - określa ona sposób, w jaki każdy klucz wewnątrz `gatsby-config.js` zostanie połączony. Poza wymienionymi poniżej, ostatnia wartość wygrywa.
 
-- `siteMetadata` and `mapping` both merge deeply using lodash's `merge` function. This means a theme can set default values in `siteMetadata` and the site can override them using the standard `siteMetadata` object in `gatsby-config.js`.
-- `plugins` are normalized to remove duplicates, then concatenated together.
+- `siteMetadata` i `mapping` są scalane głęboko, za pomocą funkcji `merge` lodash'a. Oznacza to, że motyw może ustawić domyślne wartości `siteMetadata`, a strona go wykorzystująca, może nadpisać część z nich, korzystając z obiektu `siteMetadata` wewnątrz jej `gatsby-config.js`.
+- `plugins` są normalizowane aby usunąć duplikaty, a następnie łączone.
