@@ -4,18 +4,18 @@ title: API Motywów Gatsby
 
 ## Gatsby Core API
 
-Motywy są spakowanymi stronami Gatsby dostarczanymi jako pluginy, dzięki czemu masz dostęp do całego API Gatsby'ego oraz możliwości modyfikowania domyślnej konfiguracji i funkcjonalności.
+Motywy są spakowanymi stronami Gatsby dostarczanymi jako pluginy, dzięki czemu masz dostęp do całego API Gatsby oraz możliwości modyfikowania domyślnej konfiguracji i funkcjonalności.
 
-- [Konfiguracja Gatsbyego](https://www.gatsbyjs.org/docs/gatsby-config/)
+- [Konfiguracja Gatsby](https://www.gatsbyjs.org/docs/gatsby-config/)
 - [Akcje](https://www.gatsbyjs.org/docs/actions/)
-- [Interfejs Noda](https://www.gatsbyjs.org/docs/node-interface/)
+- [Interfejs Node](https://www.gatsbyjs.org/docs/node-interface/)
 - ... [i wiele więcej](https://www.gatsbyjs.org/docs/api-specification/)
 
-Jeżeli dopiero zaczynasz swoją przygodę z Gatsbym, możesz zacząć przechodząc przez [przewodniki](https://www.gatsbyjs.org/tutorial/) do budowania strony. Poźniejsze konwertowanie jej do motywu będzie proste i przyjemne, gdyż motywy są wcześniej spakowanymi stronami Gatsby.
+Jeżeli dopiero zaczynasz swoją przygodę z Gatsby, możesz zacząć od [przewodników](https://www.gatsbyjs.org/tutorial/) jak budować strony. Poźniejsze konwertowanie jej do motywu będzie proste i przyjemne, gdyż motywy są wcześniej spakowanymi stronami Gatsby.
 
 ## Konfiguracja
 
-Pluginy mogą zawierać `gatsby-config` poza pozostałymi plikami `gatsby-*`. Jeżeli taki plugin będzie zawierał `gatsby-config.js` to zazwyczaj nazwiemy go motywem (więcej na ten temat w [kompozycji motywów](#kompozycja-motywów)). Typowy `gatsby-config.js` strony użytkownika, która używa twojego motywu może wyglądać tak:
+ Poza pozostałymi plikami `gatsby-*`, pluginy mogą zawierać teraz także `gatsby-config`. Jeżeli taki plugin będzie zawierał `gatsby-config.js` to zazwyczaj nazwiemy go motywem (więcej na ten temat w [kompozycji motywów](#kompozycja-motywów)). Typowy `gatsby-config.js` strony użytkownika, która używa twojego motywu może wyglądać tak:
 
 Dodatkowo, w tym przykładzie podajemy dwie opcje do `gatsby-theme-name`: `postsPath` oraz `colors`.
 
@@ -35,7 +35,7 @@ module.exports = {
 }
 ```
 
-Możesz odnosić się do opcji podanych twojemu motywowi, w jego `gatsby-config`. Dzięki tej możliwości, można na przykład używać ich do konfiguracji lokalizacji źródeł w systemie plików, przyjmowania różnych elementów menu nawigacyjnego strony, zmiany domyślnych kolorów na stronie, czy czegokolwiek innego co może być konfigurowalne.
+Masz dostęp do opcji przekazanych twojemu motywowi, w jego pliku `gatsby-config`. Dzięki tej możliwości, można na przykład używać ich do konfiguracji lokalizacji źródeł w systemie plików, przyjmowania różnych elementów menu nawigacyjnego strony, zmiany domyślnych kolorów na stronie, czy czegokolwiek innego co może być konfigurowalne.
 
 Aby skorzystać z opcji podanych twojemu motywowi przez konfigurację strony użytkownika, który ten motyw wykorzystuje, w pliku `gatsby-config.js` twojego motywu należy zwrócić funkcję. Argument, który zostanie podany tej funkcji, to opcje które użytkownik poda przy konfiguracji motywu.
 
