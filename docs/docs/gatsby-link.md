@@ -95,7 +95,7 @@ Więcej na ten temat w [dokumentacji `@reach/router`](https://reach.tech/router/
 
 Domyślnie propsy `activeStyles` i `activeClassName` będą aplikowane do komponentu `Link` tylko jeżeli obecna ścieżka jest _dokładnie_ taka sama jak ścieżka podana we propsie `to`. Czasami jednak przydatne mogłoby być stylowanie linku tak jakby był aktywny, ale gdy props `to` tylko częściowo pasuje do obecnego URL'u. Na przykład:
 
-- Możnaby chcieć aby `/blog/hello-world` pasował do `<Link to="/blog">`
+- Można by chcieć aby `/blog/hello-world` pasował do `<Link to="/blog">`
 - Lub `/gatsby-link/#passing-state-through-link-and-navigate` pasował do `<Link to="/gatsby-link">`
 
 W takich sytuacjach wystarczy dodać props `partiallyActive` do komponentu `<Link>`, a style zostaną zaaplikowane nawet wtedy, gdy ścieżka pasuje tylko częściowo.
