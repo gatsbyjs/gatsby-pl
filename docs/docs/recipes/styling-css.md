@@ -50,11 +50,11 @@ import "./src/styles/global.css"
 
 ### Kroki
 
-Możesz dodać globalne style do [współdzielonego komponentu układu](/tutorial/part-three/#your-first-layout-component). Ten komponent będzie użyty do powtarzających się rzeczy na stronie, takich jak nagłówek lub stopka.
+Możesz dodać globalne style do [współdzielonego komponentu układu](/tutorial/part-three/#your-first-layout-component). Ten komponent będzie użyty do powtarzających się na stronie elementów, takich jak nagłówek lub stopka.
 
 1. Utwórz folder `/src/components`, jeśli jeszcze taki nie istnieje.
 
-2. W środku folderu `components` utwórz dwa pliki pod nazwami: `layout.css` i `layout.js`.
+2. W folderze `components` utwórz dwa pliki pod nazwami: `layout.css` i `layout.js`.
 
 3. Wklej następujący kod do pliku `layout.css`:
 
@@ -73,7 +73,7 @@ import "./layout.css"
 export default ({ children }) => <div>{children}</div>
 ```
 
-5. Teraz, zmodyfikuj stronę główną w pliku `/src/pages/index.js` tak, aby korzystałą z komponentu układu:
+5. Teraz, zmodyfikuj stronę główną w pliku `/src/pages/index.js` tak, aby korzystała z komponentu układu:
 
 ```jsx:title=/src/pages/index.js
 import React from "react"
@@ -201,7 +201,7 @@ export default () => (
 4. Uruchom `gatsby develop`, aby zaobserwować zmiany.
 
 **Uwaga:**
-Pamiętaj o rozszerzeniu pliku `.module.css` zamiast samego `.css`, informuje to Gatsbyiego o tym, że jest on modułem CSS.
+Pamiętaj o rozszerzeniu pliku `.module.css` zamiast samego `.css`, informuje to Gatsby o tym, że jest to moduł CSS.
 
 ### Dodatkowe materiały
 
@@ -266,7 +266,7 @@ _Uwaga: Możesz także korzystać z plików Sass/SCSS jako modułów, tak jak ju
 - [Oficjalny poradnik Sass](https://sass-lang.com/guide)
 - [Kompletny tutorial o instalacji Sass zawierający więcej wyjaśnień i materiałów.](https://www.gatsbyjs.org/docs/sass/)
 
-## Dodawanie lokalnej czcionki
+## Dodawanie lokalnych czcionek
 
 ### Wymagania
 
@@ -300,7 +300,7 @@ body {
 
 Poprzez dodanie czcionki do elementu `HTML`, zaaplikuje się ona do większości tekstów na stronie. Dodatkowe reguły mogą być dodane do innych elementów takich jak `button` lub `textarea`.
 
-Jeżeli czcionki na stornie nie aktualizują się poprawnie, upewnij się, że podmieniłeś istniejące własności font-family w odpowiednich elementach.
+Jeżeli czcionki na stronie nie aktualizują się poprawnie, upewnij się, że podmieniłeś istniejące własności font-family w odpowiednich elementach.
 
 ### Dodatkowe materiały
 
@@ -308,7 +308,7 @@ Jeżeli czcionki na stornie nie aktualizują się poprawnie, upewnij się, że p
 
 ## Korzystanie z Emotion
 
-[Emotion](https://emotion.sh) to potężna biblioteka CSS-in-JS, która wspiera zarówno style lokalne, jak i ostylowane komponenty. Można z nich korzystać osobno lub mieszać razem w jednym pliku.
+[Emotion](https://emotion.sh) to potężna biblioteka CSS-in-JS, która wspiera zarówno style lokalne, jak i stylowane komponenty. Można z nich korzystać osobno lub mieszać razem w jednym pliku.
 
 ### Wymagania
 
@@ -352,7 +352,7 @@ export default () => (
 )
 ```
 
-4. Aby używać [stylowanych komponentów](https://emotion.sh/docs/styled), zaimportuj odpowiedni pakiet i zdefinuj je za pomocą funkcji `styled`.
+4. Aby używać [stylowanych komponentów](https://emotion.sh/docs/styled), zaimportuj odpowiedną paczkę i zdefinuj je za pomocą funkcji `styled`.
 
 ```jsx:title=src/pages/emotion-sample.js
 import React from "react"
@@ -381,7 +381,7 @@ export default () => (
 
 ## Korzystanie z Google Fonts
 
-Jeśli hostujemy [Google Fonts](https://fonts.google.com/) lokalnie w swoim projekcie, nasza strona nie będzie wysyłać zapytania o czcionkę przez internet za każdym załadowaniem strony. Może to przyspieszyć twoją stronę aż o ~300 milisekund na komputerze i 1+ sekundę na połączeniu 3G. Rekomenduje się ograniczanie użytku własnych czcionek tylko do tych, które są wymagane, aby zmaksymalizować wydajność strony.
+Jeśli hostujemy [Google Fonts](https://fonts.google.com/) lokalnie w swoim projekcie, nasza strona nie będzie wysyłać zapytania o czcionkę przez internet za każdym załadowaniem strony. Może to przyspieszyć twoją stronę aż o ~300 milisekund na komputerze i 1+ sekundę na połączeniu 3G. Rekomenduje się ograniczanie użycia własnych czcionek tylko do tych, które są wymagane, aby zmaksymalizować wydajność strony.
 
 ### Wymagania
 
