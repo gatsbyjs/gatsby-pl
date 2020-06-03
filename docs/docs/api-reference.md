@@ -3,6 +3,6 @@ title: Gatsby API Reference
 overview: true
 ---
 
-Learn more about Gatsby API methods and options, common files, and customizations.
+Dowiedz się więcej na temat metod, opcji, typowych plików i dostosowywania API Gatsby.
 
 <GuideList slug={props.slug} />
