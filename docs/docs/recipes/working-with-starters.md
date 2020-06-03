@@ -3,36 +3,36 @@ title: "Recipes: Working with Starters"
 tableOfContentsDepth: 1
 ---
 
-[Starters](/docs/starters/) are boilerplate Gatsby sites maintained officially, or by the community.
+[Startery](/docs/starters/) są boilerplatem stron Gatsby utrzymywanym oficjalnie lub przez społeczność.
 
-## Using a starter
+## Używanie startera
 
-### Prerequisites
+### Wymagania wstępne
 
-- The [Gatsby CLI](/docs/gatsby-cli) installed
+- Zainstalowane [Gatsby CLI](/docs/gatsby-cli)
 
-### Directions
+### Wskazówki
 
-1. Find the starter you'd like to use. (_The [Starter Library](/starters/?v=2) is a good place to look!_)
+1. Znajdź starter, którego chcesz użyć. (_Biblioteka [Starter Library](/starters/?v=2) jest dobrym miejscem, aby rzucić okiem!_)
 
-2. Generate a new site based on the starter. In the terminal, run:
+2. Wygeneruj nową stronę na podstawie startera. W terminalu uruchom:
 
 ```shell
-gatsby new {your-project-name} {link-to-starter}
+gatsby new {twoja-nazwa-projektu} {link-do-startera}
 ```
 
-> _Don't run the above command as-is -- remember to replace {your-project-name} and {link-to-starter}!_
+> _Nie uruchamiaj powyższego polecenia dokładnie w ten sposób -- pamiętaj aby odpowiednio zastąpić {twoja-nazwa-projektu} oraz {link-do-startera}!_
 
-3. Run your new site:
+3. Uruchom twoją nową stronę:
 
 ```shell
-cd {your-project-name}
+cd {twoja-nazwa-projektu}
 gatsby develop
 ```
 
-### Additional resources
+### Dodatkowe materiały
 
-- Follow a [more detailed guide](/docs/starters/) on using Gatsby starters.
-- Learn how to use the [Gatsby CLI](/docs/gatsby-cli) tool to use starters in [tutorial part one](/tutorial/part-one/#using-gatsby-starters)
-- Browse the [Starter Library](/starters/?v=2)
-- Check out Gatsby's [official default starter](https://github.com/gatsbyjs/gatsby-starter-default)
+- Sprawdź [bardziej szczegółowy przewodnik](/docs/starters/) dotyczący używania starterów Gatsby.
+- Naucz się jak używać narzędzia [Gatsby CLI](/docs/gatsby-cli) do korzystania ze starterów w [pierwszej części samouczka](/tutorial/part-one/#using-gatsby-starters)
+- Przeglądaj [bibliotekę starterów](/starters/?v=2)
+- Sprawdź [oficjalny domyślny starter](https://github.com/gatsbyjs/gatsby-starter-default) Gatsby
