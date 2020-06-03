@@ -3,7 +3,7 @@ title: "Recipes: Working with Starters"
 tableOfContentsDepth: 1
 ---
 
-[Startery](/docs/starters/) są boilerplatem stron Gatsby'iego utrzymywanym oficjalnie lub przez społeczność.
+[Startery](/docs/starters/) są boilerplatem stron Gatsby utrzymywanym oficjalnie lub przez społeczność.
 
 ## Używanie startera
 
