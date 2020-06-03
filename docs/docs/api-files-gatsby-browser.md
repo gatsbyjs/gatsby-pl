@@ -1,5 +1,5 @@
 ---
-title: API pliku gatsby-browser.js
+title: Plik API gatsby-browser.js
 ---
 
 Plik `gatsby-browser.js` pozwala Ci reagować na akcję, które dzieją się w przeglądarce oraz zawierać Twoją stronę w dodatkowe komponenty. [Gatsby Browser API](/docs/browser-apis) daje Ci wiele opcji interakcji [po stronie klienta](/docs/glossary#client-side) w Gatsby.

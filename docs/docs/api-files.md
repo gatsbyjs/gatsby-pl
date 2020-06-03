@@ -1,5 +1,5 @@
 ---
-title: API plików
+title: Pliki API
 ---
 
 Gatsby używa 4 plików w głownym katalogu projektu do konfiguracji twojej strony oraz kontroli tego jak się zachowuje. Wszytskie z tych plików są opcjonalne.
