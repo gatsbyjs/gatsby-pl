@@ -34,7 +34,7 @@ import "./src/styles/global.css"
 
 > **Uwaga:** Możesz także użyć `require('./src/styles/global.css')`, aby zaimportować globalny plik CSS w pliku `gatsby-config.js`
 
-3. Uruchom `gatsby-develop`, aby zaobserwować zaaplikowane style globalne na swojej stronie.
+3. Uruchom `gatsby-develop`, aby zobaczyć globalne style na swojej stronie.
 
 > **Uwaga:** Ten sposób może nie być najlepszym rozwiązaniem, jeżeli używasz stylowania CSS-in-JS, w takim przypadku powinieneś utworzyć stronę układu zawierającą wszystkie współdzielone komponenty. Jest to opisane w kolejnym przepisie.
 
