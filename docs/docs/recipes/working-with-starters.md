@@ -5,7 +5,7 @@ tableOfContentsDepth: 1
 
 [Startery](/docs/starters/) są boilerplatem stron Gatsby'iego utrzymywanym oficjalnie lub przez społeczność.
 
-## Używanie starteru
+## Używanie startera
 
 ### Wymagania wstępne
 
@@ -13,7 +13,7 @@ tableOfContentsDepth: 1
 
 ### Wskazówki
 
-1. Znajdź starter, który chcesz użyć. (_Biblioteka [Starter Library](/starters/?v=2) jest dobrym miejscem, aby rzucić okiem!_)
+1. Znajdź starter, którego chcesz użyć. (_Biblioteka [Starter Library](/starters/?v=2) jest dobrym miejscem, aby rzucić okiem!_)
 
 2. Wygeneruj nową stronę na podstawie startera. W terminalu uruchom:
 
@@ -32,7 +32,7 @@ gatsby develop
 
 ### Dodatkowe materiały
 
-- Obserwuj [bardziej szczegółowy przewodnik](/docs/starters/) dotyczący używania starterów Gatsby'iego.
-- Naucz się jak używać narzędzia [Gatsby CLI](/docs/gatsby-cli) do korzystania ze starterów w [tutorial part one](/tutorial/part-one/#using-gatsby-starters)
-- Przeglądaj bibliotekę [Starter Library](/starters/?v=2)
-- Sprawdź [oficjalny domyślny starter](https://github.com/gatsbyjs/gatsby-starter-default) Gatsby'iego
+- Sprawdź [bardziej szczegółowy przewodnik](/docs/starters/) dotyczący używania starterów Gatsby.
+- Naucz się jak używać narzędzia [Gatsby CLI](/docs/gatsby-cli) do korzystania ze starterów w [pierwszej części samouczka](/tutorial/part-one/#using-gatsby-starters)
+- Przeglądaj [bibliotekę starterów](/starters/?v=2)
+- Sprawdź [oficjalny domyślny starter](https://github.com/gatsbyjs/gatsby-starter-default) Gatsby
