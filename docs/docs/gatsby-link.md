@@ -4,9 +4,9 @@ title: API Gatsby Link
 
 Do nawigacji wewnątrz strony, Gatsby dostarcza wbudowany komponent `<Link>` oraz funkcję `navigate` służącą do nawigacji programowej.
 
-Komponent `<Link>` umożliwia linkowanie do stron wewnętrznych oraz korzystanie z ładowania wstępnego (_preloading_). Ładowanie wstępne wykorzystywane jest do ładowania zasobów strony, zanim użytkownik na nią przejdzie, co zwiększa wydajność i ogólną responsywność strony. W tym celu używany jest `IntersectionObserver`, który wstępnie wykonuje zapytanie z niskim priorytetem gdy `Link` znajdzie się w polu widzenia użytkownika, a następnie wykonuje zapytanie o wyższym priorytecie gdy uruchomiony zostanie event `onMouseOver` elementu `Link` - w tym momencie użytkownik najprawdopodobniej będzie chciał przejść na stronę, na której pobierane zasoby będą się znajdować.
+Komponent `<Link>` umożliwia linkowanie do stron wewnętrznych oraz korzystanie z ładowania wstępnego (_preloading_). Ładowanie wstępne wykorzystywane jest do ładowania zasobów strony, zanim użytkownik na nią przejdzie, co zwiększa wydajność i ogólną responsywność strony. W tym celu używany jest `IntersectionObserver`, który wstępnie wykonuje zapytanie z niskim priorytetem, gdy `Link` znajdzie się w polu widzenia użytkownika, a następnie wykonuje zapytanie o wyższym priorytecie, gdy uruchomiony zostanie event `onMouseOver` elementu `Link` - w tym momencie użytkownik najprawdopodobniej będzie chciał przejść na stronę, na której pobierane zasoby będą się znajdować.
 
-Komponent `Link` zbudowany jest na bazie [komponentu link z @reach/router](https://reach.tech/router/api/Link), dodając do niego użyteczne usprawnienia specyficzne dla Gatsby. Wszystkie właściwości przekazywane są do komponentu `Link` z @reach/router.
+Komponent `Link` zbudowany jest na bazie [komponentu link z @reach/router](https://reach.tech/router/api/Link), dodając do niego użyteczne usprawnienia specyficzne dla Gatsby. Wszystkie propsy przekazywane są do komponentu `Link` z @reach/router.
 
 ## Jak używać Gatsby Link?
 
@@ -82,23 +82,23 @@ const SiteNavigation = () => (
 
 ### Wykorzystywanie `getProps` do zaawansowanego stylowania linków
 
-Komponent Gatsby `<Link>` dostarcza właściwość `getProps`, która może być użyteczna przy zaawansowanym stylowaniu. Dostarcza obiekt, z następującymi właściwościami:
+Komponent Gatsby `<Link>` dostarcza props `getProps`, która może być użyteczna przy zaawansowanym stylowaniu. Dostarcza obiekt, z następującymi propsami:
 
-- `isCurrent` — prawda, jeżeli `location.pathname` jest dokładnie taka sama jak właściwość `to` komponentu `Link`
-- `isPartiallyCurrent` — prawda, jeżeli `location.pathname` zaczyna się tak samo jak właściwość `to` komponentu `Link`
-- `href` — wartość właściwości `to`
+- `isCurrent` — prawda, jeżeli `location.pathname` jest dokładnie taka sama jak props `to` komponentu `Link`
+- `isPartiallyCurrent` — prawda, jeżeli `location.pathname` zaczyna się tak samo jak props `to` komponentu `Link`
+- `href` — wartość props `to`
 - `location` — aktualny obiekt `location`
 
 Więcej na ten temat w [dokumentacji `@reach/router`](https://reach.tech/router/api/Link).
 
 ### Style aktywnego linku dla ścieżek częściowo pasujących lub linków do rodzica
 
-Domyślnie właściwości `activeStyles` i `activeClassName` będą aplikowane do komponentu `Link` tylko jeżeli obecna ścieżka jest _dokładnie_ taka sama jak ścieżka podana we właściwości `to`. Czasami jednak przydatne mogłoby być stylowanie linku tak jakby był aktywny, ale gdy właściwość `to` tylko częściowo pasuje do obecnego URL'u. Na przykład:
+Domyślnie propsy `activeStyles` i `activeClassName` będą aplikowane do komponentu `Link` tylko jeżeli obecna ścieżka jest _dokładnie_ taka sama jak ścieżka podana we propsie `to`. Czasami jednak przydatne mogłoby być stylowanie linku tak jakby był aktywny, ale gdy props `to` tylko częściowo pasuje do obecnego URL'u. Na przykład:
 
 - Możnaby chcieć aby `/blog/hello-world` pasował do `<Link to="/blog">`
 - Lub `/gatsby-link/#passing-state-through-link-and-navigate` pasował do `<Link to="/gatsby-link">`
 
-W takich sytuacjach wystarczy dodać właściwość `partiallyActive` do komponentu `<Link>`, a style zostaną zaaplikowane nawet wtedy, gdy ścieżka pasuje tylko częściowo.
+W takich sytuacjach wystarczy dodać props `partiallyActive` do komponentu `<Link>`, a style zostaną zaaplikowane nawet wtedy, gdy ścieżka pasuje tylko częściowo.
 
 ```jsx
 import React from "react"
@@ -118,14 +118,14 @@ const Header = <>
 
 _**Uwaga:** Ta funkcjonalność jest dostępna od Gatsby w wersji 2.1.31, jeżeli obserwujesz jakieś błędy z tym związane, sprawdź twoją wersję Gatsby i/lub go zaaktualizuj_
 
-### Przekazywanie stanu jako właściwości do linkowanych stron
+### Przekazywanie stanu jako propsa do linkowanych stron
 
 <EggheadEmbed
   lessonLink="https://egghead.io/lessons/gatsby-include-information-about-state-in-navigation-with-gatsby-s-link-component"
   lessonTitle="Include Information About State in Navigation With Gatsby’s Link Component"
 />
 
-Może pojawić się potrzeba przekazywania danych ze strony, na której znajduje się link, a strony do której on przekierowuje. Można zrobić to, przez przekazanie właściwości `state` do komponentu `Link` lub przez wywołanie funkcji `navigate`. Podlinkowana strona otrzyma właściwość `location`, która będzie zawierała w sobie obiekt `state` zawierający przekazane dane
+Może pojawić się potrzeba przekazywania danych ze strony, na której znajduje się link, a strony do której on przekierowuje. Można zrobić to, przez przekazanie propsa `state` do komponentu `Link` lub przez wywołanie funkcji `navigate`. Podlinkowana strona otrzyma props `location`, która będzie zawierała w sobie obiekt `state` zawierający przekazane dane
 
 ```jsx
 const PhotoFeedItem = ({ id }) => (
@@ -161,7 +161,7 @@ const Photo = ({ location, photoId }) => {
 
 Jest kilka sytuacji gdzie rzeczywiście sens miałoby zmienianie domyślnego zachowania przycisku "wstecz" - na przykład jeżeli tworzymy stronę, gdzie użytkownik coś wybiera, a następnie zostaje przekierowany do podstrony "Czy jesteś pewien?", z której przechodzi do strony z podsumowaniem, to znajdując się na niej, chcąc jednak coś zmienić, logicznym wydawałoby się aby po kliknięciu przycisku "wstecz" strona z potwierdzeniem została pominięta.
 
-W takiej sytuacji używamy właściwości `replace`, aby na przekierowaniu obecny URL w historii został zamieniony na docelowy danego linku.
+W takiej sytuacji używamy propsa `replace`, aby na przekierowaniu obecny URL w historii został zamieniony na docelowy danego linku.
 
 ```jsx
 import React from "react"
@@ -194,7 +194,7 @@ Gatsby eksportuje funkcję pomocniczą `navigate` która akceptuje argumenty `to
 | Argument          | Wymagany | Opis                                                                                                                   |
 | ----------------- | -------- | ---------------------------------------------------------------------------------------------------------------------- |
 | `to`              | tak      | Strona do której ma zostać wykonane przekierowanie (np. `/blog/`)                                                      |
-| `options.state`   | nie      | Obiekt. Wartości przekazane w tym miejscu, dostępne będą wewnątrz `location.state` we właściwościach strony docelowej. |
+| `options.state`   | nie      | Obiekt. Wartości przekazane w tym miejscu, dostępne będą wewnątrz `location.state` w propsach strony docelowej. |
 | `options.replace` | nie      | Wartość logiczna. Jeżeli `true`, to podmienia obecny URL w historii przeglądarki.                                      |
 
 Domyślnie, `navigate` operuje w taki sam sposób jak kliknięty komponent `Link`
@@ -249,11 +249,11 @@ const Form = () => (
 )
 ```
 
-Następnie aby na stronie docelowej można uzyskać stan `location` tak, jak zaprezentowano w [Przekazywanie stanu jako właściwości do linkowanych stron](#przekazywanie-stanu-jako-właściwości-do-linkowanych-stron).
+Następnie aby na stronie docelowej można uzyskać stan `location` tak, jak zaprezentowano w [Przekazywanie stanu jako propsa do linkowanych stron](#przekazywanie-stanu-jako-propsa-do-linkowanych-stron).
 
 ### Podmiana historii podczas nawigacji programowej
 
-Jeżeli nawigacja ma podmienić aktualny wpis w historii, zamiast dodawania nowego, dodaj właściwość `replace` z wartością `true` do argumentu `options` funkcji navigate `navigate`.
+Jeżeli nawigacja ma podmienić aktualny wpis w historii, zamiast dodawania nowego, dodaj props `replace` z wartością `true` do argumentu `options` funkcji navigate `navigate`.
 
 ```jsx
 import React from "react"
@@ -309,7 +309,7 @@ Ze względu na fakt, że określenie czy link jest wewnętrzny lub zewnętrzny z
 ```jsx
 import { Link as GatsbyLink } from "gatsby"
 
-// Elementy DOM (w tym `a`) nie przyjmują takich właściwości jak
+// Elementy DOM (w tym `a`) nie przyjmują takich propsów jak
 // activeClassName, partiallyActive, to, itp.
 // więc trzeba je zdestrukturyzować, oraz podać bezpośrednio do komponentu `Link`
 const Link = ({ children, to, activeClassName, partiallyActive, ...other }) => {
