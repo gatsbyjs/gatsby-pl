@@ -2,17 +2,17 @@
 title: Gatsby Image API
 ---
 
-Part of what makes Gatsby sites so fast is its recommended approach to handling images. `gatsby-image` is a React component designed to work seamlessly with Gatsby’s [native image processing](https://image-processing.gatsbyjs.org/) capabilities powered by GraphQL and [gatsby-plugin-sharp](/packages/gatsby-plugin-sharp/) to easily and completely optimize image loading for your sites.
+Częścią tego, co sprawia, że strony Gatsby są tak szybkie, jest rekomendowane podejście do implementowania obrazów. `gatsby-image` jest komponentem React zaprojektowanym do bezproblemowej współpracy z [natywnym przetwarzaniem obrazu](https://image-processing.gatsbyjs.org/) Gatsby obsługiwanym przez GraphQL i [gatsby-plugin-sharp](/packages/gatsby-plugin-sharp/), tak aby łatwo i całkowicie zoptymalizować ładowanie obrazu na twojej witrynie.
 
-> _Note: gatsby-image is **not** a drop-in replacement for `<img />`. It’s optimized for responsive fixed width/height images and images that stretch the full-width of a container. There are also other ways to [work with images](/docs/images-and-files/) in Gatsby that don't require GraphQL._
+> _Uwaga: gatsby-image **nie jest** zamiennikiem dla `<img />`. Jest zoptymalizowany pod kątem responsywnych obrazów o stałej szerokości / wysokości oraz obrazów rozciągających się na całą szerokość rodzica. Istnieją również inne sposoby [pracy z obrazami](/docs/images-and-files/) w Gatsby, które nie wymagają GraphQL._
 
-Demo: [https://using-gatsby-image.gatsbyjs.org/](https://using-gatsby-image.gatsbyjs.org/)
+Przykład: [https://using-gatsby-image.gatsbyjs.org/](https://using-gatsby-image.gatsbyjs.org/)
 
-## Setting up Gatsby Image
+## Wstępne ustawienie Gatsby Image
 
-To start working with Gatsby Image, install the `gatsby-image` package along with necessary plugins `gatsby-transformer-sharp` and `gatsby-plugin-sharp`. Reference the packages in your `gatsby-config.js` file. You can also provide additional options to [`gatsby-plugin-sharp`](/packages/gatsby-plugin-sharp/) in your config file.
+Aby rozpocząć pracę z Gatsby Image, zainstaluj pakiet `gatsby-image` wraz z niezbędnymi pluginami` gatsby-transformer-sharp` i `gatsby-plugin-sharp`. Odwołaj się do pakietów w pliku `gatsby-config.js`. Możesz także podać dodatkowe opcje dla [`gatsby-plugin-sharp`](/packages/gatsby-plugin-sharp/) w pliku konfiguracyjnym.
 
-A common way to source images is to install and use `gatsby-source-filesystem` to connect your local files, but other source plugins can be used as well, such as `gatsby-source-contentful`, `gatsby-source-datocms` and `gatsby-source-sanity`.
+Typowym sposobem na pozyskiwanie obrazów jest instalacja i używanie `gatsby-source-file` do łączenia plików lokalnych, można również używać innych pluginów źródłowych, takich jak `gatsby-source-contentful`, `gatsby-source-datocms` i `gatsby-source-sanity`.
 
 ```bash
 npm install --save gatsby-image gatsby-plugin-sharp gatsby-transformer-sharp
@@ -33,27 +33,27 @@ module.exports = {
 }
 ```
 
-_For in-depth install instructions, check out the docs on [Using Gatsby Image](/docs/using-gatsby-image/)._
+_Dla dogłębnych instrukcji na temat instalacji, sprawdź dokumentację [Using Gatsby Image](/docs/using-gatsby-image/)._
 
-### Gatsby image starts with a query
+### Gatsby Image zaczyna się od zapytania
 
-To feed file data in to Gatsby Image, set up a [GraphQL query](/docs/graphql-reference/) and either pass it into a component as props or write it directly in the component. One technique is to leverage the [`useStaticQuery`](/docs/use-static-query/) hook.
+Aby wprowadzić dane pliku do Gatsby Image, skonfiguruj [zapytanie GraphQL](/docs/graphql-reference/) i albo przekaż go do komponentu jako propsy, albo zapisz go bezpośrednio w komponencie. Jedną z technik jest wykorzystanie [`useStaticQuery`](/docs/use-static-query/).
 
-Common GraphQL queries for sourcing images include `file` from [gatsby-source-filesystem](/packages/gatsby-source-filesystem/), and both `imageSharp` and `allImageSharp` from [gatsby-plugin-sharp](/packages/gatsby-plugin-sharp/), but ultimately the options available to you will depend on your content sources.
+Typowe zapytania GraphQL do pozyskiwania obrazów wykorzystują `file` z [gatsby-source-filesystem](/packages/gatsby-source-filesystem/) jak i ` imageSharp` oraz `allImageSharp` z [gatsby-plugin-sharp](/packages/gatsby-plugin-sharp/), ale ostatecznie dostępne opcje będą zależeć od źródeł treści.
 
-> Note: you can also use [GraphQL aliases](/docs/graphql-reference/#aliasing) for querying multiple images of the same type.
+> Uwaga: możesz użyć również [skrótów GraphQL](/docs/graphql-reference/#aliasing) do przeszukiwania wielu obrazów tego samego typu.
 
-See below for code examples of queries and how to use them in components.
+Zobacz poniżej przykłady kodu zapytań i sposób ich użycia w komponentach.
 
-## Types of images with `gatsby-image`
+## Typy obrazów w `gatsby-image`
 
-Gatsby image objects are created through GraphQL methods. There are two types of image optimizations available, _fixed_ and _fluid_, which create multiple image sizes (1x, 1.5x, etc.). There is also the _resize_ method, which returns a single image.
+Obiekty obrazów Gatsby są tworzone metodami GraphQL. Dostępne są dwa typy optymalizacji obrazu, _fixed_ i _fluid_, które tworzą wiele rozmiarów obrazu (1x, 1,5x itp.). Istnieje również metoda _resize_, która zwraca pojedynczy obraz.
 
-### Images with a _fixed_ width and height
+### Obrazy z _zablokowaną_ szerokością i wysokością
 
-Automatically create images for different resolutions at a set width or height — Gatsby creates responsive images for 1x, 1.5x, and 2x pixel densities using the `<picture>` element.
+Automatycznie tworzy obrazy dla różnych rozdzielczości przy określonej szerokości lub wysokości - Gatsby tworzy responsywne obrazy dla powiększenia 1x, 1,5x i 2x pikseli za pomocą elementu `<picture>`.
 
-Once you've queried for a `fixed` image to retrieve its data, you can pass that data into the `Img` component:
+Po wysłaniu zapytania o obraz typu `fixed` w celu otrzymania jego danych, możesz przekazać te dane do komponentu `Img`:
 
 ```jsx
 import { useStaticQuery, graphql } from "gatsby"
@@ -87,15 +87,15 @@ export default () => {
 }
 ```
 
-#### Fixed image query parameters
+#### Parametry dla obrazu typu fixed
 
-In a query, you can specify options for fixed images.
+W zapytaniu możesz ustalić opcje dla obrazów typu fixed.
 
 - `width` (int, default: 400)
 - `height` (int)
 - `quality` (int, default: 50)
 
-#### Returns
+#### Zwraca
 
 - `base64` (string)
 - `aspectRatio` (float)
@@ -104,7 +104,7 @@ In a query, you can specify options for fixed images.
 - `src` (string)
 - `srcSet` (string)
 
-This is where fragments like `GatsbyImageSharpFixed` come in handy, as they'll return all the above items in one line without having to type them all out:
+Tutaj przydają się fragmenty takie jak `GatsbyImageSharpFixed`, ponieważ zwracają wszystkie powyższe elementy w jednym wierszu bez konieczności wypisywania ich wszystkich:
 
 ```graphql
 file(relativePath: { eq: "images/default.jpg" }) {
@@ -118,13 +118,13 @@ file(relativePath: { eq: "images/default.jpg" }) {
 }
 ```
 
-Read more about fixed image queries in the [gatsby-plugin-sharp](/packages/gatsby-plugin-sharp/#fixed) README.
+Przeczytaj więcej o zapytaniach dla obrazów typu fixed w [gatsby-plugin-sharp](/packages/gatsby-plugin-sharp/#fixed) README.
 
-### Images that stretch across a _fluid_ container
+### Obrazy, które dopasowują się do rodzica typu _fluid_
 
-Create flexible sizes for an image that stretches to fill its container. E.g. for a container whose max width is 800px, the automatic sizes would be: 200px, 400px, 800px, 1200px and 1600px – enough to provide close to the optimal image size for every device size / screen resolution. If you want more control over which sizes are output you can use the `srcSetBreakpoints` parameter.
+Utwórz elastyczne rozmiary obrazu, który rozciąga siędo rozmiarów rodzica. Na przykład: w przypadku rodzica, którego maksymalna szerokość wynosi 800px, automatyczne rozmiary będą wynosić: 200px, 400px, 800px, 1200px i 1600px - wystarczająco, aby zapewnić niemal optymalny rozmiar obrazu dla każdego rozmiaru urządzenia / rozdzielczości ekranu. Jeśli chcesz mieć większą kontrolę nad wyjściowymi rozmiarami, możesz użyć parametru `srcSetBreakpoints`.
 
-Once you've queried for a `fluid` image to retrieve its data, you can pass that data into the `Img` component:
+Po zapytaniu o obraz typu `fluid` w celu pozyskania jego danych, możesz przekazać te dane do komponentu `Img`:
 
 ```jsx
 import { useStaticQuery, graphql } from "gatsby"
@@ -158,9 +158,9 @@ export default () => {
 }
 ```
 
-#### Fluid image query parameters
+#### Parametry zapytania o obraz typu fluid
 
-In a query, you can specify options for fluid images.
+W zapytaniu, możesz ustalić opcje dla obrazów typu fluid.
 
 - `maxWidth` (int, default: 800)
 - `maxHeight`(int)
@@ -168,7 +168,7 @@ In a query, you can specify options for fluid images.
 - `srcSetBreakpoints` (array of int, default: [])
 - `background` (string, default: `rgba(0,0,0,1)`)
 
-#### Returns
+#### Zwraca
 
 - `base64` (string)
 - `aspectRatio` (float)
@@ -178,7 +178,7 @@ In a query, you can specify options for fluid images.
 - `sizes` (string)
 - `originalImg` (string)
 
-This is where fragments like `GatsbyImageSharpFluid` come in handy, as they'll return all the above items in one line without having to type them all out:
+Tutaj przydają się fragmenty takie jak `GatsbyImageSharpFluid`, ponieważ zwracają wszystkie powyższe elementy w jednym wierszu bez konieczności wpisywania ich wszystkich:
 
 ```graphql
 file(relativePath: { eq: "images/default.jpg" }) {
@@ -192,13 +192,13 @@ file(relativePath: { eq: "images/default.jpg" }) {
 }
 ```
 
-Read more about fluid image queries in the [gatsby-plugin-sharp](/packages/gatsby-plugin-sharp/#fluid) README.
+Przeczytaj więcej o zapytaniach dla obrazów typu fluid w [gatsby-plugin-sharp](/packages/gatsby-plugin-sharp/#fluid) README.
 
-### Resized images
+### Obrazy o zmienionym rozmiarze
 
-In addition to _fixed_ and _fluid_ images, the gatsby-image API allows you to call a `resize` method with `gatsby-plugin-sharp` to return a single image as opposed to multiple sizes. There are no default fragments available for the resize method.
+Oprócz obrazów _fixed_ oraz _fluid_, interfejs API gatsby-image pozwala Ci wywołać funkcję `resize` za pomocą `gatsby-plugin-sharp`, aby zwrócić pojedynczy obraz w przeciwieństwie do wielu rozmiarów. Brak dostępnych domyślnych fragmentów dla metody zmiany rozmiaru.
 
-#### Parameters
+#### Parametry
 
 - `width` (int, default: 400)
 - `height` (int)
@@ -207,9 +207,9 @@ In addition to _fixed_ and _fluid_ images, the gatsby-image API allows you to ca
 - `pngCompressionLevel` (int, default: 9)
 - `base64`(bool, default: false)
 
-#### Returns
+#### Zwraca
 
-Resize returns an object with the following items:
+Metoda `resize` zwraca obiekt z następującymi elementami:
 
 - `src` (string)
 - `width` (int)
@@ -228,11 +228,11 @@ allImageSharp {
 }
 ```
 
-Read more about resized image queries in the [gatsby-plugin-sharp](/packages/gatsby-plugin-sharp/#resize) README.
+Przeczytaj więcej o zapytaniach dla obrazów o zmienionym rozmiarze w [gatsby-plugin-sharp](/packages/gatsby-plugin-sharp/#resize) README.
 
-### Shared query parameters
+### Wspólne parametry zapytania
 
-In addition to `gatsby-plugin-sharp` settings in `gatsby-config.js`, there are additional query options that apply to _fluid_, _fixed_, and _resized_ images:
+Oprócz ustawień `gatsby-plugin-sharp` w` gatsby-config.js`, istnieją dodatkowe opcje zapytań, które dotyczą obrazów _fluid_, _fixed_ i _resized_:
 
 - [`grayscale`](/packages/gatsby-plugin-sharp/#grayscale) (bool, default: false)
 - [`duotone`](/packages/gatsby-plugin-sharp/#duotone) (bool|obj, default: false)
@@ -242,7 +242,7 @@ In addition to `gatsby-plugin-sharp` settings in `gatsby-config.js`, there are a
 - [`pngCompressionSpeed`](/packages/gatsby-plugin-sharp/#pngcompressionspeed) (int, default: 4)
 - [`rotate`](/packages/gatsby-plugin-sharp/#rotate) (int, default: 0)
 
-Here's an example of using the `duotone` option with a fixed image:
+Tutaj jest przykład użycia opcji `duotone` w obrazie o zmienionym rozmiarze:
 
 ```graphql
 fixed(
@@ -262,7 +262,7 @@ fixed(
   <figcaption>Duotone | Before - After</figcaption>
 </figure>
 
-And an example of using the `grayscale` option with a fixed image:
+Z kolei tutaj przykład użycia opcji `grayscale` w obrazie o zmienionym rozmiarze:
 
 ```graphql
 fixed(
@@ -278,17 +278,17 @@ fixed(
   <figcaption>Grayscale | Before - After</figcaption>
 </figure>
 
-Read more about shared image query parameters in the [`gatsby-plugin-sharp`](/packages/gatsby-plugin-sharp/#shared-options) README.
+Przeczytaj więcej o wspólnych parametrach zapytania w [`gatsby-plugin-sharp`](/packages/gatsby-plugin-sharp/#shared-options) README.
 
-## Image query fragments
+## Fragmenty zapytań o obraz
 
-GraphQL includes a concept called "query fragments", which are a part of a query that can be reused. To ease building with `gatsby-image`, Gatsby image processing plugins which support `gatsby-image` ship with fragments which you can easily include in your queries.
+GraphQL zawiera pojęcie zwane "fragmentami zapytań", które są częścią zapytania, które można ponownie wykorzystać. Aby ułatwić budowanie za pomocą `gatsby-image`, pluginy przetwarzania obrazu Gatsby, które obsługują` gatsby-image`, są dostarczane z fragmentami, które możesz łatwo dołączyć do swoich zapytań.
 
-> Note: using fragments in your queries depends on which data source(s) you have configured. Read more about image query fragments in the [gatsby-image](/packages/gatsby-image/#fragments) README.
+> Uwaga: używanie fragmentów w zapytaniach zależy od źródeł danych, które skonfigurowałeś. Przeczytaj więcej na temat fragmentów zapytań o obrazy w [gatsby-image](/packages/gatsby-image/#fragments) README.
 
-### Common fragments with `gatsby-transformer-sharp`
+### Typowe fragmenty przy użyciu `gatsby-transformer-sharp`
 
-#### Fixed images
+#### Obrazy typu fixed
 
 - `GatsbyImageSharpFixed`
 - `GatsbyImageSharpFixed_noBase64`
@@ -297,7 +297,7 @@ GraphQL includes a concept called "query fragments", which are a part of a query
 - `GatsbyImageSharpFixed_withWebp_noBase64`
 - `GatsbyImageSharpFixed_withWebp_tracedSVG`
 
-#### Fluid images
+#### Obrazy typu fluid
 
 - `GatsbyImageSharpFluid`
 - `GatsbyImageSharpFluid_noBase64`
@@ -306,19 +306,19 @@ GraphQL includes a concept called "query fragments", which are a part of a query
 - `GatsbyImageSharpFluid_withWebp_noBase64`
 - `GatsbyImageSharpFluid_withWebp_tracedSVG`
 
-#### About `noBase64`
+#### Informacje o `noBase64`
 
-If you don't want to use the [blur-up effect](https://using-gatsby-image.gatsbyjs.org/blur-up/), choose the fragment with `noBase64` at the end.
+Jeśli nie chcesz używać [efektu rozmycia](https://using-gatsby-image.gatsbyjs.org/blur-up/), wybierz fragment z `noBase64` na końcu.
 
-#### About `tracedSVG`
+#### Informacje o `tracedSVG`
 
-If you want to use the [traced placeholder SVGs](https://using-gatsby-image.gatsbyjs.org/traced-svg/), choose the fragment with `tracedSVG` at the end.
+Jeśli chcesz użyć [śledzonych plików zastępczych SVG](https://using-gatsby-image.gatsbyjs.org/traced-svg/), wybierz fragment z `tracedSVG` na końcu.
 
-#### About `withWebP`
+#### Informacje o `withWebP`
 
-If you want to automatically use [WebP images](https://developers.google.com/speed/webp/) when the browser supports the file format, use the `withWebp` fragments. If the browser doesn't support WebP, `gatsby-image` will fall back to the default image format.
+Jeśli chcesz automatycznie korzystać z [obrazów WebP](https://developers.google.com/speed/webp/), gdy przeglądarka obsługuje format pliku, użyj fragmentów `withWebp`. Jeśli przeglądarka nie obsługuje WebP, `gatsby-image` powróci do domyślnego formatu obrazu.
 
-Here's an example of using a non-default fragment from `gatsby-transformer-sharp`. Be sure to pick one that matches your desired image type (_fixed_ or _fluid_):
+Oto przykład użycia niestandardowego fragmentu z `gatsby-transformer-sharp`. Wybierz taki, który pasuje do żądanego typu obrazu (_fixed_ lub _fluid_):
 
 ```graphql
 file(relativePath: { eq: "images/default.jpg" }) {
@@ -331,41 +331,41 @@ file(relativePath: { eq: "images/default.jpg" }) {
 }
 ```
 
-For more info on how these options work, check out the Gatsby Image demo: [https://using-gatsby-image.gatsbyjs.org/](https://using-gatsby-image.gatsbyjs.org/)
+Aby uzyskać więcej informacji na temat działania tych opcji, zobacz przykład Gatsby Image: [https://using-gatsby-image.gatsbyjs.org/](https://using-gatsby-image.gatsbyjs.org/)
 
-#### Additional plugin fragments
+#### Dodatkowe frgamenty pluginów
 
-Additionally, plugins supporting `gatsby-image` currently include [gatsby-source-contentful](/packages/gatsby-source-contentful/), [gatsby-source-datocms](https://github.com/datocms/gatsby-source-datocms) and [gatsby-source-sanity](https://github.com/sanity-io/gatsby-source-sanity). See the [gatsby-image](/packages/gatsby-image/#fragments) README for more details.
+Dodatkowo, pluginy obsługujące `gatsby-image` obecnie obejmują [gatsby-source-contentful](/packages/gatsby-source-contentful/), [gatsby-source-datocms](https://github.com/datocms/gatsby-source-datocms) i [gatsby-source-sanity](https://github.com/sanity-io/gatsby-source-sanity). Zobacz [gatsby-image](/packages/gatsby-image/#fragments) README, aby uzyskać więcej informacji.
 
-## Gatsby-image props
+## Propsy Gatsby-image
 
-After you've made a query, you can pass additional options to the gatsby-image component.
+Po wykonaniu zapytania możesz przekazać dodatkowe opcje do komponentu gatsby-image.
 
-| Name                   | Type                | Description                                                                                                                   |
-| ---------------------- | ------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `fixed`                | `object`            | Data returned from the `fixed` query                                                                                          |
-| `fluid`                | `object`            | Data returned from the `fluid` query                                                                                          |
-| `fadeIn`               | `bool`              | Defaults to fading in the image on load                                                                                       |
-| `durationFadeIn`       | `number`            | fade-in duration is set up to 500ms by default                                                                                |
-| `title`                | `string`            | Passed to the rendered HTML `img` element                                                                                     |
-| `alt`                  | `string`            | Passed to the rendered HTML `img` element. Defaults to an empty string, e.g. `alt=""`                                         |
-| `crossOrigin`          | `string`            | Passed to the rendered HTML `img` element                                                                                     |
-| `className`            | `string` / `object` | Passed to the wrapper element. Object is needed to support Glamor's css prop                                                  |
-| `style`                | `object`            | Spread into the default styles of the wrapper element                                                                         |
-| `imgStyle`             | `object`            | Spread into the default styles of the actual `img` element                                                                    |
-| `placeholderStyle`     | `object`            | Spread into the default styles of the placeholder `img` element                                                               |
-| `placeholderClassName` | `string`            | A class that is passed to the placeholder `img` element                                                                       |
-| `backgroundColor`      | `string` / `bool`   | Set a colored background placeholder. If true, uses "lightgray" for the color. You can also pass in any valid color string.   |
-| `onLoad`               | `func`              | A callback that is called when the full-size image has loaded.                                                                |
-| `onStartLoad`          | `func`              | A callback that is called when the full-size image starts loading, it gets the parameter `{ wasCached: <boolean> }` provided. |
-| `onError`              | `func`              | A callback that is called when the image fails to load.                                                                       |
-| `Tag`                  | `string`            | Which HTML tag to use for wrapping elements. Defaults to `div`.                                                               |
-| `objectFit`            | `string`            | Passed to the `object-fit-images` polyfill when importing from `gatsby-image/withIEPolyfill`. Defaults to `cover`.            |
-| `objectPosition`       | `string`            | Passed to the `object-fit-images` polyfill when importing from `gatsby-image/withIEPolyfill`. Defaults to `50% 50%`.          |
-| `loading`              | `string`            | Set the browser's native lazy loading attribute. One of `lazy`, `eager` or `auto`. Defaults to `lazy`.                        |
-| `critical`             | `bool`              | Opt-out of lazy-loading behavior. Defaults to `false`. Deprecated, use `loading` instead.                                     |
+| Name                   | Type                | Description                                                                                                                               |
+| ---------------------- | ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| `fixed`                | `object`            | Dane zwrócone z zapytania typu `fixed`                                                                                                    |
+| `fluid`                | `object`            | Dane zwrócone z zapytania typu `fluid`                                                                                                    |
+| `fadeIn`               | `bool`              | Domyślna animacja fade-in obrazu po załadowaniu                                                                                           |
+| `durationFadeIn`       | `number`            | Czas trwania animacji fade-in, który jest ustawiony domyślnie na 500ms                                                                    |
+| `title`                | `string`            | Przekazany do renderowanego elementu HTML `img`                                                                                           |
+| `alt`                  | `string`            | Przekazany do renderowanego elementu HTML `img`. Domyślnie pusty string, np. `alt=""`                                                     |
+| `crossOrigin`          | `string`            | Przekazany do renderowanego elementu HTML `img`                                                                                           |
+| `className`            | `string` / `object` | Przekazany do rodzica. Obiekt jest potrzebny do wspierania propsa Glamor css                                                              |
+| `style`                | `object`            | Przeniesiony do domyśnych stylów rodzica                                                                                                  |
+| `imgStyle`             | `object`            | Przeniesiony do domyśnych stylów obecnego elementu `img`                                                                                  |
+| `placeholderStyle`     | `object`            | Przeniesiony do domyśnych stylów tymczasowego elementu `img`                                                                              |
+| `placeholderClassName` | `string`            | Klasa przekazana do tymczasowego elementu `img`                                                                                           |
+| `backgroundColor`      | `string` / `bool`   | Ustawia tło zastępcze o jednolitym kolorze. Ustawione na "true", używa jako kolor "lightgray". Możesz też ustawić każdy kolor jako string |
+| `onLoad`               | `func`              | Funkcja zwrotna wywoływana gdy załaduje się obraz o pełnym rozmiarze.                                                                      |
+| `onStartLoad`          | `func`              | Funkcja zwrotna wywoływana gdy obraz o pełnym rozmiarze zaczyna się ładować, pobiera podany parametr `{ wasCached: <boolean> }`.           |
+| `onError`              | `func`              | Funkcja zwrotna wywoływana gdy nie uda się załaować obrazu.                                                                               |
+| `Tag`                  | `string`            | Jaki element HTML jest użyty jako rodzic. Domyślnie jest to `div`.                                                                        |
+| `objectFit`            | `string`            | Przekazany do polyfill `object-fit-images` gdy importuje się `gatsby-image/withIEPolyfill`. Domyślnie: `cover`.                           |
+| `objectPosition`       | `string`            | Przekazany do polyfill `object-fit-images` gdy importuje się `gatsby-image/withIEPolyfill`. Domyślnie: `50% 50%`.                         |
+| `loading`              | `string`            | Ustawia natywny atrybut powolnego ładowania. Jeden z `lazy`, `eager` lub `auto`. Domyślnie `lazy`.                                        |
+| `critical`             | `bool`              | Rezygnacja z powolnego ładowania. Domyślnie: `false`. Przestarzałe, użyj w zamian `loading`.                                              |
 
-Here are some usage examples:
+Oto kilka przykładów użycia:
 
 ```jsx
 <Img
