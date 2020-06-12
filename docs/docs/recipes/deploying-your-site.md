@@ -38,26 +38,26 @@ Istnieje kilka powodów by użyć -- ,dla przykładu hosting bloga zbudowanego z
 gatsby build --prefix-paths
 ```
 
-5. Upewnij się, że twoja strona wygląda tak samo używając komendy `gatsby build` jak i `gatsby develop`. Kiedy strona została zbudowana uruchom `gatsby serve`, możesz teraz przetestować jej finalny efekt(i jeśli to potrzebne - poprawić) tuż przed upublicznieniem.
+5. Upewnij się, że twoja strona wygląda tak samo używając komendy `gatsby build` jak i `gatsby develop`. Kiedy strona została zbudowana uruchom `gatsby serve`, możesz teraz przetestować jej finalny efekt (i jeśli to potrzebne - poprawić) tuż przed upublicznieniem.
 
 ```shell
 gatsby build && gatsby serve
 ```
 
-### Dodatkowe źródła
+### Dodatkowe materiały
 
 - Przejdź przez samouczek dotyczący budowania i wdrażania przykładowej strony w [części drugiej](/tutorial/part-one/#deploying-a-gatsby-site)
 - Dowiedz się więcej o [optymalizacji wydajności](/docs/performance/)
 - Przeczytaj więcej o [innych możliwościach wdrażania strony](/docs/preparing-for-deployment/)
-- Sprawdź [dokumenty wdrożeniowe](/docs/deploying-and-hosting/) aby odnaleźć więcej informacji na temat konkretnych platform hostingowych oraz jak wykorzystując je - wdrożyć stronę.
+- Sprawdź [dokumenty wdrożeniowe](/docs/deploying-and-hosting/), aby odnaleźć więcej informacji na temat konkretnych platform hostingowych oraz jak wykorzystując je - wdrożyć stronę.
 
 ## Wdrożenie na platformie Netlify
 
-Wykorzystaj [`netlify-cli`](https://www.netlify.com/docs/cli/) aby wdrożyć swoją aplikację Gatsby bez opuszczania interfejsu konsoli.
+Wykorzystaj [`netlify-cli`](https://www.netlify.com/docs/cli/), aby wdrożyć swoją aplikację Gatsby bez opuszczania interfejsu konsoli.
 
 ### Wymagania
 
-- [Strona Gatsby](/docs/quick-start) z pojedyńczym komponentem `index.js`
+- [Strona Gatsby](/docs/quick-start) z pojedynczym komponentem `index.js`
 - Zainstalowana paczka [netlify-cli](https://www.npmjs.com/package/netlify-cli)
 - Zainstalowane [Gatsby CLI](/docs/gatsby-cli)
 
@@ -71,7 +71,7 @@ Wykorzystaj [`netlify-cli`](https://www.netlify.com/docs/cli/) aby wdrożyć swo
 
 4. Wpisz swoją nazwę strony lub jeśli chcesz kliknij enter aby otrzymać losowo wybraną.
 
-5. Wybierz swoją [grupę](https://www.netlify.com/docs/teams/).
+5. Wybierz swój [zespół](https://www.netlify.com/docs/teams/).
 
 6. Zmień ścieżkę wdrożeniową na `public/`
 
@@ -84,7 +84,7 @@ Wykorzystaj [`netlify-cli`](https://www.netlify.com/docs/cli/) aby wdrożyć swo
 
 ## Wdrożenie na platformie ZEIT Now
 
-Wykorzystaj [Now CLI](https://zeit.co/download) aby wdrożyć swoją aplikację Gatsby bez opuszczania interfejsu konsoli.
+Wykorzystaj [Now CLI](https://zeit.co/download), aby wdrożyć swoją aplikację Gatsby bez opuszczania interfejsu konsoli.
 
 ### Wymagania
 
@@ -107,7 +107,7 @@ Wykorzystaj [Now CLI](https://zeit.co/download) aby wdrożyć swoją aplikację 
 
 ## Wdrożenie na platformie Cloudflare Workers
 
-Wykorzystaj [`wrangler`](https://developers.cloudflare.com/workers/tooling/wrangler/) aby wdrożyć swoją aplikację Gatsby bez opuszczania interfejsu konsoli.
+Wykorzystaj [`wrangler`](https://developers.cloudflare.com/workers/tooling/wrangler/) ,aby wdrożyć swoją aplikację Gatsby bez opuszczania interfejsu konsoli.
 
 ### Wymagania
 
@@ -121,7 +121,7 @@ Wykorzystaj [`wrangler`](https://developers.cloudflare.com/workers/tooling/wrang
 1. Zbuduj swoją aplikację Gatsby używając `gatsby build`
 2. Uruchom `wrangler config`, zostaniesz poproszony o swój [Cloudflare API token](https://developers.cloudflare.com/workers/quickstart/#api-token)
 3. Uruchom `wrangler init --site`
-4. Skonfigutuj `wrangler.toml`. Na początku dodaj pole [account ID](https://developers.cloudflare.com/workers/quickstart/#account-id-and-zone-id) a następnie
+4. Skonfiguruj `wrangler.toml`. Na początku dodaj pole [account ID](https://developers.cloudflare.com/workers/quickstart/#account-id-and-zone-id) a następnie
    1. Darmową domenę workers.dev poprzez ustawienie `workers_dev = true`
    2. Niestandardową domenę na Cloudflare poprzez ustawienie `workers_dev = false`, `zone_id = "abdc..` oraz `route = przykladowadomena.com/*`
 5. W pliku `wrangler.toml` ustaw `bucket = "./public"`
