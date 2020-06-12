@@ -107,7 +107,7 @@ Wykorzystaj [Now CLI](https://zeit.co/download), aby wdrożyć swoją aplikację
 
 ## Wdrożenie na platformie Cloudflare Workers
 
-Wykorzystaj [`wrangler`](https://developers.cloudflare.com/workers/tooling/wrangler/) ,aby wdrożyć swoją aplikację Gatsby bez opuszczania interfejsu konsoli.
+Wykorzystaj [`wrangler`](https://developers.cloudflare.com/workers/tooling/wrangler/), aby wdrożyć swoją aplikację Gatsby bez opuszczania interfejsu konsoli.
 
 ### Wymagania
 
