@@ -12,7 +12,7 @@ Przykład: [https://using-gatsby-image.gatsbyjs.org/](https://using-gatsby-image
 
 Aby rozpocząć pracę z Gatsby Image, zainstaluj pakiet `gatsby-image` wraz z niezbędnymi pluginami` gatsby-transformer-sharp` i `gatsby-plugin-sharp`. Odwołaj się do pakietów w pliku `gatsby-config.js`. Możesz także podać dodatkowe opcje dla [`gatsby-plugin-sharp`](/packages/gatsby-plugin-sharp/) w pliku konfiguracyjnym.
 
-Typowym sposobem na pozyskiwanie obrazów jest instalacja i używanie `gatsby-source-file` do łączenia plików lokalnych, można również używać innych pluginów źródłowych, takich jak `gatsby-source-contentful`, `gatsby-source-datocms` i `gatsby-source-sanity`.
+Typowym sposobem na pozyskiwanie obrazów jest instalacja i używanie `gatsby-source-filesystem` do łączenia plików lokalnych, można również używać innych pluginów źródłowych, takich jak `gatsby-source-contentful`, `gatsby-source-datocms` i `gatsby-source-sanity`.
 
 ```bash
 npm install --save gatsby-image gatsby-plugin-sharp gatsby-transformer-sharp
@@ -232,7 +232,7 @@ Przeczytaj więcej o zapytaniach dla obrazów o zmienionym rozmiarze w [gatsby-p
 
 ### Wspólne parametry zapytania
 
-Oprócz ustawień `gatsby-plugin-sharp` w` gatsby-config.js`, istnieją dodatkowe opcje zapytań, które dotyczą obrazów _fluid_, _fixed_ i _resized_:
+Oprócz ustawień `gatsby-plugin-sharp` w `gatsby-config.js`, istnieją dodatkowe opcje zapytań, które dotyczą obrazów _fluid_, _fixed_ i _resized_:
 
 - [`grayscale`](/packages/gatsby-plugin-sharp/#grayscale) (bool, default: false)
 - [`duotone`](/packages/gatsby-plugin-sharp/#duotone) (bool|obj, default: false)
