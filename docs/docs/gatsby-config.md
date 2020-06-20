@@ -1,10 +1,10 @@
 ---
-title: API Gatsby Link
+title: API Gatsby Config
 ---
 
 Opcje konfiguracji dla strony w Gatsby umieszczone są wewnątrz pliku `gatsby-config.js` umiejscowionego w głównym folderze projektu.
 
-_Uwaga: Wewnątrz [Gatsby Example Websites](https://github.com/gatsbyjs/gatsby/tree/master/examples) znajduje się wiele pomocnych przykładowych konfiguracji, do krotóych dla porównania można się odnieść._
+_Uwaga: W [Gatsby Example Websites](https://github.com/gatsbyjs/gatsby/tree/master/examples) można znaleźć wiele przykładowych konfiguracji, do których dla porównania można się odnieść._
 
 ## Opcje konfiguracji
 
@@ -32,7 +32,7 @@ module.exports = {
 }
 ```
 
-Dzięki temu można je przechowywać w jednym miejscu, a następnie pobierać gdziekolwiek chcemy. Jeżeli kiedykolwiek pojawiła by się potrzeba zmiany tych danych, wystarczy zmienić je tylko w tym miejscu.
+Dzięki temu można je przechowywać w jednym miejscu, a następnie pobierać gdziekolwiek chcemy. Jeżeli kiedykolwiek pojawiłaby się potrzeba zmiany tych danych, wystarczy zmienić je tylko w tym miejscu.
 
 Pełen opis i przykładowe użycie w [czwartej części poradnika Gatsby.js](/tutorial/part-four/#data-in-gatsby).
 
@@ -55,11 +55,11 @@ module.exports = {
 }
 ```
 
-Sprawdź [Plugins](/docs/plugins/) po więcej informacji na temat ich używania oraz by znależć pluginy oficjalne, jak i te od społeczności.
+Sprawdź [Pluginy](/docs/plugins/) by znaleźć ciekawe wtyczki, czy dowiedzieć się więcej na temat ich używania.
 
 ## pathPrefix
 
-Dość często hostuje się strony w innym miejscu, niż na roocie ich domeny. Powiedzmy że strona w Gatsby znajduje się pod adresem `example.com/blog/`. W tym celu należy dodać prefiks (`/blog`) do wszystkich ścieżek na stronie.
+Dość często hostuje się strony w innym miejscu, niż w katalogu głównym ich domeny. Powiedzmy że strona w Gatsby znajduje się pod adresem `example.com/blog/`. W tym celu należy dodać prefiks (`/blog`) do wszystkich ścieżek na stronie.
 
 ```javascript:title=gatsby-config.js
 module.exports = {
