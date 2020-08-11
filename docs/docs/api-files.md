@@ -1,10 +1,10 @@
 ---
-title: API Files
+title: Pliki API
 ---
 
-Gatsby uses 4 files in the root of your project to configure your site and control its behavior. All of these files are optional.
+Gatsby używa 4 plików w głownym katalogu projektu do konfiguracji twojej strony oraz kontroli tego jak się zachowuje. Wszystkie z tych plików są opcjonalne.
 
-- [gatsby-config.js](/docs/api-files-gatsby-config) - Enables plugins, defines common site data, and contains other site configuration that integrates with Gatsby's GraphQL data layer.
-- [gatsby-browser.js](/docs/api-files-gatsby-browser) - Gives you control over Gatsby's behavior in the browser. For example, responding to a user changing routes, or calling a function when the user first opens any page.
-- [gatsby-node.js](/docs/api-files-gatsby-node) - Allows you to respond to events in the Gatsby build cycle. For example, adding pages dynamically, editing GraphQL nodes as they are created, or performing an action after a build is complete.
-- [gatsby-ssr.js](/docs/api-files-gatsby-ssr) - Exposes Gatsby's server-side rendering process so you can control how it builds your HTML pages.
+- [gatsby-config.js](/docs/api-files-gatsby-config) - Pozwala na użycie pluginów, definiuje typowe dane dla strony oraz zawiera inne ustawienia, które pozwalają integrować warstwę danych GraphQL
+- [gatsby-browser.js](/docs/api-files-gatsby-browser) - Pozwala kontrolować to jak Gatsby zachowuje się w przeglądarce. Na przykład: reagowanie na zmiane podstrony przez użytkownika lub wywoływanie funkcji, gdy użytkownik wejdzie na jakąkolwiek stronę.
+- [gatsby-node.js](/docs/api-files-gatsby-node) - Pozwala reagować na zdarzeneia w procesie budowania strony Gatsby. Dla przykładu: dodawanie stron dynamicznie, edytowanie node-ów GraphQL gdy zostały zaciągnięte, wywoływanie akcji gdy budowanie się zakończy.
+- [gatsby-ssr.js](/docs/api-files-gatsby-ssr) - Ujawnia proces renderowania po stronie serwera w Gatsby, abyś mógł kontrolować, w jaki sposób tworzy strony HTML.
