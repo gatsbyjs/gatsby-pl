@@ -36,9 +36,9 @@ Dzięki temu można je przechowywać w jednym miejscu, a następnie pobierać gd
 
 Pełen opis i przykładowe użycie w [czwartej części poradnika Gatsby.js](/tutorial/part-four/#data-in-gatsby).
 
-## Pluginy
+## Wtyczki
 
-Pluginy to paczki Node.js, które implementują API Gatsby. Plik konfiguracyjny przyjmuje array z listą pluginów. Niektóre pluginy mogą wymagać tylko ich nazwy, inne z kolei mogą przyjmować różne ustawienia (w celu ich znalezienia, należy odwołać się do dokumentacji poszczególnych pluginów).
+Wtyczki to paczki Node.js, które implementują API Gatsby. Plik konfiguracyjny przyjmuje array z listą wtyczek. Niektóre wtyczki mogą wymagać tylko ich nazwy, inne z kolei mogą przyjmować różne ustawienia (w celu ich znalezienia, należy odwołać się do dokumentacji poszczególnych wtyczek).
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -55,7 +55,7 @@ module.exports = {
 }
 ```
 
-Sprawdź [Pluginy](/docs/plugins/) by znaleźć ciekawe wtyczki, czy dowiedzieć się więcej na temat ich używania.
+Sprawdź [Wtyczki](/docs/plugins/) by znaleźć ciekawe wtyczki, czy dowiedzieć się więcej na temat ich używania.
 
 ## pathPrefix
 
