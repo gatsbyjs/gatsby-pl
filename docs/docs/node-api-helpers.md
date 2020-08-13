@@ -1,13 +1,13 @@
 ---
 title: Punkty funkcji pomocniczych API
-description: Dokumentacja na temat API funkcji pomocniczych do tworzenia punktów Gatsby'ego poprzez warstwę z danymi GraphQL
+description: Dokumentacja na temat API funkcji pomocniczych do tworzenia punktów Gatsby wewnątrz warstwy danych GraphQL
 jsdoc: ["gatsby/src/utils/api-node-helpers-docs.js"]
 apiCalls: NodeAPIHelpers
 contentsHeading: Shared helpers
 showTopLevelSignatures: true
 ---
 
-Pierwszym argumentem przekazanym do [punktów API Gatsby'ego](/docs/node-apis/) jest obiekt zawierający zestaw pomocniczych funkcji, udostępnionych przez całe API punktów Gatsby'ego, które są udokumentowane w sekcji [Udostępnione funkcje pomocnicze](#shared-helpers).
+Pierwszym argumentem przekazanym do [punktów API Gatsby](/docs/node-apis/) jest obiekt zawierający zestaw pomocniczych funkcji, udostępnionych przez całe API punktów Gatsby, które są udokumentowane w sekcji [Udostępnione funkcje pomocnicze](#shared-helpers).
 
 ```javascript
 // w gatsby-node.js
