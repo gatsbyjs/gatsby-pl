@@ -9,7 +9,7 @@ Gatsby to niesamowicie szybki, nowoczesny generator stron dla Reacta.
 
 Istnieją dwie możliwości, by zacząć z Gatsby:
 
-1. [Samouczek](/tutorial/): Instrukcje krok po kroku jak zainstalować Gatsby'ego i rozpocząć swój projekt: napisane dla ludzi bez doświadczenia z Gatsbym ani z programowaniem webowym, chociaż te zasoby pomogły programistom na każdym poziomie umiejętności.
+1. [Samouczek](/tutorial/): Instrukcje krok po kroku jak zainstalować Gatsby i rozpocząć swój projekt: napisane dla ludzi bez doświadczenia z Gatsby ani z programowaniem webowym, chociaż te zasoby pomogły programistom na każdym poziomie umiejętności.
 2. [Szybki start](/docs/quick-start): Jednostronicowe podsumowanie, jak zainstalować Gatsby i rozpocząć nowy projekt.
 
 ## Następnie
@@ -20,7 +20,7 @@ Istnieją dwie możliwości, by zacząć z Gatsby:
    - [Przewodniki](/docs/guides/): Dowiedz się o wielu tematach związanych z budowaniem stron z Gatsby, takich jak pozyskiwanie danych, wdrażanie i wiele więcej.
    - [API Gatsby](/docs/api-reference/): Dowiedz się więcej o API Gatsby i jego konfiguracji.
    - [Wersje i migracje](/docs/releases-and-migration/): Znajdź informacje o wydaniach i przewodniki dotyczące migracji pomiędzy głównymi wersjami.
-   - [Przewodnik koncepcyjny](/docs/conceptual-guide/): Przeczytaj ogólny przegląd podejścia Gatsby'ego.
+   - [Przewodnik koncepcyjny](/docs/conceptual-guide/): Przeczytaj ogólny przegląd podejścia Gatsby.
    - [Gatsby od środka](/docs/gatsby-internals/): Dowiedz się, jak Gatsby działa za kulisami.
    - [Profesjonalne korzystanie z Gatsby](/docs/using-gatsby-professionally/): Poznaj porady i wskazówki, jak wyjaśnić Gatsby innym w pracy, aby mieć możliwość profesjonalnej pracy z Gatsby.
 
