@@ -28,6 +28,6 @@ Istnieją dwie możliwości, by zacząć z Gatsbym:
 
 ## Zacznij współtworzyć
 
-Odwiedź sekcję [Współtowrzenia](/contributing/), by znaleźć przewodniki dla społeczności, kodeks postępowania, oraz jak zacząć współtworzyć Gatsby'ego.
+Odwiedź sekcję [Współtowrzenia](/contributing/), by znaleźć przewodniki dla społeczności, kodeks postępowania, oraz jak zacząć współtworzyć Gatsby.
 
 <EmailCaptureForm signupMessage="Chcesz być na bieżąco z najnowszymi wskazówkami i sztuczkami? Zapisz się do naszego newslettera!" />
