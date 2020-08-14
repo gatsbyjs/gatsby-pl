@@ -6,3 +6,7 @@ package-lock.json
 # Do not commit images
 images
 *.png
+
+# Some files frome IDE's (we don't want them in the repo)
+.vscode/
+.idea/
