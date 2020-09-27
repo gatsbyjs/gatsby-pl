@@ -9,7 +9,7 @@ Gatsby udostępnia wtyczkom i kreatorom stron wiele interfejsów API umożliwiaj
 
 ## Wtyczki asynchroniczne
 
-Jeśli twoja wtyczka wykonuje operacje asynchroniczne (dysk I/O, dostęp do bazy danych, wywoływanie zdalnych interfejsów API, etc.) musisz zwrócić obietnicę albo użyć funkcji zwrotnej przekazanej jako trzeci argument. Gatsby musi wiedzieć kiedy wtyczki są gotowe, tak samo jak niektóre API aby zadziałać poprawnie - wymagają zakończenia pracy poprzednich interfejsów API. Sprawdź [Debugowanie asynchronicznych cykli życia](/docs/debugging-async-lifecycles/) aby dowiedzieć się więcej.
+Jeśli twoja wtyczka wykonuje operacje asynchroniczne (I/O na dyskach, dostęp do bazy danych, wywoływanie zdalnych interfejsów API, etc.) musisz zwrócić `Promise` albo użyć funkcji zwrotnej przekazanej jako trzeci argument. Gatsby musi wiedzieć kiedy wtyczki są gotowe, tak samo jak niektóre API aby zadziałać poprawnie - wymagają zakończenia pracy poprzednich interfejsów API. Sprawdź [Debugowanie asynchronicznych cykli życia](/docs/debugging-async-lifecycles/) aby dowiedzieć się więcej.
 
 ```javascript
 // Promise API
