@@ -1,6 +1,6 @@
 ---
 title: Gatsby Node APIs
-description: Dokumentacja Node API wykorzystywanego przy procesie budowania do powszechnych zastosowań, takich jak tworzenie stron
+description: Dokumentacja Node API wykorzystywanego podczas budowania powszechnych zastosowań, takich jak generowanie stron
 jsdoc: ["gatsby/src/utils/api-node-docs.js"]
 apiCalls: NodeAPI
 ---
