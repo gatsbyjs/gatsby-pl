@@ -5,7 +5,7 @@ jsdoc: ["gatsby/src/utils/api-node-docs.js"]
 apiCalls: NodeAPI
 ---
 
-Gatsby udostępnia wtyczkom i kreatorom stron wiele interfejsów API aby kontrolować przepływ danych za pośrednictwem GraphQL.
+Gatsby udostępnia wtyczkom i kreatorom stron wiele interfejsów API umożliwiających kontrolowanie przepływu danych za pośrednictwem GraphQL.
 
 ## Wtyczki asynchroniczne
 
