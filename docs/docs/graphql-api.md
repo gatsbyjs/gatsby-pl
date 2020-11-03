@@ -88,7 +88,7 @@ Zapoznaj się również z [przewodnikiem dotyczącym odpytywania danych w kompon
 
 #### Parametry
 
-Komponent `StaticQuery` przyjmuje dwie wartości jako atrybuty w JSX:
+Komponent `StaticQuery` przyjmuje dwie wartości jako propsy w JSX:
 
 - `query`: zapytanie `graphql` jako string
 - `render`: komponent który ma dostęp do zwróconych danych
