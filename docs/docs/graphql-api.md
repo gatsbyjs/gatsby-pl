@@ -86,7 +86,7 @@ StaticQuery jest wbudowanym komponentem który pobiera dane z warstwy danych Gat
 
 Możesz użyć tylko jedno `StaticQuery` na stronę: aby uwzględnić potrzebne dane z wielu źródeł, możesz użyć jednego zapytania z wieloma [głównymi polami](/docs/graphql-concepts/#query-fields). Komponent ten nie może przyjmować zmiennych jako argumenty.
 
-Zapoznaj się również z [przewodnikiem jak odpytywać dane w komponentach wykorzystując zapytanie statyczne](/docs/static-query/).
+Zapoznaj się również z [przewodnikiem dotyczącym odpytywania danych w komponentach wykorzystując zapytanie statyczne](/docs/static-query/).
 
 #### Parametry
 
