@@ -63,7 +63,7 @@ export const pageQuery = graphql`
 
 #### Zwrócone wartości
 
-Kiedy zapytanie jest użyte w pliku komponentu strony, zapytanie strony zwraca obiekt `data` który automatycznie jest przekazywany do komponentu jako atrybut.
+Kiedy zapytanie jest użyte w pliku komponentu strony, zapytanie strony zwraca obiekt `data` zostaje przekazany do komponentu jako prop.
 
 ```jsx
 // highlight-start
