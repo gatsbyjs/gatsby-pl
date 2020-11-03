@@ -31,13 +31,11 @@ Dane mogą być odpytywane w stronach, komponentach, oraz w pliku `gatsby-node.j
 - Komponent `StaticQuery`
 - Hook `useStaticQuery`
 
-**Uwaga**: Ze względu na to jak Gatsby przetwarza zapytania GraphQL, nie możesz mieszać zapytań o strony i statycznych zapytać w tym samym pliku. Nie możesz również mieć wielokrotnych zapytań o strony i zapytań o strony w jednym pliku.
+**Uwaga**: Ze względu na to jak Gatsby przetwarza zapytania GraphQL, nie możesz mieszać zapytań stron i zapytań statycznych wewnątrz pliku. Nie możesz również umieszczać wielu zapytań stron wewnątrz jednego pliku.
 
 Po więcej informacji na wykorzystywania przez Gatsby komponentów stron i nie tylko, sprawdź sekcję [budowanie z komponentami](docs/building-with-components/#how-does-gatsby-use-react-components).
 
 ### `pageQuery`
-
-===========================================
 
 `pageQuery` jest wbudowanym komponentem który pobiera informacje z warstwy danych w stronach Gatsby. Na jednej stronie możesz mieć jedno zapytanie. Może ono przyjmować argumenty dla zmiennych w zapytaniach.
 
@@ -116,7 +114,7 @@ Komponent `StaticQuery` przyjmuje dwie wartości jako atrybuty w JSX:
 />
 ```
 
-#### Zwroty
+#### Zwrócone wartości
 
 Komponent StaticQuery zwraca `data` w jako atrybut `render`:
 
@@ -159,7 +157,7 @@ const data = useStaticQuery(graphql`
 `)
 ```
 
-#### Zwroty
+#### Zwrócone wartości
 
 Hook `useStaticQuery` zwraca `data` jako obiekt:
 
