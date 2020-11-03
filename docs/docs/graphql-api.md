@@ -13,7 +13,7 @@ GraphQL jest dostępny w Gatsby bez potrzeby dodatkowej instalacji: schemat jest
 
 ## Pozyskiwanie danych
 
-Dane muszą być [pozyskane](/docs/content-and-data/) - lub dodane do schematu GraphQL - aby odpytać i wykorzystać je w stronach za pośrednictwem GraphQL. Gatsby wykorzystuje [wtyczki źródłowe](/plugins/?=gatsby-source) do pobierania danych.
+Dane muszą zostać [dodane](/docs/content-and-data/) do schematu GraphQL, aby je odpytywać i wykorzystywać na stronie za pomocą GraphQL. Do pobierania danych, Gatsby wykorzystuje [wtyczki źródłowe](/plugins/?=gatsby-source).
 
 **Uwaga**: GraphQL nie jest wymagany: możesz wciąż [wykorzystywać Gatsby bez GraphQL](/docs/using-gatsby-without-graphql/).
 
