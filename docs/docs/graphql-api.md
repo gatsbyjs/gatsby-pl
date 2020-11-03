@@ -137,7 +137,7 @@ Komponent StaticQuery zwraca `data` w jako atrybut `render`:
 
 Hook `useStaticQuery` może być użyty podobnie do `StaticQuery` w dowolnym komponencie lub stronie, ale nie wymaga użycia komponentu i atrybutu render.
 
-Ponieważ jest to React hook, [zasady korzystania z hooków](https://pl.reactjs.org/docs/hooks-rules.html) muszą zostać zachowane, więc będziesz potrzebował wersji React i ReactDOM 16.8.0 lub wyższej. Wobec tego to jak zapytania obecnie działają w Gatsby, tylko jedna instancja `useStaticQuery` jest wspierana dla danego pliku.
+Ponieważ jest to React hook, [zasady korzystania z hooków](https://pl.reactjs.org/docs/hooks-rules.html) muszą zostać zachowane, więc będziesz potrzebować wersji React i ReactDOM 16.8.0 lub wyższej. Wobec tego to jak zapytania obecnie działają w Gatsby, tylko jedna instancja `useStaticQuery` jest wspierana dla danego pliku.
 
 Zapoznaj się również z [poradnikiem dotyczącym odpytywania danych w komponentach z użyciem useStaticQuery](/docs/use-static-query/)
 
