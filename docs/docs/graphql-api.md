@@ -9,7 +9,7 @@ Jest to dokumentacja funkcjonalności GraphQL wbudowanych w Gatsby, włącznie z
 
 ## Pierwsze kroki z GraphQL
 
-GraphQL jest dostępny w Gatsby bez potrzeby dodatkowej instalacji: schemat jest automatycznie wyciągany i tworzony kiedy uruchamiasz projekt `gatsby develop` lub `gatsby build`. Kiedy strona zostanie skompilowania, warstwę danych możesz [zbadać](/docs/running-queries-with-graphiql/) pod adresem: <http://localhost:8000/___graphql>
+GraphQL jest dostępny w Gatsby bez potrzeby dodatkowej instalacji: schemat jest automatycznie budowany kiedy uruchamiasz projekt (`gatsby develop` lub `gatsby build`). Kiedy strona zostanie zbudowana, warstwę danych możesz [ręcznie przeglądać](/docs/running-queries-with-graphiql/) pod adresem: <http://localhost:8000/___graphql>
 
 ## Pozyskiwanie danych
 
