@@ -192,7 +192,7 @@ Aby lepiej zrozumieć działanie części zapytania, zapoznaj się z [przewodnik
 
 Zapytania GraphQL mogą przyjmować argumenty które będą definiować jakie dane będą zwracane. Logika dla tych argumentów jest wewnęterznie obsługiwana przez Gatsby. Argumenty mogą być przekazywane do pól na dowolnym szczeblu zapytania.
 
-Różne węzły mogą przyjmować różne argumenty nw zależności od natury węzła
+Różne node'y w zależności od ich budowy, przyjmować mogą różne argumenty
 
 Argumenty które możesz przekazać do kolekcji(jak tablice lub długie listy dancyh - np. `allFile` czy `allMdx`) to:
 
