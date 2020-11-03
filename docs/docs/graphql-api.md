@@ -222,7 +222,7 @@ Jeśli chcesz zobaczyć przykłady, zapoznaj się z [recepturami zapytań](/docs
 
 ## Fragmenty zapytań
 
-Fragmenty pozwalają Ci na re-używanie części zapytań GraphQL. Pozwalają one również na dzielenie skomplikowanych zapytań na mniejsze, łatwiejsze w zrozumieniu komponenty.
+Fragmenty pozwalają Ci na ponowne używanie części zapytań GraphQL. Pozwalają one również na dzielenie skomplikowanych zapytań na mniejsze, łatwiejsze w zrozumieniu komponenty.
 
 Aby dowiedziec się więcej, sprawdź przewodnik w dokumentacji na temat [używania fragmentów w Gatsby](/docs/using-graphql-fragments/)
 
