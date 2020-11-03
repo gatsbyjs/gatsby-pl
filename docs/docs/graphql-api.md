@@ -17,7 +17,7 @@ Dane muszą zostać [dodane](/docs/content-and-data/) do schematu GraphQL, aby j
 
 **Uwaga**: GraphQL nie jest wymagany: z Gatsby można [korzystać bez GraphQL](/docs/using-gatsby-without-graphql/).
 
-Aby pozyskać dane poprzez istniejącą wtyczkę, musisz zainstalować wszystkie potrzebne paczki. Ponadto musisz dodać wtyczkę do tablicy wtyczek w `gatsby-config` i jej opcjonalną konfigurację. Jeśli chcesz pozyskać dane z systemu plików do użytku z GraphQL, jak na przykład pliki Markdown, zdjęcia i inne, sprawdź [dokumentację pozyskiwania danych z systemu plików](/docs/sourcing-from-the-filesystem/) oraz [przepisy](/docs/recipes/sourcing-data).
+Aby pozyskać dane poprzez istniejącą wtyczkę, musisz zainstalować wszystkie potrzebne paczki i dodać wtyczkę (oraz opcjonalnie jej konfigurację) do tablicy wtyczek w `gatsby-config`. Dane takie jak zdjęcia, pliki Markdown, itp. można pozyskiwać z systemu plików. Po więcej informacji, sprawdź [dokumentację pozyskiwania danych z systemu plików](/docs/sourcing-from-the-filesystem/) oraz [przepisy](/docs/recipes/sourcing-data).
 
 Aby uzyskać instrukcje dotyczące instalacji paczek z npm, zajrzyj do instrukcji w dokumentacji [jak korzystać z wtyczki](/docs/using-a-plugin-in-your-site/).
 
