@@ -63,7 +63,7 @@ export const pageQuery = graphql`
 
 **Uwaga**: Zapytanie eksportowane jako `const` wcale nie musi być nazwane `pageQuery`. Ważniejszym aspektem jest to, że Gatsby szuka w pliku wyeksportowanego string'a `graphql`.
 
-#### Zwroty
+#### Zwrócone wartości
 
 Kiedy zapytanie jest użyte w pliku komponentu strony, zapytanie strony zwraca obiekt `data` który automatycznie jest przekazywany do komponentu jako atrybut.
 
