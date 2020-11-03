@@ -194,7 +194,7 @@ Zapytania GraphQL mogą przyjmować argumenty które będą definiować jakie da
 
 Różne node'y w zależności od ich budowy, przyjmować mogą różne argumenty
 
-Argumenty które możesz przekazać do kolekcji(jak tablice lub długie listy dancyh - np. `allFile` czy `allMdx`) to:
+Argumenty które możesz przekazać do kolekcji (jak tablice lub długie listy danych - np. `allFile` czy `allMdx`) to:
 
 - [`filter`](/docs/graphql-reference#filter)
 - [`limit`](/docs/graphql-reference#limit)
