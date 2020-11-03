@@ -23,7 +23,7 @@ Aby uzyskać instrukcje dotyczące instalacji paczek z npm, zajrzyj do instrukcj
 
 Możesz również [tworzyć niestandardowe wtyczki](/docs/creating-plugins/) dopasowane do twoich potrzeb, które mogą pobierać dane w dowolny sposób.
 
-## Odpytywanie w komponentach i hooki
+## Komponenty i hooki służące do wykonywania zapytań
 
 Dane mogą być odpytywane w stronach, komponentach, oraz w pliku `gatsby-node.js`, wykorzystując jedną z poniższych możliwości:
 
