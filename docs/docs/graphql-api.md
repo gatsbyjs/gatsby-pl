@@ -116,7 +116,7 @@ Komponent `StaticQuery` przyjmuje dwie wartości jako propsy w JSX:
 
 #### Zwrócone wartości
 
-Komponent StaticQuery zwraca `data` w jako atrybut `render`:
+Komponent StaticQuery zwraca `data` argument w `render` prop:
 
 ```jsx
 <StaticQuery
