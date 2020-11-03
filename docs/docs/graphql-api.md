@@ -41,7 +41,7 @@ Po więcej informacji na wykorzystywania przez Gatsby komponentów stron i nie t
 
 `pageQuery` jest wbudowanym komponentem który pobiera informacje z warstwy danych w stronach Gatsby. Na jednej stronie możesz mieć jedno zapytanie. Może ono przyjmować argumenty dla zmiennych w zapytaniach.
 
-[Strona jest utworzona w Gatsby](/docs/page-creation/) przez dowolny React komponent znajdujący się w folderze `src/pages` lub poprzez wywołanie akcji `createPage` oraz użycie komponentu w opcjach `createPage` - znaczy to, że `pageQuery` nie zadziała w dowolnym komponencie, ale tylko w tych które spełniają te kryteria.
+[Strona jest utworzona w Gatsby](/docs/page-creation/) z dowolnego komponentu React znajdującego się w folderze `src/pages` lub poprzez wywołanie akcji `createPage` oraz użycie komponentu w opcjach `createPage` - znaczy to, że `pageQuery` nie zadziała w dowolnym komponencie, ale tylko w tych które spełniają te kryteria.
 
 Zapoznaj się również z [przewodnikiem jak odpytywać dane w stronach poprzez zapytanie strony](/docs/page-query/)
 
