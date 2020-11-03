@@ -82,7 +82,7 @@ const HomePage = ({ data }) => {
 
 ### `StaticQuery`
 
-StaticQuery jest wbudowanym komponentem który pobiera dane z warstwy danych Gatsby dla komponentów które nie są stronami, jak np. header, nawigacja czy dowolny inny komponent użyty jako dziecko.
+StaticQuery jest wbudowanym komponentem który pobiera dane z warstwy danych Gatsby dla komponentów które nie są stronami, jak np. nagłówek, nawigacja czy dowolny inny komponent użyty jako dziecko.
 
 Możesz użyć tylko jedno `StaticQuery` na stronę: aby uwzględnić potrzebne dane z wielu źródeł, możesz użyć jednego zapytania z wieloma [głównymi polami](/docs/graphql-concepts/#query-fields). Komponent ten nie może przyjmować zmiennych jako argumenty.
 
