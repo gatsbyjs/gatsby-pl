@@ -5,7 +5,7 @@ tableOfContentsDepth: 2
 
 Ogromną przewagą Gatsby jest wbudowana warstwa danych która jest w stanie połączyć wiele źródeł danych. Dane zbierane są w [trakcie budowania](/docs/glossary#build) i zostają automatycznie zgromadzone w [schemat](/docs/glossary#schema) który definiuje w jaki sposób mogą one być pobierane przez twoją stronę.
 
-Ten dokument służy jako odniesienie do funkcji GraphQL wbudowanych w Gatsby, włącznie z metodami do zapytań i pozyskiwania danych, oraz dostosowywania GraphQL do potrzeb twojej strony.
+Jest to dokumentacja funkcjonalności GraphQL wbudowanych w Gatsby, włącznie z metodami do zapytań i pozyskiwania danych, oraz dostosowywania GraphQL do swoich potrzeb.
 
 ## Pierwsze kroki z GraphQL
 
