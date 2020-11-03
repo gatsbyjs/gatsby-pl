@@ -33,7 +33,7 @@ Dane mogą być odpytywane w stronach, komponentach, oraz w pliku `gatsby-node.j
 
 **Uwaga**: Ze względu na to jak Gatsby przetwarza zapytania GraphQL, nie możesz mieszać zapytań o strony i statycznych zapytać w tym samym pliku. Nie możesz również mieć wielokrotnych zapytań o strony i zapytań o strony w jednym pliku.
 
-Po więcej informacji na temat komponentów strony lub innych w odniesieniu do zapytań, sprawdź przewodnik w dokumentacji [budowanie z komponentami](docs/building-with-components/#how-does-gatsby-use-react-components)
+Po więcej informacji na wykorzystywania przez Gatsby komponentów stron i nie tylko, sprawdź sekcję [budowanie z komponentami](docs/building-with-components/#how-does-gatsby-use-react-components).
 
 ### `pageQuery`
 
