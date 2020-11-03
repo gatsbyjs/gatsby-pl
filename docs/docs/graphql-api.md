@@ -184,7 +184,7 @@ return (
 
 ## Struktora zapytania
 
-Zapytania są pisane w takim samym kształcie w jakim mają być zwracane dane. Sposów w jaki pozyskujesz dane określi nazwy pól, w odniesieniu do których możesz wysyłać zapytania, na podstawie węzłów które dodają do schematu GraphQL.
+Zapytania są pisane w takim samym kształcie w jakim mają być zwracane dane. Umieszczone dane określą nazwy pól do których możesz tworzyć zapytania, bazując na node'ach które dodają do schematu GraphQL.
 
 Aby lepiej zrozumieć działanie części zapytania, zapoznaj się z [przewodnikiem koncepcyjnym](/docs/graphql-concepts/#understanding-the-parts-of-a-query)
 
