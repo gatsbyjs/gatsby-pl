@@ -21,7 +21,7 @@ Aby pozyskać dane poprzez istniejącą wtyczkę, musisz zainstalować wszystkie
 
 Aby uzyskać instrukcje dotyczące instalacji paczek z npm, zajrzyj do instrukcji w dokumentacji [jak korzystać z wtyczki](/docs/using-a-plugin-in-your-site/).
 
-Możesz również [stworzyć niestandardowe wtyczki](/docs/creating-plugins/) aby pasowały do twoich przypadków użycia i wyciągaj dane jak tylko chcesz.
+Możesz również [tworzyć niestandardowe wtyczki](/docs/creating-plugins/) dopasowane do twoich potrzeb, które mogą pobierać dane w dowolny sposób.
 
 ## Odpytywanie w komponentach i hooki
 
