@@ -1,23 +1,23 @@
 ---
-title: Gatsby Link API
+title: API Gatsby Link
 ---
 
-For internal navigation, Gatsby includes a built-in `<Link>` component as well as a `navigate` function which is used for programmatic navigation.
+Do nawigacji wewnątrz strony, Gatsby dostarcza wbudowany komponent `<Link>` oraz funkcję `navigate` służącą do nawigacji programowej.
 
-Gatsby's `<Link>` component enables linking to internal pages as well as a powerful performance feature called preloading. Preloading is used to prefetch resources so that the resources are fetched by the time the user navigates with this component. We use an `IntersectionObserver` to fetch a low-priority request when the `Link` is in the viewport and then use an `onMouseOver` event to trigger a high-priority request when it is likely that a user will navigate to the requested resource.
+Komponent `<Link>` umożliwia linkowanie do stron wewnętrznych oraz korzystanie z ładowania wstępnego (_preloading_). Ładowanie wstępne wykorzystywane jest do ładowania zasobów strony, zanim użytkownik na nią przejdzie, co zwiększa wydajność i ogólną responsywność strony. W tym celu używany jest `IntersectionObserver`, który wstępnie wykonuje zapytanie z niskim priorytetem, gdy `Link` znajdzie się w polu widzenia użytkownika, a następnie wykonuje zapytanie o wyższym priorytecie, gdy uruchomiony zostanie event `onMouseOver` elementu `Link` - w tym momencie użytkownik najprawdopodobniej będzie chciał przejść na stronę, na której pobierane zasoby będą się znajdować.
 
-The component is a wrapper around [@reach/router's Link component](https://reach.tech/router/api/Link) that adds useful enhancements specific to Gatsby. All props are passed through to @reach/router's `Link` component.
+Komponent `Link` zbudowany jest na bazie [komponentu link z @reach/router](https://reach.tech/router/api/Link), dodając do niego użyteczne usprawnienia specyficzne dla Gatsby. Wszystkie propsy przekazywane są do komponentu `Link` z @reach/router.
 
-## How to use Gatsby Link
+## Jak używać Gatsby Link?
 
 <EggheadEmbed
   lessonLink="https://egghead.io/lessons/gatsby-why-and-how-to-use-gatsby-s-link-component"
   lessonTitle="Why and How to Use Gatsby’s Link Component"
 />
 
-### Replace `a` tags with the `Link` tag for local links
+### Zamień tagi `a` na `Link` do lokalnych przekierowań
 
-In any situation where you want to link between pages on the same site, use the `Link` component instead of an `a` tag.
+W jakiejkolwiek sytuacji, kiedy chcesz stworzyć przekierowanie wewnątrz tej samej strony, korzystaj z komponentu `Link` zamiast tagu `a`.
 
 ```jsx
 import React from "react"
@@ -31,28 +31,28 @@ const Page = () => (
       Check out my <Link to="/blog">blog</Link>!
     </p>
     <p>
-      {/* Note that external links still use `a` tags. */}
+      {/* Zauważ, że zewnętrzne linki nadal korzystają z tagu `a`. */}
       Follow me on <a href="https://twitter.com/gatsbyjs">Twitter</a>!
     </p>
   </div>
 )
 ```
 
-### Add custom styles for the currently active link
+### Dodawanie własnych styli do aktualnie aktywnego linku
 
 <EggheadEmbed
   lessonLink="https://egghead.io/lessons/gatsby-add-custom-styles-for-the-active-link-using-gatsby-s-link-component"
   lessonTitle="Add Custom Styles for the Active Link Using Gatsby’s Link Component"
 />
 
-It’s often a good idea to show which page is currently being viewed by visually changing the link matching the current page.
+Zazwyczaj dobrym pomysłem jest wyróżnianie, która strona jest aktualnie wyświetlana, przez zmianę wyglądu linku odnoszącego się do tej strony.
 
-`Link` provides two options for adding styles to the active link:
+`Link` zapewnia dwa sposoby na dodawanie styli do aktywnego odnośnika:
 
-- `activeStyle` — a style object that will only be applied when the current item is active
-- `activeClassName` — a class name that will only be added to the `Link` when the current item is active
+- `activeStyle` — obiekt styli aplikowany tylko wtedy, gdy link jest aktywny
+- `activeClassName` — klasa dodawana do komponentu `Link`, gdy jest on aktywny
 
-For example, to turn the active link red, either of the following approaches is valid:
+Na przykład, aby zmienić kolor aktywnego linku na czerwony, oba podejścia są poprawne
 
 ```jsx
 import React from "react"
@@ -63,7 +63,7 @@ const SiteNavigation = () => (
     <Link
       to="/"
       {/* highlight-start */}
-      {/* This assumes the `active` class is defined in your CSS */}
+      {/* Zakładamy że klasa `active` jest obecna w stylach CSS */}
       activeClassName="active"
       {/* highlight-end */}
     >
@@ -80,25 +80,25 @@ const SiteNavigation = () => (
 )
 ```
 
-### Use `getProps` for advanced link styling
+### Wykorzystywanie `getProps` do zaawansowanego stylowania linków
 
-Gatsby's `<Link>` component comes with a `getProps` prop, which can be useful for advanced styling. It passes you an object with the following properties:
+Komponent Gatsby `<Link>` dostarcza props `getProps`, która może być użyteczna przy zaawansowanym stylowaniu. Dostarcza obiekt, z następującymi propsami:
 
-- `isCurrent` — true if the `location.pathname` is exactly the same as the `<Link>` component's `to` prop
-- `isPartiallyCurrent` — true if the `location.pathname` starts with the `<Link>` component's `to` prop
-- `href` — the value of the `to` prop
-- `location` — the page's `location` object
+- `isCurrent` — prawda, jeżeli `location.pathname` jest dokładnie taka sama jak props `to` komponentu `Link`
+- `isPartiallyCurrent` — prawda, jeżeli `location.pathname` zaczyna się tak samo jak props `to` komponentu `Link`
+- `href` — wartość props `to`
+- `location` — aktualny obiekt `location`
 
-You can read more about it on [`@reach/router`'s documentation](https://reach.tech/router/api/Link).
+Więcej na ten temat w [dokumentacji `@reach/router`](https://reach.tech/router/api/Link).
 
-### Show active styles for partially matched and parent links
+### Style aktywnego linku dla ścieżek częściowo pasujących lub linków do rodzica
 
-By default the `activeStyle` and `activeClassName` props will only be set on a `<Link>` component if the current URL matches its `to` prop _exactly_. Sometimes, you may want to style a `<Link>` as active even if it partially matches the current URL. For example:
+Domyślnie propsy `activeStyles` i `activeClassName` będą aplikowane do komponentu `Link` tylko jeżeli obecna ścieżka jest _dokładnie_ taka sama jak ścieżka podana we propsie `to`. Czasami jednak przydatne mogłoby być stylowanie linku tak jakby był aktywny, ale gdy props `to` tylko częściowo pasuje do obecnego URL'u. Na przykład:
 
-- You may want `/blog/hello-world` to match `<Link to="/blog">`
-- Or `/gatsby-link/#passing-state-through-link-and-navigate` to match `<Link to="/gatsby-link">`
+- Można by chcieć aby `/blog/hello-world` pasował do `<Link to="/blog">`
+- Lub `/gatsby-link/#passing-state-through-link-and-navigate` pasował do `<Link to="/gatsby-link">`
 
-In instances like these, just add the `partiallyActive` prop to your `<Link>` component and the style will also be applied even if the `to` prop only is a partial match:
+W takich sytuacjach wystarczy dodać props `partiallyActive` do komponentu `<Link>`, a style zostaną zaaplikowane nawet wtedy, gdy ścieżka pasuje tylko częściowo.
 
 ```jsx
 import React from "react"
@@ -116,21 +116,21 @@ const Header = <>
 </>;
 ```
 
-_**Note:** Available from Gatsby V2.1.31, if you are experiencing issues please check your version and/or update._
+_**Uwaga:** Ta funkcjonalność jest dostępna od Gatsby w wersji 2.1.31, jeżeli obserwujesz jakieś błędy z tym związane, sprawdź twoją wersję Gatsby i/lub go zaaktualizuj_
 
-### Pass state as props to the linked page
+### Przekazywanie stanu jako propsa do linkowanych stron
 
 <EggheadEmbed
   lessonLink="https://egghead.io/lessons/gatsby-include-information-about-state-in-navigation-with-gatsby-s-link-component"
   lessonTitle="Include Information About State in Navigation With Gatsby’s Link Component"
 />
 
-Sometimes you'll want to pass data from the source page to the linked page. You can do this by passing a `state` prop to the `Link` component or on a call to the `navigate` function. The linked page will have a `location` prop containing a nested `state` object structure containing the passed data.
+Może pojawić się potrzeba przekazywania danych ze strony, na której znajduje się link, a strony do której on przekierowuje. Można zrobić to, przez przekazanie propsa `state` do komponentu `Link` lub przez wywołanie funkcji `navigate`. Podlinkowana strona otrzyma props `location`, która będzie zawierała w sobie obiekt `state` zawierający przekazane dane
 
 ```jsx
 const PhotoFeedItem = ({ id }) => (
   <div>
-    {/* (skip the feed item markup for brevity) */}
+    {/* (dla zwięzłości pominięto element feed) */}
     <Link
       to={`/photos/${id}`}
       {/* highlight-next-line */}
@@ -152,16 +152,16 @@ const Photo = ({ location, photoId }) => {
 }
 ```
 
-### Replace history to change “back” button behavior
+### Podmiana historii, aby zmieniać zachowanie przycisku "wstecz"
 
 <EggheadEmbed
   lessonLink="https://egghead.io/lessons/gatsby-replace-navigation-history-items-with-gatsby-s-link-component"
   lessonTitle="Replace Navigation History Items with Gatsby’s Link Component"
 />
 
-There are a few cases where it might make sense to modify the “back” button’s behavior. For example, if you build a page where you choose something, then see an “are you sure?” page to make sure it’s what you really wanted, and finally see a confirmation page, it may be desirable to skip the “are you sure?” page if the “back” button is clicked.
+Jest kilka sytuacji gdzie rzeczywiście sens miałoby zmienianie domyślnego zachowania przycisku "wstecz" - na przykład jeżeli tworzymy stronę, gdzie użytkownik coś wybiera, a następnie zostaje przekierowany do podstrony "Czy jesteś pewien?", z której przechodzi do strony z podsumowaniem, to znajdując się na niej, chcąc jednak coś zmienić, logicznym wydawałoby się aby po kliknięciu przycisku "wstecz" strona z potwierdzeniem została pominięta.
 
-In those cases, use the `replace` prop to replace the current URL in history with the target of the `Link`.
+W takiej sytuacji używamy propsa `replace`, aby na przekierowaniu obecny URL w historii został zamieniony na docelowy danego linku.
 
 ```jsx
 import React from "react"
@@ -178,26 +178,26 @@ const AreYouSureLink = () => (
 )
 ```
 
-## How to use the `navigate` helper function
+## Jak używać funkcji pomocniczej `navigate`?
 
 <EggheadEmbed
   lessonLink="https://egghead.io/lessons/gatsby-navigate-to-a-new-page-programmatically-in-gatsby"
   lessonTitle="Navigate to a New Page Programmatically in Gatsby"
 />
 
-Sometimes you need to navigate to pages programmatically, such as during form submissions. In these cases, `Link` won’t work.
+Czasami powstaje potrzeba przekierowania użytkownika programowo - na przykład przy podsumowywaniu formularza. W takiej sytuacji komponent `Link` nie zadziała.
 
-_**Note:** `navigate` was previously named `navigateTo`. `navigateTo` is deprecated in Gatsby v2 and will be removed in the next major release._
+_**Uwaga:** funkcja `navigate` wcześniej nazywała się `navigateTo`. `navigateTo` jest zdeprecjonowane w Gatsby v2 i zostanie usunięte w najbliższym głównym wydaniu_
 
-Instead, Gatsby exports a `navigate` helper function that accepts `to` and `options` arguments.
+Gatsby eksportuje funkcję pomocniczą `navigate` która akceptuje argumenty `to` oraz `options`.
 
-| Argument          | Required | Description                                                                                     |
-| ----------------- | -------- | ----------------------------------------------------------------------------------------------- |
-| `to`              | yes      | The page to navigate to (e.g. `/blog/`).                                                        |
-| `options.state`   | no       | An object. Values passed here will be available in `location.state` in the target page’s props. |
-| `options.replace` | no       | A boolean value. If true, replaces the current URL in history.                                  |
+| Argument          | Wymagany | Opis                                                                                                                   |
+| ----------------- | -------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `to`              | tak      | Strona do której ma zostać wykonane przekierowanie (np. `/blog/`)                                                      |
+| `options.state`   | nie      | Obiekt. Wartości przekazane w tym miejscu, dostępne będą wewnątrz `location.state` w propsach strony docelowej. |
+| `options.replace` | nie      | Wartość logiczna. Jeżeli `true`, to podmienia obecny URL w historii przeglądarki.                                      |
 
-By default, `navigate` operates the same way as a clicked `Link` component.
+Domyślnie, `navigate` operuje w taki sam sposób jak kliknięty komponent `Link`
 
 ```jsx
 import React from "react"
@@ -208,19 +208,19 @@ const Form = () => (
     onSubmit={event => {
       event.preventDefault()
 
-      // TODO: do something with form values
+      // TODO: operacje na wartościach z formularza
       // highlight-next-line
       navigate("/form-submitted/")
     }}
   >
-    {/* (skip form inputs for brevity) */}
+    {/* (pominięto inputy dla zwięzłości) */}
   </form>
 )
 ```
 
-### Add state to programmatic navigation
+### Dodawanie stanu do nawigacji programowej
 
-To include state information, add an `options` object and include a `state` prop with the desired state.
+Aby zawrzeć informacje o stanie, wystarczy dodać obiekt `options` z wartością `state` zawierającą wszystkie dane które potrzebujemy.
 
 ```jsx
 import React from "react"
@@ -231,7 +231,7 @@ const Form = () => (
     onSubmit={event => {
       event.preventDefault()
 
-      // Implementation of this function is an exercise for the reader.
+      // Implementacja tej funkcji to zadanie dla czytelnika ;)
       const formValues = getFormValues()
 
       navigate(
@@ -244,16 +244,16 @@ const Form = () => (
       )
     }}
   >
-    {/* (skip form inputs for brevity) */}
+    {/* (pominięto inputy dla zwięzłości) */}
   </form>
 )
 ```
 
-Then from the receiving page you can access the `location` state as demonstrated in [Pass state as props to the linked page](#pass-state-as-props-to-the-linked-page).
+Następnie aby na stronie docelowej można uzyskać stan `location` tak, jak zaprezentowano w [Przekazywanie stanu jako propsa do linkowanych stron](#przekazywanie-stanu-jako-propsa-do-linkowanych-stron).
 
-### Replace history during programmatic navigation
+### Podmiana historii podczas nawigacji programowej
 
-If the navigation should replace history instead of pushing a new entry into the navigation history, add the `replace` prop with a value of `true` to the `options` argument of `navigate`.
+Jeżeli nawigacja ma podmienić aktualny wpis w historii, zamiast dodawania nowego, dodaj props `replace` z wartością `true` do argumentu `options` funkcji navigate `navigate`.
 
 ```jsx
 import React from "react"
@@ -264,7 +264,7 @@ const Form = () => (
     onSubmit={event => {
       event.preventDefault()
 
-      // TODO: do something with form values
+      // TODO: operacje na wartościach z formularza
       navigate(
         "/form-submitted/",
         // highlight-next-line
@@ -272,17 +272,16 @@ const Form = () => (
       )
     }}
   >
-    {/* (skip form inputs for brevity) */}
+    {/* (pominięto inputy dla zwięzłości) */}
   </form>
 )
 ```
 
-## Add the path prefix to paths using `withPrefix`
+## Dodawanie prefiksu do ścieżki, korzystając z `withPrefix`
 
-It is common to host sites in a sub-directory of a site. Gatsby lets you [set
-the path prefix for your site](/docs/path-prefix/). After doing so, Gatsby's `<Link>` component will automatically handle constructing the correct URL in development and production.
+Popularną praktyką jest hostowanie stron w pod-ścieżkach strony. Gatsby pozwala [ustawić prefiks ścieżki dla twojej strony](/docs/path-prefix/). Po skonfigurowaniu prefiksu ścieżki, komponent `Link` będzie automatycznie konstruował odpowiedni URL w fazie developmentu, jak i na produkcji.
 
-For pathnames you construct manually, there's a helper function, `withPrefix` that prepends your path prefix in production (but doesn't during development where paths don't need to be prefixed).
+Dla nazw ścieżek konstruowanych ręcznie, istnieje funkcja pomocnicza - `withPrefix`, która dodaje prefiks do ścieżki na produkcji (ale nie w fazie developmentu, gdzie nie istnieje taka potrzeba).
 
 ```jsx
 import { withPrefix } from "gatsby"
@@ -299,33 +298,28 @@ const IndexLayout = ({ children, location }) => {
 }
 ```
 
-## Reminder: use `<Link>` only for internal links!
+## Przypomnienie: używaj komponentu `Link` tylko do przekierowań wewnątrz strony!
 
-This component is intended _only_ for links to pages handled by Gatsby. For links to pages on other domains or pages on the same domain not handled by the current Gatsby site, use the normal `<a>` element.
+Komponent ten jest stworzony z myślą _tylko_ o linkach do stron stworzonych przez Gatsby. Do przekierowań na strony w innych domenach, czy w tej samej domenie ale nie należących do obecnej strony Gatsby, należy używać tradycyjnego elementu `a`.
 
-Sometimes you won't know ahead of time whether a link will be internal or not,
-such as when the data is coming from a CMS.
-In these cases you may find it useful to make a component which inspects the
-link and renders either with Gatsby's `<Link>` or with a regular `<a>` tag
-accordingly.
+Czasami nie jesteśmy w stanie przewidzieć, czy przekierowanie będzie wewnętrzne lub zewnętrzne, na przykład wtedy gdy dane przychodzą z CMS'a. W takiej sytacji, przydatne może być utworzenie komponentu, który sprawdza link, a następnie renderuje komponent Gatsby `Link` lub element `a`, w zależności od tego czy jest on wewnętrzny czy zewnętrzny.
 
-Since deciding whether a link is internal or not depends on the site in
-question, you may need to customize the heuristic to your environment, but the
-following may be a good starting point:
+Ze względu na fakt, że określenie czy link jest wewnętrzny lub zewnętrzny zależy od strony, którą budujemy, może pojawić się potrzeba zmodyfikowania poniższego przykładu do własnych potrzeb. Mimo to może on stanowić dobry punkt wyjścia do budowania takiego mechanizmu:
 
 ```jsx
 import { Link as GatsbyLink } from "gatsby"
 
-// Since DOM elements <a> cannot receive activeClassName
-// and partiallyActive, destructure the prop here and
-// pass it only to GatsbyLink
+// Elementy DOM (w tym `a`) nie przyjmują takich propsów jak
+// activeClassName, partiallyActive, to, itp.
+// więc trzeba je zdestrukturyzować, oraz podać bezpośrednio do komponentu `Link`
 const Link = ({ children, to, activeClassName, partiallyActive, ...other }) => {
-  // Tailor the following test to your environment.
-  // This example assumes that any internal link (intended for Gatsby)
-  // will start with exactly one slash, and that anything else is external.
+  // Dostosuj poniższy test do twojego środowiska.
+  // Poniższy przykład zakłada, że linki wewnętrzne (przeznaczone dla Gatsby)
+  // będą zaczynać się dokładnie jednym slashem,
+  // a wszystkie inne zostaną potraktowane jako zewnętrzne
   const internal = /^\/(?!\/)/.test(to)
 
-  // Use Gatsby Link for internal links, and <a> for others
+  // Gatsby `Link` do wewnętrznych, `a` do zewnętrznych
   if (internal) {
     return (
       <GatsbyLink
@@ -348,9 +342,9 @@ const Link = ({ children, to, activeClassName, partiallyActive, ...other }) => {
 export default Link
 ```
 
-### File Downloads
+### Pobieranie plików
 
-You can similarly check for file downloads:
+Podobny mechanizm można zaimplementować do pobierania plików:
 
 ```jsx
   const file = /\.[0-9a-z]+$/i.test(to)
@@ -373,9 +367,9 @@ You can similarly check for file downloads:
   }
 ```
 
-## Recommendations for programmatic, in-app navigation
+## Zalecenia do programowej nawigacji, wewnątrz tej samej strony
 
-Neither `<Link>` nor `navigate` can be used for in-route navigation with a hash or query parameter. If you need this behavior, you should either use an anchor tag or import the `@reach/router` package--which Gatsby already depends upon--to make use of its `navigate` function, like so:
+`<Link>` i `navigate` nie mogą być wykorzystywane do nawigacji wewnątrz tej samej ścieżki, z hashem lub parametrem query. Jeżeli potrzebujesz takiego zachowania, należy wykorzystać tag `a` lub zaimportować funkcję `navigate` z paczki `@reach/router`, którą wewnątrz wykorzystuje Gatsby.
 
 ```jsx
 import { navigate } from '@reach/router';
@@ -384,23 +378,23 @@ import { navigate } from '@reach/router';
 
 onClick = () => {
   navigate('#some-link');
-  // OR
+  // lub
   navigate('?foo=bar');
 }
 ```
 
-## Handling stale client-side pages
+## Obsługa nieaktualnych stron po stronie klienta
 
-Gatsby's `<Link>` component will only fetch each page's resources once. Updates to pages on the site are not reflected in the browser as they are effectively "locked in time". This can have the undesirable impact of different users having different views of the content.
+Komponent `Link` będzie pobierał zasoby każdej strony tylko raz. Aktualizacje do stron nie są bezpośrednio odzwierciedlane w przeglądarce, ponieważ są w pewien sposób "zamrożone w czasie". Mimo że będzie to zmiejszać czas ładowania strony, to może mieć to wpływ na niechcianą sytuację, gdy inni użytkownicy będą widzieć na stronie różną treść.
 
-In order to prevent this staleness, Gatsby requests an additional resource on each new page load: `app-data.json`. This contains a hash generated when the site is built; if anything in the `src` directory changes, the hash will change. During page loads, if Gatsby sees a different hash in the `app-data.json` than the hash it initially retrieved when the site first loaded, the browser will navigate using `window.location`. The browser fetches the new page and starts over again, so any cached resources are lost.
+Aby temu zapobiec, Gatsby wykonuje zapytanie o dodatkowy zasób na każdym nowym załadowaniu strony - `app-data.json`. Zawiera on wygenerowany podczas budowania strony hash; jeżeli cokolwiek zmieni się wewnątrz lokalizacji `src`, hash się zmieni. Gdy podczas ładowania, Gatsby zauważy że hash się zmienił od czasu gdy pobrał go po raz pierwszy, przeglądarka w celu nawigacji użyje `window.location`. W ten sposób pobierze nową stronę od zera, a jakiekolwiek zasoby znajdujące się w pamięci podręcznej zostaną utracone.
 
-However, if the page has previously loaded, it will not re-request `app-data.json`. In that case, the hash comparison will not occur and the previously loaded content will be used.
+Jeżeli natomiast strona została już wcześniej załadowana, `app-data.json` nie zostanie pobrany. W tej sytuacji nie dojdzie do porównywania hash'ów, a użyta zostanie wcześniej pobrana treść.
 
-> **Note:** Any state will be lost during the `window.location` transition. This can have an impact if there is a reliance on state management, e.g. tracking state in [wrapPageElement](/docs/browser-apis/#wrapPageElement) or via a library like Redux.
+> **Uwaga:** Jakikolwiek stan zostanie utracony podczas przekierowania `window.location`. Może mieć to wpływ, jeżeli opieramy się na zarządzaniu stanem, np. śledzenie stanu wewnątrz [wrapPageElement](/docs/browser-apis/#wrapPageElement) czy przez biblioteke taką jak Redux
 
-## Additional resources
+## Dodatkowe źródła
 
 - [Authentication tutorial for client-only routes](/tutorial/authentication-tutorial/)
 - [Routing: Getting Location Data from Props](/docs/location-data-from-props/)
-- [`gatsby-plugin-catch-links`](https://www.gatsbyjs.org/packages/gatsby-plugin-catch-links/) to automatically intercept local links in Markdown files for `gatsby-link` like behavior
+- [`gatsby-plugin-catch-links`](https://www.gatsbyjs.org/packages/gatsby-plugin-catch-links/) aby automatycznie przechwycić linki wewnętrzne z plików markdown czy CMS'ów, dla zachowania podobnego do `gatsby-link`

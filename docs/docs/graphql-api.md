@@ -88,7 +88,7 @@ Zapoznaj się również z [przewodnikiem dotyczącym odpytywania danych w kompon
 
 #### Parametry
 
-Komponent `StaticQuery` przyjmuje dwie wartości jako atrybuty w JSX:
+Komponent `StaticQuery` przyjmuje dwie wartości jako propsy w JSX:
 
 - `query`: zapytanie `graphql` jako string
 - `render`: komponent który ma dostęp do zwróconych danych
@@ -116,7 +116,7 @@ Komponent `StaticQuery` przyjmuje dwie wartości jako atrybuty w JSX:
 
 #### Zwrócone wartości
 
-Komponent StaticQuery zwraca `data` w jako atrybut `render`:
+Komponent StaticQuery zwraca `data` argument w `render` prop:
 
 ```jsx
 <StaticQuery
@@ -133,7 +133,7 @@ Komponent StaticQuery zwraca `data` w jako atrybut `render`:
 
 ### `useStaticQuery`
 
-Hook `useStaticQuery` może być użyty podobnie do `StaticQuery` w dowolnym komponencie lub stronie, ale nie wymaga użycia komponentu i atrybutu render.
+Hook `useStaticQuery` może być użyty w podobny sposób do `StaticQuery` w dowolnym komponencie lub stronie, ale nie wymaga użycia dodatkowego komponentu z render propem.
 
 Ponieważ jest to React hook, [zasady korzystania z hooków](https://pl.reactjs.org/docs/hooks-rules.html) muszą zostać zachowane, więc będziesz potrzebować wersji React i ReactDOM 16.8.0 lub wyższej. Wobec tego to jak zapytania obecnie działają w Gatsby, tylko jedna instancja `useStaticQuery` jest wspierana dla danego pliku.
 

@@ -68,7 +68,7 @@ Jeśli zewnętrzny link prowadzi do artykułu w np. [MDN] lub [Wikipedia], a ist
 Przykład:
 
 ```md
-React is a JavaScript [library](https://en.wikipedia.org/wiki/Library_(computing)).
+React is a JavaScript [library](<https://en.wikipedia.org/wiki/Library_(computing)>).
 ```
 
 ✅ DOBRZE:
@@ -79,33 +79,59 @@ React jest javascriptową [biblioteką](https://pl.wikipedia.org/wiki/Biblioteka
 
 Dla linków, które nie mają polskiego odpowiednika (Stack Overflow, filmy na YouTube , itd.), po prostu użyj wersji angielskiej.
 
+### Odmiana nazwy
+
+Wiele osób próbuje odmieniać nazwę `Gatsby`. Ustalono jednak, że w dokumentacji odmieniać tej nazwy nie będziemy. Czyli:
+
+✅ DOBRZE:
+
+```md
+Dokumentacja API motywów Gatsby.
+```
+
+❌ ŹLE:
+
+```md
+Dokumentacja API motywów Gatsby'ego.
+```
+
+lub
+
+✅ DOBRZE:
+
+```md
+Praca z Gatsby.
+```
+
+❌ ŹLE:
+
+```md
+Praca z Gatsby'm.
+```
+
 ## Słowniczek
 
 Użyj tej sekcji, jako spisu tłumaczeń dla często używanych, technicznych pojęć.
 
-| Słowo / pojęcie  | Tłumaczenie |
-| ------ | ----------- |
-| Array | Array (odmieniany po polsku) |
-| Development environment | Środowisko programistyczne   |
-| Development server | Serwer deweloperski   |
-| Explorer | Eksplorator   |
-| Gatsby Docs | Dokumentacja Gatsby (pisane z wielkiej litery)   |
-| Global styles | Style globalne |
-| Layout components | Komponenty Układu |
-| Node | Node (odmieniane po polsku)  |
-| Plugin | Wtyczka     |
-| Query  | Zapytanie   |
-| Root | Katalog główny   |
-| Run command | Uruchom komendę   |
-| Scope | Zasięg |
-| Selectors | Selektory |
-| Source plugins | Wtyczki Źródeł   |
-| String | String (odmieniany po polsku)   |
-| Stylesheet | Arkusz stylów   |
-| Theme  | Motyw       |
-| Transformer plugins | Wtyczki Transformacji   |
-| Tutorial | Samouczek lub Poradnik   |
-
-
-
-
+| Słowo / pojęcie         | Tłumaczenie                                    |
+| ----------------------- | ---------------------------------------------- |
+| Array                   | Array (odmieniany po polsku)                   |
+| Development environment | Środowisko programistyczne                     |
+| Development server      | Serwer deweloperski                            |
+| Explorer                | Eksplorator                                    |
+| Gatsby Docs             | Dokumentacja Gatsby (pisane z wielkiej litery) |
+| Global styles           | Style globalne                                 |
+| Layout components       | Komponenty Układu                              |
+| Node                    | Node (odmieniane po polsku)                    |
+| Plugin                  | Wtyczka                                        |
+| Query                   | Zapytanie                                      |
+| Root                    | Katalog główny                                 |
+| Run command             | Uruchom komendę                                |
+| Scope                   | Zasięg                                         |
+| Selectors               | Selektory                                      |
+| Source plugins          | Wtyczki Źródeł                                 |
+| String                  | String (odmieniany po polsku)                  |
+| Stylesheet              | Arkusz stylów                                  |
+| Theme                   | Motyw                                          |
+| Transformer plugins     | Wtyczki Transformacji                          |
+| Tutorial                | Samouczek lub Poradnik                         |
