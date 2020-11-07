@@ -53,7 +53,7 @@ module.exports = {
 }
 ```
 
-Teraz [dostęp do tytułu strony możesz wykorzystać poprzez GraphQL](/tutorial/part-four/#your-first-graphql-query) w dowolnym miejscu na stronie.
+Teraz [tytuł strony możesz uzyskać poprzez GraphQL](/tutorial/part-four/#your-first-graphql-query) w dowolnym miejscu na stronie.
 
 ### Wtyczki
 
