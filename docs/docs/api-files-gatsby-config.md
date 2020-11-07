@@ -6,7 +6,10 @@ W pliku `gatsby-config.js` zdefiniowane zostać mogą metadane twojej strony, wt
 
 ## Przygotowanie pliku konfiguracyjnego
 
-Plik konfiguracyjny powinien eksportować obiekt JavaScript. W ramach tego obiektu możesz zdefiniować kilka różnych opcji konfiguracyjnych.
+## Przygotowanie pliku konfiguracyjnego
+
+Plik konfiguracyjny powinien eksportować obiekt JavaScript.  Wewnątrz tego obiektu możesz zdefiniować kilka różnych opcji konfiguracyjnych.
+```
 
 ```javascript:title=gatsby-config.js
 module.exports = {
