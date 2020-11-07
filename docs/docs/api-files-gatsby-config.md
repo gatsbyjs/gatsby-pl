@@ -40,7 +40,7 @@ Jest [wiele dostępnych opcji konfiguracyjnych](/docs/gatsby-config), ale najcz�
 
 ### Metadane strony
 
-Objekt `siteMetadata` może zawierać dowolne dane które chcesz wykorzystywać później na swojej stronie. Właściwym użyciem metadanych jest np. tytuł strony. Jeśli przechowujesz tytuł w `siteMetadata`, możesz zmienić go w jednym miejscu, a ten zaktualizuje się wszędzie gdzie był on użyty. Aby dodać metadane umieść obiekt `siteMetadata` w swoim pliku konfiguracyjnym:
+Obiekt `siteMetadata` może zawierać dowolne dane które chcesz wykorzystać później na swojej stronie. Właściwym użyciem metadanych jest np. tytuł strony. Jeśli przechowujesz tytuł w `siteMetadata` - możesz zmienić go w jednym miejscu, a ten zaktualizuje się wszędzie gdzie był użyty. Aby dodać metadane umieść obiekt `siteMetadata` w swoim pliku konfiguracyjnym:
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -56,7 +56,7 @@ Teraz [dostęp do tytułu strony możesz wykorzystać poprzez GraphQL](/tutorial
 
 Wtyczki dodają nowe funkcjonalności na twojej stronie Gatsby. Na przykład, niektóre wtyczki pobierają dane z usług hostowanych, przekształcają formaty danych lub zmieniają rozmiar obrazów. [Biblioteka wtyczek Gatsby](/plugins) pomoże ci znaleźć odpowiednią wtyczkę dostosowaną do twoich potrzeb.
 
-Instalacja wtyczki poprzez poprzez użycie menedżera paczek jak np. `npm` **nie spowoduje** włączenia jej na twojej stronie Gatsby. Aby poprawnie ukończyć proces dodawania wtyczki, upewnij się że twój plik `gatsby-config.js` zawiera tablicę `plugins`. Jest to miejsce na wszystkie wtyczki potrzebne do zbudowania strony:
+Instalacja wtyczki poprzez poprzez użycie menedżera paczek jak np. `npm` **nie spowoduje** włączenia jej na twojej stronie Gatsby. Aby poprawnie ukończyć proces dodawania wtyczki, upewnij się że twój plik `gatsby-config.js` zawiera tablicę `plugins`. Jest to miejsce na wszystkie potrzebne wtyczki do zbudowania strony:
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -80,7 +80,7 @@ module.exports = {
 
 #### Wtyczki z opcjami konfiguracyjnymi
 
-Wiele wtyczek posiada opcjonalne lub wymagane opcje konfiguracji. Zamiast dodawać nazwę w string'u do tablicy `plugins`, dodaj obiekt z nazwą i opcjami konfiguracyjnymi. Większość wtyczek ma pokazane przykłady konfiguracji w swoim pliku `README` lub na ich stronie w [bibliotece wtyczek Gatsby](/plugins).
+Wiele wtyczek posiada opcjonalne lub wymagane warianty konfiguracji. Zamiast dodawać nazwę w string'u do tablicy `plugins`, dodaj obiekt z nazwą i opcjami konfiguracyjnymi. Większość wtyczek ma pokazane przykłady konfiguracji w swoim pliku `README` lub na ich stronie w [bibliotece wtyczek Gatsby](/plugins).
 
 To jest przykład który pokazuje jak poprawnie napisać obiekt z kluczami `resolve` - do wyciągania nazwy wtyczki oraz obiektem `options` z dowolnymi odpowiednimi ustawieniami:
 
@@ -119,4 +119,4 @@ module.exports = {
 
 ## Dodatkowe opcje konfiguracyjne
 
-Jest wiele innych opcji konfiguracyjnych dostępnych dla `gatsby-config.js`. Możesz listę dla każdej opcji na stronie [API Konfiguracji Gatsby](/docs/gatsby-config/).
+Jest wiele innych opcji konfiguracyjnych dostępnych dla `gatsby-config.js`. Możesz znaleźć listę dla każdej opcji na stronie [API Konfiguracji Gatsby](/docs/gatsby-config/).
