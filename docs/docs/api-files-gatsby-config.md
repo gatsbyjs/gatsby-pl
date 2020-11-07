@@ -4,7 +4,7 @@ title: Plik API gatsby-config.js
 
 W pliku `gatsby-config.js` zdefiniowane zostać mogą metadane twojej strony, wtyczki, oraz reszta ogólnej konfiguracji. Plik ten powinien znajdować się w głównym katalogu twojej strony Gatsby.
 
-## Przygotowanie pliku konfiguracyjnego
+Jeżeli utworzyłeś/aś projekt strony korzystając z komendy `gatsby new`, domyślnie utworzony powinien zostać przykładowy plik konfiguracyjny.
 
 ## Przygotowanie pliku konfiguracyjnego
 
