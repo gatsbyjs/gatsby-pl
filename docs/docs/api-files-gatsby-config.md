@@ -39,7 +39,7 @@ module.exports = {
 
 ## Opcje konfiguracyjne
 
-Jest [wiele dostępnych opcji konfiguracyjnych](/docs/gatsby-config), ale najczęstszym zestawieniem jest ustawienie metadanych oraz włączonych wtyczek.
+[Opcji konfiguracyjnych](/docs/gatsby-config) jest naprawdę wiele, ale najczęściej konfiguracja ogranicza się do ustawienia metadanych strony oraz dodania wtyczek dla strony.
 
 ### Metadane strony
 
