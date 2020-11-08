@@ -44,11 +44,11 @@ Globalny, unikatowy typ node'a wybrany przez właściciela wtyczki.
 
 ### `owner`
 
-Wtyczka przez którą stworzony został node. To pole jest dodane przez Gatsby(a nie przez wtyczkę).
+Wtyczka przez którą stworzony został node. To pole jest dodawane przez Gatsby(a nie przez wtyczkę).
 
 ### `fieldOwners`
 
-Magazyn informacji które wtyczki utworzyły poszczególne pola. To pole jest dodane przez Gatsby(a nie przez wtyczkę).
+Magazyn informacji które wtyczki utworzyły poszczególne pola. To pole jest dodawane przez Gatsby(a nie przez wtyczkę).
 
 ### `content`
 
@@ -56,9 +56,9 @@ Opcjonalne pole dostarczające surową zawartość dla tego node'a którą mogą
 
 ## Wtyczki źródłowe
 
-Nowe node'y dodane do Gatsby poprzez "źródłowe" wtyczki. Powszechnie stosowaną przez wiele witryn Gatsby wtyczką źródłową jest [wtyczka źródłowa systemu plików](/packages/gatsby-source-filesystem/) która przekształca pliki na dysku na node'y pliku.
+Nowe node'y dodawane są do Gatsby poprzez wtyczki "źródłowe". Powszechnie stosowaną przez wiele witryn Gatsby wtyczką źródłową jest [wtyczka źródłowa systemu plików](/packages/gatsby-source-filesystem/) która przekształca pliki na dysku na node'y pliku.
 
-Inne wtyczki źródłowe zaciągają dane z zewnętrznych interfejsów API jak np. [Drupal](/packages/gatsby-source-drupal/) czy [Hacker News](/packages/gatsby-source-hacker-news/).
+Inne wtyczki źródłowe zaciągają dane z zewnętrznych interfejsów API takich jak np. [Drupal](/packages/gatsby-source-drupal/) czy [Hacker News](/packages/gatsby-source-hacker-news/).
 
 ## Wtyczki przekształcające
 
@@ -66,13 +66,12 @@ Wtyczki przekształcające mogą również tworzyć node'y poprzez przekształce
 
 Node'y utworzone przez wtyczki przekształcające są ustawione jako "dzieci" swoich "rodziców".
 
-- The
-  [Remark (Markdown library) transformer plugin](/packages/gatsby-transformer-remark/)
-  looks for new nodes that are created with a `mediaType` of `text/markdown` and
-  then transforms these nodes into `MarkdownRemark` nodes with an `html` field.
-- The [YAML transformer plugin](/packages/gatsby-transformer-yaml/) looks for
-  new nodes with a media type of `text/yaml` (e.g. a `.yaml` file) and creates
-  new YAML child node(s) by parsing the YAML source into JavaScript objects.
+- [Wtyczka przekształcająca dane(biblioteka Markdown)](/packages/gatsby-transformer-remark/) wyszukuje nowych node'ów,
+  które zostały utworzone z typem `text/markdown` dla `mediaType` i  
+  przekształca je na node'y `MarkdownRemark` z polami `html`.
+- [Wtyczka przekształcająca YAML](/packages/gatsby-transformer-yaml/) wyszukuje nowych node'ów z typem
+  nośnika `text/yaml` (np. pliki `.yaml`) i tworzy nowe YAML dzieci node'a/node'ów poprzez
+  transformację źródła YAML w obiekt JavaScript.
 
 ## GraphQL
 
@@ -80,4 +79,4 @@ Gatsby automatycznie wprowadza strukturę node'ów Twojej strony i tworzy schema
 
 ## Tworzenie node'ów
 
-Aby dowiedzieć się więcej na temat tego jak tworzone i łączone są ze sobą node'y sprawdź dokumentację [tworzenia node'ów](/docs/node-creation/) w sekcji "Za kulisami"
+Aby dowiedzieć się więcej na temat tego jak tworzone i łączone są ze sobą node'y sprawdź dokumentację [tworzenia node'ów](/docs/node-creation/) w sekcji "Za kulisami".
