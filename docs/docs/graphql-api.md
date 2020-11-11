@@ -41,7 +41,7 @@ Po więcej informacji na wykorzystywania przez Gatsby komponentów stron i nie t
 
 [Strona jest utworzona w Gatsby](/docs/page-creation/) z dowolnego komponentu React znajdującego się w folderze `src/pages` lub poprzez wywołanie akcji `createPage` oraz użycie komponentu w opcjach `createPage` - znaczy to, że `pageQuery` nie zadziała w dowolnym komponencie, ale tylko w tych które spełniają te kryteria.
 
-Zapoznaj się również z [przewodnikiem dotyczącym pobierania danych w stronach poprzez zapytania stron](/docs/page-query/)
+Zapoznaj się również z [przewodnikiem dotyczącym pobierania danych w stronach poprzez zapytania stron](/docs/page-query/).
 
 #### Parametry
 
@@ -63,7 +63,7 @@ export const pageQuery = graphql`
 
 #### Zwrócone wartości
 
-Kiedy zapytanie jest użyte w pliku komponentu strony, zapytanie strony zwraca obiekt `data` zostaje przekazany do komponentu jako prop.
+Kiedy zapytanie jest użyte w pliku komponentu strony, zapytanie strony zwraca obiekt `data` który automatycznie jest przekazywany do komponentu jako atrybut.
 
 ```jsx
 // highlight-start
@@ -137,7 +137,7 @@ Hook `useStaticQuery` może być użyty w podobny sposób do `StaticQuery` w dow
 
 Ponieważ jest to React hook, [zasady korzystania z hooków](https://pl.reactjs.org/docs/hooks-rules.html) muszą zostać zachowane, więc będziesz potrzebować wersji React i ReactDOM 16.8.0 lub wyższej. Wobec tego to jak zapytania obecnie działają w Gatsby, tylko jedna instancja `useStaticQuery` jest wspierana dla danego pliku.
 
-Zapoznaj się również z [poradnikiem dotyczącym odpytywania danych w komponentach z użyciem useStaticQuery](/docs/use-static-query/)
+Zapoznaj się również z [poradnikiem dotyczącym odpytywania danych w komponentach z użyciem useStaticQuery](/docs/use-static-query/).
 
 #### Parametry
 
@@ -180,11 +180,11 @@ return (
 )
 ```
 
-## Struktora zapytania
+## Struktura zapytania
 
 Zapytania są pisane w takim samym kształcie w jakim mają być zwracane dane. Umieszczone dane określą nazwy pól do których możesz tworzyć zapytania, bazując na node'ach które dodają do schematu GraphQL.
 
-Aby lepiej zrozumieć działanie części zapytania, zapoznaj się z [przewodnikiem koncepcyjnym](/docs/graphql-concepts/#understanding-the-parts-of-a-query)
+Aby lepiej zrozumieć działanie części zapytania, zapoznaj się z [przewodnikiem koncepcyjnym](/docs/graphql-concepts/#understanding-the-parts-of-a-query).
 
 ### Argumenty w zapytaniach GraphQL
 
@@ -222,7 +222,7 @@ Jeśli chcesz zobaczyć przykłady, zapoznaj się z [recepturami zapytań](/docs
 
 Fragmenty pozwalają Ci na ponowne używanie części zapytań GraphQL. Pozwalają one również na dzielenie skomplikowanych zapytań na mniejsze, łatwiejsze w zrozumieniu komponenty.
 
-Aby dowiedziec się więcej, sprawdź przewodnik w dokumentacji na temat [używania fragmentów w Gatsby](/docs/using-graphql-fragments/)
+Aby dowiedziec się więcej, sprawdź przewodnik w dokumentacji na temat [używania fragmentów w Gatsby](/docs/using-graphql-fragments/).
 
 ### Fragmenty Gatsby
 
