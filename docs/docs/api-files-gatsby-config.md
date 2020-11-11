@@ -1,22 +1,23 @@
 ---
-title: The gatsby-config.js API File
+title: Plik API gatsby-config.js
 ---
 
-The file `gatsby-config.js` defines your site's metadata, plugins, and other general configuration. This file should be in the root of your Gatsby site.
+W pliku `gatsby-config.js` zdefiniowane zostać mogą metadane twojej strony, wtyczki, oraz reszta ogólnej konfiguracji. Plik ten powinien znajdować się w głównym katalogu twojej strony Gatsby.
 
-If you created a Gatsby site with the `gatsby new` command, there should already be a sample configuration file in your site's directory.
+Jeżeli utworzyłeś/aś projekt strony korzystając z komendy `gatsby new`, domyślnie utworzony powinien zostać przykładowy plik konfiguracyjny.
 
-## Set up the configuration file
+## Przygotowanie pliku konfiguracyjnego
 
-The configuration file should export a JavaScript object. Within this object, you can define several different configuration options.
+Plik konfiguracyjny powinien eksportować obiekt JavaScript.  Wewnątrz tego obiektu możesz zdefiniować kilka różnych opcji konfiguracyjnych.
+```
 
 ```javascript:title=gatsby-config.js
 module.exports = {
-  //configuration object
+  //obiekt konfiguracyjny
 }
 ```
 
-An example `gatsby-config.js` file could look like this:
+Przykład poprawnego wyglądu pliku `gatsby-config.js`:
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -36,13 +37,13 @@ module.exports = {
 }
 ```
 
-## Configuration options
+## Opcje konfiguracyjne
 
-There are [many configuration options](/docs/gatsby-config) available, but the most common set site-wide metadata and enable plugins.
+[Opcji konfiguracyjnych](/docs/gatsby-config) jest naprawdę wiele, ale najczęściej konfiguracja ogranicza się do ustawienia metadanych strony oraz dodania wtyczek dla strony.
 
-### Site metadata
+### Metadane strony
 
-The `siteMetadata` object can contain any data you want to share across your site. A useful example is the site's title. If you store the title in `siteMetadata`, you can alter the title in one place, and it will be updated throughout your site. To add metadata, include a `siteMetadata` object in your configuration file:
+Obiekt `siteMetadata` może zawierać dowolne dane które chcesz wykorzystać później na swojej stronie. Właściwym użyciem metadanych jest np. tytuł strony. Jeśli przechowujesz tytuł w `siteMetadata` - możesz zmienić go w jednym miejscu, a ten zaktualizuje się wszędzie gdzie był użyty. Aby dodać metadane umieść obiekt `siteMetadata` w swoim pliku konfiguracyjnym:
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -52,27 +53,27 @@ module.exports = {
 }
 ```
 
-You can then [access the site title using GraphQL](/tutorial/part-four/#your-first-graphql-query) anywhere on your site.
+Teraz [tytuł strony możesz uzyskać poprzez GraphQL](/tutorial/part-four/#your-first-graphql-query) w dowolnym miejscu na stronie.
 
-### Plugins
+### Wtyczki
 
-Plugins add new features to your Gatsby site. For example, some plugins fetch data from hosted services, transform data formats, or resize images. The [Gatsby plugin library](/plugins) helps you find the right plugin for your needs.
+Wtyczki dodają nowe funkcjonalności na twojej stronie Gatsby. Na przykład, niektóre wtyczki pobierają dane z usług hostowanych, przekształcają formaty danych lub zmieniają rozmiar obrazów. [Biblioteka wtyczek Gatsby](/plugins) pomoże ci znaleźć odpowiednią wtyczkę dostosowaną do twoich potrzeb.
 
-Installing a plugin using a package manager like `npm` **does not** enable it in your Gatsby site. To finish adding a plugin, make sure your `gatsby-config.js` file has a `plugins` array so you can include a space for the plugins needed to build your site:
+Instalacja wtyczki poprzez poprzez użycie menedżera paczek jak np. `npm` **nie spowoduje** włączenia jej na twojej stronie Gatsby. Aby poprawnie ukończyć proces dodawania wtyczki, upewnij się że twój plik `gatsby-config.js` zawiera tablicę `plugins`. Jest to miejsce na wszystkie potrzebne wtyczki do zbudowania strony:
 
 ```javascript:title=gatsby-config.js
 module.exports = {
   plugins: [
-    //plugins go here
+    //umieść wtyczki tutaj
   ],
 }
 ```
 
-When adding multiple plugins, they should be separated by commas in the `plugins` array to support valid JavaScript syntax.
+Podczas dodawania kolejnych wtyczek w tablicy `plugins`, powinny być one rozdzielane przecinkiem, tak aby spełniały poprawną składnie JavaScript.
 
-#### Plugins without options
+#### Wtyczki bez opcji konfiguracyjnych
 
-If a plugin does not require any options, you can add its name as a string to the `plugins` array:
+Jeśli wtyczka nie potrzebuje żadnych opcji konfiguracyjnych, możesz dodać jej nazwę w string'u do tablicy `plugins`:
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -80,11 +81,11 @@ module.exports = {
 }
 ```
 
-#### Plugins with options
+#### Wtyczki z opcjami konfiguracyjnymi
 
-Many plugins have optional or required options to configure them. Instead of adding a name string to the `plugins` array, add an object with its name and options. Most plugins show examples in their `README` file or page in the [Gatsby plugin library](/plugins).
+Wiele wtyczek posiada opcjonalne lub wymagane warianty konfiguracji. Zamiast dodawać nazwę w string'u do tablicy `plugins`, dodaj obiekt z nazwą i opcjami konfiguracyjnymi. Większość wtyczek ma pokazane przykłady konfiguracji w swoim pliku `README` lub na ich stronie w [bibliotece wtyczek Gatsby](/plugins).
 
-Here's an example showing how to write an object with keys to `resolve` the plugin name and an `options` object with any applicable settings:
+To jest przykład który pokazuje jak poprawnie napisać obiekt z kluczami `resolve` - do wyciągania nazwy wtyczki oraz obiektem `options` z dowolnymi odpowiednimi ustawieniami:
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -100,9 +101,9 @@ module.exports = {
 }
 ```
 
-#### Mixed plugins
+#### Wtyczki mieszane
 
-You can add plugins with and without options in the same array. Your site's config file could look like this:
+Możesz dodać wtyczki z lub bez opcji konfiguracyjnych w tej samej tablicy. Twój plik konfiguracyjny strony mógłby wyglądać tak:
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -119,6 +120,6 @@ module.exports = {
 }
 ```
 
-## Additional configuration options
+## Dodatkowe opcje konfiguracyjne
 
-There are several more configuration options available for `gatsby-config.js`. You can find a list of every option in the [Gatsby Configuration API](/docs/gatsby-config/) page.
+Jest wiele innych opcji konfiguracyjnych dostępnych dla `gatsby-config.js`. Możesz znaleźć listę dla każdej opcji na stronie [API Konfiguracji Gatsby](/docs/gatsby-config/).
