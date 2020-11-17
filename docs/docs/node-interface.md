@@ -44,11 +44,11 @@ Globalny, unikatowy typ node'a wybrany przez właściciela wtyczki.
 
 ### `owner`
 
-Wtyczka przez którą stworzony został node. To pole jest dodawane przez Gatsby(a nie przez wtyczkę).
+Wtyczka, przez którą stworzony został node. To pole jest dodawane przez Gatsby (a nie przez wtyczkę).
 
 ### `fieldOwners`
 
-Magazyn informacji które wtyczki utworzyły poszczególne pola. To pole jest dodawane przez Gatsby(a nie przez wtyczkę).
+Magazynuje informacje, które wtyczki utworzyły poszczególne pola. To pole jest dodawane przez Gatsby (a nie przez wtyczkę).
 
 ### `content`
 
@@ -66,12 +66,10 @@ Wtyczki przekształcające mogą również tworzyć node'y poprzez przekształce
 
 Node'y utworzone przez wtyczki przekształcające są ustawione jako "dzieci" swoich "rodziców".
 
-- [Wtyczka przekształcająca dane(biblioteka Markdown)](/packages/gatsby-transformer-remark/) wyszukuje nowych node'ów,
+- [Wtyczka przekształcająca dane (biblioteka Markdown)](/packages/gatsby-transformer-remark/) wyszukuje nowych node'ów,
   które zostały utworzone z typem `text/markdown` dla `mediaType` i  
   przekształca je na node'y `MarkdownRemark` z polami `html`.
-- [Wtyczka przekształcająca YAML](/packages/gatsby-transformer-yaml/) wyszukuje nowych node'ów z typem
-  nośnika `text/yaml` (np. pliki `.yaml`) i tworzy nowe YAML dzieci node'a/node'ów poprzez
-  transformację źródła YAML w obiekt JavaScript.
+- [Wtyczka przekształcająca YAML](/packages/gatsby-transformer-yaml/) wyszukuje nowe node'y z typem nośnika `text/yaml` (np. pliki `.yaml`) i tworzy nowe YAML dzieci node'y poprzez transformację źródła YAML w obiekt JavaScript.
 
 ## GraphQL
 
