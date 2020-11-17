@@ -69,9 +69,7 @@ Node'y utworzone przez wtyczki przekształcające są ustawione jako "dzieci" sw
 - [Wtyczka przekształcająca dane (biblioteka Markdown)](/packages/gatsby-transformer-remark/) wyszukuje nowych node'ów,
   które zostały utworzone z typem `text/markdown` dla `mediaType` i  
   przekształca je na node'y `MarkdownRemark` z polami `html`.
-- [Wtyczka przekształcająca YAML](/packages/gatsby-transformer-yaml/) wyszukuje nowych node'ów z typem
-  nośnika `text/yaml` (np. pliki `.yaml`) i tworzy nowe YAML dzieci node'a/node'ów poprzez
-  transformację źródła YAML w obiekt JavaScript.
+- [Wtyczka przekształcająca YAML](/packages/gatsby-transformer-yaml/) wyszukuje nowe node'y z typem nośnika `text/yaml` (np. pliki `.yaml`) i tworzy nowe YAML dzieci node'y poprzez transformację źródła YAML w obiekt JavaScript.
 
 ## GraphQL
 
