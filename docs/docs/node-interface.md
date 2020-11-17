@@ -2,7 +2,7 @@
 title: Node Interface
 ---
 
-"Node" jest centrum systemu danych Gatsby. Wszystkie dane które są dodane do Gatsby są modelowane wykorzystując node'y.
+"Node" jest centrum systemu danych Gatsby. Wszystkie dane, które są dodane do Gatsby są modelowane wykorzystując node'y.
 
 ## Struktura danych node'a
 
@@ -26,7 +26,7 @@ internal: {
 
 ### `parent`
 
-Klucz zazrezerwowany dla wtyczek które chcą rozszerzyć swoje node'y.
+Klucz zazrezerwowany dla wtyczek, które chcą rozszerzyć swoje node'y.
 
 ### `contentDigest`
 
@@ -52,11 +52,11 @@ Magazyn informacji które wtyczki utworzyły poszczególne pola. To pole jest do
 
 ### `content`
 
-Opcjonalne pole dostarczające surową zawartość dla tego node'a którą mogą pobierać wtyczki przekształcające w celu dalszego przetwarzania.
+Opcjonalne pole dostarczające surową zawartość dla tego node'a, którą mogą pobierać wtyczki przekształcające w celu dalszego przetwarzania.
 
 ## Wtyczki źródłowe
 
-Nowe node'y dodawane są do Gatsby poprzez wtyczki "źródłowe". Powszechnie stosowaną przez wiele witryn Gatsby wtyczką źródłową jest [wtyczka źródłowa systemu plików](/packages/gatsby-source-filesystem/) która przekształca pliki na dysku na node'y pliku.
+Nowe node'y dodawane są do Gatsby poprzez wtyczki "źródłowe". Powszechnie stosowaną przez wiele witryn Gatsby wtyczką źródłową jest [wtyczka źródłowa systemu plików](/packages/gatsby-source-filesystem/), która przekształca pliki na dysku na node'y pliku.
 
 Inne wtyczki źródłowe zaciągają dane z zewnętrznych interfejsów API takich jak np. [Drupal](/packages/gatsby-source-drupal/) czy [Hacker News](/packages/gatsby-source-hacker-news/).
 
@@ -75,7 +75,7 @@ Node'y utworzone przez wtyczki przekształcające są ustawione jako "dzieci" sw
 
 ## GraphQL
 
-Gatsby automatycznie wprowadza strukturę node'ów Twojej strony i tworzy schemat GraphQL, który można następnie odpytywać z komponentów twojej strony.
+Gatsby automatycznie wprowadza strukturę node'ów twojej strony i tworzy schemat GraphQL, który można następnie odpytywać z komponentów twojej strony.
 
 ## Tworzenie node'ów
 
