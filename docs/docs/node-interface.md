@@ -26,7 +26,7 @@ internal: {
 
 ### `parent`
 
-Klucz zazrezerwowany dla wtyczek, które chcą rozszerzyć swoje node'y.
+Klucz zarezerwowany dla wtyczek, które chcą rozszerzyć swoje node'y.
 
 ### `contentDigest`
 
