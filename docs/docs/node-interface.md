@@ -66,7 +66,7 @@ Wtyczki przekształcające mogą również tworzyć node'y poprzez przekształce
 
 Node'y utworzone przez wtyczki przekształcające są ustawione jako "dzieci" swoich "rodziców".
 
-- [Wtyczka przekształcająca dane(biblioteka Markdown)](/packages/gatsby-transformer-remark/) wyszukuje nowych node'ów,
+- [Wtyczka przekształcająca dane (biblioteka Markdown)](/packages/gatsby-transformer-remark/) wyszukuje nowych node'ów,
   które zostały utworzone z typem `text/markdown` dla `mediaType` i  
   przekształca je na node'y `MarkdownRemark` z polami `html`.
 - [Wtyczka przekształcająca YAML](/packages/gatsby-transformer-yaml/) wyszukuje nowych node'ów z typem
