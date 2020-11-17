@@ -48,7 +48,7 @@ Wtyczka, przez którą stworzony został node. To pole jest dodawane przez Gatsb
 
 ### `fieldOwners`
 
-Magazyn informacji które wtyczki utworzyły poszczególne pola. To pole jest dodawane przez Gatsby(a nie przez wtyczkę).
+Magazynuje informacje, które wtyczki utworzyły poszczególne pola. To pole jest dodawane przez Gatsby (a nie przez wtyczkę).
 
 ### `content`
 
