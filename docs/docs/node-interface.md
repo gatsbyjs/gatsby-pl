@@ -44,7 +44,7 @@ Globalny, unikatowy typ node'a wybrany przez właściciela wtyczki.
 
 ### `owner`
 
-Wtyczka przez którą stworzony został node. To pole jest dodawane przez Gatsby(a nie przez wtyczkę).
+Wtyczka, przez którą stworzony został node. To pole jest dodawane przez Gatsby (a nie przez wtyczkę).
 
 ### `fieldOwners`
 
