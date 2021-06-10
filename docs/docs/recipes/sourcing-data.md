@@ -8,13 +8,13 @@ Do pozyskania danych w Gatsby używa się wtyczek, które pozyskują dane z okre
 
 ## Dodawanie danych do GraphQL
 
-[Warstwa danych GraphQL](/docs/graphql-concepts/) wykorzystuje node'y, by zmodelować porcje danych. Wtyczki źródeł dodają źródłowe node'y, które możesz pozyskać poprzez wykonanie odpowiedniego zapytania. Możesz także stworzyć źródłowe node'y samodzielnie - Gatsby zapewnia metody, które możesz wykorzystać by dodać niestandardowe dane do warstwy danych GraphQL.
+[Warstwa danych GraphQL](/docs/graphql-concepts/) wykorzystuje node'y, by zmodelować porcje danych. Wtyczki źródeł dodają źródłowe node'y, które możesz pozyskać poprzez wykonanie odpowiedniego zapytania. Możesz także stworzyć źródłowe node'y samodzielnie - Gatsby zapewnia metody, które możesz wykorzystać aby dodać niestandardowe dane do warstwy danych GraphQL.
 
 Ten przepis pokazuje w jaki sposób dodać własne dane poprzez użycie `createNode()`.
 
 ### Wskazówki
 
-1. W pliku `gatsby-node.js` użyj `sourceNodes()` i `actions.createNode()` by stworzyć i wyeksportować node'y niezbędne do wykonania zapytania.
+1. W pliku `gatsby-node.js` użyj `sourceNodes()` i `actions.createNode()`, aby stworzyć i wyeksportować node'y niezbędne do wykonania zapytania.
 
 ```javascript:title=gatsby-node.js
 exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
@@ -64,9 +64,9 @@ query MyPokemonQuery {
 - Zrozum wtyczki źródeł poprzez stworzenie jednej z pomocą [samouczka Pixabay](/tutorial/pixabay-source-plugin-tutorial/)
 - [Dokumentacja funkcji createNode](/docs/actions/#createNode)
 
-## Pozyskiwanie danych z Markdownu korzystając z GraphQL
+## Pozyskiwanie danych z Markdown korzystając z GraphQL
 
-Możesz pozyskać dane z Markdownu i użyć [`createPages` API](/docs/actions/#createPage), aby dynamicznie stworzyć strony.
+Możesz pozyskać dane z Markdown i użyć [`createPages` API](/docs/actions/#createPage), aby dynamicznie stworzyć strony.
 Ten przepis pokazuje w jaki sposób z plików Markdown ulokowanych na twoim lokalnym systemie stworzyć strony z użyciem warstwy danych GraphQL.
 
 ### Wymagania wstępne
@@ -329,7 +329,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
 6. Otwórz`GraphiQL IDE` pod adresem `http://localhost:8000/__graphql` i otwórz Docs lub Explorer, gdzie znajdziesz pola do odpytywania dla `allWordpressPosts`
 
-Stworzone powyżej w `gatsby-node.js` dynamiczne strony mają unikalne ścieżki dla poszczególnych postów i używają szablonu razem z przykładowym zapytaniem GraphQl, które pozyskuje dane z Wordpress.
+Stworzone powyżej w `gatsby-node.js` dynamiczne strony mają unikalne ścieżki dla poszczególnych postów i używają szablonu razem z przykładowym zapytaniem GraphQL, które pozyskuje dane z Wordpress.
 
 ### Dodatkowe źródła
 
@@ -381,7 +381,7 @@ contentful space accesstoken create -s '<space ID>' --name 'Example token'
 npm install --save gatsby-source-contentful
 ```
 
-6. By aktywować wtyczkę w pliku `gatsby-config.js` dodaj `gatsby-source-contentful` do listy `plugins`. Powinieneś poważnie rozważyć użycie [zmiennych środowiskowych](/docs/environment-variables/) do przechowywania twojego space ID i klucza ze względów bezpieczeństwa.
+6. Aby aktywować wtyczkę w pliku `gatsby-config.js` dodaj `gatsby-source-contentful` do listy `plugins`. Powinieneś poważnie rozważyć użycie [zmiennych środowiskowych](/docs/environment-variables/) do przechowywania twojego space ID i klucza ze względów bezpieczeństwa.
 
 ```javascript:title=gatsby-config.js
 plugins: [
@@ -404,7 +404,7 @@ plugins: [
 
 ![Interferjs graphQL, z przykładowym zapytaniem przedstawionym poniżej](../images/recipe-sourcing-contentful-graphql.png)
 
-By wykonać zapytanie o tytuły blog postów z Contenful, użyj poniższe zapytanie GraphQL:
+Aby wykonać zapytanie o tytuły blog postów z Contenful, użyj poniższe zapytanie GraphQL:
 
 ```graphql
 {
@@ -421,7 +421,7 @@ By wykonać zapytanie o tytuły blog postów z Contenful, użyj poniższe zapyta
 Node'y Contentful zawierają także metadane takie jak `createdAt` i `node_locale`.
 
 
-9. By wyświetlić listę linków do blog postów, stwórz nowy plik `/src/pages/blog.js`. Ta strona wyświetli wszystkie posty, posortowane na podstawie daty aktualizacji.
+9. Aby wyświetlić listę linków do blog postów, stwórz nowy plik `/src/pages/blog.js`. Ta strona wyświetli wszystkie posty, posortowane na podstawie daty aktualizacji.
 
 ```jsx:title=src/pages/blog.js
 import React from "react"
@@ -468,7 +468,7 @@ By dalej tworzyć twoją stronę, w tym podstron ze szczegółami postów, zapoz
 
 ## Pozyskiwanie danych z zewnętrznych źródeł i tworzenie stron bez użycia GraphQL
 
-Nie musisz używać warstwy danych GraphQL, aby uwzględnić dane na stronach, [chociaż są istotne powody, dla których powinieneś rozważyć użycie GraphQL](/docs/why-gatsby-uses-graphql/). Możesz wykorzystać `createPages` API, by pozyskać nieustrukturyzowane dane bezpośrednio do projektu Gatsby, a nie za pośrednictwem GraphQL i wtyczek źródłowych.
+Nie musisz używać warstwy danych GraphQL, aby uwzględnić dane na stronach, [chociaż są istotne powody, dla których powinieneś rozważyć użycie GraphQL](/docs/why-gatsby-uses-graphql/). Możesz wykorzystać `createPages` API, aby pozyskać nieustrukturyzowane dane bezpośrednio do projektu Gatsby, a nie za pośrednictwem GraphQL i wtyczek źródłowych.
 
 W tym przepisie utworzysz dynamiczne strony z danych pobranych z [endpointów PokéAPI’s REST](https://www.pokeAPI.co/). [Kompletny przykład](https://github.com/jlengstorf/gatsby-with-unstructured-data/) może być znaleziony na Github.
 
@@ -480,7 +480,7 @@ W tym przepisie utworzysz dynamiczne strony z danych pobranych z [endpointów Po
 
 ### Wskazówki
 
-1. Dodaj poniższy kod do pliku `gatsby-node.js`, by pobrać dane z PokeAPI i programowo stworzyć stronę główną:
+1. Dodaj poniższy kod do pliku `gatsby-node.js`, aby pobrać dane z PokeAPI i programowo stworzyć stronę główną:
 
 ```js:title=gatsby-node.js
 const axios = require("axios")
@@ -526,7 +526,7 @@ export default ({ pageContext: { allPokemon } }) => (
 )
 ```
 
-3. Uruchom komendę `gatsby develop`, by pozyskać dane, zbudować strony i uruchomić serwer deweloperski.
+3. Uruchom komendę `gatsby develop`, aby pozyskać dane, zbudować strony i uruchomić serwer deweloperski.
 4. Sprawdź swoją stronę główną na: `http://localhost:8000`
 
 ### Dodatkowe źródła
@@ -551,7 +551,7 @@ export default ({ pageContext: { allPokemon } }) => (
 npm install --save gatsby-source-drupal
 ```
 
-2. Dodaj poniższy kod do pliku `gatsby-config.js`, by skonfigurować i aktywować wtyczkę.
+2. Dodaj poniższy kod do pliku `gatsby-config.js`, aby skonfigurować i aktywować wtyczkę.
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -569,7 +569,7 @@ module.exports = {
 
 3. Uruchom serwer deweloperski przy użyciu komendy `gatsby develop`, otwórz eksplorator GraphiQL pod adresem `http://localhost:8000/___graphql`. 
 Poniżej zakładki Eksplorator powinieneś zobaczyć nowe typy node'ów, takie jak `allBlockBlock` dla bloków Drupal i jeden dla każdego typu danych w twoim Drupal.
-Na przykład, jeśli masz typ danych "Page", będzie on dostępny jako `allNodePage`. By pobrać wszystkie node'y wraz z ich tytułem i body, użyj poniższego zapytania:
+Na przykład, jeśli masz typ danych "Page", będzie on dostępny jako `allNodePage`. Aby pobrać wszystkie node'y wraz z ich tytułem i body, użyj poniższego zapytania:
 
 
 ```graphql
@@ -587,7 +587,7 @@ Na przykład, jeśli masz typ danych "Page", będzie on dostępny jako `allNodeP
 }
 ```
 
-4. By użyć swoje dane z Drupal, stwórz nową stronę `src/pages/drupal.js`, będzie ona zawierać listę wszystkich node'ów "Page" z Drupal.
+4. Aby użyć swoje dane z Drupal, stwórz nową stronę `src/pages/drupal.js`, będzie ona zawierać listę wszystkich node'ów "Page" z Drupal.
 
 _**Uwaga:** dokładna schema GraphQL będzie zależała od tego, jak skonfigurowana jest twoja instancja Drupal._
 
