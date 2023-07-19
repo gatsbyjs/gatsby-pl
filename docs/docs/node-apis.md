@@ -1,33 +1,33 @@
 ---
 title: Gatsby Node APIs
-description: Documentation on Node APIs used in Gatsby build process for common uses like creating pages
+description: Dokumentacja Node API wykorzystywanego podczas budowania powszechnych zastosowań, takich jak generowanie stron
 jsdoc: ["gatsby/src/utils/api-node-docs.js"]
 apiCalls: NodeAPI
 ---
 
-Gatsby gives plugins and site builders many APIs for controlling your site's data in the GraphQL data layer.
+Gatsby udostępnia wtyczkom i kreatorom stron wiele interfejsów API umożliwiających kontrolowanie przepływu danych za pośrednictwem GraphQL.
 
-## Async plugins
+## Wtyczki asynchroniczne
 
-If your plugin performs async operations (disk I/O, database access, calling remote APIs, etc.) you must either return a promise or use the callback passed to the 3rd argument. Gatsby needs to know when plugins are finished as some APIs, to work correctly, require previous APIs to be complete first. See [Debugging Async Lifecycles](/docs/debugging-async-lifecycles/) for more info.
+Jeśli twoja wtyczka wykonuje operacje asynchroniczne (I/O na dyskach, dostęp do bazy danych, wywoływanie zdalnych interfejsów API, etc.) musisz zwrócić `Promise` albo użyć funkcji zwrotnej przekazanej jako trzeci argument. Gatsby musi wiedzieć kiedy wtyczki są gotowe, tak samo jak niektóre API aby zadziałać poprawnie - wymagają zakończenia pracy poprzednich interfejsów API. Sprawdź [Debugowanie asynchronicznych cykli życia](/docs/debugging-async-lifecycles/) aby dowiedzieć się więcej.
 
 ```javascript
 // Promise API
 exports.createPages = () => {
   return new Promise((resolve, reject) => {
-    // do async work
+    // wykonaj kod asynchroniczne
   })
 }
 
 // Callback API
 exports.createPages = (_, pluginOptions, cb) => {
-  // do Async work
+  // wykonaj kod asynchroniczne
   cb()
 }
 ```
 
-If your plugin does not do async work, you can just return directly.
+Jeśli twoja wtyczka nie wykonuje kodu asynchronicznie - funkcję możesz po prostu zwrócić.
 
-## Usage
+## Zastosowanie
 
-Implement any of these APIs by exporting them from a file named `gatsby-node.js` in the root of your project.
+Każde z tych API implementuj poprzez export z pliku `gatsby-node.js` umiejscowionego w głównym folderze projektu.

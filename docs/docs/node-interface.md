@@ -2,12 +2,11 @@
 title: Node Interface
 ---
 
-The "node" is the center of Gatsby's data system. All data that's added to
-Gatsby is modeled using nodes.
+"Node" jest centrum systemu danych Gatsby. Wszystkie dane, które są dodane do Gatsby są modelowane wykorzystując node'y.
 
-## Node data structure
+## Struktura danych node'a
 
-The basic node data structure is as follows:
+Podstawowa struktura danych node'a przedstawiona jest następująco:
 
 ```flow
 id: String,
@@ -22,71 +21,60 @@ internal: {
   fieldOwners: Object,
   content: String,
 }
-...other fields specific to this type of node
+...innne pola określone dla tego typu node'a
 ```
 
 ### `parent`
 
-A key reserved for plugins who wish to extend other nodes.
+Klucz zarezerwowany dla wtyczek, które chcą rozszerzyć swoje node'y.
 
 ### `contentDigest`
 
-A digest "Hash", or short digital summary, of the content of this node (for example, `md5sum`).
+Skrót "Hash", lub krótkie cyfrowe streszczenie zawartości tego node'a (np. `md5sum`).
 
-The digest should be unique to the content of this node since it's used for caching. If the content changes, this digest should also change. There's a helper function called [createContentDigest](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-core-utils/src/create-content-digest.js) to create an `md5` digest.
+Skrót powinien być unikatowy dla zawartości tego node'a, ponieważ jest on używany do buforowania. Jeśli zawartość zmieni się, skrót również powinien ulec zmianie. Istnieje funkcja pomocnicza o nazwie [createContentDigest](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-core-utils/src/create-content-digest.js), która służy do utworzenia skrótu `md5`.
 
 ### `mediaType`
 
-Optional [media type](https://en.wikipedia.org/wiki/Media_type) to indicate to transformer plugins this node has data they can further process.
+Opcjonalny [typ nośnika](https://pl.wikipedia.org/wiki/Typ_MIME) do wskazania wtyczek przekształcających ten node oraz jego dane, które mogą być dalej przetwarzane.
 
 ### `type`
 
-A globally unique node type chosen by the plugin owner.
+Globalny, unikatowy typ node'a wybrany przez właściciela wtyczki.
 
 ### `owner`
 
-The plugin which created this node. This field is added by gatsby itself (and not the plugin).
+Wtyczka, przez którą stworzony został node. To pole jest dodawane przez Gatsby (a nie przez wtyczkę).
 
 ### `fieldOwners`
 
-Stores which plugins created which fields. This field is added by gatsby itself (and not the plugin).
+Magazynuje informacje, które wtyczki utworzyły poszczególne pola. To pole jest dodawane przez Gatsby (a nie przez wtyczkę).
 
 ### `content`
 
-Optional field exposing the raw content for this node that transformer plugins can take and further process.
+Opcjonalne pole dostarczające surową zawartość dla tego node'a, którą mogą pobierać wtyczki przekształcające w celu dalszego przetwarzania.
 
-## Source plugins
+## Wtyczki źródłowe
 
-New nodes are added to Gatsby by "source" plugins. A common one that many Gatsby
-sites use is the [Filesystem source plugin](/packages/gatsby-source-filesystem/)
-which turns files on disk into File nodes.
+Nowe node'y dodawane są do Gatsby poprzez wtyczki "źródłowe". Powszechnie stosowaną przez wiele witryn Gatsby wtyczką źródłową jest [wtyczka źródłowa systemu plików](/packages/gatsby-source-filesystem/), która przekształca pliki na dysku na node'y pliku.
 
-Other source plugins pull data from external APIs such as the
-[Drupal](/packages/gatsby-source-drupal/) and
-[Hacker News](/packages/gatsby-source-hacker-news/)
+Inne wtyczki źródłowe zaciągają dane z zewnętrznych interfejsów API takich jak np. [Drupal](/packages/gatsby-source-drupal/) czy [Hacker News](/packages/gatsby-source-hacker-news/).
 
-## Transformer plugins
+## Wtyczki przekształcające
 
-Transformer plugins can also create nodes by transforming source nodes into new
-types of nodes. It is very common when building Gatsby sites to install both
-source plugin(s) and transformer plugins.
+Wtyczki przekształcające mogą również tworzyć node'y poprzez przekształcenie źródeł node'ów w nowe typy node'ów. Instalowanie obu wtyczek - źródłowych i przekształcających jest powszechną praktyką podczas budowania stron Gatsby.
 
-Nodes created by transformer plugins are set as "children" of their "parent"
-nodes.
+Node'y utworzone przez wtyczki przekształcające są ustawione jako "dzieci" swoich "rodziców".
 
-- The
-  [Remark (Markdown library) transformer plugin](/packages/gatsby-transformer-remark/)
-  looks for new nodes that are created with a `mediaType` of `text/markdown` and
-  then transforms these nodes into `MarkdownRemark` nodes with an `html` field.
-- The [YAML transformer plugin](/packages/gatsby-transformer-yaml/) looks for
-  new nodes with a media type of `text/yaml` (e.g. a `.yaml` file) and creates
-  new YAML child node(s) by parsing the YAML source into JavaScript objects.
+- [Wtyczka przekształcająca dane (biblioteka Markdown)](/packages/gatsby-transformer-remark/) wyszukuje nowych node'ów,
+  które zostały utworzone z typem `text/markdown` dla `mediaType` i  
+  przekształca je na node'y `MarkdownRemark` z polami `html`.
+- [Wtyczka przekształcająca YAML](/packages/gatsby-transformer-yaml/) wyszukuje nowe node'y z typem nośnika `text/yaml` (np. pliki `.yaml`) i tworzy nowe YAML dzieci node'y poprzez transformację źródła YAML w obiekt JavaScript.
 
 ## GraphQL
 
-Gatsby automatically infers the structure of your site's nodes and creates a
-GraphQL schema which you can then query from your site's components.
+Gatsby automatycznie wprowadza strukturę node'ów twojej strony i tworzy schemat GraphQL, który można następnie odpytywać z komponentów twojej strony.
 
-## Node Creation
+## Tworzenie node'ów
 
-To learn more about how nodes are created and linked together, check out the [Node Creation](/docs/node-creation/) documentation in the "Behind the Scenes" section.
+Aby dowiedzieć się więcej na temat tego jak tworzone i łączone są ze sobą node'y sprawdź dokumentację [tworzenia node'ów](/docs/node-creation/) w sekcji "Za kulisami".
